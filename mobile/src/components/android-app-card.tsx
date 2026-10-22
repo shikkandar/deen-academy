@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useEffect, useState } from 'react';
-import { Linking, Platform, StyleSheet, View } from 'react-native';
+import { Image, Linking, Platform, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn } from 'react-native-reanimated';
 
 import { ANDROID_APK_URL, ANDROID_APP_VERSION } from '@/constants/app';
@@ -9,7 +9,6 @@ import { useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 
-import { JasmineFlower } from './jasmine-flower';
 import { SpringPressable } from './motion';
 import { ThemedText } from './themed-text';
 
@@ -43,7 +42,9 @@ export function AndroidAppCard() {
   return (
     <Animated.View entering={FadeIn.duration(400)} style={[styles.card, { backgroundColor: theme.primarySoft, borderColor: theme.border }]}>
       <View style={styles.top}>
-        <JasmineFlower size={22} />
+        <View style={styles.logoTile}>
+          <Image source={require('@/assets/images/logo-mark.png')} style={styles.logo} />
+        </View>
         <ThemedText type="small" style={styles.text}>
           {t('Deen Academy for Android — Azan alarms, Qibla camera and offline Quran & Hadith work best in the app.')}
         </ThemedText>
@@ -69,6 +70,8 @@ const styles = StyleSheet.create({
   card: { borderRadius: 20, borderWidth: 1, padding: Spacing.three, gap: Spacing.three },
   top: { flexDirection: 'row', alignItems: 'flex-start', gap: Spacing.two + 2 },
   text: { flex: 1 },
+  logoTile: { width: 30, height: 30, borderRadius: 8, alignItems: 'center', justifyContent: 'center', backgroundColor: '#F7F1E3' },
+  logo: { width: 24, height: 24 },
   close: { paddingHorizontal: Spacing.one, marginTop: -2 },
   bottom: { flexDirection: 'row', alignItems: 'center', gap: Spacing.three },
   button: { borderRadius: 999, paddingVertical: Spacing.two, paddingHorizontal: Spacing.four },

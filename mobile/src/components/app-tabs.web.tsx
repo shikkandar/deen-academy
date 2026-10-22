@@ -15,9 +15,10 @@ import { useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 
-import { JasmineFlower } from './jasmine-flower';
 import { ThemedText } from './themed-text';
 import { ThemedView } from './themed-view';
+
+const LOGO = require('@/assets/images/logo-mark.png');
 
 const ICONS = {
   home: require('@/assets/images/tabIcons/home.png'),
@@ -138,8 +139,8 @@ function Sidebar({ children, style: _style, ...props }: TabListProps) {
   return (
     <ThemedView {...props} style={[styles.sidebar, { borderRightColor: theme.border }]}>
       <View style={styles.brand}>
-        <View style={[styles.brandFlower, { backgroundColor: theme.primarySoft }]}>
-          <JasmineFlower size={26} />
+        <View style={styles.brandFlower}>
+          <Image source={LOGO} style={styles.brandLogo} />
         </View>
         <ThemedText style={styles.brandName}>Deen Academy</ThemedText>
       </View>
@@ -241,7 +242,9 @@ const styles = StyleSheet.create({
     gap: Spacing.four,
   },
   brand: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two + 2, paddingHorizontal: Spacing.two },
-  brandFlower: { width: 44, height: 44, borderRadius: 22, alignItems: 'center', justifyContent: 'center' },
+  // the Deen Academy "D" sits on its cream tile in light and dark mode alike
+  brandFlower: { width: 44, height: 44, borderRadius: 12, alignItems: 'center', justifyContent: 'center', backgroundColor: '#F7F1E3' },
+  brandLogo: { width: 34, height: 34 },
   brandName: { fontSize: 18, fontWeight: 700 },
   nav: { gap: Spacing.one, flex: 1 },
   sidebarItem: {

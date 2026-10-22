@@ -303,6 +303,12 @@ export default function SurahScreen() {
     playExclusive(playlist, lockFor(i));
   };
 
+  // Playing the whole surah opens the full Now Playing page; ⌄ minimises it to the mini player.
+  const playSurah = (i: number) => {
+    playAt(i);
+    setFull(true);
+  };
+
   const toggle = (i: number) => {
     if (current === i) {
       if (playing) playlist.pause();
@@ -353,13 +359,13 @@ export default function SurahScreen() {
                   <ThemedText type="small" style={{ color: theme.onHeroMuted }}>
                     {surah.englishNameTranslation} · {t('{n} ayahs', { n: surah.numberOfAyahs })} · {t(surah.revelationType)}
                   </ThemedText>
-                  <SpringPressable onPress={() => playAt(resumeIndex)} style={[styles.playAll, { backgroundColor: theme.onHero }]}>
+                  <SpringPressable onPress={() => playSurah(resumeIndex)} style={[styles.playAll, { backgroundColor: theme.onHero }]}>
                     <ThemedText type="small" style={[styles.bold, { color: theme.hero }]}>
                       {resumeIndex ? t('▶  Continue from ayah {n}', { n: resumeIndex + 1 }) : t('▶  Play surah')}
                     </ThemedText>
                   </SpringPressable>
                   {!!resumeIndex && (
-                    <SpringPressable onPress={() => playAt(0)} style={styles.fromStart}>
+                    <SpringPressable onPress={() => playSurah(0)} style={styles.fromStart}>
                       <ThemedText type="small" style={{ color: theme.onHeroMuted }}>
                         {t('or play from the start')}
                       </ThemedText>

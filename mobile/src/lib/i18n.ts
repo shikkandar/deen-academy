@@ -251,11 +251,13 @@ const TA: Record<string, string> = {
   // Home: Namaz Assistant and Qibla
   'Pray {prayer} with the Namaz Assistant': 'தொழுகை உதவியாளருடன் {prayer} தொழுங்கள்',
   'Led aloud like an imam · choose length and speed': 'இமாம் போல சத்தமாக வழிநடத்தும் · நீளம், வேகம் தேர்வு செய்யலாம்',
+  '{prayer} time until {time} · ': '{prayer} நேரம் {time} வரை · ',
   'Qibla direction': 'கிப்லா திசை',
   'Compass to the Kaaba · buzzes when you face it': 'கஅபாவை நோக்கும் திசைகாட்டி · நேராக முன்னோக்கும்போது அதிரும்',
 
   // Namaz Assistant
   'Namaz Assistant': 'தொழுகை உதவியாளர்',
+  'WHICH NAMAZ': 'எந்தத் தொழுகை',
   'NAMAZ ASSISTANT · {prayer}': 'தொழுகை உதவியாளர் · {prayer}',
   Close: 'மூடு',
   'Pray {prayer} with an imam': 'இமாமுடன் {prayer} தொழுங்கள்',

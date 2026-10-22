@@ -82,6 +82,24 @@ export function getLastPrayer(coords: Coords, settings: Settings, now = new Date
   return getUpcoming(coords, settings, 2, yesterday).filter((p) => p.time <= now).at(-1) ?? null;
 }
 
+/**
+ * The prayer whose time is still running, even after the Jamaat: from its Azan until the next prayer's Azan
+ * (Isha until Fajr), except Fajr, which ends at sunrise. Null between sunrise and Dhuhr, when no fard is due.
+ */
+export function getPrayerWindow(coords: Coords, settings: Settings, now = new Date()) {
+  const yesterday = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
+  const list = getUpcoming(coords, settings, 3, yesterday);
+  let i = -1;
+  list.forEach((p, k) => {
+    if (p.time <= now) i = k;
+  });
+  if (i < 0) return null;
+  const prayer = list[i];
+  const endsAt = prayer.name === 'Fajr' ? getDayTimes(coords, prayer.time, settings).sunrise : list[i + 1]?.time;
+  if (!endsAt || now >= endsAt) return null;
+  return { prayer, endsAt };
+}
+
 /** "After namaz" time: from the Jamaat / "Namaz due" time until an hour after the namaz (DND) window. */
 export function isAfterNamaz(p: PrayerTime, settings: Settings, now = new Date()) {
   const start = dueTime(p, settings).getTime();

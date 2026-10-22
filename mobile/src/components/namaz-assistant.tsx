@@ -23,6 +23,7 @@ import { ThemedText } from './themed-text';
 import { ThemedView } from './themed-view';
 
 const SPEEDS: Speed[] = [1, 1.5, 2];
+const PRAYER_CHOICES: PrayerName[] = ['Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
 const LENGTH_LABEL: Record<Length, string> = { short: 'Short', medium: 'Medium', long: 'Long' };
 const POSTURE: Record<string, string> = {
   standing: 'Standing (Qiyam)',
@@ -61,8 +62,19 @@ function salahTitle(s: Salah, t: T) {
  * Leads one whole prayer aloud like an imam, then 2 quiet minutes for dua and the Jamaat dua (after the Fard),
  * then offers the Sunnah of the same prayer.
  */
-export function NamazAssistant({ prayer, visible, onClose }: { prayer: PrayerName; visible: boolean; onClose: () => void }) {
+export function NamazAssistant({
+  prayer: suggested,
+  visible,
+  onClose,
+}: {
+  prayer: PrayerName;
+  visible: boolean;
+  onClose: () => void;
+}) {
   const theme = useTheme();
+  // The prayer whose time is running, unless another is picked (a missed one to make up).
+  const [picked, setPicked] = useState<PrayerName | null>(null);
+  const prayer = picked ?? suggested;
   const { wide } = useLayout();
   const t = useT();
   const { settings, dndAccess, openDndSettings } = useAppState();
@@ -143,11 +155,18 @@ export function NamazAssistant({ prayer, visible, onClose }: { prayer: PrayerNam
     }
   }, [playlist, salah, step, t]);
 
+  const choosePrayer = (p: PrayerName) => {
+    setPicked(p === suggested ? null : p);
+    setPartIndex(Math.max(0, rakatFor(p, settings.madhab).parts.findIndex((r) => r.kind === 'Fard')));
+  };
+
   const close = () => {
     playlist.pause();
     endPrayerSession();
     setSalah(null);
     setFinished(false);
+    setPicked(null);
+    setPartIndex(Math.max(0, rakatFor(suggested, settings.madhab).parts.findIndex((r) => r.kind === 'Fard')));
     onClose();
   };
 
@@ -192,6 +211,15 @@ export function NamazAssistant({ prayer, visible, onClose }: { prayer: PrayerNam
                     'Every takbir, the recitation, ruku and sajdah, Attahiyat, Salawat and Salam, aloud in Arabic. After the Fard: 2 quiet minutes for your dua, then the Jamaat dua.',
                   )}
                 </ThemedText>
+
+                <ThemedText type="smallBold" themeColor="textSecondary" style={styles.label}>
+                  {t('WHICH NAMAZ')}
+                </ThemedText>
+                <View style={styles.row}>
+                  {PRAYER_CHOICES.map((c) => (c === 'Dhuhr' && suggested === 'Jummah' ? 'Jummah' : c)).map((p) => (
+                    <Chip key={p} on={prayer === p} label={t(p)} onPress={() => choosePrayer(p)} />
+                  ))}
+                </View>
 
                 <ThemedText type="smallBold" themeColor="textSecondary" style={styles.label}>
                   {t('PRAYER')}

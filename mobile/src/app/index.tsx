@@ -21,7 +21,7 @@ import { useTheme } from '@/hooks/use-theme';
 import { localeFor } from '@/lib/i18n';
 import { useAppState } from '@/lib/app-state';
 import { rakatFor } from '@/lib/rakat';
-import { dueTime, formatTime, getCurrentPrayer, getDayTimes, getLastPrayer, getNextPrayer, isAfterNamaz, type PrayerTime } from '@/lib/prayer';
+import { dueTime, formatTime, getCurrentPrayer, getDayTimes, getLastPrayer, getNextPrayer, getPrayerWindow, isAfterNamaz, type PrayerTime } from '@/lib/prayer';
 
 
 function useNow(intervalMs = 1000) {
@@ -89,6 +89,9 @@ export default function HomeScreen() {
   // The prayer the screen is about: the one happening now, otherwise the next one.
   const focus = current ?? next;
   const last = getLastPrayer(place, settings, now);
+  // The Namaz Assistant leads the prayer whose time is still running (Isha until Fajr), else the next one.
+  const prayerWindow = getPrayerWindow(place, settings, now);
+  const assistantPrayer = prayerWindow?.prayer.name ?? next.name;
   const afterNamaz = !!last && isAfterNamaz(last, settings, now);
   const rows = [prayers[0], { name: 'Sunrise', time: sunrise, jamaat: null }, ...prayers.slice(1)];
   const dateLabel = now.toLocaleDateString(localeFor(settings.language) ?? [], { weekday: 'long', day: 'numeric', month: 'long' });
@@ -208,15 +211,18 @@ export default function HomeScreen() {
         <JasmineFlower size={18} />
         <View style={styles.assistantText}>
           <ThemedText style={[styles.bold, { color: theme.primary }]}>
-            {t('Pray {prayer} with the Namaz Assistant', { prayer: t(focus.name) })}
+            {t('Pray {prayer} with the Namaz Assistant', { prayer: t(assistantPrayer) })}
           </ThemedText>
           <ThemedText type="small" themeColor="textSecondary">
+            {prayerWindow
+              ? t('{prayer} time until {time} · ', { prayer: t(prayerWindow.prayer.name), time: formatTime(prayerWindow.endsAt) })
+              : ''}
             {t('Led aloud like an imam · choose length and speed')}
           </ThemedText>
         </View>
         <ThemedText style={[styles.bold, { color: theme.primary }]}>▶</ThemedText>
       </SpringPressable>
-      <NamazAssistant prayer={focus.name} visible={assistant} onClose={() => setAssistant(false)} />
+      <NamazAssistant prayer={assistantPrayer} visible={assistant} onClose={() => setAssistant(false)} />
       <SpringPressable
         pressedScale={0.98}
         onPress={() => router.push('/qibla')}
