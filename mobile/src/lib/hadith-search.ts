@@ -62,9 +62,15 @@ function muntakhabDocs(): Promise<Doc[]> {
   muntakhab = (async () => {
     const docs: Doc[] = [];
     for (const lang of ['ta', 'en'] as const) {
+      // fetched in batches on web (each page is its own file there); instant on phones
+      const BATCH = 24;
+      const loaded: Awaited<ReturnType<typeof getPage>>[] = [];
+      for (let k = 0; k < PAGE_NUMBERS.length; k += BATCH) {
+        loaded.push(...(await Promise.all(PAGE_NUMBERS.slice(k, k + BATCH).map((n) => getPage(n, lang)))));
+      }
       for (let i = 0; i < PAGE_NUMBERS.length; i++) {
         const n = PAGE_NUMBERS[i];
-        const page = getPage(n, lang);
+        const page = loaded[i];
         page?.blocks.forEach((b, block) => {
           const texts =
             b.type === 'quran'
@@ -120,7 +126,7 @@ function bundledDocs(): Promise<Doc[]> {
     const docs: Doc[] = [];
     for (const [book, sections] of Object.entries(BUNDLED)) {
       for (const [section, load] of Object.entries(sections)) {
-        addChapter(docs, book, Number(section), load() as Hadith[]);
+        addChapter(docs, book, Number(section), ((await load()) as Hadith[] | null) ?? []);
         await yieldToUi();
       }
     }

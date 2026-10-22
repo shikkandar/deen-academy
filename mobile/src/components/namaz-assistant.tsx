@@ -5,6 +5,7 @@ import Animated, { FadeIn } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { MaxContentWidth, Spacing } from '@/constants/theme';
+import { useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 import { useAppState } from '@/lib/app-state';
@@ -62,6 +63,7 @@ function salahTitle(s: Salah, t: T) {
  */
 export function NamazAssistant({ prayer, visible, onClose }: { prayer: PrayerName; visible: boolean; onClose: () => void }) {
   const theme = useTheme();
+  const { wide } = useLayout();
   const t = useT();
   const { settings, dndAccess, openDndSettings } = useAppState();
   const parts = useMemo(() => rakatFor(prayer, settings.madhab).parts, [prayer, settings.madhab]);
@@ -168,7 +170,8 @@ export function NamazAssistant({ prayer, visible, onClose }: { prayer: PrayerNam
   return (
     <Modal visible={visible} animationType="slide" onRequestClose={close}>
       <ThemedView style={styles.container}>
-        <SafeAreaView style={styles.safeArea}>
+        {/* Desktop: a centred column rather than a full-width page. */}
+        <SafeAreaView style={[styles.safeArea, wide && styles.safeAreaWide]}>
           <View style={styles.topBar}>
             <ThemedText type="smallBold" themeColor="textSecondary" style={styles.label}>
               {t('NAMAZ ASSISTANT · {prayer}', { prayer: t(prayer).toUpperCase() })}
@@ -329,6 +332,7 @@ export function NamazAssistant({ prayer, visible, onClose }: { prayer: PrayerNam
 const styles = StyleSheet.create({
   container: { flex: 1, flexDirection: 'row', justifyContent: 'center' },
   safeArea: { flex: 1, maxWidth: MaxContentWidth },
+  safeAreaWide: { maxWidth: 720, paddingTop: Spacing.four },
   topBar: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: Spacing.three },
   scroll: { padding: Spacing.three, paddingBottom: Spacing.six },
   block: { gap: Spacing.three },

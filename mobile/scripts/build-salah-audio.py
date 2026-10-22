@@ -29,7 +29,8 @@ HOME = os.path.expanduser('~')
 
 # name: (source, start s, end s)  — None end = to the end of the speech
 CLIPS = {
-    'iqamah': (f'{HOME}/Downloads/salah-voices/iqamah-Charon-1.wav', None, None),
+    'iqamah': (f'{HOME}/Downloads/salah-voices/iqamah-Charon-1.wav', None, None),  # Shafi: each phrase once
+    'iqamah-hanafi': (f'{HOME}/Downloads/salah-voices/iqamah-hanafi-Charon-3.wav', None, None),  # every phrase twice
     'takbir': (f'{HOME}/Downloads/salah-voices/takbir-Charon-2.wav', None, None),
     'sana': ('https://www.hisnmuslim.com/audio/ar/28.mp3', 0.66, 11.66),
     'taawwudh': ('https://everyayah.com/data/Alafasy_128kbps/audhubillah.mp3', 0.52, 6.70),

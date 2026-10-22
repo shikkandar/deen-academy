@@ -8,7 +8,8 @@ import { SpringPressable } from '@/components/motion';
 import { SearchIcon } from '@/components/search-icon';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { BottomTabInset, MaxContentWidth, Spacing, TopTabInset } from '@/constants/theme';
+import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
+import { useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 import { searchAll, warmUp, whereLabel, type Hit, type Results } from '@/lib/hadith-search';
@@ -35,6 +36,7 @@ type Row = { type: 'title'; key: string; title: string; total: number } | { type
 export default function HadithSearchScreen() {
   const theme = useTheme();
   const t = useT();
+  const layout = useLayout();
   const [q, setQ] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
   const [results, setResults] = useState<Results | null>(null);
@@ -79,8 +81,8 @@ export default function HadithSearchScreen() {
 
   return (
     <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
-        <View style={styles.top}>
+      <SafeAreaView style={[styles.safeArea, { maxWidth: layout.readingWidth }]}>
+        <View style={[styles.top, { paddingTop: layout.topInset + Spacing.two }]}>
           <View style={styles.searchRow}>
             <SpringPressable onPress={back} style={styles.back}>
               <ThemedText style={[styles.bold, { color: theme.primary }]}>‹</ThemedText>
@@ -194,7 +196,7 @@ const styles = StyleSheet.create({
   safeArea: { flex: 1, maxWidth: MaxContentWidth },
   flex: { flex: 1 },
   bold: { fontWeight: 700 },
-  top: { paddingHorizontal: Spacing.three, paddingTop: TopTabInset + Spacing.two, gap: Spacing.two, paddingBottom: Spacing.two },
+  top: { paddingHorizontal: Spacing.three, gap: Spacing.two, paddingBottom: Spacing.two },
   searchRow: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
   back: { paddingHorizontal: Spacing.one, paddingVertical: Spacing.two },
   field: {

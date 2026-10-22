@@ -13,6 +13,9 @@ import android.os.Build
  * AlarmManager so it works while the app is closed.
  *
  * We only ever turn DND off if we were the ones who turned it on, so a user's own DND is left alone.
+ * The windows are saved, so [DndBootReceiver] can set them again after a restart or an app update.
+ * "Alarms only" is used rather than "Priority", so no call (not even a starred contact) or message
+ * interrupts the namaz, while the Azan (alarm stream) and recitation (media) still play.
  */
 object DndScheduler {
   const val ACTION_ON = "expo.modules.prayerdnd.DND_ON"
@@ -21,6 +24,7 @@ object DndScheduler {
   private const val PREFS = "prayer_dnd"
   private const val KEY_COUNT = "scheduled_windows"
   private const val KEY_WE_ENABLED = "we_enabled"
+  private const val KEY_WINDOWS = "windows" // "start-end,start-end,…" in epoch ms
 
   fun hasAccess(context: Context): Boolean = notificationManager(context).isNotificationPolicyAccessGranted
 
@@ -32,7 +36,20 @@ object DndScheduler {
       if (start <= now) enable(context) else setAlarm(context, start, pendingIntent(context, ACTION_ON, i * 2))
       setAlarm(context, end, pendingIntent(context, ACTION_OFF, i * 2 + 1))
     }
-    prefs(context).edit().putInt(KEY_COUNT, windows.size).apply()
+    prefs(context).edit()
+      .putInt(KEY_COUNT, windows.size)
+      .putString(KEY_WINDOWS, windows.joinToString(",") { (a, b) -> "$a-$b" })
+      .apply()
+  }
+
+  /** Set the saved windows again (the alarms are lost when the phone restarts or the app is updated). */
+  fun restore(context: Context) {
+    val saved = prefs(context).getString(KEY_WINDOWS, null) ?: return
+    val windows = saved.split(",").mapNotNull { w ->
+      val parts = w.split("-")
+      if (parts.size == 2) parts[0].toLongOrNull()?.let { a -> parts[1].toLongOrNull()?.let { b -> a to b } } else null
+    }
+    schedule(context, windows)
   }
 
   fun cancelAll(context: Context) {
@@ -42,7 +59,7 @@ object DndScheduler {
       am.cancel(pendingIntent(context, ACTION_ON, i * 2))
       am.cancel(pendingIntent(context, ACTION_OFF, i * 2 + 1))
     }
-    prefs(context).edit().putInt(KEY_COUNT, 0).apply()
+    prefs(context).edit().putInt(KEY_COUNT, 0).remove(KEY_WINDOWS).apply()
     // If we're in the middle of a window, give the phone back its normal mode.
     disable(context)
   }
@@ -51,7 +68,7 @@ object DndScheduler {
     val nm = notificationManager(context)
     if (!nm.isNotificationPolicyAccessGranted) return
     if (nm.currentInterruptionFilter == NotificationManager.INTERRUPTION_FILTER_ALL) {
-      nm.setInterruptionFilter(NotificationManager.INTERRUPTION_FILTER_PRIORITY)
+      nm.setInterruptionFilter(NotificationManager.INTERRUPTION_FILTER_ALARMS)
       prefs(context).edit().putBoolean(KEY_WE_ENABLED, true).apply()
     }
   }
@@ -61,7 +78,7 @@ object DndScheduler {
     val prefs = prefs(context)
     if (!prefs.getBoolean(KEY_WE_ENABLED, false)) return
     if (nm.isNotificationPolicyAccessGranted &&
-      nm.currentInterruptionFilter == NotificationManager.INTERRUPTION_FILTER_PRIORITY
+      nm.currentInterruptionFilter == NotificationManager.INTERRUPTION_FILTER_ALARMS
     ) {
       nm.setInterruptionFilter(NotificationManager.INTERRUPTION_FILTER_ALL)
     }
@@ -129,6 +146,19 @@ class DndReceiver : BroadcastReceiver() {
     when (intent.action) {
       DndScheduler.ACTION_ON -> DndScheduler.enable(context)
       DndScheduler.ACTION_OFF -> DndScheduler.disable(context)
+    }
+  }
+}
+
+/** After a restart or an app update: put the prayer DND windows back. */
+class DndBootReceiver : BroadcastReceiver() {
+  override fun onReceive(context: Context, intent: Intent) {
+    when (intent.action) {
+      Intent.ACTION_BOOT_COMPLETED, Intent.ACTION_MY_PACKAGE_REPLACED -> {
+        // the window we may have been inside when the phone went off
+        DndScheduler.disable(context)
+        DndScheduler.restore(context)
+      }
     }
   }
 }

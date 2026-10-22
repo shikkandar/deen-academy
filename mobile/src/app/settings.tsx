@@ -12,7 +12,8 @@ import { WelcomeNote } from '@/components/welcome';
 import { enter, FloatingFlower, SpringPressable } from '@/components/motion';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { BottomTabInset, Fonts, MaxContentWidth, Spacing, TopTabInset } from '@/constants/theme';
+import { BottomTabInset, Fonts, MaxContentWidth, Spacing } from '@/constants/theme';
+import { useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 import { useAppState } from '@/lib/app-state';
@@ -140,9 +141,21 @@ function Section({ title, index, children }: { title: string; index: number; chi
   );
 }
 
+/** Desktop: the sections in two columns. Elsewhere the children render straight into the page, as before. */
+function SettingsColumns({ wide, children }: { wide: boolean; children: [React.ReactNode, React.ReactNode] }) {
+  if (!wide) return <>{children}</>;
+  return (
+    <View style={styles.columns}>
+      <View style={styles.column}>{children[0]}</View>
+      <View style={styles.column}>{children[1]}</View>
+    </View>
+  );
+}
+
 export default function SettingsScreen() {
   const theme = useTheme();
   const t = useT();
+  const layout = useLayout();
   const { settings, updateSettings, dndSupported, dndAccess, openDndSettings } = useAppState();
   const [editingMasjid, setEditingMasjid] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
@@ -192,8 +205,10 @@ export default function SettingsScreen() {
 
   return (
     <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
-        <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+      <SafeAreaView style={[styles.safeArea, { maxWidth: layout.maxWidth }]}>
+        <ScrollView
+          contentContainerStyle={[styles.scroll, { paddingTop: layout.topInset + Spacing.three }, layout.wide && styles.scrollWide]}
+          showsVerticalScrollIndicator={false}>
           <Animated.View entering={enter(0)} style={styles.header}>
             <ThemedText style={styles.serifTitle}>{t('Settings')}</ThemedText>
             <FloatingFlower size={30} rotate={20} period={30} />
@@ -216,6 +231,8 @@ export default function SettingsScreen() {
             </SpringPressable>
           </Animated.View>
 
+          <SettingsColumns wide={layout.wide}>
+          <>
           <Section title={t('MAKE SURE THE AZAN RINGS')} index={1}>
             <AzanChecklist />
           </Section>
@@ -345,6 +362,8 @@ export default function SettingsScreen() {
             </ThemedText>
           </Section>
 
+          </>
+          <>
           <Section title={t('QURAN REMINDER')} index={3}>
             <View style={styles.row}>
               <View style={styles.rowLabel}>
@@ -453,7 +472,8 @@ export default function SettingsScreen() {
               <Option key={m.value} label={t(m.label)} selected={settings.madhab === m.value} onPress={() => updateSettings({ madhab: m.value })} />
             ))}
           </Section>
-
+          </>
+          </SettingsColumns>
         </ScrollView>
       </SafeAreaView>
       <WelcomeNote visible={showWelcome} onClose={() => setShowWelcome(false)} />
@@ -477,10 +497,12 @@ const styles = StyleSheet.create({
   safeArea: { flex: 1, maxWidth: MaxContentWidth },
   scroll: {
     paddingHorizontal: Spacing.three + Spacing.one,
-    paddingTop: TopTabInset + Spacing.three,
     paddingBottom: BottomTabInset + Spacing.four,
     gap: Spacing.four,
   },
+  scrollWide: { paddingHorizontal: Spacing.five, paddingBottom: Spacing.five },
+  columns: { flexDirection: 'row', alignItems: 'flex-start', gap: Spacing.four },
+  column: { flex: 1, minWidth: 0, gap: Spacing.four },
   bold: { fontWeight: 700 },
   header: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
   serifTitle: { fontFamily: Fonts?.serif, fontSize: 34, lineHeight: 42, fontWeight: 600 },

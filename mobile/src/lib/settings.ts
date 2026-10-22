@@ -57,7 +57,7 @@ export const DEFAULT_SETTINGS: Settings = {
   playAzan: true,
   azanLength: 'full',
   fajrWake: true,
-  dnd: false,
+  dnd: true,
   dndMinutes: 20,
   masjid: EMPTY_MASJID,
   quranReminder: { enabled: false, time: '20:00', sound: 'iqra' },

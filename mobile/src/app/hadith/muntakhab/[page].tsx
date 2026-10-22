@@ -9,7 +9,8 @@ import { SpringPressable } from '@/components/motion';
 import { MuntakhabLangSwitch } from '@/components/muntakhab-lang';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { BottomTabInset, Fonts, MaxContentWidth, Spacing, TopTabInset } from '@/constants/theme';
+import { BottomTabInset, Fonts, MaxContentWidth, Spacing } from '@/constants/theme';
+import { useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 import { useAppState } from '@/lib/app-state';
@@ -112,6 +113,7 @@ function BlockView({ block, terms }: { block: Block; terms: string[] }) {
 export default function MuntakhabPage() {
   const theme = useTheme();
   const t = useT();
+  const layout = useLayout();
   const appLang = useAppState().settings.language;
   // From search: `lang` to read in, `b` the block to scroll to, `q` the words to mark.
   const { page: param, lang: langParam, b, q } = useLocalSearchParams<{ page: string; lang?: MLang; b?: string; q?: string }>();
@@ -140,7 +142,17 @@ export default function MuntakhabPage() {
     setLang(l);
     saveLang(l);
   };
-  const page = getPage(n, lang);
+  // The page (async: fetched on web). Keyed by page and language so a stale load never shows.
+  const [loaded, setLoaded] = useState<{ key: string; page: Awaited<ReturnType<typeof getPage>> } | null>(null);
+  const pageKey = `${n}-${lang}`;
+  useEffect(() => {
+    let live = true;
+    getPage(n, lang).then((p) => live && setLoaded({ key: pageKey, page: p }));
+    return () => {
+      live = false;
+    };
+  }, [n, lang, pageKey]);
+  const page = loaded?.key === pageKey ? loaded.page : null;
   const goTo = (p: number) => router.replace(`/hadith/muntakhab/${p}` as Href);
   const contents = () => {
     if (router.canDismiss()) router.dismissTo('/hadith/muntakhab');
@@ -149,8 +161,8 @@ export default function MuntakhabPage() {
 
   return (
     <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
-        <View style={[styles.topBar, { borderBottomColor: theme.border }]}>
+      <SafeAreaView style={[styles.safeArea, { maxWidth: layout.readingWidth }]}>
+        <View style={[styles.topBar, { paddingTop: layout.topInset + Spacing.two, borderBottomColor: theme.border }]}>
           <SpringPressable onPress={contents} style={styles.back}>
             <ThemedText type="small" style={[styles.bold, { color: theme.primary }]}>
               {t('‹ Contents')}
@@ -225,7 +237,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: Spacing.two,
     paddingHorizontal: Spacing.three,
-    paddingTop: TopTabInset + Spacing.two,
     paddingBottom: Spacing.two,
     borderBottomWidth: StyleSheet.hairlineWidth,
   },

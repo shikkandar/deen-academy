@@ -1,7 +1,7 @@
 import { useAudioPlaylist, useAudioPlaylistStatus } from 'expo-audio';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, FlatList, Modal, Pressable, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, FlatList, Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn, FadeInDown, FadeOutDown } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -9,11 +9,13 @@ import { JasmineBadge, JasmineFlower } from '@/components/jasmine-flower';
 import { enter, SpringPressable } from '@/components/motion';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { BottomTabInset, Fonts, MaxContentWidth, Spacing, TopTabInset } from '@/constants/theme';
+import { BottomTabInset, Fonts, MaxContentWidth, Spacing } from '@/constants/theme';
+import { useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 import { useAppState } from '@/lib/app-state';
-import { playExclusive, type LockScreen } from '@/lib/audio-focus';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { playExclusive, setPlaybackRate, type LockScreen } from '@/lib/audio-focus';
 import { loadQuranProgress, saveQuranProgress } from '@/lib/reading-progress';
 import {
   TAMIL_CREDIT,
@@ -86,9 +88,13 @@ function Chips<T extends string | boolean>({
   );
 }
 
+const SPEEDS = [1, 1.5, 2] as const;
+const SPEED_KEY = 'quran.speed.v1';
+
 export default function SurahScreen() {
   const theme = useTheme();
   const t = useT();
+  const layout = useLayout();
   const language = useAppState().settings.language;
   // `ayah` is set when opened from "Continue reading".
   const { surah: param, ayah: resumeAyah } = useLocalSearchParams<{ surah: string; ayah?: string }>();
@@ -206,9 +212,30 @@ export default function SurahScreen() {
     return () => sub.remove();
   }, [playlist, per]);
 
+  // Full-screen "Now Playing" view, opened from the mini player.
+  const [full, setFull] = useState(false);
+
+  // Where it was stopped, so the mini player stays and can resume from that ayah.
+  const [stoppedAt, setStoppedAt] = useState<number | null>(null);
   const stop = () => {
     playlist.pause();
+    if (current != null) setStoppedAt(current);
     setStarted(false);
+  };
+
+  // Recitation speed, remembered across surahs.
+  const [speed, setSpeed] = useState<number>(1);
+  useEffect(() => {
+    AsyncStorage.getItem(SPEED_KEY)
+      .then((v) => v && setSpeed(Number(v) || 1))
+      .catch(() => {});
+  }, []);
+  useEffect(() => {
+    setPlaybackRate(playlist, speed);
+  }, [playlist, speed, status.currentIndex]);
+  const chooseSpeed = (v: number) => {
+    setSpeed(v);
+    AsyncStorage.setItem(SPEED_KEY, String(v)).catch(() => {});
   };
 
   const changePrefs = (patch: Partial<AudioPrefs>) => {
@@ -269,6 +296,7 @@ export default function SurahScreen() {
   const playAt = (i: number) => {
     if (!urls) return;
     setStarted(true);
+    setStoppedAt(null);
     lastAyah.current = i;
     listRef.current?.scrollToIndex({ index: i, viewPosition: 0.25, animated: true });
     playlist.skipTo(i * per);
@@ -286,14 +314,15 @@ export default function SurahScreen() {
 
   return (
     <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
+      {/* Desktop: a comfortable reading width; the mini player sits at the bottom of this column. */}
+      <SafeAreaView style={[styles.safeArea, { maxWidth: layout.readingWidth }]}>
         <FlatList
           ref={listRef}
           data={surah?.ayahs ?? []}
           onViewableItemsChanged={onViewable}
           viewabilityConfig={viewability}
           keyExtractor={(a) => String(a.number)}
-          contentContainerStyle={styles.list}
+          contentContainerStyle={[styles.list, { paddingTop: layout.topInset + Spacing.two }]}
           showsVerticalScrollIndicator={false}
           onScrollToIndexFailed={({ index, averageItemLength }) => {
             // Far ayahs aren't rendered yet: jump close by the average height, then land exactly.
@@ -414,37 +443,152 @@ export default function SurahScreen() {
           }}
         />
 
-        {/* Mini player while reciting */}
-        {surah && current !== null && (
+        {/* Mini player while reciting, and after Stop (to resume from that ayah) */}
+        {surah && (current !== null || stoppedAt !== null) && (
           <Animated.View
             entering={FadeInDown.springify().damping(18)}
             exiting={FadeOutDown}
             style={[styles.player, { backgroundColor: theme.hero }]}>
-            <View style={styles.flex}>
-              <ThemedText type="smallBold" style={{ color: theme.onHero }}>
-                {t('{surah} · Ayah {ayah}', { surah: surah.englishName, ayah: surah.ayahs[current].numberInSurah })}
-              </ThemedText>
-              <ThemedText type="small" style={{ color: theme.onHeroMuted }}>
-                {reciterName(editions[part] ?? '', t)}
-              </ThemedText>
+            <View style={styles.playerTop}>
+              <Pressable onPress={() => setFull(true)} style={styles.flex}>
+                <ThemedText type="smallBold" style={{ color: theme.onHero }}>
+                  {t('{surah} · Ayah {ayah}', { surah: surah.englishName, ayah: surah.ayahs[current ?? stoppedAt ?? 0].numberInSurah })}  ⌃
+                </ThemedText>
+                <ThemedText type="small" style={{ color: theme.onHeroMuted }}>
+                  {current === null ? t('Stopped · tap ▶ to resume') : reciterName(editions[part] ?? '', t)}
+                </ThemedText>
+              </Pressable>
+              <SpringPressable
+                accessibilityLabel={t('Audio and language')}
+                onPress={() => setSheet('options')}
+                style={[styles.playerIcon, { backgroundColor: 'rgba(255, 253, 247, 0.14)' }]}>
+                <ThemedText style={{ color: theme.onHero }}>🎧</ThemedText>
+              </SpringPressable>
+              <SpringPressable
+                onPress={() => (current === null ? playAt(stoppedAt ?? 0) : toggle(current))}
+                style={[styles.playerBtn, { backgroundColor: theme.onHero }]}>
+                <ThemedText style={[styles.playIcon, { color: theme.hero }]}>{current !== null && playing ? '❚❚' : '▶'}</ThemedText>
+              </SpringPressable>
+              <SpringPressable onPress={current === null ? () => setStoppedAt(null) : stop} style={styles.playerStop}>
+                <ThemedText type="small" style={[styles.bold, { color: theme.onHero }]}>
+                  {current === null ? t('Close') : t('Stop')}
+                </ThemedText>
+              </SpringPressable>
             </View>
-            <SpringPressable onPress={() => toggle(current)} style={[styles.playerBtn, { backgroundColor: theme.onHero }]}>
-              <ThemedText style={[styles.playIcon, { color: theme.hero }]}>{playing ? '❚❚' : '▶'}</ThemedText>
-            </SpringPressable>
-            <SpringPressable onPress={stop} style={styles.playerStop}>
-              <ThemedText type="small" style={[styles.bold, { color: theme.onHero }]}>
-                {t('Stop')}
-              </ThemedText>
-            </SpringPressable>
+            <View style={styles.speedRow}>
+              {SPEEDS.map((v) => (
+                <SpringPressable
+                  key={v}
+                  pressedScale={0.92}
+                  onPress={() => chooseSpeed(v)}
+                  style={[styles.speedChip, { backgroundColor: speed === v ? theme.onHero : 'rgba(255, 253, 247, 0.14)' }]}>
+                  <ThemedText type="small" style={[styles.bold, { color: speed === v ? theme.hero : theme.onHero }]}>
+                    {v}x
+                  </ThemedText>
+                </SpringPressable>
+              ))}
+            </View>
           </Animated.View>
         )}
       </SafeAreaView>
 
+      {/* Now Playing: the whole ayah, big, following the recitation, with previous / next. */}
+      {surah && (
+        <Modal visible={full} animationType="slide" onRequestClose={() => setFull(false)}>
+          <ThemedView style={[styles.full, { backgroundColor: theme.hero }]}>
+            <SafeAreaView style={[styles.fullSafe, layout.wide && styles.fullSafeWide]}>
+              {(() => {
+                const i = current ?? stoppedAt ?? 0;
+                const a = surah.ayahs[i];
+                const progress = current !== null && status.duration > 0 ? Math.min(1, status.currentTime / status.duration) : 0;
+                const go = (to: number) => playAt(Math.min(Math.max(to, 0), surah.ayahs.length - 1));
+                return (
+                  <>
+                    <View style={styles.fullTop}>
+                      <SpringPressable onPress={() => setFull(false)} style={styles.fullClose}>
+                        <ThemedText style={[styles.fullCloseIcon, { color: theme.onHero }]}>⌄</ThemedText>
+                      </SpringPressable>
+                      <View style={styles.fullTitle}>
+                        <ThemedText type="small" style={{ color: theme.onHeroMuted }}>
+                          {t('NOW PLAYING')}
+                        </ThemedText>
+                        <ThemedText type="smallBold" style={{ color: theme.onHero }} numberOfLines={1}>
+                          {surah.englishName} · {surah.name}
+                        </ThemedText>
+                      </View>
+                      <SpringPressable onPress={() => setSheet('options')} style={styles.fullClose}>
+                        <ThemedText style={{ color: theme.onHero, fontSize: 20 }}>🎧</ThemedText>
+                      </SpringPressable>
+                    </View>
+
+                    <ScrollView contentContainerStyle={styles.fullText} showsVerticalScrollIndicator={false}>
+                      <Animated.View key={i} entering={FadeIn.duration(350)} style={styles.fullAyah}>
+                        <JasmineBadge value={a.numberInSurah} size={52} active />
+                        <ThemedText style={[styles.fullArabic, { color: theme.onHero }]}>{a.arabic}</ThemedText>
+                        <ThemedText style={[styles.fullMeaning, { color: theme.onHeroMuted }]}>
+                          {showTamil && a.tamil ? a.tamil : a.english}
+                        </ThemedText>
+                      </Animated.View>
+                    </ScrollView>
+
+                    <View style={styles.fullBottom}>
+                      <View style={[styles.track, { backgroundColor: 'rgba(255, 253, 247, 0.2)' }]}>
+                        <View style={[styles.trackFill, { width: `${progress * 100}%`, backgroundColor: theme.onHero }]} />
+                      </View>
+                      <View style={styles.trackLabels}>
+                        <ThemedText type="small" style={{ color: theme.onHeroMuted }}>
+                          {t('Ayah {n} of {total}', { n: a.numberInSurah, total: surah.numberOfAyahs })}
+                        </ThemedText>
+                        <ThemedText type="small" style={{ color: theme.onHeroMuted }} numberOfLines={1}>
+                          {current === null ? t('Stopped') : reciterName(editions[part] ?? '', t)}
+                        </ThemedText>
+                      </View>
+
+                      <View style={styles.fullControls}>
+                        <SpringPressable accessibilityLabel={t('Previous ayah')} onPress={() => go(i - 1)} style={styles.fullSkip}>
+                          <ThemedText style={[styles.fullSkipIcon, { color: theme.onHero }]}>⏮</ThemedText>
+                        </SpringPressable>
+                        <SpringPressable
+                          onPress={() => (current === null ? playAt(i) : toggle(current))}
+                          style={[styles.fullPlay, { backgroundColor: theme.onHero }]}>
+                          <ThemedText style={[styles.fullPlayIcon, { color: theme.hero }]}>
+                            {current !== null && playing ? '❚❚' : '▶'}
+                          </ThemedText>
+                        </SpringPressable>
+                        <SpringPressable accessibilityLabel={t('Next ayah')} onPress={() => go(i + 1)} style={styles.fullSkip}>
+                          <ThemedText style={[styles.fullSkipIcon, { color: theme.onHero }]}>⏭</ThemedText>
+                        </SpringPressable>
+                      </View>
+
+                      <View style={[styles.speedRow, styles.centerRow]}>
+                        {SPEEDS.map((v) => (
+                          <SpringPressable
+                            key={v}
+                            pressedScale={0.92}
+                            onPress={() => chooseSpeed(v)}
+                            style={[styles.speedChip, { backgroundColor: speed === v ? theme.onHero : 'rgba(255, 253, 247, 0.14)' }]}>
+                            <ThemedText type="small" style={[styles.bold, { color: speed === v ? theme.hero : theme.onHero }]}>
+                              {v}x
+                            </ThemedText>
+                          </SpringPressable>
+                        ))}
+                      </View>
+                    </View>
+                  </>
+                );
+              })()}
+            </SafeAreaView>
+          </ThemedView>
+        </Modal>
+      )}
+
       {/* Audio and language options; the reciter list opens inside the same sheet. */}
       <Modal visible={!!sheet} transparent animationType="fade" onRequestClose={() => setSheet(null)}>
-        <Pressable style={styles.backdrop} onPress={() => setSheet(null)}>
-          <Pressable onPress={() => {}}>
-            <Animated.View entering={FadeInDown.springify().damping(18)} style={[styles.sheet, { backgroundColor: theme.background }]}>
+        <Pressable style={[styles.backdrop, layout.wide && styles.backdropWide]} onPress={() => setSheet(null)}>
+          <Pressable onPress={() => {}} style={layout.wide && styles.sheetWrapWide}>
+            <Animated.View
+              entering={FadeInDown.springify().damping(18)}
+              style={[styles.sheet, layout.wide && styles.sheetWide, { backgroundColor: theme.background }]}>
               <View style={[styles.grabber, { backgroundColor: theme.border }]} />
               {sheet === 'reciters' ? (
                 <>
@@ -547,7 +691,6 @@ const styles = StyleSheet.create({
   bold: { fontWeight: 700 },
   list: {
     paddingHorizontal: Spacing.three + Spacing.one,
-    paddingTop: TopTabInset + Spacing.two,
     paddingBottom: BottomTabInset + 110,
     gap: Spacing.three,
   },
@@ -583,13 +726,36 @@ const styles = StyleSheet.create({
     right: Spacing.three,
     bottom: BottomTabInset + Spacing.two,
     borderRadius: 24,
-    flexDirection: 'row',
-    alignItems: 'center',
     gap: Spacing.two,
     paddingVertical: Spacing.two + Spacing.one,
     paddingLeft: Spacing.four,
     paddingRight: Spacing.two,
   },
+  playerTop: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
+  playerIcon: { width: 36, height: 36, borderRadius: 18, alignItems: 'center', justifyContent: 'center' },
+  speedRow: { flexDirection: 'row', gap: Spacing.two },
+  speedChip: { borderRadius: 999, paddingVertical: Spacing.one, paddingHorizontal: Spacing.three },
+  centerRow: { justifyContent: 'center' },
+  full: { flex: 1, flexDirection: 'row', justifyContent: 'center' },
+  fullSafe: { flex: 1, maxWidth: MaxContentWidth, paddingHorizontal: Spacing.four },
+  fullSafeWide: { maxWidth: 760, paddingVertical: Spacing.three },
+  fullTop: { flexDirection: 'row', alignItems: 'center', paddingVertical: Spacing.three, gap: Spacing.two },
+  fullClose: { width: 44, height: 44, alignItems: 'center', justifyContent: 'center' },
+  fullCloseIcon: { fontSize: 30, lineHeight: 34 },
+  fullTitle: { flex: 1, alignItems: 'center' },
+  fullText: { flexGrow: 1, justifyContent: 'center', paddingVertical: Spacing.four },
+  fullAyah: { alignItems: 'center', gap: Spacing.four },
+  fullArabic: { fontSize: 32, lineHeight: 62, textAlign: 'center', writingDirection: 'rtl' },
+  fullMeaning: { fontSize: 17, lineHeight: 27, textAlign: 'center' },
+  fullBottom: { gap: Spacing.three, paddingBottom: Spacing.five },
+  track: { height: 4, borderRadius: 2, overflow: 'hidden' },
+  trackFill: { height: 4, borderRadius: 2 },
+  trackLabels: { flexDirection: 'row', justifyContent: 'space-between', gap: Spacing.three },
+  fullControls: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: Spacing.five },
+  fullSkip: { width: 56, height: 56, alignItems: 'center', justifyContent: 'center' },
+  fullSkipIcon: { fontSize: 30 },
+  fullPlay: { width: 76, height: 76, borderRadius: 38, alignItems: 'center', justifyContent: 'center' },
+  fullPlayIcon: { fontSize: 24, fontWeight: 800 },
   playerBtn: { width: 40, height: 40, borderRadius: 20, alignItems: 'center', justifyContent: 'center' },
   playerStop: { paddingHorizontal: Spacing.three, paddingVertical: Spacing.two },
   audioBox: { borderWidth: 1, borderRadius: 24, padding: Spacing.three, gap: Spacing.two },
@@ -601,6 +767,10 @@ const styles = StyleSheet.create({
   mode: { borderRadius: 999, paddingVertical: 6, paddingHorizontal: 12 },
   reciterRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingTop: Spacing.two },
   backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.45)', justifyContent: 'flex-end' },
+  // Desktop: the options sheet becomes a centred dialog.
+  backdropWide: { justifyContent: 'center', alignItems: 'center', padding: Spacing.four },
+  sheetWrapWide: { width: '100%', maxWidth: 560 },
+  sheetWide: { borderRadius: 28, paddingBottom: Spacing.four },
   sheet: { borderTopLeftRadius: 28, borderTopRightRadius: 28, padding: Spacing.four, paddingBottom: Spacing.six, gap: Spacing.one },
   reciterOption: {
     flexDirection: 'row',

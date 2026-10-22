@@ -5,6 +5,7 @@ import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Fonts, Spacing } from '@/constants/theme';
+import { useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 import { pickBoardPhoto, scanBoard } from '@/lib/masjid-scan';
@@ -84,6 +85,7 @@ type Props = {
 
 export function MasjidEditor({ masjid, onClose, onSave }: Props) {
   const theme = useTheme();
+  const { wide } = useLayout();
   const t = useT();
   const [draft, setDraft] = useState(masjid);
   const [scanning, setScanning] = useState(false);
@@ -130,7 +132,7 @@ export function MasjidEditor({ masjid, onClose, onSave }: Props) {
     <Modal visible animationType="slide" presentationStyle="pageSheet" onRequestClose={onClose}>
       <ThemedView style={styles.flex}>
         <SafeAreaView style={styles.flex}>
-          <ScrollView contentContainerStyle={styles.scroll} keyboardShouldPersistTaps="handled">
+          <ScrollView contentContainerStyle={[styles.scroll, wide && styles.scrollWide]} keyboardShouldPersistTaps="handled">
             <Animated.View entering={FadeInDown.springify().damping(18)} style={styles.header}>
               <View style={styles.flex}>
                 <ThemedText style={styles.title}>{t('My Masjid')}</ThemedText>
@@ -240,6 +242,8 @@ const styles = StyleSheet.create({
   flex: { flex: 1 },
   bold: { fontWeight: 700 },
   scroll: { padding: Spacing.three + Spacing.one, gap: Spacing.three, paddingBottom: Spacing.six },
+  // Desktop: a centred column.
+  scrollWide: { width: '100%', maxWidth: 720, alignSelf: 'center', paddingTop: Spacing.five },
   header: { flexDirection: 'row', alignItems: 'center', gap: Spacing.three },
   title: { fontFamily: Fonts?.serif, fontSize: 30, lineHeight: 38, fontWeight: 600 },
   nameInput: { borderWidth: 1, borderRadius: 16, paddingHorizontal: Spacing.three, paddingVertical: Spacing.three, fontSize: 16 },

@@ -14,8 +14,8 @@ const CHANNEL_REMINDER = 'prayer-reminder';
 // Fajr is a wake-up alarm: its own Azan, played on the alarm stream so it sounds in silent mode and DND.
 // Full and short Azans need separate channels, since a channel's sound can't change once created.
 const AZAN = {
-  full: { channel: 'azan-v2', sound: 'azan.wav' },
-  short: { channel: 'azan-short-v2', sound: 'azan_short.wav' },
+  full: { channel: 'azan-v3', sound: 'azan.wav' },
+  short: { channel: 'azan-short-v3', sound: 'azan_short.wav' },
 } as const;
 // Daily Quran reading reminder — one channel per sound.
 const QURAN_REMINDER = {
@@ -64,6 +64,9 @@ async function ensureChannels() {
       name: length === 'full' ? 'Azan' : 'Azan (short)',
       importance: Notifications.AndroidImportance.MAX,
       sound,
+      bypassDnd: true,
+      audioAttributes: { usage: Notifications.AndroidAudioUsage.ALARM },
+      lockscreenVisibility: Notifications.AndroidNotificationVisibility.PUBLIC,
     });
   }
   for (const { channel, sound, name } of Object.values(QURAN_REMINDER)) {
@@ -87,6 +90,8 @@ async function ensureChannels() {
   await Notifications.deleteNotificationChannelAsync('fajr-wake-v2'); // old alarm, 6 times over
   await Notifications.deleteNotificationChannelAsync('azan-fajr-v1'); // old Fajr Azan recording
   await Notifications.deleteNotificationChannelAsync('azan-fajr-short-v1');
+  await Notifications.deleteNotificationChannelAsync('azan-v2'); // was silent on silent/vibrate and in DND
+  await Notifications.deleteNotificationChannelAsync('azan-short-v2');
   await Notifications.deleteNotificationChannelAsync('azan-v1'); // old Azan recordings (now the same as Fajr's)
   await Notifications.deleteNotificationChannelAsync('azan-short-v1');
   await Notifications.deleteNotificationChannelAsync('quran-reminder-azan');

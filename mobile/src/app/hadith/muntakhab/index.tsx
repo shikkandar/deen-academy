@@ -9,7 +9,8 @@ import { enter, FloatingFlower, SpringPressable } from '@/components/motion';
 import { MuntakhabLangSwitch } from '@/components/muntakhab-lang';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { BottomTabInset, Fonts, MaxContentWidth, Spacing, TopTabInset } from '@/constants/theme';
+import { BottomTabInset, Fonts, MaxContentWidth, Spacing } from '@/constants/theme';
+import { useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 import { useAppState } from '@/lib/app-state';
@@ -22,6 +23,7 @@ const pageHref = (n: number) => `/hadith/muntakhab/${n}` as Href;
 export default function MuntakhabContents() {
   const theme = useTheme();
   const t = useT();
+  const layout = useLayout();
   // Until she picks one here, Muntakhab follows the app language.
   const appLang = useAppState().settings.language;
   const [lang, setLang] = useState<MLang>(appLang);
@@ -44,8 +46,8 @@ export default function MuntakhabContents() {
 
   return (
     <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
-        <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+      <SafeAreaView style={[styles.safeArea, { maxWidth: layout.readingWidth }]}>
+        <ScrollView contentContainerStyle={[styles.scroll, { paddingTop: layout.topInset + Spacing.two }]} showsVerticalScrollIndicator={false}>
           <View style={styles.topRow}>
             <SpringPressable onPress={back} style={styles.back}>
               <ThemedText type="small" style={[styles.bold, { color: theme.primary }]}>
@@ -126,7 +128,6 @@ const styles = StyleSheet.create({
   safeArea: { flex: 1, maxWidth: MaxContentWidth },
   scroll: {
     paddingHorizontal: Spacing.three + Spacing.one,
-    paddingTop: TopTabInset + Spacing.two,
     paddingBottom: BottomTabInset + Spacing.four,
     gap: Spacing.three,
   },

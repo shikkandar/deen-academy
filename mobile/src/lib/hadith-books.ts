@@ -69,7 +69,7 @@ export function isOurTamil(book: string) {
 /** Arabic + English (+ Tamil where available) hadith of one chapter, cached on the phone after the first load. */
 export async function getChapter(book: string, section: number): Promise<Hadith[]> {
   const bundled = BUNDLED[book]?.[section];
-  if (bundled) return bundled() as Hadith[];
+  if (bundled) return (await bundled()) as Hadith[]; // fetched on web, bundled on phones
 
   const key = `hadith.chapter.v2.${book}.${section}`;
   try {

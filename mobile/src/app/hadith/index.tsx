@@ -9,7 +9,8 @@ import { enter, FloatingFlower, SpringPressable } from '@/components/motion';
 import { SearchIcon } from '@/components/search-icon';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { BottomTabInset, Fonts, MaxContentWidth, Spacing, TopTabInset } from '@/constants/theme';
+import { BottomTabInset, Fonts, MaxContentWidth, Spacing } from '@/constants/theme';
+import { gridItemStyle, useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 import { BOOKS, hasTamil, type Book } from '@/lib/hadith-books';
@@ -23,14 +24,20 @@ function openBook(book: Book) {
 export default function HadithBooksScreen() {
   const theme = useTheme();
   const t = useT();
+  const layout = useLayout();
+  const cell = gridItemStyle(layout.columns, Spacing.two);
 
   return (
     <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
+      <SafeAreaView style={[styles.safeArea, { maxWidth: layout.maxWidth }]}>
         <FlatList
+          // On desktop the books sit in a 2–3 column grid (the list remounts when the column count changes).
+          key={`cols-${layout.columns}`}
+          numColumns={layout.columns}
+          columnWrapperStyle={layout.columns > 1 ? styles.gridRow : undefined}
           data={BOOKS}
           keyExtractor={(b) => b.id}
-          contentContainerStyle={styles.list}
+          contentContainerStyle={[styles.list, { paddingTop: layout.topInset + Spacing.three }, layout.wide && styles.listWide]}
           showsVerticalScrollIndicator={false}
           ListHeaderComponent={
             <View style={styles.headerBlock}>
@@ -68,11 +75,11 @@ export default function HadithBooksScreen() {
             </View>
           }
           renderItem={({ item: b, index }) => (
-            <Animated.View entering={enter(1 + index)}>
+            <Animated.View entering={enter(1 + index)} style={cell}>
               <SpringPressable
                 pressedScale={0.98}
                 onPress={() => openBook(b)}
-                style={[styles.row, { backgroundColor: theme.backgroundElement, borderColor: theme.border }]}>
+                style={[styles.row, layout.wide && styles.rowWide, { backgroundColor: theme.backgroundElement, borderColor: theme.border }]}>
                 <JasmineBadge value={index + 1} size={44} />
                 <View style={styles.rowMain}>
                   <ThemedText style={styles.bold}>{b.name}</ThemedText>
@@ -102,10 +109,12 @@ const styles = StyleSheet.create({
   safeArea: { flex: 1, maxWidth: MaxContentWidth },
   list: {
     paddingHorizontal: Spacing.three + Spacing.one,
-    paddingTop: TopTabInset + Spacing.three,
     paddingBottom: BottomTabInset + Spacing.four,
     gap: Spacing.two,
   },
+  listWide: { paddingHorizontal: Spacing.five, paddingBottom: Spacing.five },
+  gridRow: { gap: Spacing.two },
+  rowWide: { flex: 1, cursor: 'pointer' },
   headerBlock: { gap: Spacing.three, paddingBottom: Spacing.two },
   header: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
   title: { fontFamily: Fonts?.serif, fontSize: 34, lineHeight: 42, fontWeight: 600 },

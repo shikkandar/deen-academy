@@ -87,3 +87,9 @@ export const Spacing = {
 export const TopTabInset = Platform.select({ web: 56 }) ?? 0;
 export const BottomTabInset =Platform.select({ ios: 50, android: 80 }) ?? 0;
 export const MaxContentWidth = 800;
+
+// Desktop web (see useLayout): a left sidebar replaces the top bar and pages use the extra width.
+export const WideBreakpoint = 1024;
+export const SidebarWidth = 248;
+export const WideMaxContentWidth = 1240;
+export const ReadingWidth = 900;

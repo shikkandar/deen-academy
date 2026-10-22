@@ -3,6 +3,17 @@ import type { Language } from './settings';
 // App text in English and Tamil. The English text is the key; anything missing in Tamil falls back to English.
 // `{name}` placeholders are filled from `vars`.
 const TA: Record<string, string> = {
+  'Dismiss': 'மறை',
+  'Download': 'பதிவிறக்கு',
+  'Deen Academy for Android — Azan alarms, Qibla camera and offline Quran & Hadith work best in the app.': 'Android-க்கான Deen Academy — பாங்கு அலாரம், கிப்லா கேமரா, இணையமில்லாமல் குர்ஆன் & ஹதீஸ் ஆகியவை ஆப்பில் சிறப்பாக வேலை செய்யும்.',
+  'Android · v{version} · free': 'Android · v{version} · இலவசம்',
+  'Get the Android app': 'Android ஆப்பைப் பெறுங்கள்',
+  'Next ayah': 'அடுத்த வசனம்',
+  'Previous ayah': 'முந்தைய வசனம்',
+  'Stopped': 'நிறுத்தப்பட்டது',
+  'Ayah {n} of {total}': 'வசனம் {n} / {total}',
+  'NOW PLAYING': 'இப்போது ஒலிப்பது',
+  'Stopped · tap ▶ to resume': 'நிறுத்தப்பட்டது · தொடர ▶ அழுத்தவும்',
   // Tabs and titles
   Prayers: 'தொழுகை',
   Quran: 'குர்ஆன்',
@@ -303,6 +314,7 @@ const TA: Record<string, string> = {
   'Jamaat dua': 'ஜமாஅத் துஆ',
   'Time for your dua': 'உங்கள் துஆ நேரம்',
   'The Iqamah: the prayer is about to begin. Stand in your row.': 'இகாமத்: தொழுகை தொடங்கப் போகிறது. உங்கள் வரிசையில் நில்லுங்கள்.',
+  'The Iqamah (Hanafi): the prayer is about to begin. Stand in your row.': 'இகாமத் (ஹனஃபீ): தொழுகை தொடங்கப் போகிறது. உங்கள் வரிசையில் நில்லுங்கள்.',
   'Allah is the Greatest': 'அல்லாஹ் மிகப் பெரியவன்',
   'Glory be to You, O Allah, and praise. Blessed is Your name, exalted Your majesty; there is no god but You.':
     'யா அல்லாஹ், நீ தூயவன், புகழ் அனைத்தும் உனக்கே. உன் பெயர் அருள் நிறைந்தது, உன் மகத்துவம் உயர்ந்தது; உன்னைத் தவிர வேறு இறைவன் இல்லை.',

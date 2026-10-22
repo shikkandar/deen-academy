@@ -8,7 +8,8 @@ import { JasmineBadge } from '@/components/jasmine-flower';
 import { enter, SpringPressable } from '@/components/motion';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { BottomTabInset, Fonts, MaxContentWidth, Spacing, TopTabInset } from '@/constants/theme';
+import { BottomTabInset, Fonts, MaxContentWidth, Spacing } from '@/constants/theme';
+import { useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 import { useAppState } from '@/lib/app-state';
@@ -18,6 +19,7 @@ import { saveHadithProgress } from '@/lib/reading-progress';
 export default function HadithChapterScreen() {
   const theme = useTheme();
   const t = useT();
+  const layout = useLayout();
   const tamil = useAppState().settings.language === 'ta';
   // `at` is set when opened from "Continue reading".
   const { book: bookId, section, at } = useLocalSearchParams<{ book: string; section: string; at?: string }>();
@@ -84,7 +86,7 @@ export default function HadithChapterScreen() {
 
   return (
     <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
+      <SafeAreaView style={[styles.safeArea, { maxWidth: layout.readingWidth }]}>
         <FlatList
           ref={listRef}
           data={hadiths ?? []}
@@ -94,7 +96,7 @@ export default function HadithChapterScreen() {
             setTimeout(() => listRef.current?.scrollToIndex({ index, viewPosition: 0.05, animated: true }), 250)
           }
           keyExtractor={(h) => String(h.number)}
-          contentContainerStyle={styles.list}
+          contentContainerStyle={[styles.list, { paddingTop: layout.topInset + Spacing.two }]}
           showsVerticalScrollIndicator={false}
           ListHeaderComponent={
             <View style={styles.headerBlock}>
@@ -194,7 +196,6 @@ const styles = StyleSheet.create({
   credit: { textAlign: 'center' },
   list: {
     paddingHorizontal: Spacing.three + Spacing.one,
-    paddingTop: TopTabInset + Spacing.two,
     paddingBottom: BottomTabInset + Spacing.four,
     gap: Spacing.three,
   },

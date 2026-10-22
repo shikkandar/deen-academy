@@ -22,6 +22,7 @@ type Clip = keyof typeof clipSeconds;
 
 const CLIPS: Partial<Record<Clip, number>> = {
   iqamah: require('@/assets/sounds/salah/iqamah.m4a'),
+  'iqamah-hanafi': require('@/assets/sounds/salah/iqamah-hanafi.m4a'),
   takbir: require('@/assets/sounds/salah/takbir.m4a'),
   sana: require('@/assets/sounds/salah/sana.m4a'),
   taawwudh: require('@/assets/sounds/salah/taawwudh.m4a'),
@@ -49,6 +50,12 @@ const TEXT: Record<string, { arabic: string; transliteration: string; english: s
       'اللهُ أَكْبَرُ اللهُ أَكْبَرُ، أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللهُ، أَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللهِ، حَيَّ عَلَى الصَّلَاةِ، حَيَّ عَلَى الْفَلَاحِ، قَدْ قَامَتِ الصَّلَاةُ، قَدْ قَامَتِ الصَّلَاةُ، اللهُ أَكْبَرُ اللهُ أَكْبَرُ، لَا إِلَٰهَ إِلَّا اللهُ',
     transliteration: 'Allahu Akbar… Hayya ‘alas-salah, hayya ‘alal-falah. Qad qamatis-salah, qad qamatis-salah…',
     english: 'The Iqamah: the prayer is about to begin. Stand in your row.',
+  },
+  'iqamah-hanafi': {
+    arabic:
+      'اللهُ أَكْبَرُ اللهُ أَكْبَرُ، اللهُ أَكْبَرُ اللهُ أَكْبَرُ، أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللهُ ×٢، أَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللهِ ×٢، حَيَّ عَلَى الصَّلَاةِ ×٢، حَيَّ عَلَى الْفَلَاحِ ×٢، قَدْ قَامَتِ الصَّلَاةُ ×٢، اللهُ أَكْبَرُ اللهُ أَكْبَرُ، لَا إِلَٰهَ إِلَّا اللهُ',
+    transliteration: 'Allahu Akbar ×4… every phrase twice… Qad qamatis-salah ×2… La ilaha illallah',
+    english: 'The Iqamah (Hanafi): the prayer is about to begin. Stand in your row.',
   },
   takbir: { arabic: 'اللهُ أَكْبَر', transliteration: 'Allahu Akbar', english: 'Allah is the Greatest' },
   sana: {
@@ -200,7 +207,8 @@ export function buildSalah(o: SalahOptions): Salah {
   const surahIn = (r: number) => o.kind !== 'Fard' || r <= 2;
 
   // The Iqamah calls the Fard; Sunnah and Nafl start straight with the takbir.
-  if (o.kind === 'Fard') steps.push(clip('iqamah', 'standing', null, 'Iqamah'));
+  // Hanafi: every phrase of the Iqamah twice; Shafi: once.
+  if (o.kind === 'Fard') steps.push(clip(o.madhab === 'Hanafi' ? 'iqamah-hanafi' : 'iqamah', 'standing', null, 'Iqamah'));
 
   for (let r = 1; r <= o.rakats; r++) {
     const start = steps.length;

@@ -8,7 +8,8 @@ import { JasmineBadge } from '@/components/jasmine-flower';
 import { enter, SpringPressable } from '@/components/motion';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { BottomTabInset, Fonts, MaxContentWidth, Spacing, TopTabInset } from '@/constants/theme';
+import { BottomTabInset, Fonts, MaxContentWidth, Spacing } from '@/constants/theme';
+import { gridItemStyle, useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 import { getBook } from '@/lib/hadith-books';
@@ -19,6 +20,8 @@ export default function HadithChaptersScreen() {
   const { book: bookId } = useLocalSearchParams<{ book: string }>();
   const book = getBook(bookId);
   const [query, setQuery] = useState('');
+  const layout = useLayout();
+  const cell = gridItemStyle(layout.columns, Spacing.two);
 
   const shown = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -30,11 +33,15 @@ export default function HadithChaptersScreen() {
 
   return (
     <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
+      <SafeAreaView style={[styles.safeArea, { maxWidth: layout.maxWidth }]}>
         <FlatList
+          // On desktop the chapters sit in a 2–3 column grid (the list remounts when the column count changes).
+          key={`cols-${layout.columns}`}
+          numColumns={layout.columns}
+          columnWrapperStyle={layout.columns > 1 ? styles.gridRow : undefined}
           data={shown}
           keyExtractor={(s) => String(s.id)}
-          contentContainerStyle={styles.list}
+          contentContainerStyle={[styles.list, { paddingTop: layout.topInset + Spacing.two }, layout.wide && styles.listWide]}
           showsVerticalScrollIndicator={false}
           keyboardShouldPersistTaps="handled"
           ListHeaderComponent={
@@ -62,11 +69,11 @@ export default function HadithChaptersScreen() {
             </View>
           }
           renderItem={({ item: s, index }) => (
-            <Animated.View entering={index < 12 ? enter(1 + index) : undefined}>
+            <Animated.View entering={index < 12 ? enter(1 + index) : undefined} style={cell}>
               <SpringPressable
                 pressedScale={0.98}
                 onPress={() => router.push(`/hadith/${bookId}/${s.id}`)}
-                style={[styles.row, { backgroundColor: theme.backgroundElement, borderColor: theme.border }]}>
+                style={[styles.row, layout.wide && styles.rowWide, { backgroundColor: theme.backgroundElement, borderColor: theme.border }]}>
                 <JasmineBadge value={s.id} size={40} />
                 <View style={styles.rowMain}>
                   <ThemedText style={styles.bold}>{s.name}</ThemedText>
@@ -88,10 +95,12 @@ const styles = StyleSheet.create({
   safeArea: { flex: 1, maxWidth: MaxContentWidth },
   list: {
     paddingHorizontal: Spacing.three + Spacing.one,
-    paddingTop: TopTabInset + Spacing.two,
     paddingBottom: BottomTabInset + Spacing.four,
     gap: Spacing.two,
   },
+  listWide: { paddingHorizontal: Spacing.five, paddingBottom: Spacing.five },
+  gridRow: { gap: Spacing.two },
+  rowWide: { flex: 1, cursor: 'pointer' },
   headerBlock: { gap: Spacing.three, paddingBottom: Spacing.two },
   back: { alignSelf: 'flex-start', paddingVertical: Spacing.two },
   title: { fontFamily: Fonts?.serif, fontSize: 28, lineHeight: 36, fontWeight: 600 },
