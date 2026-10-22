@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- Lets the app switch Do Not Disturb on/off once the user grants DND access in system settings. -->
+  <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+  <!-- Asks to be left out of battery optimisation, so the Azan alarms aren't delayed or dropped. -->
+  <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+  <application>
+    <receiver android:name="expo.modules.prayerdnd.DndReceiver" android:exported="false" />
+  </application>
+</manifest>

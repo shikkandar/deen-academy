@@ -1,0 +1,2379 @@
+{
+  "title": "Hadith on Namaz (Salah)",
+  "description": "Complete chapters 'Times of the Prayers' and 'Friday Prayer' from Sahih al-Bukhari, Arabic text with English translation.",
+  "source": {
+    "dataset": "fawazahmed0/hadith-api (public domain, The Unlicense)",
+    "url": "https://github.com/fawazahmed0/hadith-api",
+    "editions": [
+      "eng-bukhari",
+      "ara-bukhari"
+    ]
+  },
+  "count": 147,
+  "hadith": [
+    {
+      "id": "bukhari-522",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 522,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 1,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ، قَالَ قَرَأْتُ عَلَى مَالِكٍ عَنِ ابْنِ شِهَابٍ، أَنَّ عُمَرَ بْنَ عَبْدِ الْعَزِيزِ، أَخَّرَ الصَّلاَةَ يَوْمًا، فَدَخَلَ عَلَيْهِ عُرْوَةُ بْنُ الزُّبَيْرِ، فَأَخْبَرَهُ أَنَّ الْمُغِيرَةَ بْنَ شُعْبَةَ أَخَّرَ الصَّلاَةَ يَوْمًا وَهْوَ بِالْعِرَاقِ، فَدَخَلَ عَلَيْهِ أَبُو مَسْعُودٍ الأَنْصَارِيُّ فَقَالَ مَا هَذَا يَا مُغِيرَةُ أَلَيْسَ قَدْ عَلِمْتَ أَنَّ جِبْرِيلَ نَزَلَ فَصَلَّى، فَصَلَّى رَسُولُ اللَّهِ صلى الله عليه وسلم ثُمَّ صَلَّى فَصَلَّى رَسُولُ اللَّهِ صلى الله عليه وسلم ثُمَّ صَلَّى فَصَلَّى رَسُولُ اللَّهِ صلى الله عليه وسلم ثُمَّ صَلَّى فَصَلَّى رَسُولُ اللَّهِ صلى الله عليه وسلم ثُمَّ صَلَّى فَصَلَّى رَسُولُ اللَّهِ صلى الله عليه وسلم ثُمَّ قَالَ ‏ \"‏ بِهَذَا أُمِرْتُ ‏\"‏‏.‏ فَقَالَ عُمَرُ لِعُرْوَةَ اعْلَمْ مَا تُحَدِّثُ أَوَإِنَّ جِبْرِيلَ هُوَ أَقَامَ لِرَسُولِ اللَّهِ صلى الله عليه وسلم وَقْتَ الصَّلاَةِ‏.‏ قَالَ عُرْوَةُ كَذَلِكَ كَانَ بَشِيرُ بْنُ أَبِي مَسْعُودٍ يُحَدِّثُ عَنْ أَبِيهِ‏.‏ قَالَ عُرْوَةُ وَلَقَدْ حَدَّثَتْنِي عَائِشَةُ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم كَانَ يُصَلِّي الْعَصْرَ، وَالشَّمْسُ فِي حُجْرَتِهَا قَبْلَ أَنْ تَظْهَرَ‏.‏",
+      "english": "Narrated Ibn Shihab: Once `Umar bin `Abdul `Aziz delayed the prayer and `Urwa bin Az-Zubair went to him and said, \"Once in 'Iraq, Al-Mughira bin Shu`ba delayed his prayers and Abi Mas`ud Al-Ansari went to him and said, 'O Mughira! What is this? Don't you know that once Gabriel came and offered the prayer (Fajr prayer) and Allah's Messenger (ﷺ) prayed too, then he prayed again (Zuhr prayer) and so did Allah's Apostle and again he prayed (`Asr prayers and Allah's Messenger (ﷺ) did the same; again he prayed (Maghrib-prayer) and so did Allah's Messenger (ﷺ) and again prayed (`Isha prayer) and so did Allah's Apostle and (Gabriel) said, 'I was ordered to do so (to demonstrate the prayers prescribed to you)?'\" `Umar (bin `Abdul `Aziz) said to `Urwa, \"Be sure of what you Say. Did Gabriel lead Allah's Messenger (ﷺ) at the stated times of the prayers?\" `Urwa replied, \"Bashir bin Abi Mas`ud narrated like this on the authority of his father.\" `Urwa added, \"Aisha told me that Allah's Messenger (ﷺ) used to pray `Asr prayer when the sunshine was still inside her residence (during the early time of `Asr)",
+      "source": "https://sunnah.com/bukhari:522",
+      "prayers": [
+        "Fajr",
+        "Dhuhr",
+        "Asr",
+        "Maghrib",
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-523",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 523,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 2,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ، قَالَ حَدَّثَنَا عَبَّادٌ ـ هُوَ ابْنُ عَبَّادٍ ـ عَنْ أَبِي جَمْرَةَ، عَنِ ابْنِ عَبَّاسٍ، قَالَ قَدِمَ وَفْدُ عَبْدِ الْقَيْسِ عَلَى رَسُولِ اللَّهِ صلى الله عليه وسلم فَقَالُوا إِنَّا مِنْ هَذَا الْحَىِّ مِنْ رَبِيعَةَ، وَلَسْنَا نَصِلُ إِلَيْكَ إِلاَّ فِي الشَّهْرِ الْحَرَامِ، فَمُرْنَا بِشَىْءٍ نَأْخُذْهُ عَنْكَ، وَنَدْعُو إِلَيْهِ مَنْ وَرَاءَنَا‏.‏ فَقَالَ ‏ \"‏ آمُرُكُمْ بِأَرْبَعٍ، وَأَنْهَاكُمْ عَنْ أَرْبَعٍ الإِيمَانِ بِاللَّهِ ـ ثُمَّ فَسَّرَهَا لَهُمْ شَهَادَةُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ، وَأَنِّي رَسُولُ اللَّهِ، وَإِقَامُ الصَّلاَةِ، وَإِيتَاءُ الزَّكَاةِ، وَأَنْ تُؤَدُّوا إِلَىَّ خُمُسَ مَا غَنِمْتُمْ، وَأَنْهَى عَنِ الدُّبَّاءِ وَالْحَنْتَمِ وَالْمُقَيَّرِ وَالنَّقِيرِ ‏\"‏‏.‏",
+      "english": "Narrated Ibn `Abbas: \"Once a delegation of `Abdul Qais came to Allah's Messenger (ﷺ) and said, \"We belong to such and such branch of the tribe of Rabi'ah and we can only come to you in the sacred months. Order us to do something good so that we may take it from you and also invite to it those whom we have left behind (at home).\" So he said, \"I order you to do four things and forbid you from four things: To believe in Allah\" - and then he explained it to them \"to testify that none has the right to be worshipped but Allah and that I am Allah's Messenger (ﷺ), to establish the prayers (at the stated times), to pay the Zakat (obligatory charity), to hand me the Khumus (fifth) if you acquire spoils of war. And I forbid from (using) Dubba, Hantam, Muqaiyyar, and Naqir (all these were utensils used for the preparation of alcoholic drinks)",
+      "source": "https://sunnah.com/bukhari:523",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-524",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 524,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 3,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى، قَالَ حَدَّثَنَا يَحْيَى، قَالَ حَدَّثَنَا إِسْمَاعِيلُ، قَالَ حَدَّثَنَا قَيْسٌ، عَنْ جَرِيرِ بْنِ عَبْدِ اللَّهِ، قَالَ بَايَعْتُ رَسُولَ اللَّهِ صلى الله عليه وسلم عَلَى إِقَامِ الصَّلاَةِ، وَإِيتَاءِ الزَّكَاةِ، وَالنُّصْحِ لِكُلِّ مُسْلِمٍ‏.‏",
+      "english": "Narrated Jarir bin `Abdullah: I gave the pledge of allegiance to Allah's Messenger (ﷺ) for to offer prayers perfectly, to pay Zakat regularly, and to give good advice to every Muslim",
+      "source": "https://sunnah.com/bukhari:524",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-525",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 525,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 4,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى، عَنِ الأَعْمَشِ، قَالَ حَدَّثَنِي شَقِيقٌ، قَالَ سَمِعْتُ حُذَيْفَةَ، قَالَ كُنَّا جُلُوسًا عِنْدَ عُمَرَ ـ رضى الله عنه ـ فَقَالَ أَيُّكُمْ يَحْفَظُ قَوْلَ رَسُولِ اللَّهِ صلى الله عليه وسلم فِي الْفِتْنَةِ قُلْتُ أَنَا، كَمَا قَالَهُ‏.‏ قَالَ إِنَّكَ عَلَيْهِ ـ أَوْ عَلَيْهَا ـ لَجَرِيءٌ‏.‏ قُلْتُ ‏ \"‏ فِتْنَةُ الرَّجُلِ فِي أَهْلِهِ وَمَالِهِ وَوَلَدِهِ وَجَارِهِ تُكَفِّرُهَا الصَّلاَةُ وَالصَّوْمُ وَالصَّدَقَةُ وَالأَمْرُ وَالنَّهْىُ ‏\"‏‏.‏ قَالَ لَيْسَ هَذَا أُرِيدُ، وَلَكِنِ الْفِتْنَةُ الَّتِي تَمُوجُ كَمَا يَمُوجُ الْبَحْرُ‏.‏ قَالَ لَيْسَ عَلَيْكَ مِنْهَا بَأْسٌ يَا أَمِيرَ الْمُؤْمِنِينَ، إِنَّ بَيْنَكَ وَبَيْنَهَا بَابًا مُغْلَقًا‏.‏ قَالَ أَيُكْسَرُ أَمْ يُفْتَحُ قَالَ يُكْسَرُ‏.‏ قَالَ إِذًا لاَ يُغْلَقَ أَبَدًا‏.‏ قُلْنَا أَكَانَ عُمَرُ يَعْلَمُ الْبَابَ قَالَ نَعَمْ، كَمَا أَنَّ دُونَ الْغَدِ اللَّيْلَةَ، إِنِّي حَدَّثْتُهُ بِحَدِيثٍ لَيْسَ بِالأَغَالِيطِ‏.‏ فَهِبْنَا أَنْ نَسْأَلَ حُذَيْفَةَ، فَأَمَرْنَا مَسْرُوقًا فَسَأَلَهُ فَقَالَ الْبَابُ عُمَرُ‏.‏",
+      "english": "Narrated Shaqiq: that he had heard Hudhaifa saying, \"Once I was sitting with `Umar and he said, 'Who amongst you remembers the statement of Allah's Messenger (ﷺ) about the afflictions?' I said, 'I know it as the Prophet (ﷺ) had said it.' `Umar said, 'No doubt you are bold.' I said, 'The afflictions caused for a man by his wife, money, children and neighbor are expiated by his prayers, fasting, charity and by enjoining (what is good) and forbidding (what is evil).' `Umar said, 'I did not mean that but I asked about that affliction which will spread like the waves of the sea.' I (Hudhaifa) said, 'O leader of the faithful believers! You need not be afraid of it as there is a closed door between you and it.' `Umar asked, Will the door be broken or opened?' I replied, 'It will be broken.' `Umar said, 'Then it will never be closed again.' I was asked whether `Umar knew that door. I replied that he knew it as one knows that there will be night before the tomorrow morning. I narrated a Hadith that was free from any misstatement\" The subnarrator added that they deputized Masruq to ask Hudhaifa (about the door). Hudhaifa said, \"The door was `Umar himself",
+      "source": "https://sunnah.com/bukhari:525",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-526",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 526,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 5,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا قُتَيْبَةُ، قَالَ حَدَّثَنَا يَزِيدُ بْنُ زُرَيْعٍ، عَنْ سُلَيْمَانَ التَّيْمِيِّ، عَنْ أَبِي عُثْمَانَ النَّهْدِيِّ، عَنِ ابْنِ مَسْعُودٍ، أَنَّ رَجُلاً، أَصَابَ مِنَ امْرَأَةٍ قُبْلَةً، فَأَتَى النَّبِيَّ صلى الله عليه وسلم فَأَخْبَرَهُ، فَأَنْزَلَ اللَّهُ ‏{‏أَقِمِ الصَّلاَةَ طَرَفَىِ النَّهَارِ وَزُلَفًا مِنَ اللَّيْلِ إِنَّ الْحَسَنَاتِ يُذْهِبْنَ السَّيِّئَاتِ‏}‏‏.‏ فَقَالَ الرَّجُلُ يَا رَسُولَ اللَّهِ أَلِي هَذَا قَالَ ‏\"‏ لِجَمِيعِ أُمَّتِي كُلِّهِمْ ‏\"‏‏.‏",
+      "english": "Narrated Ibn Mas`ud: A man kissed a woman (unlawfully) and then went to the Prophet (ﷺ) and informed him. Allah revealed: And offer prayers perfectly At the two ends of the day And in some hours of the night (i.e. the five compulsory prayers). Verily! good deeds remove (annul) the evil deeds (small sins) (11.114). The man asked Allah's Messenger (ﷺ), \"Is it for me?\" He said, \"It is for all my followers",
+      "source": "https://sunnah.com/bukhari:526",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-527",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 527,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 6,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو الْوَلِيدِ، هِشَامُ بْنُ عَبْدِ الْمَلِكِ قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ الْوَلِيدُ بْنُ الْعَيْزَارِ أَخْبَرَنِي قَالَ سَمِعْتُ أَبَا عَمْرٍو الشَّيْبَانِيَّ، يَقُولُ حَدَّثَنَا صَاحِبُ، هَذِهِ الدَّارِ وَأَشَارَ إِلَى دَارِ عَبْدِ اللَّهِ قَالَ سَأَلْتُ النَّبِيَّ صلى الله عليه وسلم أَىُّ الْعَمَلِ أَحَبُّ إِلَى اللَّهِ قَالَ ‏\"‏ الصَّلاَةُ عَلَى وَقْتِهَا ‏\"‏‏.‏ قَالَ ثُمَّ أَىُّ قَالَ ‏\"‏ ثُمَّ بِرُّ الْوَالِدَيْنِ ‏\"‏‏.‏ قَالَ ثُمَّ أَىُّ قَالَ ‏\"‏ الْجِهَادُ فِي سَبِيلِ اللَّهِ ‏\"‏‏.‏ قَالَ حَدَّثَنِي بِهِنَّ وَلَوِ اسْتَزَدْتُهُ لَزَادَنِي‏.‏",
+      "english": "Narrated `Abdullah: I asked the Prophet (ﷺ) \"Which deed is the dearest to Allah?\" He replied, \"To offer the prayers at their early stated fixed times.\" I asked, \"What is the next (in goodness)?\" He replied, \"To be good and dutiful to your parents\" I again asked, \"What is the next (in goodness)?\" He replied, 'To participate in Jihad (religious fighting) in Allah's cause.\" `Abdullah added, \"I asked only that much and if I had asked more, the Prophet (ﷺ) would have told me more",
+      "source": "https://sunnah.com/bukhari:527",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-528",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 528,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 7,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا إِبْرَاهِيمُ بْنُ حَمْزَةَ، قَالَ حَدَّثَنِي ابْنُ أَبِي حَازِمٍ، وَالدَّرَاوَرْدِيُّ، عَنْ يَزِيدَ، عَنْ مُحَمَّدِ بْنِ إِبْرَاهِيمَ، عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ، عَنْ أَبِي هُرَيْرَةَ، أَنَّهُ سَمِعَ رَسُولَ اللَّهِ صلى الله عليه وسلم يَقُولُ ‏\"‏ أَرَأَيْتُمْ لَوْ أَنَّ نَهَرًا بِبَابِ أَحَدِكُمْ، يَغْتَسِلُ فِيهِ كُلَّ يَوْمٍ خَمْسًا، مَا تَقُولُ ذَلِكَ يُبْقِي مِنْ دَرَنِهِ ‏\"‏‏.‏ قَالُوا لاَ يُبْقِي مِنْ دَرَنِهِ شَيْئًا‏.‏ قَالَ ‏\"‏ فَذَلِكَ مِثْلُ الصَّلَوَاتِ الْخَمْسِ، يَمْحُو اللَّهُ بِهَا الْخَطَايَا ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: I heard Allah's Messenger (ﷺ) saying, \"If there was a river at the door of anyone of you and he took a bath in it five times a day would you notice any dirt on him?\" They said, \"Not a trace of dirt would be left.\" The Prophet (ﷺ) added, \"That is the example of the five prayers with which Allah blots out (annuls) evil deeds",
+      "source": "https://sunnah.com/bukhari:528",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-529",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 529,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 8,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُوسَى بْنُ إِسْمَاعِيلَ، قَالَ حَدَّثَنَا مَهْدِيٌّ، عَنْ غَيْلاَنَ، عَنْ أَنَسٍ، قَالَ مَا أَعْرِفُ شَيْئًا مِمَّا كَانَ عَلَى عَهْدِ النَّبِيِّ صلى الله عليه وسلم‏.‏ قِيلَ الصَّلاَةُ‏.‏ قَالَ أَلَيْسَ ضَيَّعْتُمْ مَا ضَيَّعْتُمْ فِيهَا‏.‏",
+      "english": "Narrated Ghailan: Anas said, \"I do not find (now-a-days) things as they were (practiced) at the time of the Prophet.\" Somebody said \"The prayer (is as it was.)\" Anas said, \"Have you not done in the prayer what you have done?",
+      "source": "https://sunnah.com/bukhari:529",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-530",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 530,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 9,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَمْرُو بْنُ زُرَارَةَ، قَالَ أَخْبَرَنَا عَبْدُ الْوَاحِدِ بْنُ وَاصِلٍ أَبُو عُبَيْدَةَ الْحَدَّادُ، عَنْ عُثْمَانَ بْنِ أَبِي رَوَّادٍ، أَخِي عَبْدِ الْعَزِيزِ قَالَ سَمِعْتُ الزُّهْرِيَّ، يَقُولُ دَخَلْتُ عَلَى أَنَسِ بْنِ مَالِكٍ بِدِمَشْقَ وَهُوَ يَبْكِي فَقُلْتُ مَا يُبْكِيكَ فَقَالَ لاَ أَعْرِفُ شَيْئًا مِمَّا أَدْرَكْتُ إِلاَّ هَذِهِ الصَّلاَةَ، وَهَذِهِ الصَّلاَةُ قَدْ ضُيِّعَتْ‏.‏ وَقَالَ بَكْرٌ حَدَّثَنَا مُحَمَّدُ بْنُ بَكْرٍ الْبُرْسَانِيُّ أَخْبَرَنَا عُثْمَانُ بْنُ أَبِي رَوَّادٍ نَحْوَهُ‏.‏",
+      "english": "Narrated Az-Zuhri that he visited Anas bin Malik at Damascus and found him weeping and asked him why he was weeping. He replied, \"I do not know anything which I used to know during the life-time of Allah's Apostle except this prayer which is being lost (not offered as it should be)",
+      "source": "https://sunnah.com/bukhari:530",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-531",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 531,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 10,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُسْلِمُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا هِشَامٌ، عَنْ قَتَادَةَ، عَنْ أَنَسٍ، قَالَ قَالَ النَّبِيُّ صلى الله عليه وسلم ‏\"‏ إِنَّ أَحَدَكُمْ إِذَا صَلَّى يُنَاجِي رَبَّهُ فَلاَ يَتْفِلَنَّ عَنْ يَمِينِهِ، وَلَكِنْ تَحْتَ قَدَمِهِ الْيُسْرَى ‏\"‏‏.‏ وَقَالَ سَعِيدٌ عَنْ قَتَادَةَ لاَ يَتْفِلُ قُدَّامَهُ أَوْ بَيْنَ يَدَيْهِ، وَلَكِنْ عَنْ يَسَارِهِ أَوْ تَحْتَ قَدَمَيْهِ‏.‏ وَقَالَ شُعْبَةُ لاَ يَبْزُقُ بَيْنَ يَدَيْهِ وَلاَ عَنْ يَمِينِهِ، وَلَكِنْ عَنْ يَسَارِهِ أَوْ تَحْتَ قَدَمِهِ‏.‏ وَقَالَ حُمَيْدٌ عَنْ أَنَسٍ عَنِ النَّبِيِّ صلى الله عليه وسلم ‏\"‏ لاَ يَبْزُقْ فِي الْقِبْلَةِ وَلاَ عَنْ يَمِينِهِ، وَلَكِنْ عَنْ يَسَارِهِ أَوْ تَحْتَ قَدَمِهِ ‏\"‏‏.‏",
+      "english": "Narrated Anas: The Prophet (ﷺ) said, \"Whenever anyone of you offers his prayer he is speaking in private to his Lord. So he should not spit to his right but under his left foot.\" Qatada said, \"He should not spit in front of him but to his left or under his feet.\" And Shu`ba said, \"He should not spit in front of him, nor to his right but to his left or under his foot.\" Anas said: The Prophet (ﷺ) said, \"He should neither spit in the direction of his Qibla nor to his right but to his left or under his foot",
+      "source": "https://sunnah.com/bukhari:531",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-532",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 532,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 11,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا حَفْصُ بْنُ عُمَرَ، قَالَ حَدَّثَنَا يَزِيدُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا قَتَادَةُ، عَنْ أَنَسٍ، عَنِ النَّبِيِّ صلى الله عليه وسلم قَالَ ‏ \"‏ اعْتَدِلُوا فِي السُّجُودِ، وَلاَ يَبْسُطْ ذِرَاعَيْهِ كَالْكَلْبِ، وَإِذَا بَزَقَ فَلاَ يَبْزُقَنَّ بَيْنَ يَدَيْهِ وَلاَ عَنْ يَمِينِهِ، فَإِنَّهُ يُنَاجِي رَبَّهُ ‏\"‏‏.‏",
+      "english": "Narrated Anas: The Prophet (ﷺ) said, \"Do the prostration properly and do not put your forearms flat with elbows touching the ground like a dog. And if you want to spit, do not spit in front, nor to the right for the person in prayer is speaking in private to his Lord",
+      "source": "https://sunnah.com/bukhari:532",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-533",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 533,
+      "book": 0,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 0,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَيُّوبُ بْنُ سُلَيْمَانَ، قَالَ حَدَّثَنَا أَبُو بَكْرٍ، عَنْ سُلَيْمَانَ، قَالَ صَالِحُ بْنُ كَيْسَانَ حَدَّثَنَا الأَعْرَجُ عَبْدُ الرَّحْمَنِ، وَغَيْرُهُ، عَنْ أَبِي هُرَيْرَةَ‏.‏وَنَافِعٌ مَوْلَى عَبْدِ اللَّهِ بْنِ عُمَرَ عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ، أَنَّهُمَا حَدَّثَاهُ عَنْ رَسُولِ اللَّهِ صلى الله عليه وسلم أَنَّهُ قَالَ ‏ \"‏ إِذَا اشْتَدَّ الْحَرُّ فَأَبْرِدُوا عَنِ الصَّلاَةِ، فَإِنَّ شِدَّةَ الْحَرِّ مِنْ فَيْحِ جَهَنَّمَ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira and `Abdullah bin `Umar: Allah's Messenger (ﷺ) said, \"If it is very hot, then pray the Zuhr prayer when it becomes (a bit) cooler, as the severity of the heat is from the raging of the Hell-fire",
+      "source": "https://sunnah.com/bukhari:533",
+      "prayers": [
+        "Dhuhr"
+      ]
+    },
+    {
+      "id": "bukhari-534",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 534,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 12,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَيُّوبُ بْنُ سُلَيْمَانَ، قَالَ حَدَّثَنَا أَبُو بَكْرٍ، عَنْ سُلَيْمَانَ، قَالَ صَالِحُ بْنُ كَيْسَانَ حَدَّثَنَا الأَعْرَجُ عَبْدُ الرَّحْمَنِ، وَغَيْرُهُ، عَنْ أَبِي هُرَيْرَةَ‏.‏وَنَافِعٌ مَوْلَى عَبْدِ اللَّهِ بْنِ عُمَرَ عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ، أَنَّهُمَا حَدَّثَاهُ عَنْ رَسُولِ اللَّهِ صلى الله عليه وسلم أَنَّهُ قَالَ ‏ \"‏ إِذَا اشْتَدَّ الْحَرُّ فَأَبْرِدُوا عَنِ الصَّلاَةِ، فَإِنَّ شِدَّةَ الْحَرِّ مِنْ فَيْحِ جَهَنَّمَ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira and `Abdullah bin `Umar: Allah's Messenger (ﷺ) said, \"If it is very hot, then pray the Zuhr prayer when it becomes (a bit) cooler, as the severity of the heat is from the raging of the Hell-fire",
+      "source": "https://sunnah.com/bukhari:534",
+      "prayers": [
+        "Dhuhr"
+      ]
+    },
+    {
+      "id": "bukhari-535",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 535,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 13,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا ابْنُ بَشَّارٍ، قَالَ حَدَّثَنَا غُنْدَرٌ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنِ الْمُهَاجِرِ أَبِي الْحَسَنِ، سَمِعَ زَيْدَ بْنَ وَهْبٍ، عَنْ أَبِي ذَرٍّ، قَالَ أَذَّنَ مُؤَذِّنُ النَّبِيِّ صلى الله عليه وسلم الظُّهْرَ فَقَالَ ‏\"‏ أَبْرِدْ أَبْرِدْ ـ أَوْ قَالَ ـ انْتَظِرِ انْتَظِرْ ‏\"‏‏.‏ وَقَالَ ‏\"‏ شِدَّةُ الْحَرِّ مِنْ فَيْحِ جَهَنَّمَ، فَإِذَا اشْتَدَّ الْحَرُّ فَأَبْرِدُوا عَنِ الصَّلاَةِ ‏\"‏‏.‏ حَتَّى رَأَيْنَا فَىْءَ التُّلُولِ‏.‏",
+      "english": "Narrated Abu Dhar: The Mu'adh-dhin (call-maker) of the Prophet (ﷺ) pronounced the Adhan (call) for the Zuhr prayer but the Prophet said, \"Let it be cooler, let it be cooler.\" Or said, 'Wait, wait, because the severity of heat is from the raging of the Hell-fire. In severe hot weather, pray when it becomes (a bit) cooler and the shadows of hillocks appear",
+      "source": "https://sunnah.com/bukhari:535",
+      "prayers": [
+        "Dhuhr"
+      ]
+    },
+    {
+      "id": "bukhari-536",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 536,
+      "book": 0,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 0,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا سُفْيَانُ، قَالَ حَفِظْنَاهُ مِنَ الزُّهْرِيِّ عَنْ سَعِيدِ بْنِ الْمُسَيَّبِ، عَنْ أَبِي هُرَيْرَةَ، عَنِ النَّبِيِّ صلى الله عليه وسلم قَالَ ‏\"‏ إِذَا اشْتَدَّ الْحَرُّ فَأَبْرِدُوا بِالصَّلاَةِ، فَإِنَّ شِدَّةَ الْحَرِّ مِنْ فَيْحِ جَهَنَّمَ ‏\"‏‏.‏ ‏\"‏ وَاشْتَكَتِ النَّارُ إِلَى رَبِّهَا فَقَالَتْ يَا رَبِّ أَكَلَ بَعْضِي بَعْضًا‏.‏ فَأَذِنَ لَهَا بِنَفَسَيْنِ نَفَسٍ فِي الشِّتَاءِ، وَنَفَسٍ فِي الصَّيْفِ، فَهُوَ أَشَدُّ مَا تَجِدُونَ مِنَ الْحَرِّ، وَأَشَدُّ مَا تَجِدُونَ مِنَ الزَّمْهَرِيرِ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: The Prophet (ﷺ) said, \"In very hot weather delay the Zuhr prayer till it becomes (a bit) cooler because the severity of heat is from the raging of the Hell-fire. The Hell-fire of Hell complained to its Lord saying: O Lord! My parts are eating (destroying) one another. So Allah allowed it to take two breaths, one in the winter and the other in the summer. The breath in the summer is at the time when you feel the severest heat and the breath in the winter is at the time when you feel the severest cold",
+      "source": "https://sunnah.com/bukhari:536",
+      "prayers": [
+        "Dhuhr"
+      ]
+    },
+    {
+      "id": "bukhari-537",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 537,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 14,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا سُفْيَانُ، قَالَ حَفِظْنَاهُ مِنَ الزُّهْرِيِّ عَنْ سَعِيدِ بْنِ الْمُسَيَّبِ، عَنْ أَبِي هُرَيْرَةَ، عَنِ النَّبِيِّ صلى الله عليه وسلم قَالَ ‏\"‏ إِذَا اشْتَدَّ الْحَرُّ فَأَبْرِدُوا بِالصَّلاَةِ، فَإِنَّ شِدَّةَ الْحَرِّ مِنْ فَيْحِ جَهَنَّمَ ‏\"‏‏.‏ ‏\"‏ وَاشْتَكَتِ النَّارُ إِلَى رَبِّهَا فَقَالَتْ يَا رَبِّ أَكَلَ بَعْضِي بَعْضًا‏.‏ فَأَذِنَ لَهَا بِنَفَسَيْنِ نَفَسٍ فِي الشِّتَاءِ، وَنَفَسٍ فِي الصَّيْفِ، فَهُوَ أَشَدُّ مَا تَجِدُونَ مِنَ الْحَرِّ، وَأَشَدُّ مَا تَجِدُونَ مِنَ الزَّمْهَرِيرِ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: The Prophet (ﷺ) said, \"In very hot weather delay the Zuhr prayer till it becomes (a bit) cooler because the severity of heat is from the raging of the Hell-fire. The Hell-fire of Hell complained to its Lord saying: O Lord! My parts are eating (destroying) one another. So Allah allowed it to take two breaths, one in the winter and the other in the summer. The breath in the summer is at the time when you feel the severest heat and the breath in the winter is at the time when you feel the severest cold",
+      "source": "https://sunnah.com/bukhari:537",
+      "prayers": [
+        "Dhuhr"
+      ]
+    },
+    {
+      "id": "bukhari-538",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 538,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 15,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عُمَرُ بْنُ حَفْصٍ، قَالَ حَدَّثَنَا أَبِي قَالَ، حَدَّثَنَا الأَعْمَشُ، حَدَّثَنَا أَبُو صَالِحٍ، عَنْ أَبِي سَعِيدٍ، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم ‏ \"‏ أَبْرِدُوا بِالظُّهْرِ، فَإِنَّ شِدَّةَ الْحَرِّ مِنْ فَيْحِ جَهَنَّمَ ‏\"‏‏.‏ تَابَعَهُ سُفْيَانُ وَيَحْيَى وَأَبُو عَوَانَةَ عَنِ الأَعْمَشِ‏.‏",
+      "english": "Narrated Abu Sa`id: that Allah's Messenger (ﷺ) said, \"Pray Zuhr prayer when it becomes (a bit) cooler as the severity of heat is from the raging of the Hell-fire",
+      "source": "https://sunnah.com/bukhari:538",
+      "prayers": [
+        "Dhuhr"
+      ]
+    },
+    {
+      "id": "bukhari-539",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 539,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 16,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا آدَمُ بْنُ أَبِي إِيَاسٍ، قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ حَدَّثَنَا مُهَاجِرٌ أَبُو الْحَسَنِ، مَوْلًى لِبَنِي تَيْمِ اللَّهِ قَالَ سَمِعْتُ زَيْدَ بْنَ وَهْبٍ، عَنْ أَبِي ذَرٍّ الْغِفَارِيِّ، قَالَ كُنَّا مَعَ النَّبِيِّ صلى الله عليه وسلم فِي سَفَرٍ، فَأَرَادَ الْمُؤَذِّنُ أَنْ يُؤَذِّنَ لِلظُّهْرِ فَقَالَ النَّبِيُّ صلى الله عليه وسلم ‏\"‏ أَبْرِدْ ‏\"‏‏.‏ ثُمَّ أَرَادَ أَنْ يُؤَذِّنَ فَقَالَ لَهُ ‏\"‏ أَبْرِدْ ‏\"‏‏.‏ حَتَّى رَأَيْنَا فَىْءَ التُّلُولِ، فَقَالَ النَّبِيُّ صلى الله عليه وسلم ‏\"‏ إِنَّ شِدَّةَ الْحَرِّ مِنْ فَيْحِ جَهَنَّمَ، فَإِذَا اشْتَدَّ الْحَرُّ فَأَبْرِدُوا بِالصَّلاَةِ ‏\"‏‏.‏ وَقَالَ ابْنُ عَبَّاسٍ تَتَفَيَّأُ تَتَمَيَّلُ‏.‏",
+      "english": "Narrated Abu Dhar Al-Ghifar: We were with the Prophet (ﷺ) on a journey and the Mu'adh-dhin (call maker for the prayer) wanted to pronounce the Adhan (call) for the Zuhr prayer. The Prophet (ﷺ) said, 'Let it become cooler.\" He again (after a while) wanted to pronounce the Adhan but the Prophet (ﷺ) said to him, \"Let it become cooler till we see the shadows of hillocks.\" The Prophet (ﷺ) added, \"The severity of heat is from the raging of the Hell-fire, and in very hot weather pray (Zuhr) when it becomes cooler",
+      "source": "https://sunnah.com/bukhari:539",
+      "prayers": [
+        "Dhuhr"
+      ]
+    },
+    {
+      "id": "bukhari-540",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 540,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 17,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ أَخْبَرَنِي أَنَسُ بْنُ مَالِكٍ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم خَرَجَ حِينَ زَاغَتِ الشَّمْسُ فَصَلَّى الظُّهْرَ، فَقَامَ عَلَى الْمِنْبَرِ، فَذَكَرَ السَّاعَةَ، فَذَكَرَ أَنَّ فِيهَا أُمُورًا عِظَامًا ثُمَّ قَالَ ‏\"‏ مَنْ أَحَبَّ أَنْ يَسْأَلَ عَنْ شَىْءٍ فَلْيَسْأَلْ، فَلاَ تَسْأَلُونِي عَنْ شَىْءٍ إِلاَّ أَخْبَرْتُكُمْ مَا دُمْتُ فِي مَقَامِي هَذَا ‏\"‏‏.‏ فَأَكْثَرَ النَّاسُ فِي الْبُكَاءِ، وَأَكْثَرَ أَنْ يَقُولَ ‏\"‏ سَلُونِي ‏\"‏‏.‏ فَقَامَ عَبْدُ اللَّهِ بْنُ حُذَافَةَ السَّهْمِيُّ فَقَالَ مَنْ أَبِي قَالَ ‏\"‏ أَبُوكَ حُذَافَةُ ‏\"‏‏.‏ ثُمَّ أَكْثَرَ أَنْ يَقُولَ ‏\"‏ سَلُونِي ‏\"‏‏.‏ فَبَرَكَ عُمَرُ عَلَى رُكْبَتَيْهِ فَقَالَ رَضِينَا بِاللَّهِ رَبًّا، وَبِالإِسْلاَمِ دِينًا، وَبِمُحَمَّدٍ نَبِيًّا‏.‏ فَسَكَتَ ثُمَّ قَالَ ‏\"‏ عُرِضَتْ عَلَىَّ الْجَنَّةُ وَالنَّارُ آنِفًا فِي عُرْضِ هَذَا الْحَائِطِ فَلَمْ أَرَ كَالْخَيْرِ وَالشَّرِّ ‏\"‏‏.‏",
+      "english": "Narrated Anas bin Malik: Allah's Messenger (ﷺ) came out as the sun declined at midday and offered the Zuhr prayer. He then stood on the pulpit and spoke about the Hour (Day of Judgment) and said that in it there would be tremendous things. He then said, \"Whoever likes to ask me about anything he can do so and I shall reply as long as I am at this place of mine. Most of the people wept and the Prophet (ﷺ) said repeatedly, \"Ask me.\" `Abdullah bin Hudhafa As-Sahmi stood up and said, \"Who is my father?\" The Prophet (ﷺ) said, \"Your father is Hudhafa.\" The Prophet (ﷺ) repeatedly said, \"Ask me.\" Then `Umar knelt before him and said, \"We are pleased with Allah as our Lord, Islam as our religion, and Muhammad as our Prophet.\" The Prophet then became quiet and said, \"Paradise and Hell-fire were displayed in front of me on this wall just now and I have never seen a better thing (than the former) and a worse thing (than the latter)",
+      "source": "https://sunnah.com/bukhari:540",
+      "prayers": [
+        "Dhuhr"
+      ]
+    },
+    {
+      "id": "bukhari-541",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 541,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 18,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا حَفْصُ بْنُ عُمَرَ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ أَبِي الْمِنْهَالِ، عَنْ أَبِي بَرْزَةَ، كَانَ النَّبِيُّ صلى الله عليه وسلم يُصَلِّي الصُّبْحَ وَأَحَدُنَا يَعْرِفُ جَلِيسَهُ، وَيَقْرَأُ فِيهَا مَا بَيْنَ السِّتِّينَ إِلَى الْمِائَةِ، وَيُصَلِّي الظُّهْرَ إِذَا زَالَتِ الشَّمْسُ، وَالْعَصْرَ وَأَحَدُنَا يَذْهَبُ إِلَى أَقْصَى الْمَدِينَةِ ثُمَّ يَرْجِعُ وَالشَّمْسُ حَيَّةٌ، وَنَسِيتُ مَا قَالَ فِي الْمَغْرِبِ، وَلاَ يُبَالِي بِتَأْخِيرِ الْعِشَاءِ إِلَى ثُلُثِ اللَّيْلِ‏.‏ ثُمَّ قَالَ إِلَى شَطْرِ اللَّيْلِ‏.‏ وَقَالَ مُعَاذٌ قَالَ شُعْبَةُ ثُمَّ لَقِيتُهُ مَرَّةً فَقَالَ أَوْ ثُلُثِ اللَّيْلِ‏.‏",
+      "english": "Narrated Abu Al-Minhal: Abu Barza said, \"The Prophet (ﷺ) used to offer the Fajr (prayer) when one could recognize the person sitting by him (after the prayer) and he used to recite between 60 to 100 Ayat (verses) of the Qur'an. He used to offer the Zuhr prayer as soon as the sun declined (at noon) and the `Asr prayer at a time when a man might go and return from the farthest place in Medina and find the sun still hot. (The sub-narrator forgot what was said about the Maghrib). He did not mind delaying the `Isha prayer to one third of the night or the middle of the night",
+      "source": "https://sunnah.com/bukhari:541",
+      "prayers": [
+        "Fajr",
+        "Dhuhr",
+        "Asr",
+        "Maghrib",
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-542",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 542,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 19,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدٌ ـ يَعْنِي ابْنَ مُقَاتِلٍ ـ قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا خَالِدُ بْنُ عَبْدِ الرَّحْمَنِ، حَدَّثَنِي غَالِبٌ الْقَطَّانُ، عَنْ بَكْرِ بْنِ عَبْدِ اللَّهِ الْمُزَنِيِّ، عَنْ أَنَسِ بْنِ مَالِكٍ، قَالَ كُنَّا إِذَا صَلَّيْنَا خَلْفَ رَسُولِ اللَّهِ صلى الله عليه وسلم بِالظَّهَائِرِ فَسَجَدْنَا عَلَى ثِيَابِنَا اتِّقَاءَ الْحَرِّ‏.‏",
+      "english": "Narrated Anas bin Malik: When we offered the Zuhr prayers behind Allah's Messenger (ﷺ) we used to prostrate on our clothes to protect ourselves from the heat",
+      "source": "https://sunnah.com/bukhari:542",
+      "prayers": [
+        "Dhuhr"
+      ]
+    },
+    {
+      "id": "bukhari-543",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 543,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 20,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو النُّعْمَانِ، قَالَ حَدَّثَنَا حَمَّادٌ ـ هُوَ ابْنُ زَيْدٍ ـ عَنْ عَمْرِو بْنِ دِينَارٍ، عَنْ جَابِرِ بْنِ زَيْدٍ، عَنِ ابْنِ عَبَّاسٍ، أَنَّ النَّبِيَّ صلى الله عليه وسلم صَلَّى بِالْمَدِينَةِ سَبْعًا وَثَمَانِيًا الظُّهْرَ وَالْعَصْرَ، وَالْمَغْرِبَ وَالْعِشَاءَ‏.‏ فَقَالَ أَيُّوبُ لَعَلَّهُ فِي لَيْلَةٍ مَطِيرَةٍ‏.‏ قَالَ عَسَى‏.‏",
+      "english": "Narrated Ibn `Abbas: \"The Prophet (ﷺ) prayed eight rak`at for the Zuhr and `Asr, and seven for the Maghrib and `Isha prayers in Medina.\" Aiyub said, \"Perhaps those were rainy nights.\" Anas said, \"May be",
+      "source": "https://sunnah.com/bukhari:543",
+      "prayers": [
+        "Dhuhr",
+        "Asr",
+        "Maghrib",
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-544",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 544,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 21,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا إِبْرَاهِيمُ بْنُ الْمُنْذِرِ، قَالَ حَدَّثَنَا أَنَسُ بْنُ عِيَاضٍ، عَنْ هِشَامٍ، عَنْ أَبِيهِ، أَنَّ عَائِشَةَ، قَالَتْ كَانَ رَسُولُ اللَّهِ صلى الله عليه وسلم يُصَلِّي الْعَصْرَ وَالشَّمْسُ لَمْ تَخْرُجْ مِنْ حُجْرَتِهَا‏.‏ وَقَالَ أَبُو أُسَامَةَ عَنْ هِشَامٍ مِنْ قَعْرِ حُجْرَتِهَا‏.‏",
+      "english": "Narrated Aisha: Allah's Messenger (ﷺ) used to offer the `Asr prayer when the sunshine had not disappeared from my chamber",
+      "source": "https://sunnah.com/bukhari:544",
+      "prayers": [
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-545",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 545,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 22,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا قُتَيْبَةُ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنِ ابْنِ شِهَابٍ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم صَلَّى الْعَصْرَ وَالشَّمْسُ فِي حُجْرَتِهَا، لَمْ يَظْهَرِ الْفَىْءُ مِنْ حُجْرَتِهَا‏.‏",
+      "english": "Narrated `Aisha: Allah's Messenger (ﷺ) used to offer the `Asr prayers at a time when the sunshine was still inside my chamber and no shadow had yet appeared in it",
+      "source": "https://sunnah.com/bukhari:545",
+      "prayers": [
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-546",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 546,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 23,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ أَخْبَرَنَا ابْنُ عُيَيْنَةَ، عَنِ الزُّهْرِيِّ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ، قَالَتْ كَانَ النَّبِيُّ صلى الله عليه وسلم يُصَلِّي صَلاَةَ الْعَصْرِ وَالشَّمْسُ طَالِعَةٌ فِي حُجْرَتِي لَمْ يَظْهَرِ الْفَىْءُ بَعْدُ‏.‏ وَقَالَ مَالِكٌ وَيَحْيَى بْنُ سَعِيدٍ وَشُعَيْبٌ وَابْنُ أَبِي حَفْصَةَ وَالشَّمْسُ قَبْلَ أَنْ تَظْهَرَ‏.‏",
+      "english": "Narrated Aisha: The Prophet (ﷺ) used to pray the `Asr prayers at a time when the sunshine was still inside my chamber and no shadow had yet appeared in it",
+      "source": "https://sunnah.com/bukhari:546",
+      "prayers": [
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-547",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 547,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 24,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ مُقَاتِلٍ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا عَوْفٌ، عَنْ سَيَّارِ بْنِ سَلاَمَةَ، قَالَ دَخَلْتُ أَنَا وَأَبِي، عَلَى أَبِي بَرْزَةَ الأَسْلَمِيِّ، فَقَالَ لَهُ أَبِي كَيْفَ كَانَ رَسُولُ اللَّهِ صلى الله عليه وسلم يُصَلِّي الْمَكْتُوبَةَ فَقَالَ كَانَ يُصَلِّي الْهَجِيرَ الَّتِي تَدْعُونَهَا الأُولَى حِينَ تَدْحَضُ الشَّمْسُ، وَيُصَلِّي الْعَصْرَ، ثُمَّ يَرْجِعُ أَحَدُنَا إِلَى رَحْلِهِ فِي أَقْصَى الْمَدِينَةِ وَالشَّمْسُ حَيَّةٌ ـ وَنَسِيتُ مَا قَالَ فِي الْمَغْرِبِ ـ وَكَانَ يَسْتَحِبُّ أَنْ يُؤَخِّرَ الْعِشَاءَ الَّتِي تَدْعُونَهَا الْعَتَمَةَ، وَكَانَ يَكْرَهُ النَّوْمَ قَبْلَهَا وَالْحَدِيثَ بَعْدَهَا، وَكَانَ يَنْفَتِلُ مِنْ صَلاَةِ الْغَدَاةِ حِينَ يَعْرِفُ الرَّجُلُ جَلِيسَهُ، وَيَقْرَأُ بِالسِّتِّينَ إِلَى الْمِائَةِ‏.‏",
+      "english": "Narrated Saiyar bin Salama: I along with my father went to Abu- Barza Al-Aslami and my father asked him, \"How Allah's Messenger (ﷺ) used to offer the five compulsory congregational prayers?\" Abu- Barza said, \"The Prophet (ﷺ) used to pray the Zuhr prayer which you (people) call the first one at midday when the sun had just declined The `Asr prayer at a time when after the prayer, a man could go to the house at the farthest place in Medina (and arrive) while the sun was still hot. (I forgot about the Maghrib prayer). The Prophet (ﷺ) Loved to delay the `Isha which you call Al- `Atama [??] and he disliked sleeping before it and speaking after it. After the Fajr prayer he used to leave when a man could recognize the one sitting beside him and he used to recite between 60 to 100 Ayat (in the Fajr prayer)",
+      "source": "https://sunnah.com/bukhari:547",
+      "prayers": [
+        "Fajr",
+        "Dhuhr",
+        "Asr",
+        "Maghrib",
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-548",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 548,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 25,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ، عَنْ مَالِكٍ، عَنْ إِسْحَاقَ بْنِ عَبْدِ اللَّهِ بْنِ أَبِي طَلْحَةَ، عَنْ أَنَسِ بْنِ مَالِكٍ، قَالَ كُنَّا نُصَلِّي الْعَصْرَ ثُمَّ يَخْرُجُ الإِنْسَانُ إِلَى بَنِي عَمْرِو بْنِ عَوْفٍ فَنَجِدُهُمْ يُصَلُّونَ الْعَصْرَ‏.‏",
+      "english": "Narrated Anas bin Malik: We used to pray the `Asr prayer and after that if someone happened to go to the tribe of Bani `Amr bin `Auf, he would find them still praying the `Asr (prayer)",
+      "source": "https://sunnah.com/bukhari:548",
+      "prayers": [
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-549",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 549,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 26,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا ابْنُ مُقَاتِلٍ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا أَبُو بَكْرِ بْنُ عُثْمَانَ بْنِ سَهْلِ بْنِ حُنَيْفٍ، قَالَ سَمِعْتُ أَبَا أُمَامَةَ، يَقُولُ صَلَّيْنَا مَعَ عُمَرَ بْنِ عَبْدِ الْعَزِيزِ الظُّهْرَ، ثُمَّ خَرَجْنَا حَتَّى دَخَلْنَا عَلَى أَنَسِ بْنِ مَالِكٍ فَوَجَدْنَاهُ يُصَلِّي الْعَصْرَ فَقُلْتُ يَا عَمِّ، مَا هَذِهِ الصَّلاَةُ الَّتِي صَلَّيْتَ قَالَ الْعَصْرُ، وَهَذِهِ صَلاَةُ رَسُولِ اللَّهِ صلى الله عليه وسلم الَّتِي كُنَّا نُصَلِّي مَعَهُ‏.‏",
+      "english": "Narrated Abu Bakr bin `Uthman bin Sahl bin Hunaif: that he heard Abu Umama saying: We prayed the Zuhr prayer with `Umar bin `Abdul `Aziz and then went to Anas bin Malik and found him offering the `Asr prayer. I asked him, \"O uncle! Which prayer have you offered?\" He said 'The `Asr and this is (the time of) the prayer of Allah's Apostle which we used to pray with him",
+      "source": "https://sunnah.com/bukhari:549",
+      "prayers": [
+        "Dhuhr",
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-550",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 550,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 27,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ حَدَّثَنِي أَنَسُ بْنُ مَالِكٍ، قَالَ كَانَ رَسُولُ اللَّهِ صلى الله عليه وسلم يُصَلِّي الْعَصْرَ وَالشَّمْسُ مُرْتَفِعَةٌ حَيَّةٌ، فَيَذْهَبُ الذَّاهِبُ إِلَى الْعَوَالِي فَيَأْتِيهِمْ وَالشَّمْسُ مُرْتَفِعَةٌ، وَبَعْضُ الْعَوَالِي مِنَ الْمَدِينَةِ عَلَى أَرْبَعَةِ أَمْيَالٍ أَوْ نَحْوِهِ‏.‏",
+      "english": "Narrated Anas bin Malik: Allah's Messenger (ﷺ) used to offer the `Asr prayer at a time when the sun was still hot and high and if a person went to Al-`Awali (a place) of Medina, he would reach there when the sun was still high. Some of Al-`Awali of Medina were about four miles or so from the town",
+      "source": "https://sunnah.com/bukhari:550",
+      "prayers": [
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-551",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 551,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 28,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنِ ابْنِ شِهَابٍ، عَنْ أَنَسِ بْنِ مَالِكٍ، قَالَ كُنَّا نُصَلِّي الْعَصْرَ ثُمَّ يَذْهَبُ الذَّاهِبُ مِنَّا إِلَى قُبَاءٍ، فَيَأْتِيهِمْ وَالشَّمْسُ مُرْتَفِعَةٌ‏.‏",
+      "english": "Narrated Anas bin Malik: We used to pray the `Asr and after that if one of us went to Quba' he would arrive there while the sun was still high",
+      "source": "https://sunnah.com/bukhari:551",
+      "prayers": [
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-552",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 552,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 29,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ ‏ \"‏ الَّذِي تَفُوتُهُ صَلاَةُ الْعَصْرِ كَأَنَّمَا وُتِرَ أَهْلَهُ وَمَالَهُ ‏\"‏‏.‏",
+      "english": "Narrated Ibn `Umar: Allah's Messenger (ﷺ) said, \"Whoever misses the `Asr prayer (intentionally) then it is as if he lost his family and property",
+      "source": "https://sunnah.com/bukhari:552",
+      "prayers": [
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-553",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 553,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 30,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُسْلِمُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا هِشَامٌ، قَالَ حَدَّثَنَا يَحْيَى بْنُ أَبِي كَثِيرٍ، عَنْ أَبِي قِلاَبَةَ، عَنْ أَبِي الْمَلِيحِ، قَالَ كُنَّا مَعَ بُرَيْدَةَ فِي غَزْوَةٍ فِي يَوْمٍ ذِي غَيْمٍ فَقَالَ بَكِّرُوا بِصَلاَةِ الْعَصْرِ فَإِنَّ النَّبِيَّ صلى الله عليه وسلم قَالَ ‏ \"‏ مَنْ تَرَكَ صَلاَةَ الْعَصْرِ فَقَدْ حَبِطَ عَمَلُهُ ‏\"‏‏.‏",
+      "english": "Narrated Abu Al-Malih [??]: We were with Buraida in a battle on a cloudy day and he said, \"Offer the `Asr prayer early as the Prophet said, \"Whoever leaves the `Asr prayer, all his (good) deeds will be annulled",
+      "source": "https://sunnah.com/bukhari:553",
+      "prayers": [
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-554",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 554,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 31,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا الْحُمَيْدِيُّ، قَالَ حَدَّثَنَا مَرْوَانُ بْنُ مُعَاوِيَةَ، قَالَ حَدَّثَنَا إِسْمَاعِيلُ، عَنْ قَيْسٍ، عَنْ جَرِيرٍ، قَالَ كُنَّا عِنْدَ النَّبِيِّ صلى الله عليه وسلم فَنَظَرَ إِلَى الْقَمَرِ لَيْلَةً ـ يَعْنِي الْبَدْرَ ـ فَقَالَ ‏\"‏ إِنَّكُمْ سَتَرَوْنَ رَبَّكُمْ كَمَا تَرَوْنَ هَذَا الْقَمَرَ لاَ تُضَامُّونَ فِي رُؤْيَتِهِ، فَإِنِ اسْتَطَعْتُمْ أَنْ لاَ تُغْلَبُوا عَلَى صَلاَةٍ قَبْلَ طُلُوعِ الشَّمْسِ وَقَبْلَ غُرُوبِهَا فَافْعَلُوا ‏\"‏‏.‏ ثُمَّ قَرَأَ ‏{‏وَسَبِّحْ بِحَمْدِ رَبِّكَ قَبْلَ طُلُوعِ الشَّمْسِ وَقَبْلَ الْغُرُوبِ‏}‏‏.‏ قَالَ إِسْمَاعِيلُ افْعَلُوا لاَ تَفُوتَنَّكُمْ‏.‏",
+      "english": "Narrated Qais: Jarir said, \"We were with the Prophet (ﷺ) and he looked at the moon--full-moon--and said, 'Certainly you will see your Lord as you see this moon and you will have no trouble in seeing Him. So if you can avoid missing (through sleep or business, etc.) a prayer before the sunrise (Fajr) and a prayer before sunset (`Asr), you must do so.' He then recited Allah's Statement: And celebrate the praises Of your Lord before the rising of the sun and before (its) setting.\" (50.39) Isma`il said, \"Offer those prayers and do not miss them",
+      "source": "https://sunnah.com/bukhari:554",
+      "prayers": [
+        "Fajr",
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-555",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 555,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 32,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ حَدَّثَنَا مَالِكٌ، عَنْ أَبِي الزِّنَادِ، عَنِ الأَعْرَجِ، عَنْ أَبِي هُرَيْرَةَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ ‏ \"‏ يَتَعَاقَبُونَ فِيكُمْ مَلاَئِكَةٌ بِاللَّيْلِ وَمَلاَئِكَةٌ بِالنَّهَارِ، وَيَجْتَمِعُونَ فِي صَلاَةِ الْفَجْرِ وَصَلاَةِ الْعَصْرِ، ثُمَّ يَعْرُجُ الَّذِينَ بَاتُوا فِيكُمْ، فَيَسْأَلُهُمْ وَهْوَ أَعْلَمُ بِهِمْ كَيْفَ تَرَكْتُمْ عِبَادِي فَيَقُولُونَ تَرَكْنَاهُمْ وَهُمْ يُصَلُّونَ، وَأَتَيْنَاهُمْ وَهُمْ يُصَلُّونَ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) said, \"Angels come to you in succession by night and day and all of them get together at the time of the Fajr and `Asr prayers. Those who have passed the night with you (or stayed with you) ascend (to the Heaven) and Allah asks them, though He knows everything about you, well, \"In what state did you leave my slaves?\" The angels reply: \"When we left them they were praying and when we reached them, they were praying",
+      "source": "https://sunnah.com/bukhari:555",
+      "prayers": [
+        "Fajr",
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-556",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 556,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 33,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا شَيْبَانُ، عَنْ يَحْيَى، عَنْ أَبِي سَلَمَةَ، عَنْ أَبِي هُرَيْرَةَ، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم ‏ \"‏ إِذَا أَدْرَكَ أَحَدُكُمْ سَجْدَةً مِنْ صَلاَةِ الْعَصْرِ قَبْلَ أَنْ تَغْرُبَ الشَّمْسُ فَلْيُتِمَّ صَلاَتَهُ، وَإِذَا أَدْرَكَ سَجْدَةً مِنْ صَلاَةِ الصُّبْحِ قَبْلَ أَنْ تَطْلُعَ الشَّمْسُ فَلْيُتِمَّ صَلاَتَهُ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) said, \"If anyone of you can get one rak`a of the `Asr prayer before sunset, he should complete his prayer. If any of you can get one rak`a of the Fajr prayer before sunrise, he should complete his prayer",
+      "source": "https://sunnah.com/bukhari:556",
+      "prayers": [
+        "Fajr",
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-557",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 557,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 34,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنِي إِبْرَاهِيمُ، عَنِ ابْنِ شِهَابٍ، عَنْ سَالِمِ بْنِ عَبْدِ اللَّهِ، عَنْ أَبِيهِ، أَنَّهُ أَخْبَرَهُ أَنَّهُ، سَمِعَ رَسُولَ اللَّهِ صلى الله عليه وسلم يَقُولُ ‏ \"‏ إِنَّمَا بَقَاؤُكُمْ فِيمَا سَلَفَ قَبْلَكُمْ مِنَ الأُمَمِ كَمَا بَيْنَ صَلاَةِ الْعَصْرِ إِلَى غُرُوبِ الشَّمْسِ، أُوتِيَ أَهْلُ التَّوْرَاةِ التَّوْرَاةَ فَعَمِلُوا حَتَّى إِذَا انْتَصَفَ النَّهَارُ عَجَزُوا، فَأُعْطُوا قِيرَاطًا قِيرَاطًا، ثُمَّ أُوتِيَ أَهْلُ الإِنْجِيلِ الإِنْجِيلَ فَعَمِلُوا إِلَى صَلاَةِ الْعَصْرِ، ثُمَّ عَجَزُوا، فَأُعْطُوا قِيرَاطًا قِيرَاطًا، ثُمَّ أُوتِينَا الْقُرْآنَ فَعَمِلْنَا إِلَى غُرُوبِ الشَّمْسِ، فَأُعْطِينَا قِيرَاطَيْنِ قِيرَاطَيْنِ، فَقَالَ أَهْلُ الْكِتَابَيْنِ أَىْ رَبَّنَا أَعْطَيْتَ هَؤُلاَءِ قِيرَاطَيْنِ قِيرَاطَيْنِ، وَأَعْطَيْتَنَا قِيرَاطًا قِيرَاطًا، وَنَحْنُ كُنَّا أَكْثَرَ عَمَلاً، قَالَ قَالَ اللَّهُ عَزَّ وَجَلَّ هَلْ ظَلَمْتُكُمْ مِنْ أَجْرِكُمْ مِنْ شَىْءٍ قَالُوا لاَ، قَالَ فَهْوَ فَضْلِي أُوتِيهِ مَنْ أَشَاءُ ‏\"‏‏.‏",
+      "english": "Narrated Salim bin `Abdullah: My father said, \"I heard Allah's Messenger (ﷺ) saying, 'The period of your stay as compared to the previous nations is like the period equal to the time between the `Asr prayer and sunset. The people of the Torah were given the Torah and they acted (upon it) till midday then they were exhausted and were given one Qirat (of gold) each. And then the people of the Gospel were given the Gospel and they acted (upon it) till the `Asr prayer then they were exhausted and were given one Qirat each. And then we were given the Qur'an and we acted (upon it) till sunset and we were given two Qirats each. On that the people of both the scriptures said, 'O our Lord! You have given them two Qirats and given us one Qirat, though we have worked more than they.' Allah said, 'Have I usurped some of your right?' They said, 'No.' Allah said: \"That is my blessing I bestow upon whomsoever I wish",
+      "source": "https://sunnah.com/bukhari:557",
+      "prayers": [
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-558",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 558,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 35,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو كُرَيْبٍ، قَالَ حَدَّثَنَا أَبُو أُسَامَةَ، عَنْ بُرَيْدٍ، عَنْ أَبِي بُرْدَةَ، عَنْ أَبِي مُوسَى، عَنِ النَّبِيِّ صلى الله عليه وسلم ‏ \"‏ مَثَلُ الْمُسْلِمِينَ وَالْيَهُودِ وَالنَّصَارَى كَمَثَلِ رَجُلٍ اسْتَأْجَرَ قَوْمًا يَعْمَلُونَ لَهُ عَمَلاً إِلَى اللَّيْلِ، فَعَمِلُوا إِلَى نِصْفِ النَّهَارِ، فَقَالُوا لاَ حَاجَةَ لَنَا إِلَى أَجْرِكَ، فَاسْتَأْجَرَ آخَرِينَ فَقَالَ أَكْمِلُوا بَقِيَّةَ يَوْمِكُمْ، وَلَكُمُ الَّذِي شَرَطْتُ، فَعَمِلُوا حَتَّى إِذَا كَانَ حِينَ صَلاَةِ الْعَصْرِ قَالُوا لَكَ مَا عَمِلْنَا‏.‏ فَاسْتَأْجَرَ قَوْمًا فَعَمِلُوا بَقِيَّةَ يَوْمِهِمْ حَتَّى غَابَتِ الشَّمْسُ، وَاسْتَكْمَلُوا أَجْرَ الْفَرِيقَيْنِ ‏\"‏‏.‏",
+      "english": "Narrated Abu Musa: The Prophet (ﷺ) said, \"The example of Muslims, Jews and Christians is like the example of a man who employed laborers to work for him from morning till night. They worked till midday and they said, 'We are not in need of your reward.' So the man employed another batch and said to them, 'Complete the rest of the day and yours will be the wages I had fixed (for the first batch). They worked until the time of the `Asr prayer and said, 'Whatever we have done is for you.' He employed another batch. They worked for the rest of the day till sunset, and they received the wages of the two former batches",
+      "source": "https://sunnah.com/bukhari:558",
+      "prayers": [
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-559",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 559,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 36,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ مِهْرَانَ، قَالَ حَدَّثَنَا الْوَلِيدُ، قَالَ حَدَّثَنَا الأَوْزَاعِيُّ، قَالَ حَدَّثَنَا أَبُو النَّجَاشِيِّ، صُهَيْبٌ مَوْلَى رَافِعِ بْنِ خَدِيجٍ قَالَ سَمِعْتُ رَافِعَ بْنَ خَدِيجٍ، يَقُولُ كُنَّا نُصَلِّي الْمَغْرِبَ مَعَ النَّبِيِّ صلى الله عليه وسلم فَيَنْصَرِفُ أَحَدُنَا وَإِنَّهُ لَيُبْصِرُ مَوَاقِعَ نَبْلِهِ‏.‏",
+      "english": "Narrated Rafi` bin Khadij: We used to offer the Maghrib prayer with the Prophet (ﷺ) and after finishing the prayer one of us may go away and could still see as far as the spots where one's arrow might reach when shot by a bow",
+      "source": "https://sunnah.com/bukhari:559",
+      "prayers": [
+        "Maghrib"
+      ]
+    },
+    {
+      "id": "bukhari-560",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 560,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 37,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ بَشَّارٍ، قَالَ حَدَّثَنَا مُحَمَّدُ بْنُ جَعْفَرٍ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ سَعْدٍ، عَنْ مُحَمَّدِ بْنِ عَمْرِو بْنِ الْحَسَنِ بْنِ عَلِيٍّ، قَالَ قَدِمَ الْحَجَّاجُ فَسَأَلْنَا جَابِرَ بْنَ عَبْدِ اللَّهِ فَقَالَ كَانَ النَّبِيُّ صلى الله عليه وسلم يُصَلِّي الظُّهْرَ بِالْهَاجِرَةِ، وَالْعَصْرَ وَالشَّمْسُ نَقِيَّةٌ، وَالْمَغْرِبَ إِذَا وَجَبَتْ، وَالْعِشَاءَ أَحْيَانًا وَأَحْيَانًا، إِذَا رَآهُمُ اجْتَمَعُوا عَجَّلَ، وَإِذَا رَآهُمْ أَبْطَوْا أَخَّرَ، وَالصُّبْحَ كَانُوا ـ أَوْ كَانَ النَّبِيُّ صلى الله عليه وسلم يُصَلِّيهَا بِغَلَسٍ‏.‏",
+      "english": "Narrated Jabir bin `Abdullah: The Prophet (ﷺ) used to pray the Zuhr at midday, and the `Asr at a time when the sun was still bright, the Maghrib after sunset (at its stated time) and the `Isha at a variable time. Whenever he saw the people assembled (for `Isha' prayer) he would pray earlier and if the people delayed, he would delay the prayer. And they or the Prophet (ﷺ) used to offer the Fajr Prayers when it was still dark",
+      "source": "https://sunnah.com/bukhari:560",
+      "prayers": [
+        "Fajr",
+        "Dhuhr",
+        "Asr",
+        "Maghrib",
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-561",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 561,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 38,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا الْمَكِّيُّ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا يَزِيدُ بْنُ أَبِي عُبَيْدٍ، عَنْ سَلَمَةَ، قَالَ كُنَّا نُصَلِّي مَعَ النَّبِيِّ صلى الله عليه وسلم الْمَغْرِبَ إِذَا تَوَارَتْ بِالْحِجَابِ‏.‏",
+      "english": "Narrated Salama: We used to pray the Maghrib prayer with the Prophet (ﷺ) when the sun disappeared from the horizon",
+      "source": "https://sunnah.com/bukhari:561",
+      "prayers": [
+        "Maghrib"
+      ]
+    },
+    {
+      "id": "bukhari-562",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 562,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 39,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ حَدَّثَنَا عَمْرُو بْنُ دِينَارٍ، قَالَ سَمِعْتُ جَابِرَ بْنَ زَيْدٍ، عَنِ ابْنِ عَبَّاسٍ، قَالَ صَلَّى النَّبِيُّ صلى الله عليه وسلم سَبْعًا جَمِيعًا وَثَمَانِيًا جَمِيعًا‏.‏",
+      "english": "Narrated Ibn `Abbas: The Prophet (ﷺ) prayed seven rak`at together and eight rak`at together",
+      "source": "https://sunnah.com/bukhari:562",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-563",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 563,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 40,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو مَعْمَرٍ ـ هُوَ عَبْدُ اللَّهِ بْنُ عَمْرٍو ـ قَالَ حَدَّثَنَا عَبْدُ الْوَارِثِ، عَنِ الْحُسَيْنِ، قَالَ حَدَّثَنَا عَبْدُ اللَّهِ بْنُ بُرَيْدَةَ، قَالَ حَدَّثَنِي عَبْدُ اللَّهِ الْمُزَنِيُّ، أَنَّ النَّبِيَّ صلى الله عليه وسلم قَالَ ‏ \"‏ لاَ تَغْلِبَنَّكُمُ الأَعْرَابُ عَلَى اسْمِ صَلاَتِكُمُ الْمَغْرِبِ ‏\"‏‏.‏ قَالَ الأَعْرَابُ وَتَقُولُ هِيَ الْعِشَاءُ‏.‏",
+      "english": "Narrated `Abdullah Al-Muzani: The Prophet (ﷺ) said, \"Do not be influenced by bedouins regarding the name of your Maghrib prayer which is called `Isha' by them",
+      "source": "https://sunnah.com/bukhari:563",
+      "prayers": [
+        "Maghrib",
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-564",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 564,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 41,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدَانُ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا يُونُسُ، عَنِ الزُّهْرِيِّ، قَالَ سَالِمٌ أَخْبَرَنِي عَبْدُ اللَّهِ، قَالَ صَلَّى لَنَا رَسُولُ اللَّهِ صلى الله عليه وسلم لَيْلَةً صَلاَةَ الْعِشَاءِ ـ وَهْىَ الَّتِي يَدْعُو النَّاسُ الْعَتَمَةَ ـ ثُمَّ انْصَرَفَ فَأَقْبَلَ عَلَيْنَا فَقَالَ ‏ \"‏ أَرَأَيْتُمْ لَيْلَتَكُمْ هَذِهِ فَإِنَّ رَأْسَ مِائَةِ سَنَةٍ مِنْهَا لاَ يَبْقَى مِمَّنْ هُوَ عَلَى ظَهْرِ الأَرْضِ أَحَدٌ ‏\"‏‏.‏",
+      "english": "Narrated `Abdullah: \"One night Allah's Messenger (ﷺ) led us in the `Isha' prayer and that is the one called Al-`Atma [??] by the people. After the completion of the prayer, he faced us and said, \"Do you know the importance of this night? Nobody present on the surface of the earth tonight will be living after one hundred years from this night.\" (See Hadith No)",
+      "source": "https://sunnah.com/bukhari:564",
+      "prayers": [
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-565",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 565,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 42,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُسْلِمُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ سَعْدِ بْنِ إِبْرَاهِيمَ، عَنْ مُحَمَّدِ بْنِ عَمْرٍو ـ هُوَ ابْنُ الْحَسَنِ بْنِ عَلِيٍّ ـ قَالَ سَأَلْنَا جَابِرَ بْنَ عَبْدِ اللَّهِ عَنْ صَلاَةِ النَّبِيِّ، صلى الله عليه وسلم فَقَالَ كَانَ يُصَلِّي الظُّهْرَ بِالْهَاجِرَةِ، وَالْعَصْرَ وَالشَّمْسُ حَيَّةٌ، وَالْمَغْرِبَ إِذَا وَجَبَتْ، وَالْعِشَاءَ إِذَا كَثُرَ النَّاسُ عَجَّلَ، وَإِذَا قَلُّوا أَخَّرَ، وَالصُّبْحَ بِغَلَسٍ‏.‏",
+      "english": "Narrated Muhammad bin `Amr: We asked Jabir bin `Abdullah about the prayers of the Prophet (ﷺ) . He said, \"He used to pray Zuhr prayer at midday, the `Asr when the sun was still hot, and the Maghrib after sunset (at its stated time). The `Isha was offered early if the people gathered, and used to be delayed if their number was less; and the morning prayer was offered when it was still dark",
+      "source": "https://sunnah.com/bukhari:565",
+      "prayers": [
+        "Fajr",
+        "Dhuhr",
+        "Asr",
+        "Maghrib",
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-566",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 566,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 43,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ عُقَيْلٍ، عَنِ ابْنِ شِهَابٍ، عَنْ عُرْوَةَ، أَنَّ عَائِشَةَ، أَخْبَرَتْهُ قَالَتْ، أَعْتَمَ رَسُولُ اللَّهِ صلى الله عليه وسلم لَيْلَةً بِالْعِشَاءِ، وَذَلِكَ قَبْلَ أَنْ يَفْشُوَ الإِسْلاَمُ، فَلَمْ يَخْرُجْ حَتَّى قَالَ عُمَرُ نَامَ النِّسَاءُ وَالصِّبْيَانُ‏.‏ فَخَرَجَ فَقَالَ لأَهْلِ الْمَسْجِدِ ‏ \"‏ مَا يَنْتَظِرُهَا أَحَدٌ مِنْ أَهْلِ الأَرْضِ غَيْرُكُمْ ‏\"‏‏.‏",
+      "english": "Narrated `Aisha: Allah's Messenger (ﷺ) once delayed the `Isha' prayer and that was during the days when Islam still had not spread. The Prophet (ﷺ) did not come out till `Umar informed him that the women and children had slept. Then he came out and said to the people of the mosque: \"None amongst the dwellers of the earth has been waiting for it (`Isha prayer) except you",
+      "source": "https://sunnah.com/bukhari:566",
+      "prayers": [
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-567",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 567,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 44,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ الْعَلاَءِ، قَالَ أَخْبَرَنَا أَبُو أُسَامَةَ، عَنْ بُرَيْدٍ، عَنْ أَبِي بُرْدَةَ، عَنْ أَبِي مُوسَى، قَالَ كُنْتُ أَنَا وَأَصْحَابِي الَّذِينَ، قَدِمُوا مَعِي فِي السَّفِينَةِ نُزُولاً فِي بَقِيعِ بُطْحَانَ، وَالنَّبِيُّ صلى الله عليه وسلم بِالْمَدِينَةِ، فَكَانَ يَتَنَاوَبُ النَّبِيَّ صلى الله عليه وسلم عِنْدَ صَلاَةِ الْعِشَاءِ كُلَّ لَيْلَةٍ نَفَرٌ مِنْهُمْ، فَوَافَقْنَا النَّبِيَّ ـ عليه السلام ـ أَنَا وَأَصْحَابِي وَلَهُ بَعْضُ الشُّغْلِ فِي بَعْضِ أَمْرِهِ فَأَعْتَمَ بِالصَّلاَةِ حَتَّى ابْهَارَّ اللَّيْلُ، ثُمَّ خَرَجَ النَّبِيُّ صلى الله عليه وسلم فَصَلَّى بِهِمْ، فَلَمَّا قَضَى صَلاَتَهُ قَالَ لِمَنْ حَضَرَهُ ‏\"‏ عَلَى رِسْلِكُمْ، أَبْشِرُوا إِنَّ مِنْ نِعْمَةِ اللَّهِ عَلَيْكُمْ أَنَّهُ لَيْسَ أَحَدٌ مِنَ النَّاسِ يُصَلِّي هَذِهِ السَّاعَةَ غَيْرُكُمْ ‏\"‏‏.‏ أَوْ قَالَ ‏\"‏ مَا صَلَّى هَذِهِ السَّاعَةَ أَحَدٌ غَيْرُكُمْ ‏\"‏‏.‏ لاَ يَدْرِي أَىَّ الْكَلِمَتَيْنِ قَالَ‏.‏ قَالَ أَبُو مُوسَى فَرَجَعْنَا فَفَرِحْنَا بِمَا سَمِعْنَا مِنْ رَسُولِ اللَّهِ صلى الله عليه وسلم‏.‏",
+      "english": "Narrated Abu Musa: My companions, who came with me in the boat and I landed at a place called Baqi [??] Buthan [??] . The Prophet (ﷺ) was in Medina at that time. One of us used to go to the Prophet (ﷺ) by turns every night at the time of the `Isha prayer. Once I along with my companions went to the Prophet (ﷺ) and he was busy in some of his affairs, so the `Isha' prayer was delayed to the middle of the night He then came out and led the people (in prayer). After finishing from the prayer, he addressed the people present there saying, \"Be patient! Don't go away. Have the glad tiding. It is from the blessing of Allah upon you that none amongst mankind has prayed at this time save you.\" Or said, \"None except you has prayed at this time.\" Abu Musa added, 'So we returned happily after what we heard from Allah's Messenger (ﷺ)",
+      "source": "https://sunnah.com/bukhari:567",
+      "prayers": [
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-568",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 568,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 45,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ سَلاَمٍ، قَالَ أَخْبَرَنَا عَبْدُ الْوَهَّابِ الثَّقَفِيُّ، قَالَ حَدَّثَنَا خَالِدٌ الْحَذَّاءُ، عَنْ أَبِي الْمِنْهَالِ، عَنْ أَبِي بَرْزَةَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم كَانَ يَكْرَهُ النَّوْمَ قَبْلَ الْعِشَاءِ وَالْحَدِيثَ بَعْدَهَا‏.‏",
+      "english": "Narrated Abu Barza: Allah's Messenger (ﷺ) disliked to sleep before the `Isha' prayer and to talk after it",
+      "source": "https://sunnah.com/bukhari:568",
+      "prayers": [
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-569",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 569,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 46,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَيُّوبُ بْنُ سُلَيْمَانَ، قَالَ حَدَّثَنِي أَبُو بَكْرٍ، عَنْ سُلَيْمَانَ، قَالَ صَالِحُ بْنُ كَيْسَانَ أَخْبَرَنِي ابْنُ شِهَابٍ، عَنْ عُرْوَةَ، أَنَّ عَائِشَةَ، قَالَتْ أَعْتَمَ رَسُولُ اللَّهِ صلى الله عليه وسلم بِالْعِشَاءِ حَتَّى نَادَاهُ عُمَرُ الصَّلاَةَ، نَامَ النِّسَاءُ وَالصِّبْيَانُ‏.‏ فَخَرَجَ فَقَالَ ‏ \"‏ مَا يَنْتَظِرُهَا أَحَدٌ مِنْ أَهْلِ الأَرْضِ غَيْرُكُمْ ‏\"‏‏.‏ قَالَ وَلاَ يُصَلَّى يَوْمَئِذٍ إِلاَّ بِالْمَدِينَةِ، وَكَانُوا يُصَلُّونَ فِيمَا بَيْنَ أَنْ يَغِيبَ الشَّفَقُ إِلَى ثُلُثِ اللَّيْلِ الأَوَّلِ‏.‏",
+      "english": "Narrated Ibn Shihab from `Urwa: `Aisha said, \"Once Allah's Messenger (ﷺ) delayed the `Isha' prayer till `Umar reminded him by saying, \"The prayer!\" The women and children have slept. Then the Prophet (ﷺ) came out and said, 'None amongst the dwellers of the earth has been waiting for it (the prayer) except you.\" `Urwa said, \"Nowhere except in Medina the prayer used to be offered (in those days).\" He further said, \"The Prophet (ﷺ) used to offer the `Isha' prayer in the period between the disappearance of the twilight and the end of the first third of the night",
+      "source": "https://sunnah.com/bukhari:569",
+      "prayers": [
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-570",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 570,
+      "book": 0,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 0,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مَحْمُودٌ، قَالَ أَخْبَرَنَا عَبْدُ الرَّزَّاقِ، قَالَ أَخْبَرَنِي ابْنُ جُرَيْجٍ، قَالَ أَخْبَرَنِي نَافِعٌ، قَالَ حَدَّثَنَا عَبْدُ اللَّهِ بْنُ عُمَرَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم شُغِلَ عَنْهَا لَيْلَةً، فَأَخَّرَهَا حَتَّى رَقَدْنَا فِي الْمَسْجِدِ، ثُمَّ اسْتَيْقَظْنَا ثُمَّ رَقَدْنَا ثُمَّ اسْتَيْقَظْنَا، ثُمَّ خَرَجَ عَلَيْنَا النَّبِيُّ صلى الله عليه وسلم ثُمَّ قَالَ ‏\"‏ لَيْسَ أَحَدٌ مِنْ أَهْلِ الأَرْضِ يَنْتَظِرُ الصَّلاَةَ غَيْرُكُمْ ‏\"‏‏.‏ وَكَانَ ابْنُ عُمَرَ لاَ يُبَالِي أَقَدَّمَهَا أَمْ أَخَّرَهَا إِذَا كَانَ لاَ يَخْشَى أَنْ يَغْلِبَهُ النَّوْمُ عَنْ وَقْتِهَا، وَكَانَ يَرْقُدُ قَبْلَهَا‏.‏ قَالَ ابْنُ جُرَيْجٍ قُلْتُ لِعَطَاءٍ وَقَالَ سَمِعْتُ ابْنَ عَبَّاسٍ، يَقُولُ أَعْتَمَ رَسُولُ اللَّهِ صلى الله عليه وسلم لَيْلَةً بِالْعِشَاءِ حَتَّى رَقَدَ النَّاسُ وَاسْتَيْقَظُوا، وَرَقَدُوا وَاسْتَيْقَظُوا، فَقَامَ عُمَرُ بْنُ الْخَطَّابِ فَقَالَ الصَّلاَةَ‏.‏ قَالَ عَطَاءٌ قَالَ ابْنُ عَبَّاسٍ فَخَرَجَ نَبِيُّ اللَّهِ صلى الله عليه وسلم كَأَنِّي أَنْظُرُ إِلَيْهِ الآنَ، يَقْطُرُ رَأْسُهُ مَاءً، وَاضِعًا يَدَهُ عَلَى رَأْسِهِ فَقَالَ ‏\"‏ لَوْلاَ أَنْ أَشُقَّ عَلَى أُمَّتِي لأَمَرْتُهُمْ أَنْ يُصَلُّوهَا هَكَذَا ‏\"‏‏.‏ فَاسْتَثْبَتُّ عَطَاءً كَيْفَ وَضَعَ النَّبِيُّ صلى الله عليه وسلم عَلَى رَأْسِهِ يَدَهُ كَمَا أَنْبَأَهُ ابْنُ عَبَّاسٍ، فَبَدَّدَ لِي عَطَاءٌ بَيْنَ أَصَابِعِهِ شَيْئًا مِنْ تَبْدِيدٍ، ثُمَّ وَضَعَ أَطْرَافَ أَصَابِعِهِ عَلَى قَرْنِ الرَّأْسِ ثُمَّ ضَمَّهَا، يُمِرُّهَا كَذَلِكَ عَلَى الرَّأْسِ حَتَّى مَسَّتْ إِبْهَامُهُ طَرَفَ الأُذُنِ مِمَّا يَلِي الْوَجْهَ عَلَى الصُّدْغِ، وَنَاحِيَةِ اللِّحْيَةِ، لاَ يُقَصِّرُ وَلاَ يَبْطُشُ إِلاَّ كَذَلِكَ وَقَالَ ‏\"‏ لَوْلاَ أَنْ أَشُقَّ عَلَى أُمَّتِي لأَمَرْتُهُمْ أَنْ يُصَلُّوا هَكَذَا ‏\"‏‏.‏",
+      "english": "Narrated Ibn Juraij from Nafi`: `Abdullah bin `Umar said, \"Once Allah's Messenger (ﷺ) was busy (at the time of the `Isha'), so the prayer was delayed so much so that we slept and woke up and slept and woke up again. The Prophet (ﷺ) came out and said, 'None amongst the dwellers of the earth but you have been waiting for the prayer.\" Ibn `Umar did not find any harm in praying it earlier or in delaying it unless he was afraid that sleep might overwhelm him and he might miss the prayer, and sometimes he used to sleep before the `Isha' prayer. Ibn Juraij said, \"I said to `Ata', 'I heard Ibn `Abbas saying: Once Allah's Messenger (ﷺ) delayed the `Isha' prayer to such an extent that the people slept and got up and slept again and got up again. Then `Umar bin Al-Khattab, stood up and reminded the Prophet (ﷺ) of the prayer.' `Ata' said, 'Ibn `Abbas said: The Prophet came out as if I was looking at him at this time, and water was trickling from his head and he was putting his hand on his head and then said, 'Hadn't I thought it hard for my followers, I would have ordered them to pray (`Isha' prayer) at this time.' I asked `Ata' for further information, how the Prophet had kept his hand on his head as he was told by Ibn `Abbas. `Ata' separated his fingers slightly and put their tips on the side of the head, brought the fingers downwards approximating them till the thumb touched the lobe of the ear at the side of the temple and the beard on the face. He neither slowed nor hurried in this action but he acted like that. The Prophet (ﷺ) said: \"Hadn't I thought it hard for my followers I would have ordered them to pray at this time",
+      "source": "https://sunnah.com/bukhari:570",
+      "prayers": [
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-571",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 571,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 47,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مَحْمُودٌ، قَالَ أَخْبَرَنَا عَبْدُ الرَّزَّاقِ، قَالَ أَخْبَرَنِي ابْنُ جُرَيْجٍ، قَالَ أَخْبَرَنِي نَافِعٌ، قَالَ حَدَّثَنَا عَبْدُ اللَّهِ بْنُ عُمَرَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم شُغِلَ عَنْهَا لَيْلَةً، فَأَخَّرَهَا حَتَّى رَقَدْنَا فِي الْمَسْجِدِ، ثُمَّ اسْتَيْقَظْنَا ثُمَّ رَقَدْنَا ثُمَّ اسْتَيْقَظْنَا، ثُمَّ خَرَجَ عَلَيْنَا النَّبِيُّ صلى الله عليه وسلم ثُمَّ قَالَ ‏\"‏ لَيْسَ أَحَدٌ مِنْ أَهْلِ الأَرْضِ يَنْتَظِرُ الصَّلاَةَ غَيْرُكُمْ ‏\"‏‏.‏ وَكَانَ ابْنُ عُمَرَ لاَ يُبَالِي أَقَدَّمَهَا أَمْ أَخَّرَهَا إِذَا كَانَ لاَ يَخْشَى أَنْ يَغْلِبَهُ النَّوْمُ عَنْ وَقْتِهَا، وَكَانَ يَرْقُدُ قَبْلَهَا‏.‏ قَالَ ابْنُ جُرَيْجٍ قُلْتُ لِعَطَاءٍ وَقَالَ سَمِعْتُ ابْنَ عَبَّاسٍ، يَقُولُ أَعْتَمَ رَسُولُ اللَّهِ صلى الله عليه وسلم لَيْلَةً بِالْعِشَاءِ حَتَّى رَقَدَ النَّاسُ وَاسْتَيْقَظُوا، وَرَقَدُوا وَاسْتَيْقَظُوا، فَقَامَ عُمَرُ بْنُ الْخَطَّابِ فَقَالَ الصَّلاَةَ‏.‏ قَالَ عَطَاءٌ قَالَ ابْنُ عَبَّاسٍ فَخَرَجَ نَبِيُّ اللَّهِ صلى الله عليه وسلم كَأَنِّي أَنْظُرُ إِلَيْهِ الآنَ، يَقْطُرُ رَأْسُهُ مَاءً، وَاضِعًا يَدَهُ عَلَى رَأْسِهِ فَقَالَ ‏\"‏ لَوْلاَ أَنْ أَشُقَّ عَلَى أُمَّتِي لأَمَرْتُهُمْ أَنْ يُصَلُّوهَا هَكَذَا ‏\"‏‏.‏ فَاسْتَثْبَتُّ عَطَاءً كَيْفَ وَضَعَ النَّبِيُّ صلى الله عليه وسلم عَلَى رَأْسِهِ يَدَهُ كَمَا أَنْبَأَهُ ابْنُ عَبَّاسٍ، فَبَدَّدَ لِي عَطَاءٌ بَيْنَ أَصَابِعِهِ شَيْئًا مِنْ تَبْدِيدٍ، ثُمَّ وَضَعَ أَطْرَافَ أَصَابِعِهِ عَلَى قَرْنِ الرَّأْسِ ثُمَّ ضَمَّهَا، يُمِرُّهَا كَذَلِكَ عَلَى الرَّأْسِ حَتَّى مَسَّتْ إِبْهَامُهُ طَرَفَ الأُذُنِ مِمَّا يَلِي الْوَجْهَ عَلَى الصُّدْغِ، وَنَاحِيَةِ اللِّحْيَةِ، لاَ يُقَصِّرُ وَلاَ يَبْطُشُ إِلاَّ كَذَلِكَ وَقَالَ ‏\"‏ لَوْلاَ أَنْ أَشُقَّ عَلَى أُمَّتِي لأَمَرْتُهُمْ أَنْ يُصَلُّوا هَكَذَا ‏\"‏‏.‏",
+      "english": "Narrated Ibn Juraij from Nafi`: `Abdullah bin `Umar said, \"Once Allah's Messenger (ﷺ) was busy (at the time of the `Isha'), so the prayer was delayed so much so that we slept and woke up and slept and woke up again. The Prophet (ﷺ) came out and said, 'None amongst the dwellers of the earth but you have been waiting for the prayer.\" Ibn `Umar did not find any harm in praying it earlier or in delaying it unless he was afraid that sleep might overwhelm him and he might miss the prayer, and sometimes he used to sleep before the `Isha' prayer. Ibn Juraij said, \"I said to `Ata', 'I heard Ibn `Abbas saying: Once Allah's Messenger (ﷺ) delayed the `Isha' prayer to such an extent that the people slept and got up and slept again and got up again. Then `Umar bin Al-Khattab, stood up and reminded the Prophet (ﷺ) of the prayer.' `Ata' said, 'Ibn `Abbas said: The Prophet came out as if I was looking at him at this time, and water was trickling from his head and he was putting his hand on his head and then said, 'Hadn't I thought it hard for my followers, I would have ordered them to pray (`Isha' prayer) at this time.' I asked `Ata' for further information, how the Prophet had kept his hand on his head as he was told by Ibn `Abbas. `Ata' separated his fingers slightly and put their tips on the side of the head, brought the fingers downwards approximating them till the thumb touched the lobe of the ear at the side of the temple and the beard on the face. He neither slowed nor hurried in this action but he acted like that. The Prophet (ﷺ) said: \"Hadn't I thought it hard for my followers I would have ordered them to pray at this time",
+      "source": "https://sunnah.com/bukhari:571",
+      "prayers": [
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-572",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 572,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 48,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ الرَّحِيمِ الْمُحَارِبِيُّ، قَالَ حَدَّثَنَا زَائِدَةُ، عَنْ حُمَيْدٍ الطَّوِيلِ، عَنْ أَنَسٍ، قَالَ أَخَّرَ النَّبِيُّ صلى الله عليه وسلم صَلاَةَ الْعِشَاءِ إِلَى نِصْفِ اللَّيْلِ، ثُمَّ صَلَّى ثُمَّ قَالَ ‏ \"‏ قَدْ صَلَّى النَّاسُ وَنَامُوا، أَمَا إِنَّكُمْ فِي صَلاَةٍ مَا انْتَظَرْتُمُوهَا ‏\"‏‏.‏ وَزَادَ ابْنُ أَبِي مَرْيَمَ أَخْبَرَنَا يَحْيَى بْنُ أَيُّوبَ حَدَّثَنِي حُمَيْدٌ سَمِعَ أَنَسًا كَأَنِّي أَنْظُرُ إِلَى وَبِيصِ خَاتَمِهِ لَيْلَتَئِذٍ‏.‏",
+      "english": "Narrated Anas: The Prophet (ﷺ) delayed the `Isha' prayer till midnight and then he offered the prayer and said, \"The people prayed and slept but you have been in prayer as long as you have been waiting for it (the prayer).\" Anas added: As if I am looking now at the glitter of the ring of the Prophet (ﷺ) on that night",
+      "source": "https://sunnah.com/bukhari:572",
+      "prayers": [
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-573",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 573,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 49,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى، عَنْ إِسْمَاعِيلَ، حَدَّثَنَا قَيْسٌ، قَالَ لِي جَرِيرُ بْنُ عَبْدِ اللَّهِ كُنَّا عِنْدَ النَّبِيِّ صلى الله عليه وسلم إِذْ نَظَرَ إِلَى الْقَمَرِ لَيْلَةَ الْبَدْرِ فَقَالَ ‏\"‏ أَمَا إِنَّكُمْ سَتَرَوْنَ رَبَّكُمْ كَمَا تَرَوْنَ هَذَا، لاَ تُضَامُّونَ ـ أَوْ لاَ تُضَاهُونَ ـ فِي رُؤْيَتِهِ، فَإِنِ اسْتَطَعْتُمْ أَنْ لاَ تُغْلَبُوا عَلَى صَلاَةٍ قَبْلَ طُلُوعِ الشَّمْسِ، وَقَبْلَ غُرُوبِهَا فَافْعَلُوا ‏\"‏‏.‏ ثُمَّ قَالَ ‏\"‏ فَسَبِّحْ بِحَمْدِ رَبِّكَ قَبْلَ طُلُوعِ الشَّمْسِ وَقَبْلَ غُرُوبِهَا ‏\"‏‏.‏",
+      "english": "Narrated Jarir bin `Abdullah: We were with the Prophet (ﷺ) on a full moon night. He looked at the moon and said, \"You will certainly see your Lord as you see this moon, and there will be no trouble in seeing Him. So if you can avoid missing (through sleep, business, etc.) a prayer before the rising of the sun (Fajr) and before its setting (`Asr) you must do so. He (the Prophet (ﷺ) ) then recited the following verse: And celebrate the praises Of Your Lord before The rising of the sun And before (its) setting",
+      "source": "https://sunnah.com/bukhari:573",
+      "prayers": [
+        "Fajr",
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-574",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 574,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 50,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا هُدْبَةُ بْنُ خَالِدٍ، قَالَ حَدَّثَنَا هَمَّامٌ، حَدَّثَنِي أَبُو جَمْرَةَ، عَنْ أَبِي بَكْرِ بْنِ أَبِي مُوسَى، عَنْ أَبِيهِ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ ‏ \"‏ مَنْ صَلَّى الْبَرْدَيْنِ دَخَلَ الْجَنَّةَ ‏\"‏‏.‏ وَقَالَ ابْنُ رَجَاءٍ حَدَّثَنَا هَمَّامٌ عَنْ أَبِي جَمْرَةَ أَنَّ أَبَا بَكْرِ بْنَ عَبْدِ اللَّهِ بْنِ قَيْسٍ أَخْبَرَهُ بِهَذَا‏.‏ حَدَّثَنَا إِسْحَاقُ، عَنْ حَبَّانَ، حَدَّثَنَا هَمَّامٌ، حَدَّثَنَا أَبُو جَمْرَةَ، عَنْ أَبِي بَكْرِ بْنِ عَبْدِ اللَّهِ، عَنْ أَبِيهِ، عَنِ النَّبِيِّ صلى الله عليه وسلم مِثْلَهُ‏.‏",
+      "english": "Narrated Abu Bakr bin Abi Musa: My father said, \"Allah's Messenger (ﷺ) said, 'Whoever prays the two cool prayers (`Asr and Fajr) will go to Paradise",
+      "source": "https://sunnah.com/bukhari:574",
+      "prayers": [
+        "Fajr",
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-575",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 575,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 51,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَمْرُو بْنُ عَاصِمٍ، قَالَ حَدَّثَنَا هَمَّامٌ، عَنْ قَتَادَةَ، عَنْ أَنَسٍ، أَنَّ زَيْدَ بْنَ ثَابِتٍ، حَدَّثَهُ أَنَّهُمْ، تَسَحَّرُوا مَعَ النَّبِيِّ صلى الله عليه وسلم ثُمَّ قَامُوا إِلَى الصَّلاَةِ‏.‏ قُلْتُ كَمْ بَيْنَهُمَا قَالَ قَدْرُ خَمْسِينَ أَوْ سِتِّينَ ـ يَعْنِي آيَةً ـ ح‏.‏",
+      "english": "Narrated Anas: Zaid bin Thabit said, \"We took the \"Suhur\" (the meal taken before dawn while fasting is observed) with the Prophet (ﷺ) and then stood up for the (morning) prayer.\" I asked him how long the interval between the two (Suhur and prayer) was. He replied, 'The interval between the two was just sufficient to recite fifty to sixty 'Ayat",
+      "source": "https://sunnah.com/bukhari:575",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-576",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 576,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 52,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا حَسَنُ بْنُ صَبَّاحٍ، سَمِعَ رَوْحًا، حَدَّثَنَا سَعِيدٌ، عَنْ قَتَادَةَ، عَنْ أَنَسِ بْنِ مَالِكٍ، أَنَّ نَبِيَّ اللَّهِ صلى الله عليه وسلم وَزَيْدَ بْنَ ثَابِتٍ تَسَحَّرَا، فَلَمَّا فَرَغَا مِنْ سَحُورِهِمَا قَامَ نَبِيُّ اللَّهِ صلى الله عليه وسلم إِلَى الصَّلاَةِ فَصَلَّى‏.‏ قُلْنَا لأَنَسٍ كَمْ كَانَ بَيْنَ فَرَاغِهِمَا مِنْ سَحُورِهِمَا وَدُخُولِهِمَا فِي الصَّلاَةِ قَالَ قَدْرُ مَا يَقْرَأُ الرَّجُلُ خَمْسِينَ آيَةً‏.‏",
+      "english": "Narrated Qatada: Anas bin Malik said, \"The Prophet (ﷺ) and Zaid bin Thabit took the 'Suhur' together and after finishing the meal, the Prophet (ﷺ) stood up and prayed (Fajr prayer).\" I asked Anas, \"How long was the interval between finishing their 'Suhur' and starting the prayer?\" He replied, \"The interval between the two was just sufficient to recite fifty 'Ayat.\" (Verses of the Qur'an)",
+      "source": "https://sunnah.com/bukhari:576",
+      "prayers": [
+        "Fajr"
+      ]
+    },
+    {
+      "id": "bukhari-577",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 577,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 53,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا إِسْمَاعِيلُ بْنُ أَبِي أُوَيْسٍ، عَنْ أَخِيهِ، عَنْ سُلَيْمَانَ، عَنْ أَبِي حَازِمٍ، أَنَّهُ سَمِعَ سَهْلَ بْنَ سَعْدٍ، يَقُولُ كُنْتُ أَتَسَحَّرُ فِي أَهْلِي ثُمَّ يَكُونُ سُرْعَةٌ بِي أَنْ أُدْرِكَ صَلاَةَ الْفَجْرِ مَعَ رَسُولِ اللَّهِ صلى الله عليه وسلم‏.‏",
+      "english": "Narrated Sahl bin Sa`d: I used to take the \"Suhur\" meal with my family and hasten so as to catch the Fajr (morning prayer) with Allah's Messenger (ﷺ)",
+      "source": "https://sunnah.com/bukhari:577",
+      "prayers": [
+        "Fajr"
+      ]
+    },
+    {
+      "id": "bukhari-578",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 578,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 54,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ أَخْبَرَنَا اللَّيْثُ، عَنْ عُقَيْلٍ، عَنِ ابْنِ شِهَابٍ، قَالَ أَخْبَرَنِي عُرْوَةُ بْنُ الزُّبَيْرِ، أَنَّ عَائِشَةَ، أَخْبَرَتْهُ قَالَتْ، كُنَّ نِسَاءُ الْمُؤْمِنَاتِ يَشْهَدْنَ مَعَ رَسُولِ اللَّهِ صلى الله عليه وسلم صَلاَةَ الْفَجْرِ مُتَلَفِّعَاتٍ بِمُرُوطِهِنَّ، ثُمَّ يَنْقَلِبْنَ إِلَى بُيُوتِهِنَّ حِينَ يَقْضِينَ الصَّلاَةَ، لاَ يَعْرِفُهُنَّ أَحَدٌ مِنَ الْغَلَسِ‏.‏",
+      "english": "Narrated `Aisha: The believing women covered with their veiling sheets used to attend the Fajr prayer with Allah's Apostle, and after finishing the prayer they would return to their home and nobody could recognize them because of darkness",
+      "source": "https://sunnah.com/bukhari:578",
+      "prayers": [
+        "Fajr"
+      ]
+    },
+    {
+      "id": "bukhari-579",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 579,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 55,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ، عَنْ مَالِكٍ، عَنْ زَيْدِ بْنِ أَسْلَمَ، عَنْ عَطَاءِ بْنِ يَسَارٍ، وَعَنْ بُسْرِ بْنِ سَعِيدٍ، وَعَنِ الأَعْرَجِ، يُحَدِّثُونَهُ عَنْ أَبِي هُرَيْرَةَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ ‏ \"‏ مَنْ أَدْرَكَ مِنَ الصُّبْحِ رَكْعَةً قَبْلَ أَنْ تَطْلُعَ الشَّمْسُ فَقَدْ أَدْرَكَ الصُّبْحَ، وَمَنْ أَدْرَكَ رَكْعَةً مِنَ الْعَصْرِ قَبْلَ أَنْ تَغْرُبَ الشَّمْسُ فَقَدْ أَدْرَكَ الْعَصْرَ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) said, \"Whoever could get one rak`a (of the Fajr prayer) before sunrise, he has got the (morning) prayer and whoever could get one rak`a of the `Asr prayer before sunset, he has got the (`Asr) prayer",
+      "source": "https://sunnah.com/bukhari:579",
+      "prayers": [
+        "Fajr",
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-580",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 580,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 56,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنِ ابْنِ شِهَابٍ، عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ، عَنْ أَبِي هُرَيْرَةَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ ‏ \"‏ مَنْ أَدْرَكَ رَكْعَةً مِنَ الصَّلاَةِ فَقَدْ أَدْرَكَ الصَّلاَةَ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) said, \"Whoever could get one rak`a of a prayer, (in its proper time) he has got the prayer",
+      "source": "https://sunnah.com/bukhari:580",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-581",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 581,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 57,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا حَفْصُ بْنُ عُمَرَ، قَالَ حَدَّثَنَا هِشَامٌ، عَنْ قَتَادَةَ، عَنْ أَبِي الْعَالِيَةِ، عَنِ ابْنِ عَبَّاسٍ، قَالَ شَهِدَ عِنْدِي رِجَالٌ مَرْضِيُّونَ وَأَرْضَاهُمْ عِنْدِي عُمَرُ أَنَّ النَّبِيَّ صلى الله عليه وسلم نَهَى عَنِ الصَّلاَةِ بَعْدَ الصُّبْحِ حَتَّى تَشْرُقَ الشَّمْسُ، وَبَعْدَ الْعَصْرِ حَتَّى تَغْرُبَ‏.‏ حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى، عَنْ شُعْبَةَ، عَنْ قَتَادَةَ، سَمِعْتُ أَبَا الْعَالِيَةِ، عَنِ ابْنِ عَبَّاسٍ، قَالَ حَدَّثَنِي نَاسٌ، بِهَذَا‏.‏",
+      "english": "Narrated `Umar: \"The Prophet (ﷺ) forbade praying after the Fajr prayer till the sun rises and after the `Asr prayer till the sun sets.\" Narrated Ibn `Abbas: Some people told me the same narration (as above)",
+      "source": "https://sunnah.com/bukhari:581",
+      "prayers": [
+        "Fajr",
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-582",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 582,
+      "book": 0,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 0,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى بْنُ سَعِيدٍ، عَنْ هِشَامٍ، قَالَ أَخْبَرَنِي أَبِي قَالَ، أَخْبَرَنِي ابْنُ عُمَرَ، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم ‏\"‏ لاَ تَحَرَّوْا بِصَلاَتِكُمْ طُلُوعَ الشَّمْسِ وَلاَ غُرُوبَهَا ‏\"‏‏.‏ وَقَالَ حَدَّثَنِي ابْنُ عُمَرَ، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم ‏\"‏ إِذَا طَلَعَ حَاجِبُ الشَّمْسِ فَأَخِّرُوا الصَّلاَةَ حَتَّى تَرْتَفِعَ، وَإِذَا غَابَ حَاجِبُ الشَّمْسِ فَأَخِّرُوا الصَّلاَةَ حَتَّى تَغِيبَ ‏\"‏‏.‏ تَابَعَهُ عَبْدَةُ‏.‏",
+      "english": "Narrated Hisham's father: Ibn `Umar said, \"Allah's Messenger (ﷺ) said, 'Do not pray at the time of sunrise and at the time of sunset.' \" Ibn `Umar said, \"Allah's Messenger (ﷺ) said, 'If the edge of the sun appears (above the horizon) delay the prayer till it becomes high, and if the edge of the sun disappears, delay the prayer till it sets (disappears completely)",
+      "source": "https://sunnah.com/bukhari:582",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-583",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 583,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 58,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى بْنُ سَعِيدٍ، عَنْ هِشَامٍ، قَالَ أَخْبَرَنِي أَبِي قَالَ، أَخْبَرَنِي ابْنُ عُمَرَ، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم ‏\"‏ لاَ تَحَرَّوْا بِصَلاَتِكُمْ طُلُوعَ الشَّمْسِ وَلاَ غُرُوبَهَا ‏\"‏‏.‏ وَقَالَ حَدَّثَنِي ابْنُ عُمَرَ، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم ‏\"‏ إِذَا طَلَعَ حَاجِبُ الشَّمْسِ فَأَخِّرُوا الصَّلاَةَ حَتَّى تَرْتَفِعَ، وَإِذَا غَابَ حَاجِبُ الشَّمْسِ فَأَخِّرُوا الصَّلاَةَ حَتَّى تَغِيبَ ‏\"‏‏.‏ تَابَعَهُ عَبْدَةُ‏.‏",
+      "english": "Narrated Hisham's father: Ibn `Umar said, \"Allah's Messenger (ﷺ) said, 'Do not pray at the time of sunrise and at the time of sunset.' \" Ibn `Umar said, \"Allah's Messenger (ﷺ) said, 'If the edge of the sun appears (above the horizon) delay the prayer till it becomes high, and if the edge of the sun disappears, delay the prayer till it sets (disappears completely)",
+      "source": "https://sunnah.com/bukhari:583",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-584",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 584,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 59,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عُبَيْدُ بْنُ إِسْمَاعِيلَ، عَنْ أَبِي أُسَامَةَ، عَنْ عُبَيْدِ اللَّهِ، عَنْ خُبَيْبِ بْنِ عَبْدِ الرَّحْمَنِ، عَنْ حَفْصِ بْنِ عَاصِمٍ، عَنْ أَبِي هُرَيْرَةَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم نَهَى عَنْ بَيْعَتَيْنِ وَعَنْ لِبْسَتَيْنِ وَعَنْ صَلاَتَيْنِ نَهَى عَنِ الصَّلاَةِ بَعْدَ الْفَجْرِ حَتَّى تَطْلُعَ الشَّمْسُ، وَبَعْدَ الْعَصْرِ حَتَّى تَغْرُبَ الشَّمْسُ، وَعَنِ اشْتِمَالِ الصَّمَّاءِ وَعَنْ الاِحْتِبَاءِ فِي ثَوْبٍ وَاحِدٍ يُفْضِي بِفَرْجِهِ إِلَى السَّمَاءِ، وَعَنِ الْمُنَابَذَةِ وَالْمُلاَمَسَةِ‏.‏",
+      "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) forbade two kinds of sales, two kinds of dresses, and two prayers. He forbade offering prayers after the Fajr prayer till the rising of the sun and after the `Asr prayer till its setting. He also forbade \"Ishtimal-Assama [??] \" and \"al-Ihtiba\" in one garment in such a way that one's private parts are exposed towards the sky. He also forbade the sales called \"Munabadha\" and \"Mulamasa.\" (See Hadith No. 354 and 355 Vol)",
+      "source": "https://sunnah.com/bukhari:584",
+      "prayers": [
+        "Fajr",
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-585",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 585,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 60,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ ‏ \"‏ لاَ يَتَحَرَّى أَحَدُكُمْ فَيُصَلِّي عِنْدَ طُلُوعِ الشَّمْسِ وَلاَ عِنْدَ غُرُوبِهَا ‏\"‏‏.‏",
+      "english": "Narrated Ibn `Umar: Allah's Messenger (ﷺ) said, \"None of you should try to pray at sunrise or sunset",
+      "source": "https://sunnah.com/bukhari:585",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-586",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 586,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 61,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا إِبْرَاهِيمُ بْنُ سَعْدٍ، عَنْ صَالِحٍ، عَنِ ابْنِ شِهَابٍ، قَالَ أَخْبَرَنِي عَطَاءُ بْنُ يَزِيدَ الْجُنْدَعِيُّ، أَنَّهُ سَمِعَ أَبَا سَعِيدٍ الْخُدْرِيَّ، يَقُولُ سَمِعْتُ رَسُولَ اللَّهِ صلى الله عليه وسلم يَقُولُ ‏ \"‏ لاَ صَلاَةَ بَعْدَ الصُّبْحِ حَتَّى تَرْتَفِعَ الشَّمْسُ، وَلاَ صَلاَةَ بَعْدَ الْعَصْرِ حَتَّى تَغِيبَ الشَّمْسُ ‏\"‏‏.‏",
+      "english": "Narrated Abu Sa`id Al-Khudri: I heard Allah's Messenger (ﷺ) saying, \"There is no prayer after the morning prayer till the sun rises, and there is no prayer after the `Asr prayer till the sun sets",
+      "source": "https://sunnah.com/bukhari:586",
+      "prayers": [
+        "Fajr",
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-587",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 587,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 62,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ أَبَانَ، قَالَ حَدَّثَنَا غُنْدَرٌ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ أَبِي التَّيَّاحِ، قَالَ سَمِعْتُ حُمْرَانَ بْنَ أَبَانَ، يُحَدِّثُ عَنْ مُعَاوِيَةَ، قَالَ إِنَّكُمْ لَتُصَلُّونَ صَلاَةً، لَقَدْ صَحِبْنَا رَسُولَ اللَّهِ صلى الله عليه وسلم فَمَا رَأَيْنَاهُ يُصَلِّيهَا، وَلَقَدْ نَهَى عَنْهُمَا، يَعْنِي الرَّكْعَتَيْنِ بَعْدَ الْعَصْرِ‏.‏",
+      "english": "Narrated Muawiya: You offer a prayer which I did not see being offered by Allah's Messenger (ﷺ) when we were in his company and he certainly had forbidden it (i.e. two rak`at after the `Asr prayer)",
+      "source": "https://sunnah.com/bukhari:587",
+      "prayers": [
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-588",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 588,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 63,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ سَلاَمٍ، قَالَ حَدَّثَنَا عَبْدَةُ، عَنْ عُبَيْدِ اللَّهِ، عَنْ خُبَيْبٍ، عَنْ حَفْصِ بْنِ عَاصِمٍ، عَنْ أَبِي هُرَيْرَةَ، قَالَ نَهَى رَسُولُ اللَّهِ صلى الله عليه وسلم عَنْ صَلاَتَيْنِ بَعْدَ الْفَجْرِ حَتَّى تَطْلُعَ الشَّمْسُ، وَبَعْدَ الْعَصْرِ حَتَّى تَغْرُبَ الشَّمْسُ‏.‏",
+      "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) forbade the offering of two prayers: -1. after the morning prayer till the sunrises. -2. after the `Asr prayer till the sun sets",
+      "source": "https://sunnah.com/bukhari:588",
+      "prayers": [
+        "Fajr",
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-589",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 589,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 64,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو النُّعْمَانِ، حَدَّثَنَا حَمَّادُ بْنُ زَيْدٍ، عَنْ أَيُّوبَ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ، قَالَ أُصَلِّي كَمَا رَأَيْتُ أَصْحَابِي يُصَلُّونَ، لاَ أَنْهَى أَحَدًا يُصَلِّي بِلَيْلٍ وَلاَ نَهَارٍ مَا شَاءَ، غَيْرَ أَنْ لاَ تَحَرَّوْا طُلُوعَ الشَّمْسِ وَلاَ غُرُوبَهَا‏.‏",
+      "english": "Narrated Ibn `Umar: I pray as I saw my companions praying. I do not forbid praying at any time during the day or night except at sunset and sunrise",
+      "source": "https://sunnah.com/bukhari:589",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-590",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 590,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 65,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا عَبْدُ الْوَاحِدِ بْنُ أَيْمَنَ، قَالَ حَدَّثَنِي أَبِي أَنَّهُ، سَمِعَ عَائِشَةَ، قَالَتْ وَالَّذِي ذَهَبَ بِهِ مَا تَرَكَهُمَا حَتَّى لَقِيَ اللَّهَ، وَمَا لَقِيَ اللَّهَ تَعَالَى حَتَّى ثَقُلَ عَنِ الصَّلاَةِ، وَكَانَ يُصَلِّي كَثِيرًا مِنْ صَلاَتِهِ قَاعِدًا ـ تَعْنِي الرَّكْعَتَيْنِ بَعْدَ الْعَصْرِ ـ وَكَانَ النَّبِيُّ صلى الله عليه وسلم يُصَلِّيهِمَا، وَلاَ يُصَلِّيهِمَا فِي الْمَسْجِدِ مَخَافَةَ أَنْ يُثَقِّلَ عَلَى أُمَّتِهِ، وَكَانَ يُحِبُّ مَا يُخَفَّفُ عَنْهُمْ‏.‏",
+      "english": "Narrated `Aisha: By Allah, Who took away the Prophet. The Prophet (ﷺ) never missed them (two rak`at) after the `Asr prayer till he met Allah and he did not meet Allah till it became heavy for him to pray while standing so he used to offer most of the prayers while sitting. (She meant the two rak`at after `Asr) He used to pray them in the house and never prayed them in the mosque lest it might be hard for his followers and he loved what was easy for them",
+      "source": "https://sunnah.com/bukhari:590",
+      "prayers": [
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-591",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 591,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 66,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى، قَالَ حَدَّثَنَا هِشَامٌ، قَالَ أَخْبَرَنِي أَبِي قَالَتْ، عَائِشَةُ ابْنَ أُخْتِي مَا تَرَكَ النَّبِيُّ صلى الله عليه وسلم السَّجْدَتَيْنِ بَعْدَ الْعَصْرِ عِنْدِي قَطُّ‏.‏",
+      "english": "Narrated Hisham's father: `Aisha (addressing me) said, \"O son of my sister! The Prophet (ﷺ) never missed two prostrations (i.e. rak`at) after the `Asr prayer in my house",
+      "source": "https://sunnah.com/bukhari:591",
+      "prayers": [
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-592",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 592,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 67,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُوسَى بْنُ إِسْمَاعِيلَ، قَالَ حَدَّثَنَا عَبْدُ الْوَاحِدِ، قَالَ حَدَّثَنَا الشَّيْبَانِيُّ، قَالَ حَدَّثَنَا عَبْدُ الرَّحْمَنِ بْنُ الأَسْوَدِ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ، قَالَتْ رَكْعَتَانِ لَمْ يَكُنْ رَسُولُ اللَّهِ صلى الله عليه وسلم يَدَعُهُمَا سِرًّا وَلاَ عَلاَنِيَةً رَكْعَتَانِ قَبْلَ صَلاَةِ الصُّبْحِ، وَرَكْعَتَانِ بَعْدَ الْعَصْرِ‏.‏",
+      "english": "Narrated `Aisha: Allah's Messenger (ﷺ) never missed two rak`at before the Fajr prayer and after the `Asr prayer openly and secretly",
+      "source": "https://sunnah.com/bukhari:592",
+      "prayers": [
+        "Fajr",
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-593",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 593,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 68,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ عَرْعَرَةَ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ أَبِي إِسْحَاقَ، قَالَ رَأَيْتُ الأَسْوَدَ وَمَسْرُوقًا شَهِدَا عَلَى عَائِشَةَ قَالَتْ مَا كَانَ النَّبِيُّ صلى الله عليه وسلم يَأْتِينِي فِي يَوْمٍ بَعْدَ الْعَصْرِ إِلاَّ صَلَّى رَكْعَتَيْنِ‏.‏",
+      "english": "Narrated `Aisha: Whenever the Prophet (ﷺ) come to me after the `Asr prayer, he always prayed two rak`at",
+      "source": "https://sunnah.com/bukhari:593",
+      "prayers": [
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-594",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 594,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 69,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُعَاذُ بْنُ فَضَالَةَ، قَالَ حَدَّثَنَا هِشَامٌ، عَنْ يَحْيَى ـ هُوَ ابْنُ أَبِي كَثِيرٍ ـ عَنْ أَبِي قِلاَبَةَ، أَنَّ أَبَا الْمَلِيحِ، حَدَّثَهُ قَالَ كُنَّا مَعَ بُرَيْدَةَ فِي يَوْمٍ ذِي غَيْمٍ فَقَالَ بَكِّرُوا بِالصَّلاَةِ فَإِنَّ النَّبِيَّ صلى الله عليه وسلم قَالَ ‏ \"‏ مَنْ تَرَكَ صَلاَةَ الْعَصْرِ حَبِطَ عَمَلُهُ ‏\"‏‏.‏",
+      "english": "Narrated Ibn Abu Malih [??]: I was with Buraida on a cloudy day and he said, \"Offer the `Asr prayer earlier as the Prophet (ﷺ) said, 'Whoever leaves the `Asr prayer will have all his (good) deeds annulled.\" (See Hadith No. 527 and)",
+      "source": "https://sunnah.com/bukhari:594",
+      "prayers": [
+        "Asr"
+      ]
+    },
+    {
+      "id": "bukhari-595",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 595,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 70,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عِمْرَانُ بْنُ مَيْسَرَةَ، قَالَ حَدَّثَنَا مُحَمَّدُ بْنُ فُضَيْلٍ، قَالَ حَدَّثَنَا حُصَيْنٌ، عَنْ عَبْدِ اللَّهِ بْنِ أَبِي قَتَادَةَ، عَنْ أَبِيهِ، قَالَ سِرْنَا مَعَ النَّبِيِّ صلى الله عليه وسلم لَيْلَةً فَقَالَ بَعْضُ الْقَوْمِ لَوْ عَرَّسْتَ بِنَا يَا رَسُولَ اللَّهِ‏.‏ قَالَ ‏\"‏ أَخَافُ أَنْ تَنَامُوا عَنِ الصَّلاَةِ ‏\"‏‏.‏ قَالَ بِلاَلٌ أَنَا أُوقِظُكُمْ‏.‏ فَاضْطَجَعُوا وَأَسْنَدَ بِلاَلٌ ظَهْرَهُ إِلَى رَاحِلَتِهِ، فَغَلَبَتْهُ عَيْنَاهُ فَنَامَ، فَاسْتَيْقَظَ النَّبِيُّ صلى الله عليه وسلم وَقَدْ طَلَعَ حَاجِبُ الشَّمْسِ فَقَالَ ‏\"‏ يَا بِلاَلُ أَيْنَ مَا قُلْتَ ‏\"‏‏.‏ قَالَ مَا أُلْقِيَتْ عَلَىَّ نَوْمَةٌ مِثْلُهَا قَطُّ‏.‏ قَالَ ‏\"‏ إِنَّ اللَّهَ قَبَضَ أَرْوَاحَكُمْ حِينَ شَاءَ، وَرَدَّهَا عَلَيْكُمْ حِينَ شَاءَ، يَا بِلاَلُ قُمْ فَأَذِّنْ بِالنَّاسِ بِالصَّلاَةِ ‏\"‏‏.‏ فَتَوَضَّأَ فَلَمَّا ارْتَفَعَتِ الشَّمْسُ وَابْيَاضَّتْ قَامَ فَصَلَّى‏.‏",
+      "english": "Narrated `Abdullah bin Abi Qatada: My father said, \"One night we were traveling with the Prophet (ﷺ) and some people said, 'We wish that Allah's Messenger (ﷺ) would take a rest along with us during the last hours of the night.' He said, 'I am afraid that you will sleep and miss the (Fajr) prayer.' Bilal said, 'I will make you get up.' So all slept and Bilal rested his back against his Rahila and he too was overwhelmed (by sleep) and slept. The Prophet (ﷺ) got up when the edge of the sun had risen and said, 'O Bilal! What about your statement?' He replied, 'I have never slept such a sleep.' The Prophet (ﷺ) said, 'Allah captured your souls when He wished, and released them when He wished. O Bilal! Get up and pronounce the Adhan for the prayer.' The Prophet (ﷺ) performed ablution and when the sun came up and became bright, he stood up and prayed",
+      "source": "https://sunnah.com/bukhari:595",
+      "prayers": [
+        "Fajr"
+      ]
+    },
+    {
+      "id": "bukhari-596",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 596,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 71,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُعَاذُ بْنُ فَضَالَةَ، قَالَ حَدَّثَنَا هِشَامٌ، عَنْ يَحْيَى، عَنْ أَبِي سَلَمَةَ، عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ، أَنَّ عُمَرَ بْنَ الْخَطَّابِ، جَاءَ يَوْمَ الْخَنْدَقِ بَعْدَ مَا غَرَبَتِ الشَّمْسُ، فَجَعَلَ يَسُبُّ كُفَّارَ قُرَيْشٍ قَالَ يَا رَسُولَ اللَّهِ مَا كِدْتُ أُصَلِّي الْعَصْرَ حَتَّى كَادَتِ الشَّمْسُ تَغْرُبُ‏.‏ قَالَ النَّبِيُّ صلى الله عليه وسلم ‏ \"‏ وَاللَّهِ مَا صَلَّيْتُهَا ‏\"‏‏.‏ فَقُمْنَا إِلَى بُطْحَانَ، فَتَوَضَّأَ لِلصَّلاَةِ، وَتَوَضَّأْنَا لَهَا فَصَلَّى الْعَصْرَ بَعْدَ مَا غَرَبَتِ الشَّمْسُ، ثُمَّ صَلَّى بَعْدَهَا الْمَغْرِبَ‏.‏",
+      "english": "Narrated Jabir bin `Abdullah: On the day of Al-Khandaq (the battle of trench.) `Umar bin Al-Khattab came cursing the disbelievers of Quraish after the sun had set and said, \"O Allah's Messenger (ﷺ) I could not offer the `Asr prayer till the sun had set.\" The Prophet (ﷺ) said, \"By Allah! I, too, have not prayed.\" So we turned towards Buthan, and the Prophet (ﷺ) performed ablution and we too performed ablution and offered the `Asr prayer after the sun had set, and then he offered the Maghrib prayer",
+      "source": "https://sunnah.com/bukhari:596",
+      "prayers": [
+        "Asr",
+        "Maghrib"
+      ]
+    },
+    {
+      "id": "bukhari-597",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 597,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 72,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو نُعَيْمٍ، وَمُوسَى بْنُ إِسْمَاعِيلَ، قَالاَ حَدَّثَنَا هَمَّامٌ، عَنْ قَتَادَةَ، عَنْ أَنَسٍ، عَنِ النَّبِيِّ صلى الله عليه وسلم قَالَ ‏\"‏ مَنْ نَسِيَ صَلاَةً فَلْيُصَلِّ إِذَا ذَكَرَهَا، لاَ كَفَّارَةَ لَهَا إِلاَّ ذَلِكَ ‏\"‏‏.‏ ‏{‏وَأَقِمِ الصَّلاَةَ لِذِكْرِي‏}‏ قَالَ مُوسَى قَالَ هَمَّامٌ سَمِعْتُهُ يَقُولُ بَعْدُ ‏{‏وَأَقِمِ الصَّلاَةَ لِذِكْرِي‏}‏‏.‏وَقَالَ حَبَّانُ حَدَّثَنَا هَمَّامٌ، حَدَّثَنَا قَتَادَةُ، حَدَّثَنَا أَنَسٌ، عَنِ النَّبِيِّ صلى الله عليه وسلم نَحْوَهُ‏.‏",
+      "english": "Narrated Anas: The Prophet (ﷺ) said, \"If anyone forgets a prayer he should pray that prayer when he remembers it. There is no expiation except to pray the same.\" Then he recited: \"Establish prayer for My (i.e. Allah's) remembrance",
+      "source": "https://sunnah.com/bukhari:597",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-598",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 598,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 73,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى، عَنْ هِشَامٍ، قَالَ حَدَّثَنَا يَحْيَى ـ هُوَ ابْنُ أَبِي كَثِيرٍ ـ عَنْ أَبِي سَلَمَةَ، عَنْ جَابِرٍ، قَالَ جَعَلَ عُمَرُ يَوْمَ الْخَنْدَقِ يَسُبُّ كُفَّارَهُمْ وَقَالَ مَا كِدْتُ أُصَلِّي الْعَصْرَ حَتَّى غَرَبَتْ‏.‏ قَالَ فَنَزَلْنَا بُطْحَانَ، فَصَلَّى بَعْدَ مَا غَرَبَتِ الشَّمْسُ، ثُمَّ صَلَّى الْمَغْرِبَ‏.‏",
+      "english": "Narrated Jabir: `Umar came cursing the disbelievers (of Quraish) on the day of Al-Khandaq (the battle of Trench) and said, \"I could not offer the `Asr prayer till the sun had set. Then we went to Buthan and he offered the (`Asr) prayer after sunset and then he offered the Maghrib prayer",
+      "source": "https://sunnah.com/bukhari:598",
+      "prayers": [
+        "Asr",
+        "Maghrib"
+      ]
+    },
+    {
+      "id": "bukhari-599",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 599,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 74,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى، قَالَ حَدَّثَنَا عَوْفٌ، قَالَ حَدَّثَنَا أَبُو الْمِنْهَالِ، قَالَ انْطَلَقْتُ مَعَ أَبِي إِلَى أَبِي بَرْزَةَ الأَسْلَمِيِّ فَقَالَ لَهُ أَبِي حَدِّثْنَا كَيْفَ، كَانَ رَسُولُ اللَّهِ صلى الله عليه وسلم يُصَلِّي الْمَكْتُوبَةَ قَالَ كَانَ يُصَلِّي الْهَجِيرَ وَهْىَ الَّتِي تَدْعُونَهَا الأُولَى حِينَ تَدْحَضُ الشَّمْسُ، وَيُصَلِّي الْعَصْرَ، ثُمَّ يَرْجِعُ أَحَدُنَا إِلَى أَهْلِهِ فِي أَقْصَى الْمَدِينَةِ وَالشَّمْسُ حَيَّةٌ، وَنَسِيتُ مَا قَالَ فِي الْمَغْرِبِ‏.‏ قَالَ وَكَانَ يَسْتَحِبُّ أَنْ يُؤَخِّرَ الْعِشَاءَ‏.‏ قَالَ وَكَانَ يَكْرَهُ النَّوْمَ قَبْلَهَا وَالْحَدِيثَ بَعْدَهَا، وَكَانَ يَنْفَتِلُ مِنْ صَلاَةِ الْغَدَاةِ حِينَ يَعْرِفُ أَحَدُنَا جَلِيسَهُ، وَيَقْرَأُ مِنَ السِّتِّينَ إِلَى الْمِائَةِ‏.‏",
+      "english": "Narrated Abu-l-Minhal: My father and I went to Abi Barza Al-Aslami and my father said to him, \"Tell us how Allah's Messenger (ﷺ) used to offer the compulsory congregational prayers.\" He said, \"He used to pray the Zuhr prayer, which you call the first prayer, as the sun declined at noon, the `Asr at a time when one of US could go to his family at the farthest place in Medina while the sun was still hot. (The narrator forgot what Abu Barza had said about the Maghrib prayer), and the Prophet (ﷺ) preferred to pray the `Isha' late and disliked to sleep before it or talk after it. And he used to return after finishing the morning prayer at such a time when it was possible for one to recognize the person sitting by his side and he (the Prophet) used to recite 60 to 100 'Ayat' (verses) of the Qur'an in it",
+      "source": "https://sunnah.com/bukhari:599",
+      "prayers": [
+        "Fajr",
+        "Dhuhr",
+        "Asr",
+        "Maghrib",
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-600",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 600,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 75,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ الصَّبَّاحِ، قَالَ حَدَّثَنَا أَبُو عَلِيٍّ الْحَنَفِيُّ، حَدَّثَنَا قُرَّةُ بْنُ خَالِدٍ، قَالَ انْتَظَرْنَا الْحَسَنَ وَرَاثَ عَلَيْنَا حَتَّى قَرُبْنَا مِنْ وَقْتِ قِيَامِهِ، فَجَاءَ فَقَالَ دَعَانَا جِيرَانُنَا هَؤُلاَءِ‏.‏ ثُمَّ قَالَ قَالَ أَنَسٌ نَظَرْنَا النَّبِيَّ صلى الله عليه وسلم ذَاتَ لَيْلَةٍ حَتَّى كَانَ شَطْرُ اللَّيْلِ يَبْلُغُهُ، فَجَاءَ فَصَلَّى لَنَا، ثُمَّ خَطَبَنَا فَقَالَ ‏ \"‏ أَلاَ إِنَّ النَّاسَ قَدْ صَلَّوْا ثُمَّ رَقَدُوا، وَإِنَّكُمْ لَمْ تَزَالُوا فِي صَلاَةٍ مَا انْتَظَرْتُمُ الصَّلاَةَ ‏\"‏‏.‏ قَالَ الْحَسَنُ وَإِنَّ الْقَوْمَ لاَ يَزَالُونَ بِخَيْرٍ مَا انْتَظَرُوا الْخَيْرَ‏.‏ قَالَ قُرَّةُ هُوَ مِنْ حَدِيثِ أَنَسٍ عَنِ النَّبِيِّ صلى الله عليه وسلم‏.‏",
+      "english": "Narrated Qurra bin Khalid: Once he waited for Al-Hasan and he did not show up till it was about the usual time for him to start his speech; then he came and apologized saying, \"Our neighbors invited us.\" Then he added, \"Narrated Anas, 'Once we waited for the Prophet (ﷺ) till it was midnight or about midnight. He came and led the prayer, and after finishing it, he addressed us and said, 'All the people prayed and then slept and you had been in prayer as long as you were waiting for it.\" Al-Hasan said, \"The people are regarded as performing good deeds as long as they are waiting for doing good deeds.\" Al-Hasan's statement is a portion of Anas's [??] Hadith from the Prophet (ﷺ)",
+      "source": "https://sunnah.com/bukhari:600",
+      "prayers": []
+    },
+    {
+      "id": "bukhari-601",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 601,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 76,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ حَدَّثَنِي سَالِمُ بْنُ عَبْدِ اللَّهِ بْنِ عُمَرَ، وَأَبُو بَكْرِ بْنُ أَبِي حَثْمَةَ أَنَّ عَبْدَ اللَّهِ بْنَ عُمَرَ، قَالَ صَلَّى النَّبِيُّ صلى الله عليه وسلم صَلاَةَ الْعِشَاءِ فِي آخِرِ حَيَاتِهِ، فَلَمَّا سَلَّمَ قَامَ النَّبِيُّ صلى الله عليه وسلم فَقَالَ ‏\"‏ أَرَأَيْتَكُمْ لَيْلَتَكُمْ هَذِهِ فَإِنَّ رَأْسَ مِائَةٍ لاَ يَبْقَى مِمَّنْ هُوَ الْيَوْمَ عَلَى ظَهْرِ الأَرْضِ أَحَدٌ ‏\"‏‏.‏ فَوَهِلَ النَّاسُ فِي مَقَالَةِ رَسُولِ اللَّهِ ـ عَلَيْهِ السَّلاَمُ ـ إِلَى مَا يَتَحَدَّثُونَ مِنْ هَذِهِ الأَحَادِيثِ عَنْ مِائَةِ سَنَةٍ، وَإِنَّمَا قَالَ النَّبِيُّ صلى الله عليه وسلم ‏\"‏ لاَ يَبْقَى مِمَّنْ هُوَ الْيَوْمَ عَلَى ظَهْرِ الأَرْضِ ‏\"‏ يُرِيدُ بِذَلِكَ أَنَّهَا تَخْرِمُ ذَلِكَ الْقَرْنَ‏.‏",
+      "english": "Narrated `Abdullah bin `Umar: The Prophet (ﷺ) prayed one of the `Isha' prayer in his last days and after finishing it with Taslim, he stood up and said, \"Do you realize (the importance of) this night? Nobody present on the surface of the earth tonight would be living after the completion of one hundred years from this night.\" The people made a mistake in grasping the meaning of this statement of Allah's Messenger (ﷺ) and they indulged in those things which are said about these narrators (i.e. some said that the Day of Resurrection will be established after 100 years etc.) But the Prophet (ﷺ) said, \"Nobody present on the surface of earth tonight would be living after the completion of 100 years from this night\"; he meant \"When that century (people of that century) would pass away",
+      "source": "https://sunnah.com/bukhari:601",
+      "prayers": [
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-602",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 602,
+      "book": 9,
+      "bookName": "Times of the Prayers",
+      "numberInBook": 77,
+      "topic": "times-of-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو النُّعْمَانِ، قَالَ حَدَّثَنَا مُعْتَمِرُ بْنُ سُلَيْمَانَ، قَالَ حَدَّثَنَا أَبِي، حَدَّثَنَا أَبُو عُثْمَانَ، عَنْ عَبْدِ الرَّحْمَنِ بْنِ أَبِي بَكْرٍ، أَنَّ أَصْحَابَ الصُّفَّةِ، كَانُوا أُنَاسًا فُقَرَاءَ، وَأَنَّ النَّبِيَّ صلى الله عليه وسلم قَالَ ‏ \"‏ مَنْ كَانَ عِنْدَهُ طَعَامُ اثْنَيْنِ فَلْيَذْهَبْ بِثَالِثٍ، وَإِنْ أَرْبَعٌ فَخَامِسٌ أَوْ سَادِسٌ ‏\"‏‏.‏ وَأَنَّ أَبَا بَكْرٍ جَاءَ بِثَلاَثَةٍ فَانْطَلَقَ النَّبِيُّ صلى الله عليه وسلم بِعَشَرَةٍ، قَالَ فَهْوَ أَنَا وَأَبِي وَأُمِّي، فَلاَ أَدْرِي قَالَ وَامْرَأَتِي وَخَادِمٌ بَيْنَنَا وَبَيْنَ بَيْتِ أَبِي بَكْرٍ‏.‏ وَإِنَّ أَبَا بَكْرٍ تَعَشَّى عِنْدَ النَّبِيِّ صلى الله عليه وسلم ثُمَّ لَبِثَ حَيْثُ صُلِّيَتِ الْعِشَاءُ، ثُمَّ رَجَعَ فَلَبِثَ حَتَّى تَعَشَّى النَّبِيُّ صلى الله عليه وسلم فَجَاءَ بَعْدَ مَا مَضَى مِنَ اللَّيْلِ مَا شَاءَ اللَّهُ، قَالَتْ لَهُ امْرَأَتُهُ وَمَا حَبَسَكَ عَنْ أَضْيَافِكَ ـ أَوْ قَالَتْ ضَيْفِكَ ـ قَالَ أَوَمَا عَشَّيْتِيهِمْ قَالَتْ أَبَوْا حَتَّى تَجِيءَ، قَدْ عُرِضُوا فَأَبَوْا‏.‏ قَالَ فَذَهَبْتُ أَنَا فَاخْتَبَأْتُ فَقَالَ يَا غُنْثَرُ، فَجَدَّعَ وَسَبَّ، وَقَالَ كُلُوا لاَ هَنِيئًا‏.‏ فَقَالَ وَاللَّهِ لاَ أَطْعَمُهُ أَبَدًا، وَايْمُ اللَّهِ مَا كُنَّا نَأْخُذُ مِنْ لُقْمَةٍ إِلاَّ رَبَا مِنْ أَسْفَلِهَا أَكْثَرُ مِنْهَا‏.‏ قَالَ يَعْنِي حَتَّى شَبِعُوا وَصَارَتْ أَكْثَرَ مِمَّا كَانَتْ قَبْلَ ذَلِكَ، فَنَظَرَ إِلَيْهَا أَبُو بَكْرٍ فَإِذَا هِيَ كَمَا هِيَ أَوْ أَكْثَرُ مِنْهَا‏.‏ فَقَالَ لاِمْرَأَتِهِ يَا أُخْتَ بَنِي فِرَاسٍ مَا هَذَا قَالَتْ لاَ وَقُرَّةِ عَيْنِي لَهِيَ الآنَ أَكْثَرُ مِنْهَا قَبْلَ ذَلِكَ بِثَلاَثِ مَرَّاتٍ‏.‏ فَأَكَلَ مِنْهَا أَبُو بَكْرٍ وَقَالَ إِنَّمَا كَانَ ذَلِكَ مِنَ الشَّيْطَانِ ـ يَعْنِي يَمِينَهُ ـ ثُمَّ أَكَلَ مِنْهَا لُقْمَةً، ثُمَّ حَمَلَهَا إِلَى النَّبِيِّ صلى الله عليه وسلم فَأَصْبَحَتْ عِنْدَهُ، وَكَانَ بَيْنَنَا وَبَيْنَ قَوْمٍ عَقْدٌ، فَمَضَى الأَجَلُ، فَفَرَّقَنَا اثْنَا عَشَرَ رَجُلاً، مَعَ كُلِّ رَجُلٍ مِنْهُمْ أُنَاسٌ، اللَّهُ أَعْلَمُ كَمْ مَعَ كُلِّ رَجُلٍ فَأَكَلُوا مِنْهَا أَجْمَعُونَ، أَوْ كَمَا قَالَ‏.‏",
+      "english": "Narrated Abu `Uthman: `Abdur Rahman bin Abi Bakr said, \"The Suffa Companions were poor people and the Prophet (ﷺ) said, 'Whoever has food for two persons should take a third one from them (Suffa companions). And whosoever has food for four persons he should take one or two from them' Abu Bakr took three men and the Prophet (ﷺ) took ten of them.\" `Abdur Rahman added, my father my mother and I were there (in the house). (The sub-narrator is in doubt whether `Abdur Rahman also said, 'My wife and our servant who was common for both my house and Abu Bakr's house). Abu Bakr took his supper with the Prophet (ﷺ) and remained there till the `Isha' prayer was offered. Abu Bakr went back and stayed with the Prophet (ﷺ) till the Prophet (ﷺ) took his meal and then Abu Bakr returned to his house after a long portion of the night had passed. Abu Bakr's wife said, 'What detained you from your guests (or guest)?' He said, 'Have you not served them yet?' She said, 'They refused to eat until you come. The food was served for them but they refused.\" `Abdur Rahman added, \"I went away and hid myself (being afraid of Abu Bakr) and in the meantime he (Abu Bakr) called me, 'O Ghunthar (a harsh word)!' and also called me bad names and abused me and then said (to his family), 'Eat. No welcome for you.' Then (the supper was served). Abu Bakr took an oath that he would not eat that food. The narrator added: By Allah, whenever any one of us (myself and the guests of Suffa companions) took anything from the food, it increased from underneath. We all ate to our fill and the food was more than it was before its serving. Abu Bakr looked at it (the food) and found it as it was before serving or even more than that. He addressed his wife (saying) 'O the sister of Bani Firas! What is this?' She said, 'O the pleasure of my eyes! The food is now three times more than it was before.' Abu Bakr ate from it, and said, 'That (oath) was from Satan' meaning his oath (not to eat). Then he again took a morsel (mouthful) from it and then took the rest of it to the Prophet. So that meal was with the Prophet. There was a treaty between us and some people, and when the period of that treaty had elapsed the Prophet (ﷺ) divided us into twelve (groups) (the Prophet's companions) each being headed by a man. Allah knows how many men were under the command of each (leader). So all of them (12 groups of men) ate of that meal",
+      "source": "https://sunnah.com/bukhari:602",
+      "prayers": [
+        "Isha"
+      ]
+    },
+    {
+      "id": "bukhari-876",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 876,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 1,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، قَالَ حَدَّثَنَا أَبُو الزِّنَادِ، أَنَّ عَبْدَ الرَّحْمَنِ بْنَ هُرْمُزَ الأَعْرَجَ، مَوْلَى رَبِيعَةَ بْنِ الْحَارِثِ حَدَّثَهُ أَنَّهُ، سَمِعَ أَبَا هُرَيْرَةَ ـ رضى الله عنه ـ أَنَّهُ سَمِعَ رَسُولَ اللَّهِ صلى الله عليه وسلم يَقُولُ ‏ \"‏ نَحْنُ الآخِرُونَ السَّابِقُونَ يَوْمَ الْقِيَامَةِ، بَيْدَ أَنَّهُمْ أُوتُوا الْكِتَابَ مِنْ قَبْلِنَا، ثُمَّ هَذَا يَوْمُهُمُ الَّذِي فُرِضَ عَلَيْهِمْ فَاخْتَلَفُوا فِيهِ، فَهَدَانَا اللَّهُ، فَالنَّاسُ لَنَا فِيهِ تَبَعٌ، الْيَهُودُ غَدًا وَالنَّصَارَى بَعْدَ غَدٍ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: I heard Allah's Messenger (ﷺ) saying, \"We (Muslims) are the last (to come) but (will be) the foremost on the Day of Resurrection though the former nations were given the Holy Scriptures before us. And this was their day (Friday) the celebration of which was made compulsory for them but they differed about it. So Allah gave us the guidance for it (Friday) and all the other people are behind us in this respect: the Jews' (holy day is) tomorrow (i.e. Saturday) and the Christians' (is) the day after tomorrow (i.e. Sunday)",
+      "source": "https://sunnah.com/bukhari:876",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-877",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 877,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 2,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ نَافِعٍ، عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ ـ رضى الله عنهما ـ أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ ‏ \"‏ إِذَا جَاءَ أَحَدُكُمُ الْجُمُعَةَ فَلْيَغْتَسِلْ ‏\"‏‏.‏",
+      "english": "Narrated `Abdullah bin `Umar: Allah's Messenger (ﷺ) said, \"Anyone of you attending the Friday (prayers) should take a bath",
+      "source": "https://sunnah.com/bukhari:877",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-878",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 878,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 3,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدِ بْنِ أَسْمَاءَ، قَالَ أَخْبَرَنَا جُوَيْرِيَةُ، عَنْ مَالِكٍ، عَنِ الزُّهْرِيِّ، عَنْ سَالِمِ بْنِ عَبْدِ اللَّهِ بْنِ عُمَرَ، عَنِ ابْنِ عُمَرَ ـ رضى الله عنهما ـ أَنَّ عُمَرَ بْنَ الْخَطَّابِ، بَيْنَمَا هُوَ قَائِمٌ فِي الْخُطْبَةِ يَوْمَ الْجُمُعَةِ إِذْ دَخَلَ رَجُلٌ مِنَ الْمُهَاجِرِينَ الأَوَّلِينَ مِنْ أَصْحَابِ النَّبِيِّ صلى الله عليه وسلم فَنَادَاهُ عُمَرُ أَيَّةُ سَاعَةٍ هَذِهِ قَالَ إِنِّي شُغِلْتُ فَلَمْ أَنْقَلِبْ إِلَى أَهْلِي حَتَّى سَمِعْتُ التَّأْذِينَ، فَلَمْ أَزِدْ أَنْ تَوَضَّأْتُ‏.‏ فَقَالَ وَالْوُضُوءُ أَيْضًا وَقَدْ عَلِمْتَ أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم كَانَ يَأْمُرُ بِالْغُسْلِ‏.‏",
+      "english": "Narrated Ibn `Umar: While `Umar bin Al-Khattab was standing and delivering the sermon on a Friday, one of the companions of the Prophet, who was one of the foremost Muhajirs (emigrants) came. `Umar said to him, \"What is the time now?\" He replied, \"I was busy and could not go back to my house till I heard the Adhan. I did not perform more than the ablution.\" Thereupon `Umar said to him, \"Did you perform only the ablution although you know that Allah's Messenger (ﷺ) used to order us to take a bath (on Fridays)?",
+      "source": "https://sunnah.com/bukhari:878",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-879",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 879,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 4,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ صَفْوَانَ بْنِ سُلَيْمٍ، عَنْ عَطَاءِ بْنِ يَسَارٍ، عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ ـ رضى الله عنه ـ أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ ‏ \"‏ غُسْلُ يَوْمِ الْجُمُعَةِ وَاجِبٌ عَلَى كُلِّ مُحْتَلِمٍ ‏\"‏‏.‏",
+      "english": "Narrated Abu Sa`id Al-Khudri: Allah's Messenger (ﷺ) said, \"The taking of a bath on Friday is compulsory for every male (Muslim) who has attained the age of puberty",
+      "source": "https://sunnah.com/bukhari:879",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-880",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 880,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 5,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَلِيٌّ، قَالَ حَدَّثَنَا حَرَمِيُّ بْنُ عُمَارَةَ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ أَبِي بَكْرِ بْنِ الْمُنْكَدِرِ، قَالَ حَدَّثَنِي عَمْرُو بْنُ سُلَيْمٍ الأَنْصَارِيُّ، قَالَ أَشْهَدُ عَلَى أَبِي سَعِيدٍ قَالَ أَشْهَدُ عَلَى رَسُولِ اللَّهِ صلى الله عليه وسلم قَالَ ‏ \"‏ الْغُسْلُ يَوْمَ الْجُمُعَةِ وَاجِبٌ عَلَى كُلِّ مُحْتَلِمٍ، وَأَنْ يَسْتَنَّ وَأَنْ يَمَسَّ طِيبًا إِنْ وَجَدَ ‏\"‏‏.‏ قَالَ عَمْرٌو أَمَّا الْغُسْلُ فَأَشْهَدُ أَنَّهُ وَاجِبٌ، وَأَمَّا الاِسْتِنَانُ وَالطِّيبُ فَاللَّهُ أَعْلَمُ أَوَاجِبٌ هُوَ أَمْ لاَ، وَلَكِنْ هَكَذَا فِي الْحَدِيثِ‏.‏ قَالَ أَبُو عَبْدِ اللَّهِ هُوَ أَخُو مُحَمَّدِ بْنِ الْمُنْكَدِرِ وَلَمْ يُسَمَّ أَبُو بَكْرٍ هَذَا‏.‏ رَوَاهُ عَنْهُ بُكَيْرُ بْنُ الأَشَجِّ وَسَعِيدُ بْنُ أَبِي هِلاَلٍ وَعِدَّةٌ‏.‏ وَكَانَ مُحَمَّدُ بْنُ الْمُنْكَدِرِ يُكْنَى بِأَبِي بَكْرٍ وَأَبِي عَبْدِ اللَّهِ‏.‏",
+      "english": "Narrated Abu Sa`id: I testify that Allah's Messenger (ﷺ) said, \"The taking of a bath on Friday is compulsory for every male Muslim who has attained the age of puberty and (also) the cleaning of his teeth with Siwak, and the using of perfume if it is available.\" `Amr (a sub-narrator) said, \"I confirm that the taking of a bath is compulsory, but as for the Siwak and the using of perfume, Allah knows better whether it is obligatory or not, but according to the Hadith it is as above",
+      "source": "https://sunnah.com/bukhari:880",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-881",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 881,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 6,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ سُمَىٍّ، مَوْلَى أَبِي بَكْرِ بْنِ عَبْدِ الرَّحْمَنِ عَنْ أَبِي صَالِحٍ السَّمَّانِ، عَنْ أَبِي هُرَيْرَةَ ـ رضى الله عنه ـ أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ ‏ \"‏ مَنِ اغْتَسَلَ يَوْمَ الْجُمُعَةِ غُسْلَ الْجَنَابَةِ ثُمَّ رَاحَ فَكَأَنَّمَا قَرَّبَ بَدَنَةً، وَمَنْ رَاحَ فِي السَّاعَةِ الثَّانِيَةِ فَكَأَنَّمَا قَرَّبَ بَقَرَةً، وَمَنْ رَاحَ فِي السَّاعَةِ الثَّالِثَةِ فَكَأَنَّمَا قَرَّبَ كَبْشًا أَقْرَنَ، وَمَنْ رَاحَ فِي السَّاعَةِ الرَّابِعَةِ فَكَأَنَّمَا قَرَّبَ دَجَاجَةً، وَمَنْ رَاحَ فِي السَّاعَةِ الْخَامِسَةِ فَكَأَنَّمَا قَرَّبَ بَيْضَةً، فَإِذَا خَرَجَ الإِمَامُ حَضَرَتِ الْمَلاَئِكَةُ يَسْتَمِعُونَ الذِّكْرَ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) said, \"Any person who takes a bath on Friday like the bath of Janaba and then goes for the prayer (in the first hour i.e. early), it is as if he had sacrificed a camel (in Allah's cause); and whoever goes in the second hour it is as if he had sacrificed a cow; and whoever goes in the third hour, then it is as if he had sacrificed a horned ram; and if one goes in the fourth hour, then it is as if he had sacrificed a hen; and whoever goes in the fifth hour then it is as if he had offered an egg. When the Imam comes out (i.e. starts delivering the Khutba), the angels present themselves to listen to the Khutba",
+      "source": "https://sunnah.com/bukhari:881",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-882",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 882,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 7,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا شَيْبَانُ، عَنْ يَحْيَى، عَنْ أَبِي سَلَمَةَ، عَنْ أَبِي هُرَيْرَةَ، أَنَّ عُمَرَ ـ رضى الله عنه ـ بَيْنَمَا هُوَ يَخْطُبُ يَوْمَ الْجُمُعَةِ إِذْ دَخَلَ رَجُلٌ فَقَالَ عُمَرُ لِمَ تَحْتَبِسُونَ عَنِ الصَّلاَةِ فَقَالَ الرَّجُلُ مَا هُوَ إِلاَّ سَمِعْتُ النِّدَاءَ تَوَضَّأْتُ‏.‏ فَقَالَ أَلَمْ تَسْمَعُوا النَّبِيَّ صلى الله عليه وسلم قَالَ ‏ \"‏ إِذَا رَاحَ أَحَدُكُمْ إِلَى الْجُمُعَةِ فَلْيَغْتَسِلْ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: While `Umar (bin Al-Khattab) was delivering the Khutba on a Friday, a man entered (the mosque). `Umar asked him, \"What has detained you from the prayer?\" The man said, \"It was only that when I heard the Adhan I performed ablution (for the prayer).\" On that `Umar said, \"Did you not hear the Prophet saying: 'Anyone of you going out for the Jumua prayer should take a bath'?",
+      "source": "https://sunnah.com/bukhari:882",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-883",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 883,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 8,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا ابْنُ أَبِي ذِئْبٍ، عَنْ سَعِيدٍ الْمَقْبُرِيِّ، قَالَ أَخْبَرَنِي أَبِي، عَنِ ابْنِ وَدِيعَةَ، عَنْ سَلْمَانَ الْفَارِسِيِّ، قَالَ قَالَ النَّبِيُّ صلى الله عليه وسلم ‏ \"‏ لاَ يَغْتَسِلُ رَجُلٌ يَوْمَ الْجُمُعَةِ، وَيَتَطَهَّرُ مَا اسْتَطَاعَ مِنْ طُهْرٍ، وَيَدَّهِنُ مِنْ دُهْنِهِ، أَوْ يَمَسُّ مِنْ طِيبِ بَيْتِهِ ثُمَّ يَخْرُجُ، فَلاَ يُفَرِّقُ بَيْنَ اثْنَيْنِ، ثُمَّ يُصَلِّي مَا كُتِبَ لَهُ، ثُمَّ يُنْصِتُ إِذَا تَكَلَّمَ الإِمَامُ، إِلاَّ غُفِرَ لَهُ مَا بَيْنَهُ وَبَيْنَ الْجُمُعَةِ الأُخْرَى ‏\"‏‏.‏",
+      "english": "Narrated Salman-Al-Farsi: The Prophet (ﷺ) said, \"Whoever takes a bath on Friday, purifies himself as much as he can, then uses his (hair) oil or perfumes himself with the scent of his house, then proceeds (for the Jumua prayer) and does not separate two persons sitting together (in the mosque), then prays as much as (Allah has) written for him and then remains silent while the Imam is delivering the Khutba, his sins in-between the present and the last Friday would be forgiven",
+      "source": "https://sunnah.com/bukhari:883",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-884",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 884,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 9,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ طَاوُسٌ قُلْتُ لاِبْنِ عَبَّاسٍ ذَكَرُوا أَنَّ النَّبِيَّ صلى الله عليه وسلم قَالَ ‏ \"‏ اغْتَسِلُوا يَوْمَ الْجُمُعَةِ وَاغْسِلُوا رُءُوسَكُمْ وَإِنْ لَمْ تَكُونُوا جُنُبًا، وَأَصِيبُوا مِنَ الطِّيبِ ‏\"‏‏.‏ قَالَ ابْنُ عَبَّاسٍ أَمَّا الْغُسْلُ فَنَعَمْ، وَأَمَّا الطِّيبُ فَلاَ أَدْرِي‏.‏",
+      "english": "Narrated Tawus: I said to Ibn `Abbas, \"The people are narrating that the Prophet (ﷺ) said, 'Take a bath on Friday and wash your heads (i.e. take a thorough bath) even though you were not Junub and use perfume'.\" On that Ibn `Abbas replied, \"I know about the bath, (i.e. it is essential) but I do not know about the perfume (i.e. whether it is essential or not)",
+      "source": "https://sunnah.com/bukhari:884",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-885",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 885,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 10,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا إِبْرَاهِيمُ بْنُ مُوسَى، قَالَ أَخْبَرَنَا هِشَامٌ، أَنَّ ابْنَ جُرَيْجٍ، أَخْبَرَهُمْ قَالَ أَخْبَرَنِي إِبْرَاهِيمُ بْنُ مَيْسَرَةَ، عَنْ طَاوُسٍ، عَنِ ابْنِ عَبَّاسٍ ـ رضى الله عنهما ـ أَنَّهُ ذَكَرَ قَوْلَ النَّبِيِّ صلى الله عليه وسلم فِي الْغُسْلِ يَوْمَ الْجُمُعَةِ فَقُلْتُ لاِبْنِ عَبَّاسٍ أَيَمَسُّ طِيبًا أَوْ دُهْنًا إِنْ كَانَ عِنْدَ أَهْلِهِ فَقَالَ لاَ أَعْلَمُهُ‏.‏",
+      "english": "Narrated Tawus: Ibn `Abbas mentioned the statement of the Prophet (ﷺ) regarding the taking of a bath on Friday and then I asked him whether the Prophet (ﷺ) had ordered perfume or (hair) oil to be used if they could be found in one's house. He (Ibn `Abbas) replied that he did not know about it",
+      "source": "https://sunnah.com/bukhari:885",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-886",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 886,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 11,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ نَافِعٍ، عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ، أَنَّ عُمَرَ بْنَ الْخَطَّابِ، رَأَى حُلَّةَ سِيَرَاءَ عِنْدَ باب الْمَسْجِدِ فَقَالَ يَا رَسُولَ اللَّهِ، لَوِ اشْتَرَيْتَ هَذِهِ فَلَبِسْتَهَا يَوْمَ الْجُمُعَةِ وَلِلْوَفْدِ إِذَا قَدِمُوا عَلَيْكَ‏.‏ فَقَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم ‏\"‏ إِنَّمَا يَلْبَسُ هَذِهِ مَنْ لاَ خَلاَقَ لَهُ فِي الآخِرَةِ ‏\"‏‏.‏ ثُمَّ جَاءَتْ رَسُولَ اللَّهِ صلى الله عليه وسلم مِنْهَا حُلَلٌ، فَأَعْطَى عُمَرَ بْنَ الْخَطَّابِ ـ رضى الله عنه ـ مِنْهَا حُلَّةً فَقَالَ عُمَرُ يَا رَسُولَ اللَّهِ، كَسَوْتَنِيهَا وَقَدْ قُلْتَ فِي حُلَّةِ عُطَارِدٍ مَا قُلْتَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم ‏\"‏ إِنِّي لَمْ أَكْسُكَهَا لِتَلْبَسَهَا ‏\"‏‏.‏ فَكَسَاهَا عُمَرُ بْنُ الْخَطَّابِ ـ رضى الله عنه ـ أَخًا لَهُ بِمَكَّةَ مُشْرِكًا‏.‏",
+      "english": "Narrated `Abdullah bin `Umar: `Umar bin Al-Khattab saw a silken cloak (being sold) at the gate of the Mosque and said to Allah's Apostle, \"I wish you would buy this to wear on Fridays and also on occasions of the arrivals of the delegations.\" Allah's Messenger (ﷺ) replied, \"This will be worn by a person who will have no share (reward) in the Hereafter.\" Later on similar cloaks were given to Allah's Messenger (ﷺ) and he gave one of them to `Umar bin Al-Khattab. On that `Umar said, \"O Allah's Messenger (ﷺ)! You have given me this cloak although on the cloak of Atarid (a cloak merchant who was selling that silken cloak at the gate of the mosque) you passed such and such a remark.\" Allah's Messenger (ﷺ) replied, \"I have not given you this to wear\". And so `Umar bin Al-Khattab gave it to his pagan brother in Mecca to wear",
+      "source": "https://sunnah.com/bukhari:886",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-887",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 887,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 12,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ أَبِي الزِّنَادِ، عَنِ الأَعْرَجِ، عَنْ أَبِي هُرَيْرَةَ ـ رضى الله عنه ـ أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ ‏ \"‏ لَوْلاَ أَنْ أَشُقَّ عَلَى أُمَّتِي ـ أَوْ عَلَى النَّاسِ ـ لأَمَرْتُهُمْ بِالسِّوَاكِ مَعَ كُلِّ صَلاَةٍ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) said, \"If I had not found it hard for my followers or the people, I would have ordered them to clean their teeth with Siwak for every prayer",
+      "source": "https://sunnah.com/bukhari:887",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-888",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 888,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 13,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو مَعْمَرٍ، قَالَ حَدَّثَنَا عَبْدُ الْوَارِثِ، قَالَ حَدَّثَنَا شُعَيْبُ بْنُ الْحَبْحَابِ، حَدَّثَنَا أَنَسٌ، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم ‏ \"‏ أَكْثَرْتُ عَلَيْكُمْ فِي السِّوَاكِ ‏\"‏‏.‏",
+      "english": "Narrated Anas: Allah's Messenger (ﷺ) said, \"I have told you repeatedly to use the Siwak. (The Prophet (ﷺ) put emphasis on the use of the Siwak",
+      "source": "https://sunnah.com/bukhari:888",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-889",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 889,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 14,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ كَثِيرٍ، قَالَ أَخْبَرَنَا سُفْيَانُ، عَنْ مَنْصُورٍ، وَحُصَيْنٍ، عَنْ أَبِي وَائِلٍ، عَنْ حُذَيْفَةَ، قَالَ كَانَ النَّبِيُّ صلى الله عليه وسلم إِذَا قَامَ مِنَ اللَّيْلِ يَشُوصُ فَاهُ‏.‏",
+      "english": "Narrated Hudhaifa: When the Prophet (ﷺ) got up at night (for the night prayer), he used to clean his mouth",
+      "source": "https://sunnah.com/bukhari:889",
+      "prayers": [
+        "Isha",
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-890",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 890,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 15,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا إِسْمَاعِيلُ، قَالَ حَدَّثَنِي سُلَيْمَانُ بْنُ بِلاَلٍ، قَالَ قَالَ هِشَامُ بْنُ عُرْوَةَ أَخْبَرَنِي أَبِي، عَنْ عَائِشَةَ ـ رضى الله عنها ـ قَالَتْ دَخَلَ عَبْدُ الرَّحْمَنِ بْنُ أَبِي بَكْرٍ، وَمَعَهُ سِوَاكٌ يَسْتَنُّ بِهِ، فَنَظَرَ إِلَيْهِ رَسُولُ اللَّهِ صلى الله عليه وسلم فَقُلْتُ لَهُ أَعْطِنِي هَذَا السِّوَاكَ يَا عَبْدَ الرَّحْمَنِ‏.‏ فَأَعْطَانِيهِ فَقَصَمْتُهُ ثُمَّ مَضَغْتُهُ، فَأَعْطَيْتُهُ رَسُولَ اللَّهِ صلى الله عليه وسلم فَاسْتَنَّ بِهِ وَهْوَ مُسْتَسْنِدٌ إِلَى صَدْرِي‏.‏",
+      "english": "Narrated `Aisha: `Abdur-Rahman bin Abi Bakr came holding a Siwak with which he was cleaning his teeth. Allah's Apostle looked at him. I requested `Abdur-Rahman to give the Siwak to me and after he gave it to me I divided it, chewed it and gave it to Allah's Messenger (ﷺ). Then he cleaned his teeth with it and (at that time) he was resting against my chest",
+      "source": "https://sunnah.com/bukhari:890",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-891",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 891,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 16,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا سُفْيَانُ، عَنْ سَعْدِ بْنِ إِبْرَاهِيمَ، عَنْ عَبْدِ الرَّحْمَنِ ـ هُوَ ابْنُ هُرْمُزَ ـ عَنْ أَبِي هُرَيْرَةَ ـ رضى الله عنه ـ قَالَ كَانَ النَّبِيُّ صلى الله عليه وسلم يَقْرَأُ فِي الْجُمُعَةِ فِي صَلاَةِ الْفَجْرِ ‏{‏الم * تَنْزِيلُ‏}‏ السَّجْدَةَ وَ‏{‏هَلْ أَتَى عَلَى الإِنْسَانِ‏}‏",
+      "english": "Narrated Abu Huraira: The Prophet (ﷺ) used to recite the following in the Fajr prayer of Friday, \"Alif, Lam, Mim, Tanzil\" (Suratas- Sajda #32) and \"Hal-ata-ala-l-Insani\" (i.e. Surah-Ad-Dahr)",
+      "source": "https://sunnah.com/bukhari:891",
+      "prayers": [
+        "Fajr",
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-892",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 892,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 17,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى، قَالَ حَدَّثَنَا أَبُو عَامِرٍ الْعَقَدِيُّ، قَالَ حَدَّثَنَا إِبْرَاهِيمُ بْنُ طَهْمَانَ، عَنْ أَبِي جَمْرَةَ الضُّبَعِيِّ، عَنِ ابْنِ عَبَّاسٍ، أَنَّهُ قَالَ إِنَّ أَوَّلَ جُمُعَةٍ جُمِّعَتْ بَعْدَ جُمُعَةٍ فِي مَسْجِدِ رَسُولِ اللَّهِ صلى الله عليه وسلم فِي مَسْجِدِ عَبْدِ الْقَيْسِ بِجُوَاثَى مِنَ الْبَحْرَيْنِ‏.‏",
+      "english": "Narrated Ibn `Abbas: The first Jumua prayer which was offered after a Jumua prayer offered at the mosque of Allah's Apostle took place in the mosque of the tribe of `Abdul Qais at Jawathi in Bahrain",
+      "source": "https://sunnah.com/bukhari:892",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-893",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 893,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 18,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا بِشْرُ بْنُ مُحَمَّدٍ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا يُونُسُ، عَنِ الزُّهْرِيِّ، قَالَ أَخْبَرَنَا سَالِمُ بْنُ عَبْدِ اللَّهِ، عَنِ ابْنِ عُمَرَ ـ رضى الله عنهما ـ أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم يَقُولُ ‏\"‏ كُلُّكُمْ رَاعٍ ‏\"‏‏.‏ وَزَادَ اللَّيْثُ قَالَ يُونُسُ كَتَبَ رُزَيْقُ بْنُ حُكَيْمٍ إِلَى ابْنِ شِهَابٍ ـ وَأَنَا مَعَهُ يَوْمَئِذٍ بِوَادِي الْقُرَى ـ هَلْ تَرَى أَنْ أُجَمِّعَ‏.‏ وَرُزَيْقٌ عَامِلٌ عَلَى أَرْضٍ يَعْمَلُهَا، وَفِيهَا جَمَاعَةٌ مِنَ السُّودَانِ وَغَيْرِهِمْ، وَرُزَيْقٌ يَوْمَئِذٍ عَلَى أَيْلَةَ، فَكَتَبَ ابْنُ شِهَابٍ ـ وَأَنَا أَسْمَعُ ـ يَأْمُرُهُ أَنْ يُجَمِّعَ، يُخْبِرُهُ أَنَّ سَالِمًا حَدَّثَهُ أَنَّ عَبْدَ اللَّهِ بْنَ عُمَرَ يَقُولُ سَمِعْتُ رَسُولَ اللَّهِ صلى الله عليه وسلم يَقُولُ ‏\"‏ كُلُّكُمْ رَاعٍ، وَكُلُّكُمْ مَسْئُولٌ عَنْ رَعِيَّتِهِ، الإِمَامُ رَاعٍ وَمَسْئُولٌ عَنْ رَعِيَّتِهِ، وَالرَّجُلُ رَاعٍ فِي أَهْلِهِ وَهْوَ مَسْئُولٌ عَنْ رَعِيَّتِهِ، وَالْمَرْأَةُ رَاعِيَةٌ فِي بَيْتِ زَوْجِهَا وَمَسْئُولَةٌ عَنْ رَعِيَّتِهَا، وَالْخَادِمُ رَاعٍ فِي مَالِ سَيِّدِهِ وَمَسْئُولٌ عَنْ رَعِيَّتِهِ ـ قَالَ وَحَسِبْتُ أَنْ قَدْ قَالَ ـ وَالرَّجُلُ رَاعٍ فِي مَالِ أَبِيهِ وَمَسْئُولٌ عَنْ رَعِيَّتِهِ وَكُلُّكُمْ رَاعٍ وَمَسْئُولٌ عَنْ رَعِيَّتِهِ ‏\"‏‏.‏",
+      "english": "Narrated Ibn `Umar: I heard Allah's Messenger (ﷺ) saying, \"All of you are Guardians.\" Yunus said: Ruzaiq bin Hukaim wrote to Ibn Shihab while I was with him at Wadi-al-Qura saying, \"Shall I lead the Jumua prayer?\" Ruzaiq was working on the land (i.e. farming) and there was a group of Sudanese people and some others with him; Ruzaiq was then the Governor of Aila. Ibn Shihab wrote (to Ruzaiq) ordering him to lead the Jumua prayer and telling him that Salim told him that `Abdullah bin `Umar had said, \"I heard Allah's Apostle saying, 'All of you are guardians and responsible for your wards and the things under your care. The Imam (i.e. ruler) is the guardian of his subjects and is responsible for them and a man is the guardian of his family and is responsible for them. A woman is the guardian of her husband's house and is responsible for it. A servant is the guardian of his master's belongings and is responsible for them.' I thought that he also said, 'A man is the guardian of his father's property and is responsible for it. All of you are guardians and responsible for your wards and the things under your care",
+      "source": "https://sunnah.com/bukhari:893",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-894",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 894,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 19,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ حَدَّثَنِي سَالِمُ بْنُ عَبْدِ اللَّهِ، أَنَّهُ سَمِعَ عَبْدَ اللَّهِ بْنَ عُمَرَ ـ رضى الله عنهما ـ يَقُولُ سَمِعْتُ رَسُولَ اللَّهِ صلى الله عليه وسلم يَقُولُ ‏ \"‏ مَنْ جَاءَ مِنْكُمُ الْجُمُعَةَ فَلْيَغْتَسِلْ ‏\"‏‏.‏",
+      "english": "Narrated `Abdullah bin `Umar: I heard Allah's Messenger (ﷺ) saying, \"Anyone of you coming for the Jumua prayer should take a bath",
+      "source": "https://sunnah.com/bukhari:894",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-895",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 895,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 20,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ، عَنْ مَالِكٍ، عَنْ صَفْوَانَ بْنِ سُلَيْمٍ، عَنْ عَطَاءِ بْنِ يَسَارٍ، عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ ـ رضى الله عنه ـ أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ ‏ \"‏ غُسْلُ يَوْمِ الْجُمُعَةِ وَاجِبٌ عَلَى كُلِّ مُحْتَلِمٍ ‏\"‏‏.‏",
+      "english": "Narrated Abu Sa`id Al-Khudri: Allah's Messenger (ﷺ) said, \"The taking of a bath on Friday is compulsory for every Muslim who has attained the age of puberty",
+      "source": "https://sunnah.com/bukhari:895",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-896",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 896,
+      "book": 0,
+      "bookName": "Friday Prayer",
+      "numberInBook": 0,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُسْلِمُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا وُهَيْبٌ، قَالَ حَدَّثَنَا ابْنُ طَاوُسٍ، عَنْ أَبِيهِ، عَنْ أَبِي هُرَيْرَةَ، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم ‏\"‏ نَحْنُ الآخِرُونَ السَّابِقُونَ يَوْمَ الْقِيَامَةِ، أُوتُوا الْكِتَابَ مِنْ قَبْلِنَا، وَأُوتِينَاهُ مِنْ بَعْدِهِمْ، فَهَذَا الْيَوْمُ الَّذِي اخْتَلَفُوا فِيهِ فَهَدَانَا اللَّهُ، فَغَدًا لِلْيَهُودِ وَبَعْدَ غَدٍ لِلنَّصَارَى ‏\"‏‏.‏ فَسَكَتَ‏.‏ ثُمَّ قَالَ ‏\"‏ حَقٌّ عَلَى كُلِّ مُسْلِمٍ أَنْ يَغْتَسِلَ فِي كُلِّ سَبْعَةِ أَيَّامٍ يَوْمًا يَغْسِلُ فِيهِ رَأْسَهُ وَجَسَدَهُ ‏\"‏‏.‏ ثُمَّ قَالَ ‏\"‏ حَقٌّ عَلَى كُلِّ مُسْلِمٍ أَنْ يَغْتَسِلَ فِي كُلِّ سَبْعَةِ أَيَّامٍ يَوْمًا يَغْسِلُ فِيهِ رَأْسَهُ وَجَسَدَهُ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) said \"We are the last (to come amongst the nations) but (will be) the foremost on the Day of Resurrection. They were given the Holy Scripture before us and we were given the Quran after them. And this was the day (Friday) about which they differed and Allah gave us the guidance (for that). So tomorrow (i.e. Saturday) is the Jews' (day), and the day after tomorrow (i.e. Sunday) is the Christians'.\" The Prophet (ﷺ) remained silent (for a while) and then said, \"It is obligatory for every Muslim that he should take a bath once in seven days, when he should wash his head and body",
+      "source": "https://sunnah.com/bukhari:896",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-897",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 897,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 21,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُسْلِمُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا وُهَيْبٌ، قَالَ حَدَّثَنَا ابْنُ طَاوُسٍ، عَنْ أَبِيهِ، عَنْ أَبِي هُرَيْرَةَ، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم ‏\"‏ نَحْنُ الآخِرُونَ السَّابِقُونَ يَوْمَ الْقِيَامَةِ، أُوتُوا الْكِتَابَ مِنْ قَبْلِنَا، وَأُوتِينَاهُ مِنْ بَعْدِهِمْ، فَهَذَا الْيَوْمُ الَّذِي اخْتَلَفُوا فِيهِ فَهَدَانَا اللَّهُ، فَغَدًا لِلْيَهُودِ وَبَعْدَ غَدٍ لِلنَّصَارَى ‏\"‏‏.‏ فَسَكَتَ‏.‏ ثُمَّ قَالَ ‏\"‏ حَقٌّ عَلَى كُلِّ مُسْلِمٍ أَنْ يَغْتَسِلَ فِي كُلِّ سَبْعَةِ أَيَّامٍ يَوْمًا يَغْسِلُ فِيهِ رَأْسَهُ وَجَسَدَهُ ‏\"‏‏.‏ ثُمَّ قَالَ ‏\"‏ حَقٌّ عَلَى كُلِّ مُسْلِمٍ أَنْ يَغْتَسِلَ فِي كُلِّ سَبْعَةِ أَيَّامٍ يَوْمًا يَغْسِلُ فِيهِ رَأْسَهُ وَجَسَدَهُ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) said \"We are the last (to come amongst the nations) but (will be) the foremost on the Day of Resurrection. They were given the Holy Scripture before us and we were given the Quran after them. And this was the day (Friday) about which they differed and Allah gave us the guidance (for that). So tomorrow (i.e. Saturday) is the Jews' (day), and the day after tomorrow (i.e. Sunday) is the Christians'.\" The Prophet (ﷺ) remained silent (for a while) and then said, \"It is obligatory for every Muslim that he should take a bath once in seven days, when he should wash his head and body",
+      "source": "https://sunnah.com/bukhari:897",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-898",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 898,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 22,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "رَوَاهُ أَبَانُ بْنُ صَالِحٍ عَنْ مُجَاهِدٍ، عَنْ طَاوُسٍ، عَنْ أَبِي هُرَيْرَةَ، قَالَ قَالَ النَّبِيُّ صلى الله عليه وسلم ‏ \"‏ لِلَّهِ تَعَالَى عَلَى كُلِّ مُسْلِمٍ حَقٌّ أَنْ يَغْتَسِلَ فِي كُلِّ سَبْعَةِ أَيَّامٍ يَوْمًا ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira through different narrators that the Prophet (ﷺ) said, \"It is Allah's right on every Muslim that he should take a bath (at least) once in seven days",
+      "source": "https://sunnah.com/bukhari:898",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-899",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 899,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 23,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ، حَدَّثَنَا شَبَابَةُ، حَدَّثَنَا وَرْقَاءُ، عَنْ عَمْرِو بْنِ دِينَارٍ، عَنْ مُجَاهِدٍ، عَنِ ابْنِ عُمَرَ، عَنِ النَّبِيِّ صلى الله عليه وسلم قَالَ ‏ \"‏ ائْذَنُوا لِلنِّسَاءِ بِاللَّيْلِ إِلَى الْمَسَاجِدِ ‏\"‏‏.‏",
+      "english": "Narrated Ibn `Umar: The Prophet (ﷺ) said, \"Allow women to go to the Mosques at night",
+      "source": "https://sunnah.com/bukhari:899",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-900",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 900,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 24,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا يُوسُفُ بْنُ مُوسَى، حَدَّثَنَا أَبُو أُسَامَةَ، حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ عُمَرَ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ، قَالَ كَانَتِ امْرَأَةٌ لِعُمَرَ تَشْهَدُ صَلاَةَ الصُّبْحِ وَالْعِشَاءِ فِي الْجَمَاعَةِ فِي الْمَسْجِدِ، فَقِيلَ لَهَا لِمَ تَخْرُجِينَ وَقَدْ تَعْلَمِينَ أَنَّ عُمَرَ يَكْرَهُ ذَلِكَ وَيَغَارُ قَالَتْ وَمَا يَمْنَعُهُ أَنْ يَنْهَانِي قَالَ يَمْنَعُهُ قَوْلُ رَسُولِ اللَّهِ صلى الله عليه وسلم ‏ \"‏ لاَ تَمْنَعُوا إِمَاءَ اللَّهِ مَسَاجِدَ اللَّهِ ‏\"‏‏.‏",
+      "english": "Narrated Ibn `Umar: One of the wives of `Umar (bin Al-Khattab) used to offer the Fajr and the `Isha' prayer in congregation in the Mosque. She was asked why she had come out for the prayer as she knew that `Umar disliked it, and he has great ghaira (self-respect). She replied, \"What prevents him from stopping me from this act?\" The other replied, \"The statement of Allah's Messenger (ﷺ) : 'Do not stop Allah's women-slaves from going to Allah's Mosques' prevents him",
+      "source": "https://sunnah.com/bukhari:900",
+      "prayers": [
+        "Fajr",
+        "Isha",
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-901",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 901,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 25,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا إِسْمَاعِيلُ، قَالَ أَخْبَرَنِي عَبْدُ الْحَمِيدِ، صَاحِبُ الزِّيَادِيِّ قَالَ حَدَّثَنَا عَبْدُ اللَّهِ بْنُ الْحَارِثِ ابْنُ عَمِّ، مُحَمَّدِ بْنِ سِيرِينَ قَالَ ابْنُ عَبَّاسٍ لِمُؤَذِّنِهِ فِي يَوْمٍ مَطِيرٍ إِذَا قُلْتَ أَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ‏.‏ فَلاَ تَقُلْ حَىَّ عَلَى الصَّلاَةِ‏.‏ قُلْ صَلُّوا فِي بُيُوتِكُمْ‏.‏ فَكَأَنَّ النَّاسَ اسْتَنْكَرُوا، قَالَ فَعَلَهُ مَنْ هُوَ خَيْرٌ مِنِّي، إِنَّ الْجُمُعَةَ عَزْمَةٌ، وَإِنِّي كَرِهْتُ أَنْ أُخْرِجَكُمْ، فَتَمْشُونَ فِي الطِّينِ وَالدَّحْضِ‏.‏",
+      "english": "Narrated Muhammad bin Seereen: On a rainy day Ibn `Abbas said to his Mu'adh-dhin, \"After saying, 'Ash-hadu anna Muhammadan Rasulullah' (I testify that Muhammad is Allah's Messenger (ﷺ)), do not say 'Haiya 'Alas-Salat' (come for the prayer) but say 'Pray in your houses'.\" (The man did so). But the people disliked it. Ibn `Abbas said, \"It was done by one who was much better than I (i.e. the Prophet (ﷺ) ). No doubt, the Jumua prayer is compulsory but I dislike to put you to task by bringing you out walking in mud and slush",
+      "source": "https://sunnah.com/bukhari:901",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-902",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 902,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 26,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَحْمَدُ، قَالَ حَدَّثَنَا عَبْدُ اللَّهِ بْنُ وَهْبٍ، قَالَ أَخْبَرَنِي عَمْرُو بْنُ الْحَارِثِ، عَنْ عُبَيْدِ اللَّهِ بْنِ أَبِي جَعْفَرٍ، أَنَّ مُحَمَّدَ بْنَ جَعْفَرِ بْنِ الزُّبَيْرِ، حَدَّثَهُ عَنْ عُرْوَةَ بْنِ الزُّبَيْرِ، عَنْ عَائِشَةَ، زَوْجِ النَّبِيِّ صلى الله عليه وسلم قَالَتْ كَانَ النَّاسُ يَنْتَابُونَ يَوْمَ الْجُمُعَةِ مِنْ مَنَازِلِهِمْ وَالْعَوَالِي، فَيَأْتُونَ فِي الْغُبَارِ، يُصِيبُهُمُ الْغُبَارُ وَالْعَرَقُ، فَيَخْرُجُ مِنْهُمُ الْعَرَقُ، فَأَتَى رَسُولَ اللَّهِ صلى الله عليه وسلم إِنْسَانٌ مِنْهُمْ وَهْوَ عِنْدِي، فَقَالَ النَّبِيُّ صلى الله عليه وسلم ‏ \"‏ لَوْ أَنَّكُمْ تَطَهَّرْتُمْ لِيَوْمِكُمْ هَذَا ‏\"‏‏.‏",
+      "english": "Narrated Aisha: (the wife of the Prophet) The people used to come from their abodes and from Al-`Awali (i.e. outskirts of Medina up to a distance of four miles or more from Medina). They used to pass through dust and used to be drenched with sweat and covered with dust; so sweat used to trickle from them. One of them came to Allah's Messenger (ﷺ) who was in my house. The Prophet (ﷺ) said to him, \"I wish that you keep yourself clean on this day of yours (i.e. take a bath)",
+      "source": "https://sunnah.com/bukhari:902",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-903",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 903,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 27,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدَانُ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا يَحْيَى بْنُ سَعِيدٍ، أَنَّهُ سَأَلَ عَمْرَةَ عَنِ الْغُسْلِ، يَوْمَ الْجُمُعَةِ فَقَالَتْ قَالَتْ عَائِشَةُ ـ رضى الله عنها ـ كَانَ النَّاسُ مَهَنَةَ أَنْفُسِهِمْ، وَكَانُوا إِذَا رَاحُوا إِلَى الْجُمُعَةِ رَاحُوا فِي هَيْئَتِهِمْ فَقِيلَ لَهُمْ لَوِ اغْتَسَلْتُمْ‏.‏",
+      "english": "Narrated Yahya bin Sa`id: I asked `Amra about taking a bath on Fridays. She replied, \" Aisha said, 'The people used to work (for their livelihood) and whenever they went for the Jumua prayer, they used to go to the mosque in the same shape as they had been in work. So they were asked to take a bath on Friday",
+      "source": "https://sunnah.com/bukhari:903",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-904",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 904,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 28,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا سُرَيْجُ بْنُ النُّعْمَانِ، قَالَ حَدَّثَنَا فُلَيْحُ بْنُ سُلَيْمَانَ، عَنْ عُثْمَانَ بْنِ عَبْدِ الرَّحْمَنِ بْنِ عُثْمَانَ التَّيْمِيِّ، عَنْ أَنَسِ بْنِ مَالِكٍ، رضى الله عنه أَنَّ النَّبِيَّ صلى الله عليه وسلم كَانَ يُصَلِّي الْجُمُعَةَ حِينَ تَمِيلُ الشَّمْسُ‏.‏",
+      "english": "Narrated Anas bin Malik: The Prophet (ﷺ) used to offer the Jumua prayer immediately after midday",
+      "source": "https://sunnah.com/bukhari:904",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-905",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 905,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 29,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدَانُ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا حُمَيْدٌ، عَنْ أَنَسٍ، قَالَ كُنَّا نُبَكِّرُ بِالْجُمُعَةِ، وَنَقِيلُ بَعْدَ الْجُمُعَةِ‏.‏",
+      "english": "Narrated Anas bin Malik: We used to offer the Jumua prayer early and then have an afternoon nap",
+      "source": "https://sunnah.com/bukhari:905",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-906",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 906,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 30,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ أَبِي بَكْرٍ الْمُقَدَّمِيُّ، قَالَ حَدَّثَنَا حَرَمِيُّ بْنُ عُمَارَةَ، قَالَ حَدَّثَنَا أَبُو خَلْدَةَ ـ هُوَ خَالِدُ بْنُ دِينَارٍ ـ قَالَ سَمِعْتُ أَنَسَ بْنَ مَالِكٍ، يَقُولُ كَانَ النَّبِيُّ صلى الله عليه وسلم إِذَا اشْتَدَّ الْبَرْدُ بَكَّرَ بِالصَّلاَةِ، وَإِذَا اشْتَدَّ الْحَرُّ أَبْرَدَ بِالصَّلاَةِ، يَعْنِي الْجُمُعَةَ‏.‏ قَالَ يُونُسُ بْنُ بُكَيْرٍ أَخْبَرَنَا أَبُو خَلْدَةَ فَقَالَ بِالصَّلاَةِ، وَلَمْ يَذْكُرِ الْجُمُعَةَ‏.‏ وَقَالَ بِشْرُ بْنُ ثَابِتٍ حَدَّثَنَا أَبُو خَلْدَةَ قَالَ صَلَّى بِنَا أَمِيرٌ الْجُمُعَةَ ثُمَّ قَالَ لأَنَسٍ ـ رضى الله عنه ـ كَيْفَ كَانَ النَّبِيُّ صلى الله عليه وسلم يُصَلِّي الظُّهْرَ",
+      "english": "Narrated Anas bin Malik: The Prophet (ﷺ) used to offer the prayer earlier if it was very cold; and if it was very hot he used to delay the prayer, i.e. the Jumua prayer",
+      "source": "https://sunnah.com/bukhari:906",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-907",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 907,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 31,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا الْوَلِيدُ بْنُ مُسْلِمٍ، قَالَ حَدَّثَنَا يَزِيدُ بْنُ أَبِي مَرْيَمَ، قَالَ حَدَّثَنَا عَبَايَةُ بْنُ رِفَاعَةَ، قَالَ أَدْرَكَنِي أَبُو عَبْسٍ وَأَنَا أَذْهَبُ، إِلَى الْجُمُعَةِ فَقَالَ سَمِعْتُ النَّبِيَّ صلى الله عليه وسلم يَقُولُ ‏ \"‏ مَنِ اغْبَرَّتْ قَدَمَاهُ فِي سَبِيلِ اللَّهِ حَرَّمَهُ اللَّهُ عَلَى النَّارِ ‏\"‏‏.‏",
+      "english": "Narrated Abu `Abs: I heard the Prophet (ﷺ) saying, \"Anyone whose feet are covered with dust in Allah's cause, shall be saved by Allah from the Hell-Fire",
+      "source": "https://sunnah.com/bukhari:907",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-908",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 908,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 32,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا ابْنُ أَبِي ذِئْبٍ، قَالَ الزُّهْرِيُّ عَنْ سَعِيدٍ، وَأَبِي، سَلَمَةَ عَنْ أَبِي هُرَيْرَةَ ـ رضى الله عنه ـ عَنِ النَّبِيِّ صلى الله عليه وسلم‏.‏ وَحَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ أَخْبَرَنِي أَبُو سَلَمَةَ بْنُ عَبْدِ الرَّحْمَنِ، أَنَّ أَبَا هُرَيْرَةَ، قَالَ سَمِعْتُ رَسُولَ اللَّهِ صلى الله عليه وسلم يَقُولُ ‏ \"‏ إِذَا أُقِيمَتِ الصَّلاَةُ فَلاَ تَأْتُوهَا تَسْعَوْنَ، وَأْتُوهَا تَمْشُونَ عَلَيْكُمُ السَّكِينَةُ، فَمَا أَدْرَكْتُمْ فَصَلُّوا، وَمَا فَاتَكُمْ فَأَتِمُّوا ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: heard Allah's Messenger (ﷺ) saying, \"If the prayer is started do not run for it but just walk for it calmly and pray whatever you get, and complete whatever is missed",
+      "source": "https://sunnah.com/bukhari:908",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-909",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 909,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 33,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَمْرُو بْنُ عَلِيٍّ، قَالَ حَدَّثَنِي أَبُو قُتَيْبَةَ، قَالَ حَدَّثَنَا عَلِيُّ بْنُ الْمُبَارَكِ، عَنْ يَحْيَى بْنِ أَبِي كَثِيرٍ، عَنْ عَبْدِ اللَّهِ بْنِ أَبِي قَتَادَةَ ـ لاَ أَعْلَمُهُ إِلاَّ عَنْ أَبِيهِ ـ عَنِ النَّبِيِّ صلى الله عليه وسلم قَالَ ‏ \"‏ لاَ تَقُومُوا حَتَّى تَرَوْنِي، وَعَلَيْكُمُ السَّكِينَةُ ‏\"‏‏.‏",
+      "english": "Narrated `Abdullah bin Abi Qatada on the authority of his father: The Prophet (ﷺ) said, \"Do not stand up (for prayer) unless you see me, and observe calmness and solemnity",
+      "source": "https://sunnah.com/bukhari:909",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-910",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 910,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 34,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدَانُ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا ابْنُ أَبِي ذِئْبٍ، عَنْ سَعِيدٍ الْمَقْبُرِيِّ، عَنْ أَبِيهِ، عَنِ ابْنِ وَدِيعَةَ، عَنْ سَلْمَانَ الْفَارِسِيِّ، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم ‏ \"‏ مَنِ اغْتَسَلَ يَوْمَ الْجُمُعَةِ، وَتَطَهَّرَ بِمَا اسْتَطَاعَ مِنْ طُهْرٍ، ثُمَّ ادَّهَنَ أَوْ مَسَّ مِنْ طِيبٍ، ثُمَّ رَاحَ فَلَمْ يُفَرِّقْ بَيْنَ اثْنَيْنِ، فَصَلَّى مَا كُتِبَ لَهُ، ثُمَّ إِذَا خَرَجَ الإِمَامُ أَنْصَتَ، غُفِرَ لَهُ مَا بَيْنَهُ وَبَيْنَ الْجُمُعَةِ الأُخْرَى ‏\"‏‏.‏",
+      "english": "Narrated Salman Al-Farsi: Allah's Messenger (ﷺ) said, \"Anyone who takes a bath on Friday and cleans himself as much as he can and puts oil (on his hair) or scents himself; and then proceeds for the prayer and does not force his way between two persons (assembled in the mosque for the Friday prayer), and prays as much as is written for him and remains quiet when the Imam delivers the Khutba, all his sins in between the present and the last Friday will be forgiven",
+      "source": "https://sunnah.com/bukhari:910",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-911",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 911,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 35,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدٌ، قَالَ أَخْبَرَنَا مَخْلَدُ بْنُ يَزِيدَ، قَالَ أَخْبَرَنَا ابْنُ جُرَيْجٍ، قَالَ سَمِعْتُ نَافِعًا، يَقُولُ سَمِعْتُ ابْنَ عُمَرَ ـ رضى الله عنهما ـ يَقُولُ نَهَى النَّبِيُّ صلى الله عليه وسلم أَنْ يُقِيمَ الرَّجُلُ أَخَاهُ مِنْ مَقْعَدِهِ وَيَجْلِسَ فِيهِ‏.‏ قُلْتُ لِنَافِعٍ الْجُمُعَةَ قَالَ الْجُمُعَةَ وَغَيْرَهَا‏.‏",
+      "english": "Narrated Ibn Juraij: I heard Nafi' saying, \"Ibn `Umar, said, 'The Prophet (ﷺ) forbade that a man should make another man to get up to sit in his place' \". I said to Nafi`, 'Is it for Jumua prayer only?' He replied, \"For Jumua prayer and any other (prayer)",
+      "source": "https://sunnah.com/bukhari:911",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-912",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 912,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 36,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا ابْنُ أَبِي ذِئْبٍ، عَنِ الزُّهْرِيِّ، عَنِ السَّائِبِ بْنِ يَزِيدَ، قَالَ كَانَ النِّدَاءُ يَوْمَ الْجُمُعَةِ أَوَّلُهُ إِذَا جَلَسَ الإِمَامُ عَلَى الْمِنْبَرِ عَلَى عَهْدِ النَّبِيِّ صلى الله عليه وسلم وَأَبِي بَكْرٍ وَعُمَرَ ـ رضى الله عنهما ـ فَلَمَّا كَانَ عُثْمَانُ ـ رضى الله عنه ـ وَكَثُرَ النَّاسُ زَادَ النِّدَاءَ الثَّالِثَ عَلَى الزَّوْرَاءِ‏.‏",
+      "english": "Narrated As-Saib bin Yazid: In the lifetime of the Prophet, Abu Bakr and `Umar, the Adhan for the Jumua prayer used to be pronounced when the Imam sat on the pulpit. But during the Caliphate of `Uthman when the Muslims increased in number, a third Adhan at Az-Zaura' was added. Abu `Abdullah said, \"Az-Zaura' is a place in the market of Medina",
+      "source": "https://sunnah.com/bukhari:912",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-913",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 913,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 37,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ أَبِي سَلَمَةَ الْمَاجِشُونُ، عَنِ الزُّهْرِيِّ، عَنِ السَّائِبِ بْنِ يَزِيدَ، أَنَّ الَّذِي، زَادَ التَّأْذِينَ الثَّالِثَ يَوْمَ الْجُمُعَةِ عُثْمَانُ بْنُ عَفَّانَ ـ رضى الله عنه ـ حِينَ كَثُرَ أَهْلُ الْمَدِينَةِ، وَلَمْ يَكُنْ لِلنَّبِيِّ صلى الله عليه وسلم مُؤَذِّنٌ غَيْرَ وَاحِدٍ، وَكَانَ التَّأْذِينُ يَوْمَ الْجُمُعَةِ حِينَ يَجْلِسُ الإِمَامُ، يَعْنِي عَلَى الْمِنْبَرِ‏.‏",
+      "english": "Narrated As-Saib bin Yazid: The person who increased the number of Adhans for the Jumua prayers to three was `Uthman bin `Affan and it was when the number of the (Muslim) people of Medina had increased. In the lifetime of the Prophet (ﷺ) there was only one Mu'adh-dhin and the Adhan used to be pronounced only after the Imam had taken his seat (i.e. on the pulpit)",
+      "source": "https://sunnah.com/bukhari:913",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-914",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 914,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 38,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا ابْنُ مُقَاتِلٍ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا أَبُو بَكْرِ بْنُ عُثْمَانَ بْنِ سَهْلِ بْنِ حُنَيْفٍ، عَنْ أَبِي أُمَامَةَ بْنِ سَهْلِ بْنِ حُنَيْفٍ، قَالَ سَمِعْتُ مُعَاوِيَةَ بْنَ أَبِي سُفْيَانَ،، وَهُوَ جَالِسٌ عَلَى الْمِنْبَرِ، أَذَّنَ الْمُؤَذِّنُ قَالَ اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ‏.‏ قَالَ مُعَاوِيَةُ اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ‏.‏ قَالَ أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ‏.‏ فَقَالَ مُعَاوِيَةُ وَأَنَا‏.‏ فَقَالَ أَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ‏.‏ فَقَالَ مُعَاوِيَةُ وَأَنَا‏.‏ فَلَمَّا أَنْ قَضَى التَّأْذِينَ قَالَ يَا أَيُّهَا النَّاسُ إِنِّي سَمِعْتُ رَسُولَ اللَّهِ صلى الله عليه وسلم عَلَى هَذَا الْمَجْلِسِ حِينَ أَذَّنَ الْمُؤَذِّنُ يَقُولُ مَا سَمِعْتُمْ مِنِّي مِنْ مَقَالَتِي‏.‏",
+      "english": "Narrated Abu Umama bin Sahl bin Hunaif: I heard Muawiya bin Abi Sufyan (repeating the statements of the Adhan) while he was sitting on the pulpit. When the Mu'adh-dhin pronounced the Adhan saying, \"Allahu-Akbar, Allahu Akbar\", Muawiya said: \"Allah Akbar, Allahu Akbar.\" And when the Mu'adh-dhin said, \"Ash-hadu an la ilaha illal-lah (I testify that none has the right to be worshipped but Allah)\", Muawiya said, \"And (so do) I\". When he said, \"Ash-hadu anna Muhammadan Rasulullah\" (I testify that Muhammad is Allah's Apostle), Muawiya said, \"And (so do) I\". When the Adhan was finished, Muawiya said, \"O people, when the Mu'adh-dhin pronounced the Adhan I heard Allah's Messenger (ﷺ) on this very pulpit saying what you have just heard me saying",
+      "source": "https://sunnah.com/bukhari:914",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-915",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 915,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 39,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ عُقَيْلٍ، عَنِ ابْنِ شِهَابٍ، أَنَّ السَّائِبَ بْنَ يَزِيدَ، أَخْبَرَهُ أَنَّ التَّأْذِينَ الثَّانِيَ يَوْمَ الْجُمُعَةِ أَمَرَ بِهِ عُثْمَانُ حِينَ كَثُرَ أَهْلُ الْمَسْجِدِ، وَكَانَ التَّأْذِينُ يَوْمَ الْجُمُعَةِ حِينَ يَجْلِسُ الإِمَامُ‏.‏",
+      "english": "Narrated As-Sa'ib bin Yazid: `Uthman bin `Affan introduced the second Adhan on Fridays when the number of the people in the mosque increased. Previously the Adhan on Fridays used to be pronounced only after the Imam had taken his seat (on the pulpit)",
+      "source": "https://sunnah.com/bukhari:915",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-916",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 916,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 40,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ مُقَاتِلٍ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا يُونُسُ، عَنِ الزُّهْرِيِّ، قَالَ سَمِعْتُ السَّائِبَ بْنَ يَزِيدَ، يَقُولُ إِنَّ الأَذَانَ يَوْمَ الْجُمُعَةِ كَانَ أَوَّلُهُ حِينَ يَجْلِسُ الإِمَامُ يَوْمَ الْجُمُعَةِ عَلَى الْمِنْبَرِ فِي عَهْدِ رَسُولِ اللَّهِ صلى الله عليه وسلم وَأَبِي بَكْرٍ وَعُمَرَ ـ رضى الله عنهما ـ فَلَمَّا كَانَ فِي خِلاَفَةِ عُثْمَانَ ـ رضى الله عنه ـ وَكَثُرُوا، أَمَرَ عُثْمَانُ يَوْمَ الْجُمُعَةِ بِالأَذَانِ الثَّالِثِ، فَأُذِّنَ بِهِ عَلَى الزَّوْرَاءِ، فَثَبَتَ الأَمْرُ عَلَى ذَلِكَ‏.‏",
+      "english": "Narrated Az-Zuhri: I heard As-Saib bin Yazid, saying, \"In the lifetime of Allah's Messenger (ﷺ), and Abu Bakr and `Umar, the Adhan for the Jumua prayer used to be pronounced after the Imam had taken his seat on the pulpit. But when the people increased in number during the caliphate of `Uthman, he introduced a third Adhan (on Friday for the Jumua prayer) and it was pronounced at Az-Zaura' and that new state of affairs remained so in the succeeding years",
+      "source": "https://sunnah.com/bukhari:916",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-917",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 917,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 41,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ، قَالَ حَدَّثَنَا يَعْقُوبُ بْنُ عَبْدِ الرَّحْمَنِ بْنِ مُحَمَّدِ بْنِ عَبْدِ اللَّهِ بْنِ عَبْدٍ الْقَارِيُّ الْقُرَشِيُّ الإِسْكَنْدَرَانِيُّ، قَالَ حَدَّثَنَا أَبُو حَازِمِ بْنُ دِينَارٍ، أَنَّ رِجَالاً، أَتَوْا سَهْلَ بْنَ سَعْدٍ السَّاعِدِيَّ، وَقَدِ امْتَرَوْا فِي الْمِنْبَرِ مِمَّ عُودُهُ فَسَأَلُوهُ عَنْ ذَلِكَ فَقَالَ وَاللَّهِ إِنِّي لأَعْرِفُ مِمَّا هُوَ، وَلَقَدْ رَأَيْتُهُ أَوَّلَ يَوْمٍ وُضِعَ، وَأَوَّلَ يَوْمٍ جَلَسَ عَلَيْهِ رَسُولُ اللَّهِ صلى الله عليه وسلم أَرْسَلَ رَسُولُ اللَّهِ صلى الله عليه وسلم إِلَى فُلاَنَةَ ـ امْرَأَةٍ قَدْ سَمَّاهَا سَهْلٌ ـ ‏\"‏ مُرِي غُلاَمَكِ النَّجَّارَ أَنْ يَعْمَلَ لِي أَعْوَادًا أَجْلِسُ عَلَيْهِنَّ إِذَا كَلَّمْتُ النَّاسَ ‏\"‏‏.‏ فَأَمَرَتْهُ فَعَمِلَهَا مِنْ طَرْفَاءِ الْغَابَةِ ثُمَّ جَاءَ بِهَا، فَأَرْسَلَتْ إِلَى رَسُولِ اللَّهِ صلى الله عليه وسلم فَأَمَرَ بِهَا فَوُضِعَتْ هَا هُنَا، ثُمَّ رَأَيْتُ رَسُولَ اللَّهِ صلى الله عليه وسلم صَلَّى عَلَيْهَا، وَكَبَّرَ وَهْوَ عَلَيْهَا، ثُمَّ رَكَعَ وَهْوَ عَلَيْهَا، ثُمَّ نَزَلَ الْقَهْقَرَى فَسَجَدَ فِي أَصْلِ الْمِنْبَرِ ثُمَّ عَادَ، فَلَمَّا فَرَغَ أَقْبَلَ عَلَى النَّاسِ فَقَالَ ‏\"‏ أَيُّهَا النَّاسُ إِنَّمَا صَنَعْتُ هَذَا لِتَأْتَمُّوا وَلِتَعَلَّمُوا صَلاَتِي ‏\"‏‏.‏",
+      "english": "Narrated Abu Hazim bin Dinar: Some people went to Sahl bin Sa`d As-Sa`idi and told him that they had different opinions regarding the wood of the pulpit. They asked him about it and he said, \"By Allah, I know of what wood the pulpit was made, and no doubt I saw it on the very first day when Allah's Messenger (ﷺ) took his seat on it. Allah's Messenger (ﷺ) sent for such and such an Ansari woman (and Sahl mentioned her name) and said to her, 'Order your slave-carpenter to prepare for me some pieces of wood (i.e. pulpit) on which I may sit at the time of addressing the people.' So she ordered her slave-carpenter and he made it from the tamarisk of the forest and brought it (to the woman). The woman sent that (pulpit) to Allah's Messenger (ﷺ) who ordered it to be placed here. Then I saw Allah's Messenger (ﷺ) praying on it and then bowed on it. Then he stepped back, got down and prostrated on the ground near the foot of the pulpit and again ascended the pulpit. After finishing the prayer he faced the people and said, 'I have done this so that you may follow me and learn the way I pray",
+      "source": "https://sunnah.com/bukhari:917",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-918",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 918,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 42,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا سَعِيدُ بْنُ أَبِي مَرْيَمَ، قَالَ حَدَّثَنَا مُحَمَّدُ بْنُ جَعْفَرٍ، قَالَ أَخْبَرَنِي يَحْيَى بْنُ سَعِيدٍ، قَالَ أَخْبَرَنِي ابْنُ أَنَسٍ، أَنَّهُ سَمِعَ جَابِرَ بْنَ عَبْدِ اللَّهِ، قَالَ كَانَ جِذْعٌ يَقُومُ إِلَيْهِ النَّبِيُّ صلى الله عليه وسلم فَلَمَّا وُضِعَ لَهُ الْمِنْبَرُ سَمِعْنَا لِلْجِذْعِ مِثْلَ أَصْوَاتِ الْعِشَارِ حَتَّى نَزَلَ النَّبِيُّ صلى الله عليه وسلم فَوَضَعَ يَدَهُ عَلَيْهِ‏.‏ قَالَ سُلَيْمَانُ عَنْ يَحْيَى أَخْبَرَنِي حَفْصُ بْنُ عُبَيْدِ اللَّهِ بْنِ أَنَسٍ أَنَّهُ سَمِعَ جَابِرًا‏.‏",
+      "english": "Narrated Jabir bin `Abdullah: The Prophet (ﷺ) used to stand by a stem of a date-palm tree (while delivering a sermon). When the pulpit was placed for him we heard that stem crying like a pregnant she-camel till the Prophet (ﷺ) got down from the pulpit and placed his hand over it",
+      "source": "https://sunnah.com/bukhari:918",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-919",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 919,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 43,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا ابْنُ أَبِي ذِئْبٍ، عَنِ الزُّهْرِيِّ، عَنْ سَالِمٍ، عَنْ أَبِيهِ، قَالَ سَمِعْتُ النَّبِيَّ صلى الله عليه وسلم يَخْطُبُ عَلَى الْمِنْبَرِ فَقَالَ ‏ \"‏ مَنْ جَاءَ إِلَى الْجُمُعَةِ فَلْيَغْتَسِلْ ‏\"‏‏.‏",
+      "english": "Narrated Salim: My father said , \"I heard the Prophet (ﷺ) delivering the Khutba on the pulpit and he said, 'Whoever comes for the Jumua prayer should take a bath (before coming)",
+      "source": "https://sunnah.com/bukhari:919",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-920",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 920,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 44,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ عُمَرَ الْقَوَارِيرِيُّ، قَالَ حَدَّثَنَا خَالِدُ بْنُ الْحَارِثِ، قَالَ حَدَّثَنَا عُبَيْدُ اللَّهِ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ ـ رضى الله عنهما ـ قَالَ كَانَ النَّبِيُّ صلى الله عليه وسلم يَخْطُبُ قَائِمًا ثُمَّ يَقْعُدُ ثُمَّ يَقُومُ، كَمَا تَفْعَلُونَ الآنَ‏.‏",
+      "english": "Narrated Ibn `Umar: The Prophet (ﷺ) used to deliver the Khutba while standing and then he would sit, then stand again as you do now-a-days",
+      "source": "https://sunnah.com/bukhari:920",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-921",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 921,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 45,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُعَاذُ بْنُ فَضَالَةَ، قَالَ حَدَّثَنَا هِشَامٌ، عَنْ يَحْيَى، عَنْ هِلاَلِ بْنِ أَبِي مَيْمُونَةَ، حَدَّثَنَا عَطَاءُ بْنُ يَسَارٍ، أَنَّهُ سَمِعَ أَبَا سَعِيدٍ الْخُدْرِيَّ، قَالَ إِنَّ النَّبِيَّ صلى الله عليه وسلم جَلَسَ ذَاتَ يَوْمٍ عَلَى الْمِنْبَرِ وَجَلَسْنَا حَوْلَهُ‏.‏",
+      "english": "Narrated Abu Sa`id Al-Khudri: One day the Prophet (ﷺ) sat on the pulpit and we sat around him",
+      "source": "https://sunnah.com/bukhari:921",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-922",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 922,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 46,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "وَقَالَ مَحْمُودٌ حَدَّثَنَا أَبُو أُسَامَةَ، قَالَ حَدَّثَنَا هِشَامُ بْنُ عُرْوَةَ، قَالَ أَخْبَرَتْنِي فَاطِمَةُ بِنْتُ الْمُنْذِرِ، عَنْ أَسْمَاءَ بِنْتِ أَبِي بَكْرٍ، قَالَتْ دَخَلْتُ عَلَى عَائِشَةَ ـ رضى الله عنها ـ وَالنَّاسُ يُصَلُّونَ قُلْتُ مَا شَأْنُ النَّاسِ فَأَشَارَتْ بِرَأْسِهَا إِلَى السَّمَاءِ‏.‏ فَقُلْتُ آيَةٌ فَأَشَارَتْ بِرَأْسِهَا أَىْ نَعَمْ‏.‏ قَالَتْ فَأَطَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم جِدًّا حَتَّى تَجَلاَّنِي الْغَشْىُ وَإِلَى جَنْبِي قِرْبَةٌ فِيهَا مَاءٌ فَفَتَحْتُهَا فَجَعَلْتُ أَصُبُّ مِنْهَا عَلَى رَأْسِي، فَانْصَرَفَ رَسُولُ اللَّهِ صلى الله عليه وسلم وَقَدْ تَجَلَّتِ الشَّمْسُ، فَخَطَبَ النَّاسَ، وَحَمِدَ اللَّهَ بِمَا هُوَ أَهْلُهُ ثُمَّ قَالَ ‏\"‏ أَمَّا بَعْدُ ‏\"‏‏.‏ قَالَتْ وَلَغِطَ نِسْوَةٌ مِنَ الأَنْصَارِ، فَانْكَفَأْتُ إِلَيْهِنَّ لأُسَكِّتَهُنَّ فَقُلْتُ لِعَائِشَةَ مَا قَالَ قَالَتْ قَالَ ‏\"‏ مَا مِنْ شَىْءٍ لَمْ أَكُنْ أُرِيتُهُ إِلاَّ قَدْ رَأَيْتُهُ فِي مَقَامِي هَذَا حَتَّى الْجَنَّةَ وَالنَّارَ، وَإِنَّهُ قَدْ أُوحِيَ إِلَىَّ أَنَّكُمْ تُفْتَنُونَ فِي الْقُبُورِ مِثْلَ ـ أَوْ قَرِيبَ مِنْ ـ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ، يُؤْتَى أَحَدُكُمْ، فَيُقَالُ لَهُ مَا عِلْمُكَ بِهَذَا الرَّجُلِ فَأَمَّا الْمُؤْمِنُ ـ أَوْ قَالَ الْمُوقِنُ شَكَّ هِشَامٌ ـ فَيَقُولُ هُوَ رَسُولُ اللَّهِ، هُوَ مُحَمَّدٌ صلى الله عليه وسلم جَاءَنَا بِالْبَيِّنَاتِ وَالْهُدَى فَآمَنَّا وَأَجَبْنَا وَاتَّبَعْنَا وَصَدَّقْنَا‏.‏ فَيُقَالُ لَهُ نَمْ صَالِحًا، قَدْ كُنَّا نَعْلَمُ إِنْ كُنْتَ لَتُؤْمِنُ بِهِ‏.‏ وَأَمَّا الْمُنَافِقُ ـ أَوْ قَالَ الْمُرْتَابُ شَكَّ هِشَامٌ ـ فَيُقَالُ لَهُ مَا عِلْمُكَ بِهَذَا الرَّجُلِ فَيَقُولُ لاَ أَدْرِي، سَمِعْتُ النَّاسَ يَقُولُونَ شَيْئًا فَقُلْتُهُ ‏\"‏‏.‏ قَالَ هِشَامٌ فَلَقَدْ قَالَتْ لِي فَاطِمَةُ فَأَوْعَيْتُهُ، غَيْرَ أَنَّهَا ذَكَرَتْ مَا يُغَلِّظُ عَلَيْهِ‏.‏",
+      "english": "Narrated Fatima bint Al-Mundhir: Asma' bint Abi Bakr As-Siddiq said, \"I went to 'Aishah and the people were offering Salat. I asked her, 'What is wrong with the people ?' She pointed towards the sky with her head. I asked her, 'Is there a sign ?' 'Aishah nodded with her head meaning 'Yes'.\" Asma' added, \"Allah's Messenger (ﷺ) prolonged the Salat to such an extent that I fainted. There was a waterskin by my side and I opened it and poured some water on my head. When Allah's Messenger (ﷺ) finished Salat, and the solar eclipse had cleared, the Prophet (ﷺ) addressed the people and praised Allah as He deserves and said, 'Amma ba'du'.\" Asma' further said, \"Some Ansari women started talking, so I turned to them in order to make them quiet. I asked 'Aishah what the Prophet (ﷺ) had said. 'Aishah said: 'He said, 'I have seen things at this place of mine which were never shown to me before; (I have seen) even Paradise and Hell. And, no doubt it has been revealed to me that you (people) will be put in trial in your graves like or nearly like the trial of Masih Ad-Dajjal. (The angels) will come to everyone of you and ask him, 'What do you know about this man (Prophet Muhammad (ﷺ)) ?\" The faithful believer or firm believer (Hisham was in doubt which word the Prophet (ﷺ) used), will say, 'He is Allah's Messenger (ﷺ) and he is Muhammad (ﷺ) who came to us with clear evidences and guidance. So we believed him, accepted his teachings and followed and trusted his teaching.' Then the angels will tell him to sleep (in peace) as they have come to know that he was a believer. But the hypocrite or a doubtful person (Hisham is not sure as to which word the Prophet (ﷺ) used), will be asked what he knew about this man (Prophet Muhammed (ﷺ)). He will say, 'I do not know but I heard the people saying something (about him) so I said the same' \" Hisham added, \"Fatima told me that she remembered that narration completely by heart except that she said about the hypocrite or a doubtful person that he will be punished severely",
+      "source": "https://sunnah.com/bukhari:922",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-923",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 923,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 47,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ مَعْمَرٍ، قَالَ حَدَّثَنَا أَبُو عَاصِمٍ، عَنْ جَرِيرِ بْنِ حَازِمٍ، قَالَ سَمِعْتُ الْحَسَنَ، يَقُولُ حَدَّثَنَا عَمْرُو بْنُ تَغْلِبَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم أُتِيَ بِمَالٍ أَوْ سَبْىٍ فَقَسَمَهُ، فَأَعْطَى رِجَالاً وَتَرَكَ رِجَالاً فَبَلَغَهُ أَنَّ الَّذِينَ تَرَكَ عَتَبُوا، فَحَمِدَ اللَّهَ ثُمَّ أَثْنَى عَلَيْهِ، ثُمَّ قَالَ ‏ \"‏ أَمَّا بَعْدُ، فَوَاللَّهِ إِنِّي لأُعْطِي الرَّجُلَ، وَأَدَعُ الرَّجُلَ، وَالَّذِي أَدَعُ أَحَبُّ إِلَىَّ مِنَ الَّذِي أُعْطِي وَلَكِنْ أُعْطِي أَقْوَامًا لِمَا أَرَى فِي قُلُوبِهِمْ مِنَ الْجَزَعِ وَالْهَلَعِ، وَأَكِلُ أَقْوَامًا إِلَى مَا جَعَلَ اللَّهُ فِي قُلُوبِهِمْ مِنَ الْغِنَى وَالْخَيْرِ، فِيهِمْ عَمْرُو بْنُ تَغْلِبَ ‏\"‏‏.‏ فَوَاللَّهِ مَا أُحِبُّ أَنَّ لِي بِكَلِمَةِ رَسُولِ اللَّهِ صلى الله عليه وسلم حُمْرَ النَّعَمِ‏.‏ تَابَعَهُ يُونُسُ‏.‏",
+      "english": "Narrated `Amr bin Taghlib: Some property or something was brought to Allah's Messenger (ﷺ) and he distributed it. He gave to some men and ignored the others. Later he got the news of his being admonished by those whom he had ignored. So he glorified and praised Allah and said, \"Amma ba'du. By Allah, I may give to a man and ignore another, although the one whom I ignore is more beloved to me than the one whom I give. But I give to some people as I feel that they have no patience and no contentment in their hearts and I leave those who are patient and self-content with the goodness and wealth which Allah has put into their hearts and `Amr bin Taghlib is one of them.\" `Amr added, By Allah! Those words of Allah's Apostle are more beloved to me than the best red camels",
+      "source": "https://sunnah.com/bukhari:923",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-924",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 924,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 48,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ عُقَيْلٍ، عَنِ ابْنِ شِهَابٍ، قَالَ أَخْبَرَنِي عُرْوَةُ، أَنَّ عَائِشَةَ، أَخْبَرَتْهُ أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم خَرَجَ ذَاتَ لَيْلَةٍ مِنْ جَوْفِ اللَّيْلِ، فَصَلَّى فِي الْمَسْجِدِ، فَصَلَّى رِجَالٌ بِصَلاَتِهِ فَأَصْبَحَ النَّاسُ فَتَحَدَّثُوا، فَاجْتَمَعَ أَكْثَرُ مِنْهُمْ فَصَلَّوْا مَعَهُ، فَأَصْبَحَ النَّاسُ فَتَحَدَّثُوا فَكَثُرَ أَهْلُ الْمَسْجِدِ مِنَ اللَّيْلَةِ الثَّالِثَةِ، فَخَرَجَ رَسُولُ اللَّهِ صلى الله عليه وسلم فَصَلَّوْا بِصَلاَتِهِ، فَلَمَّا كَانَتِ اللَّيْلَةُ الرَّابِعَةُ عَجَزَ الْمَسْجِدُ عَنْ أَهْلِهِ حَتَّى خَرَجَ لِصَلاَةِ الصُّبْحِ، فَلَمَّا قَضَى الْفَجْرَ أَقْبَلَ عَلَى النَّاسِ، فَتَشَهَّدَ ثُمَّ قَالَ ‏ \"‏ أَمَّا بَعْدُ فَإِنَّهُ لَمْ يَخْفَ عَلَىَّ مَكَانُكُمْ، لَكِنِّي خَشِيتُ أَنْ تُفْرَضَ عَلَيْكُمْ فَتَعْجِزُوا عَنْهَا ‏\"‏‏.‏ تَابَعَهُ يُونُسُ‏.‏",
+      "english": "Narrated Aisha: Once in the middle of the night Allah's Messenger (ﷺ) went out and prayed in the mosque and some men prayed with him. The next morning the people spoke about it and so more people gathered and prayed with him (in the second night). They circulated the news in the morning, and so, on the third night the number of people increased greatly. Allah's Messenger (ﷺ) came out and they prayed behind him. On the fourth night the mosque was overwhelmed by the people till it could not accommodate them. Allah's Messenger (ﷺ) came out only for the Fajr prayer and when he finished the prayer, he faced the people and recited \"Tashah-hud\" (I testify that none has the right to be worshipped but Allah and that Muhammad is His Apostle), and then said, \"Amma ba'du. Verily your presence (in the mosque at night) was not hidden from me, but I was afraid that this prayer (Prayer of Tahajjud) might be made compulsory and you might not be able to carry it out",
+      "source": "https://sunnah.com/bukhari:924",
+      "prayers": [
+        "Fajr",
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-925",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 925,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 49,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ أَخْبَرَنِي عُرْوَةُ، عَنْ أَبِي حُمَيْدٍ السَّاعِدِيِّ، أَنَّهُ أَخْبَرَهُ أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَامَ عَشِيَّةً بَعْدَ الصَّلاَةِ، فَتَشَهَّدَ وَأَثْنَى عَلَى اللَّهِ بِمَا هُوَ أَهْلُهُ ثُمَّ قَالَ ‏\"‏ أَمَّا بَعْدُ ‏\"‏‏.‏ تَابَعَهُ أَبُو مُعَاوِيَةَ وَأَبُو أُسَامَةَ عَنْ هِشَامٍ عَنْ أَبِيهِ عَنْ أَبِي حُمَيْدٍ عَنِ النَّبِيِّ صلى الله عليه وسلم قَالَ ‏\"‏ أَمَّا بَعْدُ ‏\"‏‏.‏ تَابَعَهُ الْعَدَنِيُّ عَنْ سُفْيَانَ فِي أَمَّا بَعْدُ‏.‏",
+      "english": "Narrated Abu Hummaid As-Sa`idi: One night Allah's Messenger (ﷺ) stood up after the prayer and recited \"Tashah-hud\" and then praised Allah as He deserved and said, \"Amma ba'du",
+      "source": "https://sunnah.com/bukhari:925",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-926",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 926,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 50,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ حَدَّثَنِي عَلِيُّ بْنُ حُسَيْنٍ، عَنِ الْمِسْوَرِ بْنِ مَخْرَمَةَ، قَالَ قَامَ رَسُولُ اللَّهِ صلى الله عليه وسلم فَسَمِعْتُهُ حِينَ تَشَهَّدَ يَقُولُ ‏ \"‏ أَمَّا بَعْدُ ‏\"‏‏.‏ تَابَعَهُ الزُّبَيْدِيُّ عَنِ الزُّهْرِيِّ‏.‏",
+      "english": "Narrated Al-Miswar bin Makhrama: Once Allah's Messenger (ﷺ) got up for delivering the Khutba and I heard him after \"Tashah-hud\" saying \"Amma ba'du",
+      "source": "https://sunnah.com/bukhari:926",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-927",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 927,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 51,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا إِسْمَاعِيلُ بْنُ أَبَانَ، قَالَ حَدَّثَنَا ابْنُ الْغَسِيلِ، قَالَ حَدَّثَنَا عِكْرِمَةُ، عَنِ ابْنِ عَبَّاسٍ ـ رضى الله عنهما ـ قَالَ صَعِدَ النَّبِيُّ صلى الله عليه وسلم الْمِنْبَرَ وَكَانَ آخِرَ مَجْلِسٍ جَلَسَهُ مُتَعَطِّفًا مِلْحَفَةً عَلَى مَنْكِبَيْهِ، قَدْ عَصَبَ رَأْسَهُ بِعِصَابَةٍ دَسِمَةٍ، فَحَمِدَ اللَّهَ وَأَثْنَى عَلَيْهِ ثُمَّ قَالَ ‏\"‏ أَيُّهَا النَّاسُ إِلَىَّ ‏\"‏‏.‏ فَثَابُوا إِلَيْهِ ثُمَّ قَالَ ‏\"‏ أَمَّا بَعْدُ، فَإِنَّ هَذَا الْحَىَّ مِنَ الأَنْصَارِ يَقِلُّونَ، وَيَكْثُرُ النَّاسُ، فَمَنْ وَلِيَ شَيْئًا مِنْ أُمَّةِ مُحَمَّدٍ صلى الله عليه وسلم فَاسْتَطَاعَ أَنْ يَضُرَّ فِيهِ أَحَدًا أَوْ يَنْفَعَ فِيهِ أَحَدًا، فَلْيَقْبَلْ مِنْ مُحْسِنِهِمْ، وَيَتَجَاوَزْ عَنْ مُسِيِّهِمْ ‏\"‏‏.‏",
+      "english": "Narrated Ibn `Abbas: Once the Prophet (ﷺ) ascended the pulpit and it was the last gathering in which he took part. He was covering his shoulder with a big cloak and binding his head with an oily bandage. He glorified and praised Allah and said, \"O people! Come to me.\" So the people came and gathered around him and he then said, \"Amma ba'du.\" \"From now onward the Ansar will decrease and other people will increase. So anybody who becomes a ruler of the followers of Muhammad and has the power to harm or benefit people then he should accept the good from the benevolent amongst them (Ansar) and overlook the faults of their wrong-doers",
+      "source": "https://sunnah.com/bukhari:927",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-928",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 928,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 52,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا بِشْرُ بْنُ الْمُفَضَّلِ، قَالَ حَدَّثَنَا عُبَيْدُ اللَّهِ، عَنْ نَافِعٍ، عَنْ عَبْدِ اللَّهِ، قَالَ كَانَ النَّبِيُّ صلى الله عليه وسلم يَخْطُبُ خُطْبَتَيْنِ يَقْعُدُ بَيْنَهُمَا‏.‏",
+      "english": "Narrated `Abdullah Ibn `Umar: The Prophet (ﷺ) used to deliver two Khutbas and sit in between them",
+      "source": "https://sunnah.com/bukhari:928",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-929",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 929,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 53,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا ابْنُ أَبِي ذِئْبٍ، عَنِ الزُّهْرِيِّ، عَنْ أَبِي عَبْدِ اللَّهِ الأَغَرِّ، عَنْ أَبِي هُرَيْرَةَ، قَالَ قَالَ النَّبِيُّ صلى الله عليه وسلم ‏ \"‏ إِذَا كَانَ يَوْمُ الْجُمُعَةِ، وَقَفَتِ الْمَلاَئِكَةُ عَلَى باب الْمَسْجِدِ يَكْتُبُونَ الأَوَّلَ فَالأَوَّلَ، وَمَثَلُ الْمُهَجِّرِ كَمَثَلِ الَّذِي يُهْدِي بَدَنَةً، ثُمَّ كَالَّذِي يُهْدِي بَقَرَةً، ثُمَّ كَبْشًا، ثُمَّ دَجَاجَةً، ثُمَّ بَيْضَةً، فَإِذَا خَرَجَ الإِمَامُ طَوَوْا صُحُفَهُمْ، وَيَسْتَمِعُونَ الذِّكْرَ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: The Prophet (ﷺ) said, \"When it is a Friday, the angels stand at the gate of the mosque and keep on writing the names of the persons coming to the mosque in succession according to their arrivals. The example of the one who enters the mosque in the earliest hour is that of one offering a camel (in sacrifice). The one coming next is like one offering a cow and then a ram and then a chicken and then an egg respectively. When the Imam comes out (for Jumua prayer) they (i.e. angels) fold their papers and listen to the Khutba",
+      "source": "https://sunnah.com/bukhari:929",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-930",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 930,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 54,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا أَبُو النُّعْمَانِ، قَالَ حَدَّثَنَا حَمَّادُ بْنُ زَيْدٍ، عَنْ عَمْرِو بْنِ دِينَارٍ، عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ، قَالَ جَاءَ رَجُلٌ وَالنَّبِيُّ صلى الله عليه وسلم يَخْطُبُ النَّاسَ يَوْمَ الْجُمُعَةِ فَقَالَ ‏\"‏ أَصَلَّيْتَ يَا فُلاَنُ ‏\"‏‏.‏ قَالَ لاَ‏.‏ قَالَ ‏\"‏ قُمْ فَارْكَعْ ‏\"‏‏.‏",
+      "english": "Narrated Jabir bin `Abdullah: A person entered the mosque while the Prophet (ﷺ) was delivering the Khutba on a Friday. The Prophet (ﷺ) said to him, \"Have you prayed?\" The man replied in the negative. The Prophet (ﷺ) said, \"Get up and pray two rak`at",
+      "source": "https://sunnah.com/bukhari:930",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-931",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 931,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 55,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا سُفْيَانُ، عَنْ عَمْرٍو، سَمِعَ جَابِرًا، قَالَ دَخَلَ رَجُلٌ يَوْمَ الْجُمُعَةِ وَالنَّبِيُّ صلى الله عليه وسلم يَخْطُبُ فَقَالَ ‏\"‏ أَصَلَّيْتَ ‏\"‏‏.‏ قَالَ لاَ‏.‏ قَالَ ‏\"‏ فَصَلِّ رَكْعَتَيْنِ ‏\"‏‏.‏",
+      "english": "Narrated Jabir: A man entered the Mosque while the Prophet (ﷺ) was delivering the Khutba. The Prophet (ﷺ) said to him, \"Have you prayed?\" The man replied in the negative. The Prophet (ﷺ) said, \"Pray two rak`at",
+      "source": "https://sunnah.com/bukhari:931",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-932",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 932,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 56,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا حَمَّادُ بْنُ زَيْدٍ، عَنْ عَبْدِ الْعَزِيزِ، عَنْ أَنَسٍ،‏.‏ وَعَنْ يُونُسَ، عَنْ ثَابِتٍ، عَنْ أَنَسٍ، قَالَ بَيْنَمَا النَّبِيُّ صلى الله عليه وسلم يَخْطُبُ يَوْمَ الْجُمُعَةِ إِذْ قَامَ رَجُلٌ فَقَالَ يَا رَسُولَ اللَّهِ، هَلَكَ الْكُرَاعُ، وَهَلَكَ الشَّاءُ، فَادْعُ اللَّهَ أَنْ يَسْقِيَنَا‏.‏ فَمَدَّ يَدَيْهِ وَدَعَا‏.‏",
+      "english": "Narrated Anas: While the Prophet (ﷺ) was delivering the Khutba on a Friday, a man stood up and said, \"O, Allah's Apostle! The livestock and the sheep are dying, so pray to Allah for rain.\" So he (the Prophet) raised both his hands and invoked Allah (for it)",
+      "source": "https://sunnah.com/bukhari:932",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-933",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 933,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 57,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا إِبْرَاهِيمُ بْنُ الْمُنْذِرِ، قَالَ حَدَّثَنَا الْوَلِيدُ، قَالَ حَدَّثَنَا أَبُو عَمْرٍو، قَالَ حَدَّثَنِي إِسْحَاقُ بْنُ عَبْدِ اللَّهِ بْنِ أَبِي طَلْحَةَ، عَنْ أَنَسِ بْنِ مَالِكٍ، قَالَ أَصَابَتِ النَّاسَ سَنَةٌ عَلَى عَهْدِ النَّبِيِّ صلى الله عليه وسلم فَبَيْنَا النَّبِيُّ صلى الله عليه وسلم يَخْطُبُ فِي يَوْمِ جُمُعَةٍ قَامَ أَعْرَابِيٌّ فَقَالَ يَا رَسُولَ اللَّهِ هَلَكَ الْمَالُ وَجَاعَ الْعِيَالُ، فَادْعُ اللَّهَ لَنَا‏.‏ فَرَفَعَ يَدَيْهِ، وَمَا نَرَى فِي السَّمَاءِ قَزَعَةً، فَوَالَّذِي نَفْسِي بِيَدِهِ مَا وَضَعَهَا حَتَّى ثَارَ السَّحَابُ أَمْثَالَ الْجِبَالِ، ثُمَّ لَمْ يَنْزِلْ عَنْ مِنْبَرِهِ حَتَّى رَأَيْتُ الْمَطَرَ يَتَحَادَرُ عَلَى لِحْيَتِهِ صلى الله عليه وسلم فَمُطِرْنَا يَوْمَنَا ذَلِكَ، وَمِنَ الْغَدِ، وَبَعْدَ الْغَدِ وَالَّذِي يَلِيهِ، حَتَّى الْجُمُعَةِ الأُخْرَى، وَقَامَ ذَلِكَ الأَعْرَابِيُّ ـ أَوْ قَالَ غَيْرُهُ ـ فَقَالَ يَا رَسُولَ اللَّهِ، تَهَدَّمَ الْبِنَاءُ وَغَرِقَ الْمَالُ، فَادْعُ اللَّهَ لَنَا‏.‏ فَرَفَعَ يَدَيْهِ، فَقَالَ ‏ \"‏ اللَّهُمَّ حَوَالَيْنَا، وَلاَ عَلَيْنَا ‏\"‏‏.‏ فَمَا يُشِيرُ بِيَدِهِ إِلَى نَاحِيَةٍ مِنَ السَّحَابِ إِلاَّ انْفَرَجَتْ، وَصَارَتِ الْمَدِينَةُ مِثْلَ الْجَوْبَةِ، وَسَالَ الْوَادِي قَنَاةُ شَهْرًا، وَلَمْ يَجِئْ أَحَدٌ مِنْ نَاحِيَةٍ إِلاَّ حَدَّثَ بِالْجَوْدِ‏.‏",
+      "english": "Narrated Anas bin Malik: Once in the lifetime of the Prophet (ﷺ) the people were afflicted with drought (famine). While the Prophet (ﷺ) was delivering the Khutba on a Friday, a Bedouin stood up and said, \"O, Allah's Messenger (ﷺ)! Our possessions are being destroyed and the children are hungry; Please invoke Allah (for rain)\". So the Prophet (ﷺ) raised his hands. At that time there was not a trace of cloud in the sky. By Him in Whose Hands my soul is as soon as he lowered his hands, clouds gathered like mountains, and before he got down from the pulpit, I saw the rain falling on the beard of the Prophet. It rained that day, the next day, the third day, the fourth day till the next Friday. The same Bedouin or another man stood up and said, \"O Allah's Messenger (ﷺ)! The houses have collapsed, our possessions and livestock have been drowned; Please invoke Allah (to protect us)\". So the Prophet (ﷺ) raised both his hands and said, \"O Allah! Round about us and not on us\". So, in whatever direction he pointed with his hands, the clouds dispersed and cleared away, and Medina's (sky) became clear as a hole in between the clouds. The valley of Qanat remained flooded, for one month, none came from outside but talked about the abundant rain",
+      "source": "https://sunnah.com/bukhari:933",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-934",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 934,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 58,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ عُقَيْلٍ، عَنِ ابْنِ شِهَابٍ، قَالَ أَخْبَرَنِي سَعِيدُ بْنُ الْمُسَيَّبِ، أَنَّ أَبَا هُرَيْرَةَ، أَخْبَرَهُ أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ ‏ \"‏ إِذَا قُلْتَ لِصَاحِبِكَ يَوْمَ الْجُمُعَةِ أَنْصِتْ‏.‏ وَالإِمَامُ يَخْطُبُ فَقَدْ لَغَوْتَ ‏\"‏‏.‏",
+      "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) said, \"When the Imam is delivering the Khutba, and you ask your companion to keep quiet and listen, then no doubt you have done an evil act",
+      "source": "https://sunnah.com/bukhari:934",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-935",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 935,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 59,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ، عَنْ مَالِكٍ، عَنْ أَبِي الزِّنَادِ، عَنِ الأَعْرَجِ، عَنْ أَبِي هُرَيْرَةَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم ذَكَرَ يَوْمَ الْجُمُعَةِ فَقَالَ ‏ \"‏ فِيهِ سَاعَةٌ لاَ يُوَافِقُهَا عَبْدٌ مُسْلِمٌ، وَهْوَ قَائِمٌ يُصَلِّي، يَسْأَلُ اللَّهَ تَعَالَى شَيْئًا إِلاَّ أَعْطَاهُ إِيَّاهُ ‏\"‏‏.‏ وَأَشَارَ بِيَدِهِ يُقَلِّلُهَا‏.‏",
+      "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) talked about Friday and said, \"There is an hour (opportune time) on Friday and if a Muslim gets it while praying and asks something from Allah, then Allah will definitely meet his demand.\" And he (the Prophet) pointed out the shortness of that time with his hands",
+      "source": "https://sunnah.com/bukhari:935",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-936",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 936,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 60,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُعَاوِيَةُ بْنُ عَمْرٍو، قَالَ حَدَّثَنَا زَائِدَةُ، عَنْ حُصَيْنٍ، عَنْ سَالِمِ بْنِ أَبِي الْجَعْدِ، قَالَ حَدَّثَنَا جَابِرُ بْنُ عَبْدِ اللَّهِ، قَالَ بَيْنَمَا نَحْنُ نُصَلِّي مَعَ النَّبِيِّ صلى الله عليه وسلم إِذْ أَقْبَلَتْ عِيرٌ تَحْمِلُ طَعَامًا، فَالْتَفَتُوا إِلَيْهَا حَتَّى مَا بَقِيَ مَعَ النَّبِيِّ صلى الله عليه وسلم إِلاَّ اثْنَا عَشَرَ رَجُلاً، فَنَزَلَتْ هَذِهِ الآيَةُ ‏{‏وَإِذَا رَأَوْا تِجَارَةً أَوْ لَهْوًا انْفَضُّوا إِلَيْهَا وَتَرَكُوكَ قَائِمًا‏}‏",
+      "english": "Narrated Jabir bin `Abdullah: While we were praying (Jumua Khutba & prayer) with the Prophet (ﷺ), some camels loaded with food, arrived (from Sham). The people diverted their attention towards the camels (and left the mosque), and only twelve persons remained with the Prophet. So this verse was revealed: \"But when they see Some bargain or some amusement, They disperse headlong to it, And leave you standing",
+      "source": "https://sunnah.com/bukhari:936",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-937",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 937,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 61,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ نَافِعٍ، عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم كَانَ يُصَلِّي قَبْلَ الظُّهْرِ رَكْعَتَيْنِ، وَبَعْدَهَا رَكْعَتَيْنِ، وَبَعْدَ الْمَغْرِبِ رَكْعَتَيْنِ فِي بَيْتِهِ، وَبَعْدَ الْعِشَاءِ رَكْعَتَيْنِ وَكَانَ لاَ يُصَلِّي بَعْدَ الْجُمُعَةِ حَتَّى يَنْصَرِفَ فَيُصَلِّي رَكْعَتَيْنِ‏.‏",
+      "english": "Narrated `Abdullah bin `Umar: Allah's Messenger (ﷺ) used to pray two rak`at before the Zuhr prayer and two rak`at after it. He also used to pray two rak`at after the Maghrib prayer in his house, and two rak`at after the `Isha' prayer. He never prayed after Jumua prayer till he departed (from the Mosque), and then he would pray two rak`at at home",
+      "source": "https://sunnah.com/bukhari:937",
+      "prayers": [
+        "Dhuhr",
+        "Maghrib",
+        "Isha",
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-938",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 938,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 62,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا سَعِيدُ بْنُ أَبِي مَرْيَمَ، قَالَ حَدَّثَنَا أَبُو غَسَّانَ، قَالَ حَدَّثَنِي أَبُو حَازِمٍ، عَنْ سَهْلٍ، قَالَ كَانَتْ فِينَا امْرَأَةٌ تَجْعَلُ عَلَى أَرْبِعَاءَ فِي مَزْرَعَةٍ لَهَا سِلْقًا، فَكَانَتْ إِذَا كَانَ يَوْمُ جُمُعَةٍ تَنْزِعُ أُصُولَ السِّلْقِ فَتَجْعَلُهُ فِي قِدْرٍ، ثُمَّ تَجْعَلُ عَلَيْهِ قَبْضَةً مِنْ شَعِيرٍ تَطْحَنُهَا، فَتَكُونُ أُصُولُ السِّلْقِ عَرْقَهُ، وَكُنَّا نَنْصَرِفُ مِنْ صَلاَةِ الْجُمُعَةِ فَنُسَلِّمُ عَلَيْهَا، فَتُقَرِّبُ ذَلِكَ الطَّعَامَ إِلَيْنَا فَنَلْعَقُهُ، وَكُنَّا نَتَمَنَّى يَوْمَ الْجُمُعَةِ لِطَعَامِهَا ذَلِكَ‏.‏",
+      "english": "Narrated Sahl bin Sa`d: There was a woman amongst us who had a farm and she used to sow Silq (a kind of vegetable) on the edges of streams in her farm. On Fridays she used to pull out the Silq from its roots and put the roots in a utensil. Then she would put a handful of powdered barley over it and cook it. The roots of the Silq were a substitute for meat. After finishing the Jumua prayer we used to greet her and she would give us that food which we would eat with our hands, and because of that meal, we used to look forward to Friday",
+      "source": "https://sunnah.com/bukhari:938",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-939",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 939,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 63,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ، قَالَ حَدَّثَنَا ابْنُ أَبِي حَازِمٍ، عَنْ أَبِيهِ، عَنْ سَهْلٍ، بِهَذَا وَقَالَ مَا كُنَّا نَقِيلُ وَلاَ نَتَغَدَّى إِلاَّ بَعْدَ الْجُمُعَةِ‏.‏",
+      "english": "Narrated Sahl: As above with the addition: We never had an afternoon nap nor meals except after offering the Jumua prayer",
+      "source": "https://sunnah.com/bukhari:939",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-940",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 940,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 64,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ عُقْبَةَ الشَّيْبَانِيُّ، قَالَ حَدَّثَنَا أَبُو إِسْحَاقَ الْفَزَارِيُّ، عَنْ حُمَيْدٍ، قَالَ سَمِعْتُ أَنَسًا، يَقُولُ كُنَّا نُبَكِّرُ إِلَى الْجُمُعَةِ ثُمَّ نَقِيلُ‏.‏",
+      "english": "Narrated Anas: We used to offer the Jumua prayer early and then have the afternoon nap",
+      "source": "https://sunnah.com/bukhari:940",
+      "prayers": [
+        "Jummah"
+      ]
+    },
+    {
+      "id": "bukhari-941",
+      "collection": "Sahih al-Bukhari",
+      "hadithNumber": 941,
+      "book": 11,
+      "bookName": "Friday Prayer",
+      "numberInBook": 65,
+      "topic": "friday-prayer",
+      "grade": "Sahih",
+      "arabic": "حَدَّثَنَا سَعِيدُ بْنُ أَبِي مَرْيَمَ، قَالَ حَدَّثَنَا أَبُو غَسَّانَ، قَالَ حَدَّثَنِي أَبُو حَازِمٍ، عَنْ سَهْلٍ، قَالَ كُنَّا نُصَلِّي مَعَ النَّبِيِّ صلى الله عليه وسلم الْجُمُعَةَ ثُمَّ تَكُونُ الْقَائِلَةُ‏.‏",
+      "english": "Narrated Sahl: We used to offer the Jumua prayer with the Prophet (ﷺ) and then take the afternoon nap",
+      "source": "https://sunnah.com/bukhari:941",
+      "prayers": [
+        "Jummah"
+      ]
+    }
+  ]
+}

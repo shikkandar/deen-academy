@@ -1,0 +1,383 @@
+import type { Language } from './settings';
+
+// App text in English and Tamil. The English text is the key; anything missing in Tamil falls back to English.
+// `{name}` placeholders are filled from `vars`.
+const TA: Record<string, string> = {
+  // Tabs and titles
+  Prayers: 'தொழுகை',
+  Quran: 'குர்ஆன்',
+  Hadith: 'ஹதீஸ்',
+  Settings: 'அமைப்புகள்',
+
+  // Prayer names and rakat
+  Fajr: 'ஃபஜ்ர்',
+  Sunrise: 'சூரிய உதயம்',
+  Dhuhr: 'லுஹர்',
+  Jummah: 'ஜும்ஆ',
+  Asr: 'அஸர்',
+  Maghrib: 'மஃரிப்',
+  Isha: 'இஷா',
+  Fard: 'ஃபர்ளு',
+  Sunnah: 'சுன்னத்',
+  Witr: 'வித்ர்',
+  Nafl: 'நஃபில்',
+  optional: 'விருப்பம்',
+  "Shafi'i": 'ஷாஃபிஈ',
+  Hanafi: 'ஹனஃபி',
+
+  // Prayers screen
+  'Assalamu alaikum': 'அஸ்ஸலாமு அலைக்கும்',
+  'Finding your location…': 'உங்கள் இருப்பிடத்தைக் கண்டறிகிறது…',
+  'Location is turned off for this app. Open Settings → Permissions → Location and choose “Allow only while using the app”.':
+    'இந்த ஆப்பிற்கு இருப்பிடம் முடக்கப்பட்டுள்ளது. Settings → Permissions → Location திறந்து “Allow only while using the app” என்பதைத் தேர்ந்தெடுக்கவும்.',
+  'Prayer times depend on where you are. Allow location so Fajr to Isha are exact for your city.':
+    'தொழுகை நேரங்கள் நீங்கள் இருக்கும் இடத்தைப் பொறுத்தது. ஃபஜ்ர் முதல் இஷா வரை உங்கள் ஊருக்குச் சரியாக இருக்க இருப்பிட அனுமதி தாருங்கள்.',
+  'Open Settings': 'அமைப்புகளைத் திற',
+  'Allow location': 'இருப்பிட அனுமதி தா',
+  'Current location': 'தற்போதைய இருப்பிடம்',
+  '· refresh': '· புதுப்பி',
+  'IT’S TIME FOR': 'இப்போது நேரம்',
+  'NEXT PRAYER': 'அடுத்த தொழுகை',
+  'Jamaat {time}': 'ஜமாஅத் {time}',
+  'Next: {name} at {time}': 'அடுத்து: {name} {time}',
+  'in {time}': 'இன்னும் {time}',
+  '{n} rakat · {madhab}': '{n} ரக்அத் · {madhab}',
+  TODAY: 'இன்று',
+  Azan: 'பாங்கு',
+  Iqamah: 'இகாமத்',
+  'One notification at each Azan · Jamaat reminder when the masjid time is set': 'ஒவ்வொரு பாங்குக்கும் ஒரு அறிவிப்பு · பள்ளி நேரம் இருந்தால் ஜமாஅத் நினைவூட்டல்',
+
+  // Continue reading
+  'CONTINUE READING · QURAN': 'தொடர்ந்து ஓதுக · குர்ஆன்',
+  'CONTINUE READING · HADITH': 'தொடர்ந்து படிக்க · ஹதீஸ்',
+  'Ayah {ayah} of {total}': 'ஆயத் {ayah} / {total}',
+  'just now': 'இப்போது',
+  '{n} min ago': '{n} நிமி முன்',
+  '{n}h ago': '{n} மணி முன்',
+  yesterday: 'நேற்று',
+  today: 'இன்று',
+  '{n} days ago': '{n} நாட்கள் முன்',
+
+  // Hadith card
+  'HADITH · {name}': 'ஹதீஸ் · {name}',
+  'Narrated by {name}': 'அறிவிப்பவர்: {name}',
+  'Tap for another': 'வேறொன்றுக்குத் தட்டவும்',
+
+  // Daily reminder and welcome
+  "TODAY'S REMINDER": 'இன்றைய நினைவூட்டல்',
+  Ameen: 'ஆமீன்',
+  Bismillah: 'பிஸ்மில்லாஹ்',
+  'Welcome note': 'வரவேற்புக் குறிப்பு',
+  'Read it again any time': 'எப்போது வேண்டுமானாலும் மீண்டும் படிக்கலாம்',
+  "Today's reminder": 'இன்றைய நினைவூட்டல்',
+
+  // After-namaz duas
+  'AFTER {name} NAMAZ': '{name} தொழுகைக்குப் பின்',
+  'AFTER-NAMAZ DUAS': 'தொழுகைக்குப் பிந்தைய துஆக்கள்',
+  'tap to close': 'மூட தட்டவும்',
+  'Jamaat dua · adhkar · tap to open': 'ஜமாஅத் துஆ · திக்ர் · திறக்க தட்டவும்',
+  '❚❚  Pause': '❚❚  நிறுத்து',
+  '▶  Resume': '▶  தொடர்',
+  '▶  Play all': '▶  அனைத்தும் இயக்கு',
+  'Jamaat Dua': 'ஜமாஅத் துஆ',
+  Adhkar: 'திக்ர்',
+  'Quranic duas · recitation by Mishary Rashid Alafasy · say Ameen':
+    'குர்ஆன் துஆக்கள் · மிஷாரி ராஷித் அல்ஃபாஸி ஓதியது · ஆமீன் சொல்லுங்கள்',
+  'From Hisn al-Muslim (Fortress of the Muslim) · hisnmuslim.com': 'ஹிஸ்னுல் முஸ்லிம் நூலிலிருந்து · hisnmuslim.com',
+
+  // Quran
+  'Search surah — name or number': 'சூரா தேடு — பெயர் அல்லது எண்',
+  'Tap to retry.': 'மீண்டும் முயல தட்டவும்.',
+  '{n} ayahs': '{n} ஆயத்துகள்',
+  Meccan: 'மக்கீ',
+  Medinan: 'மதனீ',
+  '‹ All surahs': '‹ எல்லா சூராக்கள்',
+  '▶  Play surah': '▶  சூராவை இயக்கு',
+  '▶  Continue from ayah {n}': '▶  ஆயத் {n} முதல் தொடர்',
+  'or play from the start': 'அல்லது தொடக்கத்திலிருந்து இயக்கு',
+  AUDIO: 'ஒலி',
+  Reciter: 'ஓதுபவர்',
+  Stop: 'நிறுத்து',
+  'CHOOSE RECITER': 'ஓதுபவரைத் தேர்ந்தெடு',
+  '{surah} · Ayah {ayah}': '{surah} · ஆயத் {ayah}',
+  Arabic: 'அரபி',
+  English: 'ஆங்கிலம்',
+  Urdu: 'உருது',
+  'Arabic + English': 'அரபி + ஆங்கிலம்',
+  Tamil: 'தமிழ்',
+  'Arabic + Tamil': 'அரபி + தமிழ்',
+  Translation: 'மொழிபெயர்ப்பு',
+  Meaning: 'பொருள்',
+  'Audio and language': 'ஒலி மற்றும் மொழி',
+  'AUDIO & LANGUAGE': 'ஒலி & மொழி',
+  Back: 'பின்',
+  Done: 'முடிந்தது',
+  Text: 'உரை',
+  On: 'ஆன்',
+  Off: 'ஆஃப்',
+  'Arabic recitation': 'அரபி ஓதுதல்',
+  'Then the meaning, spoken': 'பிறகு பொருள், குரலில்',
+  'Meaning, spoken': 'பொருள், குரலில்',
+  'Text under each ayah': 'ஒவ்வொரு ஆயத்தின் கீழ் உரை',
+  'Tamil · Omar Sharif': 'தமிழ் · உமர் ஷரீஃப்',
+  'English · Ibrahim Walk': 'ஆங்கிலம் · இப்ராஹிம் வாக்',
+  'Urdu · Shamshad Ali Khan': 'உருது · ஷம்ஷாத் அலி கான்',
+
+  // Hadith books
+  '{n} hadith': '{n} ஹதீஸ்கள்',
+  ' · {n} chapters': ' · {n} அத்தியாயங்கள்',
+  'Arabic and English, with Tamil where marked': 'அரபி, ஆங்கிலம் · குறிக்கப்பட்டவை தமிழிலும்',
+  ' · Tamil': ' · தமிழ்',
+  'Tamil: Deen Academy translation, made with AI help from the Arabic. Not yet checked by a scholar.': 'தமிழ்: Deen Academy மொழிபெயர்ப்பு, அரபியிலிருந்து AI உதவியுடன் செய்யப்பட்டது. இன்னும் அறிஞரால் சரிபார்க்கப்படவில்லை.',
+  '‹ All books': '‹ எல்லா நூல்கள்',
+  '‹ Chapters': '‹ அத்தியாயங்கள்',
+  'Search chapter': 'அத்தியாயம் தேடு',
+  'Six qualities · Tamil and English · offline': 'ஆறு பண்புகள் · தமிழ், ஆங்கிலம் · இணையம் இல்லாமலும்',
+  'Hadith {first}–{last}': 'ஹதீஸ் {first}–{last}',
+  'Tamil translation is not available for this hadith.': 'இந்த ஹதீஸுக்குத் தமிழ் மொழிபெயர்ப்பு இல்லை.',
+
+  // Muntakhab Ahadith
+  'Tamil translation': 'தமிழ் மொழிபெயர்ப்பு',
+  'English translation': 'ஆங்கில மொழிபெயர்ப்பு',
+  'Continue · page {n}': 'தொடர் · பக்கம் {n}',
+  'Start reading': 'படிக்கத் தொடங்கு',
+  '{n} topics · from page {page}': '{n} தலைப்புகள் · பக்கம் {page} முதல்',
+  '‹ Contents': '‹ பொருளடக்கம்',
+  'QURAN · {n}': 'குர்ஆன் · {n}',
+  'This page is not available.': 'இந்தப் பக்கம் கிடைக்கவில்லை.',
+  '‹ Page {n}': '‹ பக்கம் {n}',
+  'Page {n} ›': 'பக்கம் {n} ›',
+
+  // Hadith search
+  'Search hadith': 'ஹதீஸ் தேடு',
+  All: 'அனைத்தும்',
+  Muntakhab: 'முன்தகப்',
+  'Hadith books': 'ஹதீஸ் நூல்கள்',
+  '{n} found': '{n} கிடைத்தன',
+  'MUNTAKHAB AHADITH': 'முன்தகப் அஹாதீஸ்',
+  'SAVED HADITH BOOK CHAPTERS': 'சேமித்த ஹதீஸ் நூல் அத்தியாயங்கள்',
+  'CHAPTER TITLES': 'அத்தியாயத் தலைப்புகள்',
+  ' (first {n})': ' (முதல் {n})',
+  '{lang} · page {n}': '{lang} · பக்கம் {n}',
+  'hadith {n}': 'ஹதீஸ் {n}',
+  'chapter {n}': 'அத்தியாயம் {n}',
+  'Search every page of Muntakhab Ahadith (Tamil and English), the chapter titles of every hadith book, the hadith books with Tamil in the app, and the hadith chapters you have opened. Arabic works with or without vowel marks.':
+    'முன்தகப் அஹாதீஸின் எல்லாப் பக்கங்களிலும் (தமிழ், ஆங்கிலம்), எல்லா ஹதீஸ் நூல்களின் அத்தியாயத் தலைப்புகளிலும், ஆப்பில் தமிழுடன் உள்ள ஹதீஸ் நூல்களிலும், நீங்கள் திறந்த ஹதீஸ் அத்தியாயங்களிலும் தேடுங்கள். அரபி உயிர்க்குறிகளுடனோ இல்லாமலோ தேடலாம்.',
+  'Nothing found. Try fewer or different words.': 'எதுவும் கிடைக்கவில்லை. குறைவான அல்லது வேறு சொற்களில் முயலுங்கள்.',
+
+  // Settings
+  LANGUAGE: 'மொழி',
+  'MY MASJID': 'எனது பள்ளிவாசல்',
+  "Use my masjid's timings": 'எனது பள்ளிவாசல் நேரங்களைப் பயன்படுத்து',
+  'Not set up yet': 'இன்னும் அமைக்கவில்லை',
+  'Your masjid': 'உங்கள் பள்ளிவாசல்',
+  '{name} · updated {when}': '{name} · புதுப்பித்தது {when}',
+  'Scan board again / edit times →': 'பலகையை மீண்டும் ஸ்கேன் செய் / நேரங்களைத் திருத்து →',
+  'Scan the masjid timing board →': 'பள்ளிவாசல் நேரப் பலகையை ஸ்கேன் செய் →',
+  NOTIFICATIONS: 'அறிவிப்புகள்',
+  'Namaz starts after Azan': 'பாங்குக்குப் பின் தொழுகை',
+  'Play Azan at prayer time': 'தொழுகை நேரத்தில் பாங்கு ஒலிக்கட்டும்',
+  'Azan length': 'பாங்கு நீளம்',
+  Full: 'முழு',
+  Short: 'சுருக்கம்',
+  'Fajr wake-up alarm': 'ஃபஜ்ர் எழுப்பும் அலாரம்',
+  '10 min before Fajr, then the Azan': 'ஃபஜ்ருக்கு 10 நிமி முன், பிறகு பாங்கு',
+  'Choose any audio file on the phone for the Full or Short Azan. It plays when the app is open at Azan time; otherwise the notification rings the built-in Azan. Fajr alarms ring even in silent mode and Do Not Disturb. Press a volume button to stop the Azan.':
+    'முழு அல்லது சுருக்கமான பாங்குக்கு போனில் உள்ள எந்த ஒலிக் கோப்பையும் தேர்ந்தெடுக்கலாம். பாங்கு நேரத்தில் ஆப் திறந்திருந்தால் அது ஒலிக்கும்; இல்லையெனில் அறிவிப்பு ஆப்பில் உள்ள பாங்கை ஒலிக்கும். ஃபஜ்ர் அலாரங்கள் சைலண்ட் மற்றும் Do Not Disturb-இலும் ஒலிக்கும். பாங்கை நிறுத்த வால்யூம் பட்டனை அழுத்துங்கள்.',
+  '{n} min': '{n} நிமி',
+  'QURAN REMINDER': 'குர்ஆன் நினைவூட்டல்',
+  'Daily reminder to read': 'தினமும் ஓத நினைவூட்டல்',
+  'Tap the reminder to open the Quran': 'நினைவூட்டலைத் தட்டினால் குர்ஆன் திறக்கும்',
+  'Every day at': 'தினமும்',
+  SOUND: 'ஒலி',
+  'Iqra (Al-Alaq 96:1)': 'இக்ரஃ (அல்-அலக் 96:1)',
+  '"Read!" — recited by Alafasy': '"ஓதுவீராக!" — அல்ஃபாஸி ஓதியது',
+  'Gentle chime': 'மென்மையான மணி ஒலி',
+  'Soft bell tone': 'மென்மையான மணி',
+  'Short Azan': 'சுருக்கமான பாங்கு',
+  'Full Azan': 'முழு பாங்கு',
+  'Built-in recording': 'ஆப்பில் உள்ள பதிவு',
+  Reset: 'மீட்டமை',
+  'Choose…': 'தேர்ந்தெடு…',
+  'First 20 seconds of the Azan': 'பாங்கின் முதல் 20 விநாடிகள்',
+  'Phone default': 'போனின் இயல்பு ஒலி',
+  'Your usual notification sound': 'உங்கள் வழக்கமான அறிவிப்பு ஒலி',
+  'SILENT DURING NAMAZ': 'தொழுகையின் போது அமைதி',
+  'Do Not Disturb': 'தொந்தரவு செய்யாதே (DND)',
+  'Turns on when Namaz starts, turns off by itself': 'தொழுகை தொடங்கும்போது இயங்கும், தானாக நிற்கும்',
+  'Stay silent for': 'அமைதியாக இருக்கும் நேரம்',
+  'Available in the installed Android app (not in Expo Go or the browser).':
+    'நிறுவப்பட்ட Android ஆப்பில் மட்டும் (Expo Go அல்லது பிரவுசரில் இல்லை).',
+  'Allow "Do Not Disturb access" for Deen Academy →': 'Deen Academy-க்கு "Do Not Disturb access" அனுமதி தாருங்கள் →',
+  'CALCULATION METHOD': 'கணக்கீட்டு முறை',
+  'Karachi (India / Pakistan)': 'கராச்சி (இந்தியா / பாகிஸ்தான்)',
+  'Muslim World League': 'முஸ்லிம் உலக லீக்',
+  'Umm al-Qura (Makkah)': 'உம்முல் குரா (மக்கா)',
+  Egyptian: 'எகிப்து',
+  Dubai: 'துபாய்',
+  'ISNA (North America)': 'ISNA (வட அமெரிக்கா)',
+  'MADHAB · ASR TIME & RAKAT': 'மத்ஹப் · அஸர் நேரம் & ரக்அத்',
+
+  // Masjid editor
+  'My Masjid': 'எனது பள்ளிவாசல்',
+  "Times from your masjid's board. Reminders and DND follow the Jamaat time.":
+    'உங்கள் பள்ளிவாசல் பலகையின் நேரங்கள். நினைவூட்டல்களும் DND-யும் ஜமாஅத் நேரத்தைப் பின்பற்றும்.',
+  'Masjid name': 'பள்ளிவாசல் பெயர்',
+  'SCAN THE TIMING BOARD': 'நேரப் பலகையை ஸ்கேன் செய்',
+  'Take photo': 'புகைப்படம் எடு',
+  'From gallery': 'கேலரியிலிருந்து',
+  'Reading the board…': 'பலகையைப் படிக்கிறது…',
+  TIMES: 'நேரங்கள்',
+  AZAN: 'பாங்கு',
+  JAMAAT: 'ஜமாஅத்',
+  Set: 'அமை',
+  'Tap a time to change it · long-press to clear. Empty Azan uses the calculated time.':
+    'நேரத்தை மாற்ற தட்டவும் · அழிக்க நீண்ட நேரம் அழுத்தவும். பாங்கு நேரம் இல்லையெனில் கணக்கிட்ட நேரம் பயன்படும்.',
+  Cancel: 'ரத்து',
+  'Save times': 'நேரங்களைச் சேமி',
+  'Read {n} times from the board — please check them.': 'பலகையிலிருந்து {n} நேரங்கள் படிக்கப்பட்டன — சரிபார்க்கவும்.',
+  'Scan failed, please try again.': 'ஸ்கேன் தோல்வி, மீண்டும் முயலவும்.',
+  // Home: Namaz Assistant and Qibla
+  'Pray {prayer} with the Namaz Assistant': 'தொழுகை உதவியாளருடன் {prayer} தொழுங்கள்',
+  'Led aloud like an imam · choose length and speed': 'இமாம் போல சத்தமாக வழிநடத்தும் · நீளம், வேகம் தேர்வு செய்யலாம்',
+  'Qibla direction': 'கிப்லா திசை',
+  'Compass to the Kaaba · buzzes when you face it': 'கஅபாவை நோக்கும் திசைகாட்டி · நேராக முன்னோக்கும்போது அதிரும்',
+
+  // Namaz Assistant
+  'Namaz Assistant': 'தொழுகை உதவியாளர்',
+  'NAMAZ ASSISTANT · {prayer}': 'தொழுகை உதவியாளர் · {prayer}',
+  Close: 'மூடு',
+  'Pray {prayer} with an imam': 'இமாமுடன் {prayer} தொழுங்கள்',
+  'Every takbir, the recitation, ruku and sajdah, Attahiyat, Salawat and Salam, aloud in Arabic. After the Fard: 2 quiet minutes for your dua, then the Jamaat dua.':
+    'ஒவ்வொரு தக்பீர், கிராஅத், ருகூ, ஸஜ்தா, அத்தஹிய்யாத், ஸலவாத், ஸலாம் — அனைத்தும் அரபியில் சத்தமாக. ஃபர்ளுக்குப் பின்: உங்கள் துஆவுக்கு அமைதியான 2 நிமிடங்கள், பிறகு ஜமாஅத் துஆ.',
+  PRAYER: 'தொழுகை',
+  'EACH RAKAT': 'ஒவ்வொரு ரக்அத்',
+  Medium: 'நடுத்தரம்',
+  Long: 'நீளம்',
+  '{label} · {from}–{to} min': '{label} · {from}–{to} நிமி',
+  SPEED: 'வேகம்',
+  RECITER: 'ஓதுபவர்',
+  'Allow “Do Not Disturb” access so calls and messages don’t interrupt your namaz →':
+    '“Do Not Disturb” அனுமதி தாருங்கள், அழைப்புகளும் செய்திகளும் உங்கள் தொழுகையைக் குறுக்கிடாது →',
+  '🔕 Calls, messages and notifications stay silent until the Salam.': '🔕 ஸலாம் வரை அழைப்புகள், செய்திகள், அறிவிப்புகள் அமைதியாக இருக்கும்.',
+  '▶  Start {part}': '▶  {part} தொடங்கு',
+  '▶  Play {part}': '▶  {part} தொழுக',
+  '{prayer} {kind} · {n} Rakat': '{prayer} {kind} · {n} ரக்அத்',
+  'Rakat {n} of {total} · {posture}': 'ரக்அத் {n} / {total} · {posture}',
+  'Rakat {n} · {title}': 'ரக்அத் {n} · {title}',
+  'Standing (Qiyam)': 'நிற்றல் (கியாம்)',
+  'Bowing (Ruku)': 'குனிதல் (ருகூ)',
+  'Prostration (Sajdah)': 'சிரம் பணிதல் (ஸஜ்தா)',
+  'Sitting (Qa‘dah)': 'அமர்தல் (கஅதா)',
+  'After the Salam': 'ஸலாமுக்குப் பின்',
+  'Taqabbal Allahu minna wa minkum': 'தகப்பலல்லாஹு மின்னா வ மின்கும்',
+  'May Allah accept it from us and from you. {title} is complete.': 'அல்லாஹ் நம்மிடமிருந்தும் உங்களிடமிருந்தும் ஏற்றுக்கொள்வானாக. {title} நிறைவடைந்தது.',
+  'PRAY NEXT': 'அடுத்து தொழுக',
+
+  // Namaz Assistant steps
+  'Takbir al-Ihram': 'தக்பீர் தஹ்ரீமா',
+  'Opening dua (Thana)': 'தொடக்க துஆ (ஸனா)',
+  'Ta‘awwudh': 'தஅவ்வுத் (அஊது)',
+  'Surah Al-Fatiha': 'ஸூரத்துல் ஃபாத்திஹா',
+  'Surah {name}': 'ஸூரா {name}',
+  'Takbir for Qunut': 'குனூத்துக்கான தக்பீர்',
+  'Dua al-Qunut': 'குனூத் துஆ',
+  'Takbir · going to Ruku': 'தக்பீர் · ருகூவுக்குச் செல்லுதல்',
+  Ruku: 'ருகூ',
+  'Rising from Ruku': 'ருகூவிலிருந்து எழுதல்',
+  'Standing after Ruku': 'ருகூவுக்குப் பின் நிற்றல்',
+  'Takbir · first Sajdah': 'தக்பீர் · முதல் ஸஜ்தா',
+  Sajdah: 'ஸஜ்தா',
+  'Takbir · sitting': 'தக்பீர் · அமர்தல்',
+  'Between the two Sajdahs': 'இரு ஸஜ்தாக்களுக்கு இடையே',
+  'Takbir · second Sajdah': 'தக்பீர் · இரண்டாம் ஸஜ்தா',
+  'Takbir · final sitting': 'தக்பீர் · இறுதி இருப்பு',
+  'Tashahhud (Attahiyat)': 'தஷஹ்ஹுத் (அத்தஹிய்யாத்)',
+  'Salawat (Durood Ibrahim)': 'ஸலவாத் (துரூத் இப்ராஹீம்)',
+  'Dua before Salam': 'ஸலாமுக்கு முன் துஆ',
+  'Salam · to the right': 'ஸலாம் · வலப்புறம்',
+  'Salam · to the left': 'ஸலாம் · இடப்புறம்',
+  'Takbir · first sitting': 'தக்பீர் · முதல் இருப்பு',
+  'Takbir · standing for the next Rakat': 'தக்பீர் · அடுத்த ரக்அத்துக்கு எழுதல்',
+  'Time for dua': 'துஆ செய்யும் நேரம்',
+  'Jamaat dua': 'ஜமாஅத் துஆ',
+  'Time for your dua': 'உங்கள் துஆ நேரம்',
+  'The Iqamah: the prayer is about to begin. Stand in your row.': 'இகாமத்: தொழுகை தொடங்கப் போகிறது. உங்கள் வரிசையில் நில்லுங்கள்.',
+  'Allah is the Greatest': 'அல்லாஹ் மிகப் பெரியவன்',
+  'Glory be to You, O Allah, and praise. Blessed is Your name, exalted Your majesty; there is no god but You.':
+    'யா அல்லாஹ், நீ தூயவன், புகழ் அனைத்தும் உனக்கே. உன் பெயர் அருள் நிறைந்தது, உன் மகத்துவம் உயர்ந்தது; உன்னைத் தவிர வேறு இறைவன் இல்லை.',
+  'I seek refuge in Allah from Shaytan, the accursed.': 'சபிக்கப்பட்ட ஷைத்தானை விட்டும் அல்லாஹ்விடம் பாதுகாவல் தேடுகிறேன்.',
+  'In the name of Allah, the Most Merciful, the Most Kind.': 'அளவற்ற அருளாளன், நிகரற்ற அன்புடையோன் அல்லாஹ்வின் பெயரால்.',
+  'The Opening': 'தோற்றுவாய்',
+  'O Allah, accept.': 'யா அல்லாஹ், ஏற்றுக்கொள்வாயாக.',
+  'Glory be to my Lord, the Magnificent (×3)': 'மகத்துவமிக்க என் இறைவன் தூயவன் (×3)',
+  'Allah hears the one who praises Him.': 'தன்னைப் புகழ்பவரை அல்லாஹ் செவியேற்கிறான்.',
+  'Our Lord, to You is all praise, abundant, good and blessed.': 'எங்கள் இறைவா, உனக்கே எல்லாப் புகழும் — அதிகமான, தூய்மையான, பரக்கத் நிறைந்த புகழ்.',
+  'Glory be to my Lord, the Most High (×3)': 'மிக உயர்ந்தவனான என் இறைவன் தூயவன் (×3)',
+  'My Lord, forgive me. My Lord, forgive me.': 'என் இறைவா, என்னை மன்னிப்பாயாக. என் இறைவா, என்னை மன்னிப்பாயாக.',
+  'All greetings, prayers and good things are for Allah… I bear witness that there is no god but Allah, and that Muhammad is His servant and Messenger.':
+    'எல்லாக் காணிக்கைகளும், தொழுகைகளும், நல்லவைகளும் அல்லாஹ்வுக்கே… அல்லாஹ்வைத் தவிர வேறு இறைவன் இல்லை என்றும், முஹம்மது (ஸல்) அவனுடைய அடியாரும் தூதருமாவார்கள் என்றும் சாட்சி கூறுகிறேன்.',
+  'O Allah, send prayers and blessings upon Muhammad and his family, as You did upon Ibrahim and his family.':
+    'யா அல்லாஹ், இப்ராஹீம் (அலை) அவர்கள் மீதும் அவர்களின் குடும்பத்தார் மீதும் அருள் புரிந்தது போல, முஹம்மது (ஸல்) அவர்கள் மீதும் அவர்களின் குடும்பத்தார் மீதும் அருளும் பரக்கத்தும் பொழிவாயாக.',
+  'O Allah, I have wronged myself greatly and none forgives sins but You, so forgive me and have mercy on me.':
+    'யா அல்லாஹ், நான் எனக்கே அதிகம் அநீதி இழைத்துவிட்டேன்; உன்னைத் தவிர பாவங்களை மன்னிப்பவர் யாருமில்லை. ஆகவே என்னை மன்னித்து, எனக்குக் கருணை புரிவாயாக.',
+  'O Allah, guide me among those You have guided… Blessed and exalted are You, our Lord. (Qunut of Witr)':
+    'யா அல்லாஹ், நீ நேர்வழி காட்டியவர்களுடன் எனக்கும் நேர்வழி காட்டுவாயாக… எங்கள் இறைவா, நீ அருள் நிறைந்தவன், உயர்ந்தவன். (வித்ரின் குனூத்)',
+  'Peace and the mercy of Allah be upon you.': 'உங்கள் மீது சாந்தியும் அல்லாஹ்வின் அருளும் உண்டாவதாக.',
+  'Raise your hands. Two quiet minutes for your own dua.': 'கைகளை உயர்த்துங்கள். உங்கள் சொந்த துஆவுக்கு அமைதியான இரண்டு நிமிடங்கள்.',
+  'The duas made together after the prayer.': 'தொழுகைக்குப் பின் சேர்ந்து ஓதும் துஆக்கள்.',
+
+  // Qibla
+  QIBLA: 'கிப்லா',
+  'Turn on location so the Qibla can be worked out for where you are.': 'நீங்கள் இருக்கும் இடத்திலிருந்து கிப்லாவைக் கணக்கிட இருப்பிடத்தை இயக்குங்கள்.',
+  'Qibla is {deg}° from North': 'கிப்லா வடக்கிலிருந்து {deg}°',
+  'Finding north…': 'வடக்கைக் கண்டறிகிறது…',
+  'You are facing the Qibla': 'நீங்கள் கிப்லாவை முன்னோக்கியுள்ளீர்கள்',
+  'Turn right {deg}°': 'வலப்புறம் {deg}° திரும்புங்கள்',
+  'Turn left {deg}°': 'இடப்புறம் {deg}° திரும்புங்கள்',
+  'Qibla {deg}° {point} · Makkah is {km} km away': 'கிப்லா {deg}° {point} · மக்கா {km} கி.மீ தொலைவில்',
+  'Compass needs calibrating: move the phone in a figure 8 a few times, away from metal and magnets.':
+    'திசைகாட்டியை அளவீடு செய்ய வேண்டும்: உலோகம், காந்தங்களிலிருந்து விலகி, போனை 8 வடிவில் சில முறை அசையுங்கள்.',
+  'Hold the phone flat, top pointing ahead.': 'போனைத் தட்டையாகப் பிடியுங்கள், மேல் பகுதி முன்னோக்கி இருக்கட்டும்.',
+  Qibla: 'கிப்லா',
+  '📷  Camera': '📷  கேமரா',
+  '🧭  Compass': '🧭  திசைகாட்டி',
+  'Allow the camera to find the Qibla through it →': 'கேமரா வழியாக கிப்லாவைக் கண்டறிய கேமரா அனுமதி தாருங்கள் →',
+  'Hold the phone up and look through the camera': 'போனை நேராக உயர்த்திப் பிடித்து கேமரா வழியாகப் பாருங்கள்',
+  'Hold the phone upright and turn until the Kaaba appears.': 'போனை நேராகப் பிடித்து, கஅபா தோன்றும் வரை திரும்புங்கள்.',
+
+  // Azan checklist
+  'MAKE SURE THE AZAN RINGS': 'பாங்கு ஒலிப்பதை உறுதிசெய்க',
+  'Notifications allowed': 'அறிவிப்புகள் அனுமதிக்கப்பட்டுள்ளன',
+  'Without it no Azan or reminder can show.': 'இது இல்லாமல் பாங்கோ நினைவூட்டலோ காட்ட முடியாது.',
+  'Alarms & reminders allowed': 'அலாரங்கள் & நினைவூட்டல்கள் அனுமதிக்கப்பட்டுள்ளன',
+  'So the Azan rings at the exact minute, not “around” it.': 'பாங்கு “சுமாராக” அல்ல, சரியான நிமிடத்தில் ஒலிக்க.',
+  'Battery: unrestricted': 'பேட்டரி: கட்டுப்பாடு இல்லை',
+  'Battery saving makes many phones delay or skip the Fajr Azan.': 'பேட்டரி சேமிப்பால் பல போன்களில் ஃபஜ்ர் பாங்கு தாமதமாகும் அல்லது ஒலிக்காமல் போகும்.',
+  'Do Not Disturb access': 'Do Not Disturb அனுமதி',
+  'Silences calls and messages during namaz and the Namaz Assistant.': 'தொழுகையின் போதும் தொழுகை உதவியாளரின் போதும் அழைப்புகளையும் செய்திகளையும் அமைதியாக்கும்.',
+  'All set. The Azan will ring on time, even with the app closed.': 'எல்லாம் தயார். ஆப் மூடியிருந்தாலும் பாங்கு சரியான நேரத்தில் ஒலிக்கும்.',
+  '{n} thing to fix so the Azan never misses.': 'பாங்கு தவறாமல் ஒலிக்க {n} விஷயத்தைச் சரிசெய்யுங்கள்.',
+  '{n} things to fix so the Azan never misses.': 'பாங்கு தவறாமல் ஒலிக்க {n} விஷயங்களைச் சரிசெய்யுங்கள்.',
+  Fix: 'சரிசெய்',
+  'Vivo, Oppo, Xiaomi, Realme: also turn on “Autostart” for this app in the phone’s settings.':
+    'Vivo, Oppo, Xiaomi, Realme: போனின் அமைப்புகளில் இந்த ஆப்பிற்கு “Autostart”-ஐயும் இயக்குங்கள்.',
+};
+
+const DICTS: Record<Language, Record<string, string>> = { en: {}, ta: TA };
+
+export type T = (text: string, vars?: Record<string, string | number>) => string;
+
+export function makeT(language: Language): T {
+  const dict = DICTS[language] ?? {};
+  return (text, vars) => {
+    let out = dict[text] ?? text;
+    if (vars) for (const [k, v] of Object.entries(vars)) out = out.replaceAll(`{${k}}`, String(v));
+    return out;
+  };
+}
+
+/** Locale for dates in the chosen language. */
+export function localeFor(language: Language) {
+  return language === 'ta' ? 'ta-IN' : undefined;
+}

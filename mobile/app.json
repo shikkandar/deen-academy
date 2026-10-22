@@ -1,0 +1,97 @@
+{
+  "expo": {
+    "name": "Deen Academy",
+    "slug": "way-to-jannah",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "waytojannah",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "icon": "./assets/expo.icon",
+      "bundleIdentifier": "com.waytojannah.general"
+    },
+    "android": {
+      "package": "com.waytojannah.general",
+      "adaptiveIcon": {
+        "backgroundColor": "#2F6B4F",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.SCHEDULE_EXACT_ALARM",
+        "android.permission.USE_EXACT_ALARM",
+        "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+        "android.permission.ACCESS_NOTIFICATION_POLICY",
+        "android.permission.WAKE_LOCK",
+        "android.permission.RECEIVE_BOOT_COMPLETED"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#2F6B4F",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 120
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "enableBackgroundPlayback": true,
+          "recordAudioAndroid": false,
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Deen Academy uses your location to calculate accurate prayer times for where you are."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "sounds": [
+            "./assets/sounds/azan.wav",
+            "./assets/sounds/azan_short.wav",
+            "./assets/sounds/azan_fajr.wav",
+            "./assets/sounds/azan_fajr_short.wav",
+            "./assets/sounds/reminder_iqra.wav",
+            "./assets/sounds/reminder_chime.wav",
+            "./assets/sounds/fajr_wake.wav"
+          ]
+        }
+      ],
+      "@react-native-community/datetimepicker",
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Deen Academy uses the camera to scan your masjid's prayer timing board.",
+          "photosPermission": "Deen Academy lets you pick a photo of your masjid's prayer timing board."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Deen Academy uses the camera to show the Qibla direction and to scan your masjid's prayer timing board.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      "expo-asset"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
