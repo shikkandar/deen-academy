@@ -1,0 +1,56 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 490,
+"running_head": "The Lecture of Ameerul Mu'mineen Hadhrat Mu'aawiya bin Abu Sufyaan (RA)"
+},
+"blocks": [
+{
+"type": "quran",
+"continued": true,
+"reference": "Surah Aal Imraan, verse 55",
+"text": "who disbelieve until the Day of Qiyaamah. [^1]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Makhool",
+"text": "Hadhrat Makhool reports that Hadhrat Mu'aawiya (RA) was delivering a lecture from the pulpit when he said, \"I heard Rasulullaah ﷺ say, 'O people! Knowledge is attained through studies and understanding of Deen is attained through deep thought. When Allaah wishes well for a person, He grants him understanding of the Deen and it is only the learned ones who truly fear Allaah. There shall always be a group from my Ummah who will always remain steadfast on the truth and will dominate over others without being intimidated by those who oppose them and those who are hostile towards them. They will prevail until the Day of Qiyaamah.\" [^2]"
+},
+{
+"type": "heading",
+"level": "topic",
+"text": "The Lectures of Ameerul Mu'mineen Hadhrat Abdullaah bin Zubayr (RA)"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "His Lecture On the Occasion of Hajj"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Muhammad bin Abdullaah",
+"text": "Hadhrat Muhammad bin Abdullaah reports, \"I was present when Hadhrat Abdullaah bin Zubayr (RA) delivered a lecture during the occasion of Hajj. We had no idea of his presence until he appeared just before the day of Tarwiya (8th of Dhul Hijjah) when people entered into the state of Ihraam. He was an extremely handsome man in his middle ages, wearing two white garments. When he arrived, the people shouted, 'Here comes the Ameerul Mu'mineen!' He ascended the pulpit and greeted the people. After they replied to his greeting, he recited the most beautiful Talbiya I had ever heard.\nHe then praised Allaah and said, \"You people have come as delegations to Allaah from distant and different places. It is therefore necessary that Allaah should honour you. Whoever has come in search of what is with Allaah should know that the one who seeks Allaah shall never return empty-handed. You must therefore confirm your words with deeds because deeds are the masters of words and intentions are confined to the heart. Fear Allaah! Fear Allaah in these days of yours because these are days during which Allaah forgives sins. Remember that you have come here from various distant lands without the desire for trade, wealth or any other aspect of this world.\"\nHadhrat Abdullaah bin Zubayr (RA) then recited the Talbiya and the people recited it with him. After deliberating at length, he said, \"Verily Allaah states in His Book: (اَلْحَجُّ اَشْهُرٌ مَّعْلُوْمٰتٌ) 'Hajj is the few known months'[^3]. These are three months, namely Shawwaal, Dhul Qa'dah and ten days of Dhul Hijjah.\" He then recited further:"
+},
+{
+"type": "quran",
+"arabic_text": "فَمَنْ فَرَضَ فِيْهِنَّ الْحَجَّ فَلَا رَفَثَ وَلَا فُسُوْقَ ۙ وَلَا جِدَالَ فِى الْحَجِّ ؕ وَمَا تَفْعَلُوْا مِنْ خَيْرٍ يَّعْلَمْهُ اللّٰهُ ؕ وَتَزَوَّدُوْا فَاِنَّ خَيْرَ الزَّادِ التَّقْوٰى",
+"reference": "Surah Baqarah, verse 197"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Ibn Asaakir."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Ibn Asaakir, as quoted in Kanzul Ummaal (Vol.7 Pg.130)."
+},
+{
+"type": "footnote",
+"number": 3,
+"text": "Surah Baqarah, verse 197."
+}
+]
+}

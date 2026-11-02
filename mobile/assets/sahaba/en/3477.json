@@ -1,0 +1,37 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 477,
+"running_head": "His Lecture Encouraging People to Act for the Aakhirah"
+},
+"blocks": [
+{
+"type": "narration",
+"narrator": "Hadhrat Ali (RA)",
+"continued": true,
+"text": "Hadhrat Ali (RA) also added, \"...because following one's passions prevents one from the truth and entertaining long hopes makes one forget the Aakhirah.\" [^1]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "His Lecture after the Battle at Nahrwaan"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Ziyaad A'raabi",
+"text": "Hadhrat Ziyaad A'raabi narrates that Ameerul Mu'mineen Hadhrat Ali bin Abi Taalib (RA) once ascended the pulpit in Kufa after the scourge (of the Khawaarij) and after the battle had been fought (against them) at Nahrwaan. He started by praising Allaah but he then choked on his tears and wept so much that his beard was soaked and the tears, which started running off. He then shook his beard and the droplets of tears happened to fall on some people. Hadhrat Ziyaad says that they commonly believed that Allaah forbade Jahannam from the people on whom those tears fell.\nThereafter, he said, \"O people! Never be amongst those people who wish for Jannah without doing any good and who postpone repentance because of their long hopes (hopes to live long). They are people who speak like the abstinent ones yet they behave like those who hanker after the world. If they are given any portion of the world, they are not satisfied and when anything is held back from them, they are not content. They fail to express gratitude for what they are given and still seek to have more. They instruct people to do what they do not themselves do and forbid people from that which they themselves do not abstain from. They love the righteous ones but do not carry out their actions and they detest the sinful ones whereas they are amongst them. The Nafs of such a person overpowers him in matters he is uncertain about (to do worldly acts, the benefits of which are not certain) but does not overpower him in matters he is convinced about (to do acts for the Aakhirah, the benefits of which are guaranteed). When he achieves independence, he falls into sin, when he falls ill, he is grieved and when he suffers poverty, he loses hope and becomes weak-hearted. He takes benefit from both sin and Allaah's bounties without ever being grateful when he is blessed with well-being or even being patient when afflicted with hardship. He behaves as if only others have been warned of death and that only they have been cautioned and rebuked.\nO targets of death! O pawns of death! O containers of disease! O spoils of time! O booty of the ages! O fruits of generations! O light of the vicissitudes of time! O muted ones at the time of litigation (on the Day of Qiyaamah)! O those drowning in tribulations that have become an obstacle to them learning lessons! It is with proof and conviction that I state that no successful person can attain success without knowing himself and every destroyed person has destroyed himself. Allaah says:"
+},
+{
+"type": "quran",
+"arabic_text": "يٰۤاَيُّهَا الَّذِيْنَ اٰمَنُوْا قُوْۤا اَنْفُسَكُمْ وَاَهْلِيْكُمْ نَارًا",
+"reference": "Surah Tahreem, verse 6",
+"text": "'O you who have Imaan! Save yourselves and your families from the Fire (of Jahannam).'"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Al Bidaayah wan Nihaayah (Vol.8 Pg.7)."
+}
+]
+}

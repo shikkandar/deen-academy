@@ -1,0 +1,74 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 556,
+"running_head": "Assistance by the Winds"
+},
+"blocks": [
+{
+"type": "narration",
+"narrator": "Hadhrat Humayd bin Hilaal",
+"text": "Hadhrat Humayd bin Hilaal narrates, \"Rasulullaah ﷺ had an unratified pact with the Banu Qurayzah tribe. They however broke the pact by assisting the Mushrikeen when they marched to Madinah with an assortment of armies from various tribes. Allaah however dispatched an army (of angels) and the wind, causing the Mushrikeen to flee, but leaving the Banu Qurayzah holed up in their fortress...\" The narration then continues to recount the battle against the Banu Qurayzah.[^1]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Abbaas (RA)",
+"text": "Hadhrat Abdullaah bin Abbaas (RA) narrates that the easterly wind approached the northerly wind during the night of the Battle of Ahzaab and said, \"Go and assist Rasulullaah ﷺ.\" The northerly wind however said, \"An honourable lady doesn't travel by night.\" It was therefore with the easterly wind that Rasulullaah ﷺ was assisted.[^2]"
+},
+{
+"type": "heading",
+"level": "topic",
+"text": "Enemies are Sunken into the Ground and Destroyed"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Buraydah (RA)",
+"text": "Hadhrat Buraydah (RA) reports that a man (from the Mushrikeen) said during the Battle of Uhud, \"O Allaah! If Muhammad is upon the truth, let me sink into the ground.\" He then sank into the ground.[^3]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Naafi bin Aasim",
+"text": "Hadhrat Naafi bin Aasim says that the man who injured Rasulullaah ﷺ's face was Abdullaah bin Qami'ah who belonged to the Hudhayl tribe. Allaah made a ram attack him and gore him with its horns until it killed him.[^4]"
+},
+{
+"type": "heading",
+"level": "topic",
+"text": "Enemies Lose their Sight by the Curses of Rasulullaah ﷺ and the Sahabah (RA)"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "Some Young Men from the Quraysh Lose their eyesight by the Curse of Rasulullaah ﷺ on the day of Hudaybiyyah"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Mughaffal Muzani (RA)",
+"text": "Hadhrat Abdullaah bin Mughaffal Muzani (RA) narrates, \"We were with Rasulullaah ﷺ at Hudaybiyyah...\" He then proceeds to recount the incident of the Treaty of Hudaybiyyah. Amongst other things, he mentions, \"While we were still there, thirty armed young men came to fight us. By the curse of Rasulullaah ﷺ, Allaah made them all blind in an instant and we stood up and disarmed them. When Rasulullaah ﷺ asked them whether they had come after entering into some pact or whether anyone had granted them amnesty, the replied in the negative. Rasulullaah ﷺ then set them free. It was then that Allaah revealed the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "وَهُوَ الَّذِيْ كَفَّ أَيْدِيَهُمْ عَنْكُمْ وَأَيْدِيَكُمْ عَنْهُمْ بِبَطْنِ مَكَّةَ مِنْ بَعْدِ أَنْ أَظْفَرَكُمْ"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Ibn Sa'd (Vol.2 Pg.77)."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Bazzaar, reporting from reliable sources as confirmed by Haythami (Vol.6 Pg.66). Ibn Abi Haatim and Ibn Jareer have reported a similar narration, as quoted in the Tafseer of Ibn Katheer (Vol.3 Pg.470)."
+},
+{
+"type": "footnote",
+"number": 3,
+"text": "Bazzaar, reporting from reliable sources as confirmed by Haythami (Vol.6 Pg.122)."
+},
+{
+"type": "footnote",
+"number": 4,
+"text": "Abu Nu'aym in his Dalaa'il (Pg.176)."
+}
+]
+}

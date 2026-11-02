@@ -1,0 +1,42 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 412,
+"running_head": "The Lectures Rasulullaah ﷺ Delivered on the Occasions of Battles"
+},
+"blocks": [
+{
+"type": "quran",
+"continued": true,
+"arabic_text": "يٰٓأَيُّهَا النَّاسُ إِنَّا خَلَقْنٰكُمْ مِّنْ ذَكَرٍ وَّأُنْثٰى وَجَعَلْنٰكُمْ شُعُوْبًا وَّقَبَآئِلَ لِتَعَارَفُوْا ۚ إِنَّ أَكْرَمَكُمْ عِنْدَ اللّٰهِ أَتْقٰىكُمْ ۚ إِنَّ اللّٰهَ عَلِيْمٌ خَبِيْرٌ",
+"reference": "Surah Hujuraat, verse 13",
+"text": "'O people! We have certainly created you from a single male (Aadam (AS)) and female (Hawwa) and made you into various families (nations) and tribes so that you may recognise each other (so that each person may know where he belongs and who others are). (Your differences in lineage and race does not give any of you superiority over others because) Verily, the most honoured of you in Allaah's sight is the one with the most Taqwa. Allaah is certainly All Knowing, Informed (Only He knows whose Taqwa is best).'\" {Surah Hujuraat, verse 13}"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Umar (RA)",
+"text": "Rasulullaah ﷺ then concluded by saying, \"That is all I have to say for now. I seek Allaah's forgiveness for myself and for you all.\"[^1]"
+},
+{
+"type": "heading",
+"level": "topic",
+"text": "The Sermons Rasulullaah ﷺ Delivered for the Month of Ramadhaan"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The Epic Sermon Rasulullaah ﷺ Delivered upon the Arrival of Ramadhaan, as Narrated by Hadhrat Salmaan (RA)"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Salmaan (RA)",
+"text": "Hadhrat Salmaan (RA) reports that on the last day of Sha'baan, Rasulullaah ﷺ addressed the Sahabah (RA) saying, \"O people! A great and blessed month is dawning upon you. It is a month that includes a day that is better than a thousand months. Allaah has made fasting compulsory in this month and standing in (Taraaweeh) salaah an act of tremendous merit. Whoever carries out an act of virtue (Nafl) during this month will receive the reward of carrying out a Fardh during any other month and whoever carries out a Fardh act during this month will receive the reward of carrying out seventy Fardh acts during any other month. It is a month of patience and the reward for patience is Jannah. It is also a month of sympathy and a month when the sustenance of a Mu'min is increased. Whoever provides something for a fasting person to terminate his fast shall receive the reward of the fasting person without his reward being diminished in the least.\"\n\"O Rasulullaah ﷺ!\" the Sahabah (RA) submitted, \"Not all of us can afford something to give a fasting person to terminate his fast.\" Rasulullaah ﷺ consoled them saying, \"Allaah shall grant this reward to any person who gives a fasting person even a single date or a sip of water or milk to drink. It is a month that has mercy at the beginning, forgiveness in the middle and emancipation from Jahannam at the end. For the person who makes work light for his slaves during this month, Allaah will forgive him and free him from Jahannam. In this month, you should endeavour to do four things in abundance. Two of these will please your Rabb while you cannot do without the other two. The two that will please your Rabb"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Ibn Abi Haatim and Abd bin Humayd, as quoted in the Tafseer of Ibn Katheer (Vol.4 Pg.218)."
+}
+]
+}

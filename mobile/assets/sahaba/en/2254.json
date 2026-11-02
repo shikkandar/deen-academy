@@ -1,0 +1,46 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 2,
+"page_number": 254,
+"running_head": "The Opinion of Hadhrat Umar (RA) About the Rights of the Muslims in Wealth"
+},
+"blocks": [
+{
+"type": "quran",
+"reference": "Surah Taubah, verse 60",
+"text": "decide that any other group of persons besides the above groups should receive zakaah).[^1]",
+"continued": true
+},
+{
+"type": "narration",
+"text": "He then added, \"Zakaah is reserved for these people.\" Thereafter, he recited:"
+},
+{
+"type": "quran",
+"arabic_text": "وَاعْلَمُوْٓا اَنَّمَا غَنِمْتُمْ مِّنْ شَيْءٍ فَاَنَّ لِلّٰهِ خُمُسَهٗ وَلِلرَّسُوْلِ وَلِذِى الْقُرْبٰى وَالْيَتٰمٰى وَالْمَسٰكِيْنِ وَابْنِ السَّبِيْلِ اِنْ كُنْتُمْ اٰمَنْتُمْ بِاللّٰهِ وَمَآ اَنْزَلْنَا عَلٰى عَبْدِنَا يَوْمَ الْفُرْقَانِ يَوْمَ الْتَقَى الْجَمْعٰنِ ؕ وَاللّٰهُ عَلٰى كُلِّ شَيْءٍ قَدِيْرٌ",
+"reference": "Surah Anfaal, verse 41",
+"text": "Know that from whatever spoils of war you acquire (after fighting a battle with the enemy), a fifth of it shall be for Allaah (to be spent on the recipients that He stipulates ahead), His Rasool, the relatives (of Rasulullaah ﷺ), the poor, the orphans and the travellers (who have been stranded without any means with them. The remaining four fifths will be distributed among the Muslims soldiers who participated in the battle); (distributing the spoils of war in this manner should not be at all difficult for you) if you believe in Allaah and in what We had sent down (angels and signs of Allaah's power) to Our slave (Muhammad ﷺ) on the day of the distinction (between truth and falsehood), (which was) the day when the two parties (Mu'mineen and Mushrikeen armies) clashed (at Badr) (Parting with one-fifth of the spoils to please Allaah would not be difficult for the Muslim soldiers when they understand that they would have never been able to win the battle without Allaah's help). Allaah has power over everything (He can make a small and ill-equipped army defeat a larger, heavily-armed army).[^2]"
+},
+{
+"type": "narration",
+"text": "Hadhrat Umar (RA) then said, \"The spoils of war are for these people.\" He then continued reciting:"
+},
+{
+"type": "quran",
+"arabic_text": "مَآ اَفَآءَ اللّٰهُ عَلٰى رَسُوْلِهٖ مِنْ اَهْلِ الْقُرٰى فَلِلّٰهِ وَلِلرَّسُوْلِ وَلِذِى الْقُرْبٰى وَالْيَتٰمٰى وَالْمَسٰكِيْنِ وَابْنِ السَّبِيْلِ ۙ كَيْ لَا يَكُوْنَ دُوْلَةًۢ بَيْنَ الْاَغْنِيَآءِ مِنْكُمْ ؕ وَمَآ اٰتٰىكُمُ الرَّسُوْلُ فَخُذُوْهُ ۚ وَمَا نَهٰىكُمْ عَنْهُ فَانْتَهُوْا ۚ وَاتَّقُوا اللّٰهَ ؕ اِنَّ اللّٰهَ شَدِيْدُ الْعِقَابِ ۘ لِلْفُقَرَآءِ الْمُهٰجِرِيْنَ الَّذِيْنَ اُخْرِجُوْا مِنْ دِيَارِهِمْ وَاَمْوَالِهِمْ يَبْتَغُوْنَ فَضْلًا مِّنَ اللّٰهِ وَرِضْوَانًا وَّيَنْصُرُوْنَ اللّٰهَ وَرَسُوْلَهٗ ؕ اُولٰٓئِكَ هُمُ الصّٰدِقُوْنَ",
+"reference": "Surah Hashar, verses 7,8",
+"text": "The booty that Allaah granted His Rasool ﷺ (without a battle being fought) from the people of the villages is for Allaah (to be distributed as Allaah pleases), for the (needs of the) Rasool ﷺ, for the relatives (of Rasulullaah ﷺ), for the orphans, for the poor and for the travellers so that this wealth may not remain as amassed riches with the wealthy among you (by distributing it in this manner, the wealth is circulated among people so that all may benefit). Hold fast to what (commands)"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Surah Taubah, verse 60."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Surah Anfaal, verse 41."
+}
+]
+}

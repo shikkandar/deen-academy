@@ -11,27 +11,30 @@ import type { Settings } from './settings';
 
 // Android channel settings are fixed once created, so bump the id if the sound changes.
 const CHANNEL_REMINDER = 'prayer-reminder';
-// Fajr is a wake-up alarm: its own Azan, played on the alarm stream so it sounds in silent mode and DND.
+// Every Azan plays on the alarm stream, so it sounds with the phone on silent or vibrate, and through the
+// "Alarms only" DND of the namaz. Fajr also has its own recording.
+// Recordings: azan.m4a and azan_short.m4a (its first 20 seconds) are Mohamed Tarek; azan_fajr.m4a is Abdul Basit
+// Abdus Samad (archive.org/details/athan_sound, f_abd_el_basset.mp3) and azan_fajr_short.m4a is its first 20 seconds.
 // Full and short Azans need separate channels, since a channel's sound can't change once created.
 const AZAN = {
-  full: { channel: 'azan-v3', sound: 'azan.wav' },
-  short: { channel: 'azan-short-v3', sound: 'azan_short.wav' },
+  full: { channel: 'azan-v5', sound: 'azan.m4a' },
+  short: { channel: 'azan-short-v5', sound: 'azan_short.m4a' },
 } as const;
 // Daily Quran reading reminder — one channel per sound.
 const QURAN_REMINDER = {
-  iqra: { channel: 'quran-reminder-iqra', sound: 'reminder_iqra.wav', name: 'Quran reminder (Iqra)' },
-  chime: { channel: 'quran-reminder-chime', sound: 'reminder_chime.wav', name: 'Quran reminder (chime)' },
-  azan: { channel: 'quran-reminder-azan-v2', sound: 'azan_short.wav', name: 'Quran reminder (short Azan)' },
+  iqra: { channel: 'quran-reminder-iqra', sound: 'reminder_iqra.m4a', name: 'Quran reminder (Iqra)' },
+  chime: { channel: 'quran-reminder-chime', sound: 'reminder_chime.m4a', name: 'Quran reminder (chime)' },
+  azan: { channel: 'quran-reminder-azan-v4', sound: 'azan_short.m4a', name: 'Quran reminder (short Azan)' },
   default: { channel: 'quran-reminder-default', sound: 'default', name: 'Quran reminder' },
 } as const;
 
 const FAJR = {
-  full: { channel: 'azan-fajr-v2', sound: 'azan_fajr.wav' },
-  short: { channel: 'azan-fajr-short-v2', sound: 'azan_fajr_short.wav' },
+  full: { channel: 'azan-fajr-v3', sound: 'azan_fajr.m4a' },
+  short: { channel: 'azan-fajr-short-v3', sound: 'azan_fajr_short.m4a' },
 } as const;
 
 // Fajr wake-up alarms before the Azan, on the alarm stream (rings in silent mode and DND).
-const FAJR_WAKE = { channel: 'fajr-wake-v3', sound: 'fajr_wake.wav' } as const;
+const FAJR_WAKE = { channel: 'fajr-wake-v3', sound: 'fajr_wake.m4a' } as const;
 export const FAJR_WAKE_MINUTES = [10];
 
 // 3 notifications per prayer x 5 prayers = 15 a day. Rescheduled every time the app opens.
@@ -95,6 +98,10 @@ async function ensureChannels() {
   await Notifications.deleteNotificationChannelAsync('azan-v1'); // old Azan recordings (now the same as Fajr's)
   await Notifications.deleteNotificationChannelAsync('azan-short-v1');
   await Notifications.deleteNotificationChannelAsync('quran-reminder-azan');
+  // The newer Azan recordings replaced the earlier ones.
+  for (const old of ['azan-v3', 'azan-v4', 'azan-short-v4', 'quran-reminder-azan-v3', 'azan-short-v3', 'azan-fajr-v2', 'azan-fajr-short-v2', 'quran-reminder-azan-v2']) {
+    await Notifications.deleteNotificationChannelAsync(old);
+  }
   await Notifications.setNotificationChannelAsync(FAJR_WAKE.channel, {
     name: 'Fajr wake-up alarm',
     importance: Notifications.AndroidImportance.MAX,

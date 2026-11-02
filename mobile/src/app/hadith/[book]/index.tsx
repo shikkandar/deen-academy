@@ -1,9 +1,9 @@
 import { router, useLocalSearchParams } from 'expo-router';
-import { useMemo, useState } from 'react';
-import { FlatList, StyleSheet, TextInput, View } from 'react-native';
+import { FlatList, StyleSheet, View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { BookSearchButton } from '@/components/book-search';
 import { JasmineBadge } from '@/components/jasmine-flower';
 import { enter, SpringPressable } from '@/components/motion';
 import { ThemedText } from '@/components/themed-text';
@@ -12,6 +12,7 @@ import { BottomTabInset, Fonts, MaxContentWidth, Spacing } from '@/constants/the
 import { gridItemStyle, useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
+import { useBookPlaces } from '@/lib/book-places';
 import { getBook } from '@/lib/hadith-books';
 
 export default function HadithChaptersScreen() {
@@ -19,15 +20,13 @@ export default function HadithChaptersScreen() {
   const t = useT();
   const { book: bookId } = useLocalSearchParams<{ book: string }>();
   const book = getBook(bookId);
-  const [query, setQuery] = useState('');
+  // Where it was left in this book (saved as a chapter is read).
+  const place = useBookPlaces([bookId])[bookId];
   const layout = useLayout();
   const cell = gridItemStyle(layout.columns, Spacing.two);
 
-  const shown = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!book || !q) return book?.sections ?? [];
-    return book.sections.filter((s) => s.name.toLowerCase().includes(q) || String(s.id) === q);
-  }, [book, query]);
+  // One search for the whole book (its hadith and chapter titles) sits above the chapters.
+  const shown = book?.sections ?? [];
 
   const back = () => (router.canDismiss() ? router.dismissTo('/hadith') : router.replace('/hadith'));
 
@@ -52,20 +51,25 @@ export default function HadithChaptersScreen() {
                 </ThemedText>
               </SpringPressable>
               <Animated.View entering={enter(0)}>
-                <ThemedText style={styles.title}>{book?.name ?? 'Book not found'}</ThemedText>
+                <ThemedText style={styles.title}>{book ? t(book.name) : t('Book not found')}</ThemedText>
                 {book && (
                   <ThemedText type="small" themeColor="textSecondary">
-                    {book.total.toLocaleString()} hadith · {book.sections.length} chapters
+                    {t('{n} hadith · {c} chapters', { n: book.total.toLocaleString(), c: book.sections.length })}
                   </ThemedText>
                 )}
               </Animated.View>
-              <TextInput
-                value={query}
-                onChangeText={setQuery}
-                placeholder={t('Search chapter')}
-                placeholderTextColor={theme.textSecondary}
-                style={[styles.search, { color: theme.text, borderColor: theme.border, backgroundColor: theme.backgroundElement }]}
-              />
+              {book && <BookSearchButton scope={`book-${book.id}`} title={book.name} />}
+              {place && (
+                <SpringPressable
+                  pressedScale={0.98}
+                  onPress={() => router.push(place.href)}
+                  style={[styles.continue, { backgroundColor: theme.primarySoft }]}>
+                  <ThemedText type="smallBold" style={{ color: theme.primary }}>
+                    {t('Continue reading · hadith {n}', { n: place.hadith ?? '' })}
+                  </ThemedText>
+                  <ThemedText style={{ color: theme.primary }}>›</ThemedText>
+                </SpringPressable>
+              )}
             </View>
           }
           renderItem={({ item: s, index }) => (
@@ -104,7 +108,7 @@ const styles = StyleSheet.create({
   headerBlock: { gap: Spacing.three, paddingBottom: Spacing.two },
   back: { alignSelf: 'flex-start', paddingVertical: Spacing.two },
   title: { fontFamily: Fonts?.serif, fontSize: 28, lineHeight: 36, fontWeight: 600 },
-  search: { borderWidth: 1, borderRadius: 999, paddingHorizontal: Spacing.four, paddingVertical: Spacing.three - 2, fontSize: 16 },
+  continue: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', borderRadius: 16, paddingVertical: Spacing.three, paddingHorizontal: Spacing.three },
   row: { flexDirection: 'row', alignItems: 'center', gap: Spacing.three, borderWidth: 1, borderRadius: 20, padding: Spacing.three },
   rowMain: { flex: 1, gap: 2 },
   bold: { fontWeight: 700 },

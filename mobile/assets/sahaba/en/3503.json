@@ -1,0 +1,46 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 503,
+"running_head": "A Lecture of Hadhrat Mu'aadh bin Jabal (RA)"
+},
+"blocks": [
+{
+"type": "heading",
+"level": "topic",
+"text": "A Lecture of Hadhrat Mu'aadh bin Jabal (RA)"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Salamah bin Sabarah",
+"text": "Hadhrat Salamah bin Sabarah reports that it was in Shaam that Hadhrat Mu'aadh bin Jabal (RA) addressed them saying, \"You are the Mu'mineen and the people of Jannah. By Allaah! I truly feel that Allaah will admit into Jannah every person you take prisoner from Rome and Persia. This is because whenever they do any service for you, you say, 'You have done well! May Allaah have mercy on you!' or 'You have done well! May Allaah bless you!'\" He then recited the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "وَيَسْتَجِيْبُ الَّذِيْنَ اٰمَنُوْا وَعَمِلُوا الصّٰلِحٰتِ وَيَزِيْدُهُمْ مِّنْ فَضْلِهٖ",
+"reference": "Surah Shura, verse 26",
+"text": "He (Allaah) accepts (the du'aas and sincere Ibaadah) of those who have Imaan and who do righteous deeds, and He increases (their rewards) for them out of His favour. [^1]"
+},
+{
+"type": "heading",
+"level": "topic",
+"text": "A Lecture of Hadhrat Abu Dardaa (RA)"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Howshab Fazaari",
+"text": "Hadhrat Howshab Fazaari reports that he heard Hadhrat Abu Dardaa (RA) deliver a lecture from the pulpit saying, \"I fear the day when my Rabb will summon me saying, 'O Uwaymir!' When I respond by saying, 'I am at Your service, O my Rabb!', Allaah shall ask, 'How did you practise on your knowledge?' Then every verse in Allaah's Book containing a command and every verse containing an admonition shall claim their rights. The verses containing commands testify that I did not carry out the command and every verse containing an admonition will testify that I did not take heed to the admonition it contained. How will I then be left alone?\" [^2]"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Ibn Jareer and Ibn Abi Haatim, as quoted in the Tafseer of Ibn Katheer (Vol.4 Pg.115)."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Ibn Asaakir, as quoted in Kanzul Ummaal (Vol.7 Pg.78)."
+}
+]
+}

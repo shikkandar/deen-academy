@@ -1,0 +1,87 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 1,
+"page_number": 48,
+"running_head": "Ahaadeeth Concerning Obedience to Rasulullaah ﷺ, Following him and Following the Khulafa (RA)"
+},
+"blocks": [
+{
+"type": "narration",
+"continued": true,
+"text": "corrupted shall have the rewards of a hundred martyrs.\" [^1] Bayhaqi and Tabraani have reported this Hadith from Hadhrat Abu Hurayrah (RA), stating that the reward will be that of one martyr."
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abu Hurayrah (RA)",
+"text": "Hadhrat Abu Hurayrah (RA) has reported that Rasulullaah ﷺ said, \"The person who holds fast to my Sunnah during times when my Ummah is corrupted shall have the reward of a martyr.\" [^2]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abu Hurayrah (RA)",
+"text": "Hadhrat Abu Hurayrah (RA) narrates that Rasulullaah ﷺ said, \"The person who holds fast to my Sunnah during times when my Ummah will be divided shall be like a person holding a burning charcoal.\" [^3]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Anas (RA)",
+"text": "Hadhrat Anas (RA) narrates that Rasulullaah ﷺ said, \"The person who turns away from my Sunnah has no affiliation with me.\" [^4] Ibn Asaakir has narrated this Hadith from Hadhrat Abdullaah bin Umar (RA), which begins with the words, \"The person who practises my Sunnah has an affiliation with me.\""
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Aa'isha (RA)",
+"text": "Hadhrat Aa'isha (RA) narrates that Rasulullaah ﷺ said, \"The one who holds fast to the Sunnah shall enter Jannah.\" [^5]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Anas (RA)",
+"text": "Hadhrat Anas (RA) reports that Rasulullaah ﷺ said, \"Whoever revives my Sunnah, has love for me and whoever loves me shall be with me in Jannah.\" [^6]"
+},
+{
+"type": "heading",
+"level": "topic",
+"text": "Qur'aanic Verses Concerning Rasulullaah ﷺ and the Sahabah (RA)"
+},
+{
+"type": "quran",
+"arabic_text": "مَا كَانَ مُحَمَّدٌ أَبَآ أَحَدٍ مِّنْ رِّجَالِكُمْ وَلٰكِنْ رَّسُوْلَ اللّٰهِ وَخَاتَمَ النَّبِيّٖنَ ؕ وَكَانَ اللّٰهُ بِكُلِّ شَيْءٍ عَلِيْمًا",
+"reference": "Surah Ahzaab, verse 40",
+"text": "Muhammad ﷺ is not the father of any men among you, but he is Allaah's Rasool and the seal of all Ambiyaa (after whom there shall never come another Nabi). Allaah has knowledge of all things."
+},
+{
+"type": "quran",
+"arabic_text": "يٰۤأَيُّهَا النَّبِيُّ إِنَّاۤ أَرْسَلْنٰكَ شَاهِدًا وَّمُبَشِّرًا وَّنَذِيْرًا ۝ وَّدَاعِيًا إِلَى اللّٰهِ بِإِذْنِهٖ وَسِرَاجًا مُّنِيْرًا",
+"reference": "Surah Ahzaab, verses 45, 46",
+"text": "O Nabi ﷺ! We have certainly sent you as a witness (who will bear testimony against the Kuffaar of all nations on the Day of Qiyaamah), a carrier of good news (to the Mu'mineen that they will enjoy Jannah), a warner (to the Kuffaar that they will suffer the punishment of Jahannam if they do not accept Imaan) and as a caller to Allaah by His command and an illuminating lantern (who lit up the world filled with the darkness of kufr and Shirk with the light of Imaan and also produced the Sahabah (RA) as guiding stars to guide people after him)."
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Targheeb wat Tarheeb Vol. 1 Pg. 44."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Tabraani and Abu Nu'aym in \"Hilya\"."
+},
+{
+"type": "footnote",
+"number": 3,
+"text": "Kanzul Ummaal Vol. 1 Pg. 47."
+},
+{
+"type": "footnote",
+"number": 4,
+"text": "Muslim."
+},
+{
+"type": "footnote",
+"number": 5,
+"text": "Daar Qutni."
+},
+{
+"type": "footnote",
+"number": 6,
+"text": "Sajzi."
+}
+]
+}

@@ -5,7 +5,8 @@ import { Platform, ScrollView, StyleSheet, Switch, TextInput, View } from 'react
 import Animated, { FadeIn, ZoomIn } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { AzanChecklist } from '@/components/azan-checklist';
+import { AzanChecklist, hasAzanChecklist } from '@/components/azan-checklist';
+import { ageOf, ProfileSetup } from '@/components/profile-setup';
 import { JasmineFlower } from '@/components/jasmine-flower';
 import { MasjidEditor } from '@/components/masjid-editor';
 import { WelcomeNote } from '@/components/welcome';
@@ -23,9 +24,9 @@ import type { T } from '@/lib/i18n';
 import type { AsrMadhab, CalcMethod, Language, Masjid, ReminderSound } from '@/lib/settings';
 
 const REMINDER_SOUNDS: { id: ReminderSound; label: string; note: string; file: number | null }[] = [
-  { id: 'iqra', label: 'Iqra (Al-Alaq 96:1)', note: '"Read!" — recited by Alafasy', file: require('@/assets/sounds/reminder_iqra.wav') },
-  { id: 'chime', label: 'Gentle chime', note: 'Soft bell tone', file: require('@/assets/sounds/reminder_chime.wav') },
-  { id: 'azan', label: 'Short Azan', note: 'First 20 seconds of the Azan', file: require('@/assets/sounds/azan_short.wav') },
+  { id: 'iqra', label: 'Iqra (Al-Alaq 96:1)', note: '"Read!" — recited by Alafasy', file: require('@/assets/sounds/reminder_iqra.m4a') },
+  { id: 'chime', label: 'Gentle chime', note: 'Soft bell tone', file: require('@/assets/sounds/reminder_chime.m4a') },
+  { id: 'azan', label: 'Short Azan', note: 'First 20 seconds of the Azan', file: require('@/assets/sounds/azan_short.m4a') },
   { id: 'default', label: 'Phone default', note: 'Your usual notification sound', file: null },
 ];
 
@@ -82,7 +83,7 @@ const LANGUAGES: { value: Language; label: string }[] = [
 ];
 
 const METHODS: { value: CalcMethod; label: string }[] = [
-  { value: 'Karachi', label: 'Karachi (India / Pakistan)' },
+  { value: 'Karachi', label: 'Karachi (India / Pakistan; Tamil Nadu: Karur Ulama timetable)' },
   { value: 'MuslimWorldLeague', label: 'Muslim World League' },
   { value: 'UmmAlQura', label: 'Umm al-Qura (Makkah)' },
   { value: 'Egyptian', label: 'Egyptian' },
@@ -152,13 +153,15 @@ function SettingsColumns({ wide, children }: { wide: boolean; children: [React.R
   );
 }
 
-export default function SettingsScreen() {
+/** Settings: a tab on the web; in the apps a full-screen sheet opened from the ⚙ on Prayers (`onClose` shows ✕). */
+export default function SettingsScreen({ onClose }: { onClose?: () => void } = {}) {
   const theme = useTheme();
   const t = useT();
   const layout = useLayout();
   const { settings, updateSettings, dndSupported, dndAccess, openDndSettings } = useAppState();
   const [editingMasjid, setEditingMasjid] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
+  const [showProfile, setShowProfile] = useState(false);
   const reminder = settings.quranReminder;
   const setReminder = (patch: Partial<typeof reminder>) => updateSettings({ quranReminder: { ...reminder, ...patch } });
   // Preview player for the reminder sounds.
@@ -211,7 +214,17 @@ export default function SettingsScreen() {
           showsVerticalScrollIndicator={false}>
           <Animated.View entering={enter(0)} style={styles.header}>
             <ThemedText style={styles.serifTitle}>{t('Settings')}</ThemedText>
-            <FloatingFlower size={30} rotate={20} period={30} />
+            {onClose ? (
+              <SpringPressable
+                accessibilityRole="button"
+                accessibilityLabel={t('Close')}
+                onPress={onClose}
+                style={[styles.closeBtn, { backgroundColor: theme.backgroundElement }]}>
+                <ThemedText style={{ fontSize: 18, fontWeight: 700 }}>✕</ThemedText>
+              </SpringPressable>
+            ) : (
+              <FloatingFlower size={30} rotate={20} period={30} />
+            )}
           </Animated.View>
 
 
@@ -231,11 +244,33 @@ export default function SettingsScreen() {
             </SpringPressable>
           </Animated.View>
 
+          <Animated.View entering={enter(1)}>
+            <SpringPressable
+              pressedScale={0.98}
+              onPress={() => setShowProfile(true)}
+              style={[styles.letterRow, styles.detailsRow, { backgroundColor: theme.backgroundElement, borderColor: theme.border }]}>
+              <ThemedText style={styles.detailsIcon}>👤</ThemedText>
+              <View style={styles.rowLabel}>
+                <ThemedText style={styles.bold}>{settings.profile?.name || t('Your details')}</ThemedText>
+                <ThemedText type="small" themeColor="textSecondary">
+                  {settings.profile
+                    ? `${settings.profile.gender === 'female' ? t('Female') : t('Male')} · ${t('Age {n}', { n: ageOf(settings.profile.dob) })}`
+                    : t('Name, gender and date of birth')}
+                </ThemedText>
+              </View>
+              <ThemedText type="small" style={[styles.bold, { color: theme.primary }]}>
+                {t('Edit')} ›
+              </ThemedText>
+            </SpringPressable>
+          </Animated.View>
+
           <SettingsColumns wide={layout.wide}>
           <>
-          <Section title={t('MAKE SURE THE AZAN RINGS')} index={1}>
-            <AzanChecklist />
-          </Section>
+          {hasAzanChecklist && (
+            <Section title={t('MAKE SURE THE AZAN RINGS')} index={1}>
+              <AzanChecklist />
+            </Section>
+          )}
 
           <Section title={t('LANGUAGE')} index={1}>
             {LANGUAGES.map((l) => (
@@ -477,6 +512,7 @@ export default function SettingsScreen() {
         </ScrollView>
       </SafeAreaView>
       <WelcomeNote visible={showWelcome} onClose={() => setShowWelcome(false)} />
+      {showProfile && <ProfileSetup initial={settings.profile} onClose={() => setShowProfile(false)} />}
       {editingMasjid && (
         <MasjidEditor
           masjid={settings.masjid}
@@ -492,6 +528,9 @@ export default function SettingsScreen() {
 }
 
 const styles = StyleSheet.create({
+  closeBtn: { width: 40, height: 40, borderRadius: 20, alignItems: 'center', justifyContent: 'center' },
+  detailsRow: { borderWidth: 1, marginTop: Spacing.two },
+  detailsIcon: { fontSize: 20 },
   letterRow: { flexDirection: 'row', alignItems: 'center', gap: Spacing.three, borderRadius: 20, padding: Spacing.three },
   container: { flex: 1, flexDirection: 'row', justifyContent: 'center' },
   safeArea: { flex: 1, maxWidth: MaxContentWidth },

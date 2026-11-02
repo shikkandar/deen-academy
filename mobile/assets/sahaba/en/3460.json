@@ -1,0 +1,69 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 460,
+"running_head": "The Historic Lecture Hadhrat Umar (RA) Delivered concerning Allaah's Bounties on the Muslims and Encouragement to Express Gratitude for the Same"
+},
+"blocks": [
+{
+"type": "narration",
+"narrator": "Hadhrat Urwa (RA)",
+"continued": true,
+"text": "change and is a means for them to increase and to grow. It is a duty to Allaah upon me to instruct you (to do good) and to forbid you (from evil).\" [^1]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The Lecture Hadhrat Umar (RA) Delivered discussing the Battle of Uhud"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Ibn Kulayb",
+"text": "Hadhrat Ibn Kulayb narrates that it was on a Friday that Hadhrat Umar (RA) addressed the people. He recited a portion of Surah Aal Imraan until he reached the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "اِنَّ الَّذِيْنَ تَوَلَّوْا مِنْكُمْ يَوْمَ الْتَقَى الْجَمْعٰنِ ۙ",
+"reference": "Surah Aal Imraan, verse 155",
+"text": "Those of you who fled on the day when the two armies (of the Muslim and the Mushrikeen) clashed (at Uhud) ..."
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Ibn Kulayb",
+"text": "Hadhrat Umar (RA) then commented, \"After we had been defeated in the Battle of Uhud, I ran up the mountain, leaping as if I were a mountain goat. When the people started saying that Muhammad ﷺ had been martyred, I announced that I would kill anyone who made that statement. We then regrouped on the mountain and Allaah revealed the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "اِنَّ الَّذِيْنَ تَوَلَّوْا مِنْكُمْ يَوْمَ الْتَقَى الْجَمْعٰنِ ۙ",
+"reference": "Surah Aal Imraan, verse 155",
+"text": "Those of you who fled on the day when the two armies (of the Muslim and the Mushrikeen) clashed (at Uhud) ... [^2]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Ibn Kulayb",
+"text": "Another narration from Ibn Kulayb states that as he recited Surah Aal Imraan on the pulpit, Hadhrat Umar (RA) said, \"This Surah discusses the Battle of Uhud. When we dispersed from around Rasulullaah ﷺ during the Battle of Uhud and I had climbed up the mountain, I heard a Jew announce that Rasulullaah ﷺ had been martyred. I then declared, 'I shall personally execute any person who says that Rasulullaah ﷺ has been martyred!' When I then had a proper look, I saw Rasulullaah ﷺ and saw the Muslims regrouping around him. It was then that the verse was revealed:"
+},
+{
+"type": "quran",
+"arabic_text": "وَمَا مُحَمَّدٌ اِلَّا رَسُوْلٌ قَدْ خَلَتْ مِنْ قَبْلِهِ الرُّسُلُ ؕ اَفَاۡئِنْ مَّاتَ اَوْ قُتِلَ انْقَلَبْتُمْ عَلٰٓى اَعْقَابِكُمْ ؕ وَمَنْ يَّنْقَلِبْ عَلٰى عَقِبَيْهِ فَلَنْ يَّضُرَّ اللّٰهَ شَيْئًا ؕ وَسَيَجْزِى اللّٰهُ الشّٰكِرِيْنَ",
+"reference": "Surah Aal Imraan, verse 144",
+"text": "Muhammad ﷺ is but a Rasool (of Allaah). Indeed many Rusul have passed before him. If he passes away or is martyred, would you (Muslims) then turn back on your heels (and forsake Islaam)? He who turns back on his heels can never harm Allaah in the least (because he will be harming only himself). Allaah shall soon reward the grateful ones (so be firm and strive for His Deen). [^3]"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Ibn Jareer in his Taareekh (Vol.3 Pg.283)."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Ibn Jareer."
+},
+{
+"type": "footnote",
+"number": 3,
+"text": "Ibn Mundhir, as quoted in Kanzul Ummaal (Vol.1 Pg.238)."
+}
+]
+}

@@ -66,10 +66,29 @@ export function isOurTamil(book: string) {
   return book in BUNDLED;
 }
 
+const TRANSLATION_KEY = 'hadith.translation.v1';
+
+/** English or Tamil under the Arabic, as last chosen in the reader; null until she picks (then the app language). */
+export async function loadHadithTranslation(): Promise<'en' | 'ta' | null> {
+  try {
+    const v = await AsyncStorage.getItem(TRANSLATION_KEY);
+    return v === 'en' || v === 'ta' ? v : null;
+  } catch {
+    return null;
+  }
+}
+
+export function saveHadithTranslation(value: 'en' | 'ta') {
+  AsyncStorage.setItem(TRANSLATION_KEY, value).catch(() => {});
+}
+
 /** Arabic + English (+ Tamil where available) hadith of one chapter, cached on the phone after the first load. */
 export async function getChapter(book: string, section: number): Promise<Hadith[]> {
+  // Our copy (with the Tamil): from /data — the web site, or in the apps downloaded once and then kept on the phone.
   const bundled = BUNDLED[book]?.[section];
-  if (bundled) return (await bundled()) as Hadith[]; // fetched on web, bundled on phones
+  const ours = bundled ? ((await bundled()) as Hadith[] | null) : null;
+  if (ours) return ours;
+  // otherwise (or offline before it was ever opened) the hadith API below
 
   const key = `hadith.chapter.v2.${book}.${section}`;
   try {

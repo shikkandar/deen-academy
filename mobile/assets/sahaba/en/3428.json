@@ -1,0 +1,62 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 428,
+"running_head": "The Lectures of Rasulullaah ﷺ"
+},
+"blocks": [
+{
+"type": "narration",
+"continued": true,
+"narrator": "Hadhrat Anas (RA)",
+"text": "said, \"(Glad tidings for the person) Who follows the Sunnah and never transgresses it to go towards any Bid'ah.\""
+},
+{
+"type": "narration",
+"text": "Yet another narration[^1] adds that Rasulullaah ﷺ said, \"(Glad tidings for the person) Who associates with men of understanding, avoids people with doubts and who practice Bid'ah. His public life is a righteous one and people are safe from his evil.\""
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Aa'isha (RA)",
+"text": "Hadhrat Aa'isha (RA) narrates that Rasulullaah ﷺ was on the pulpit and the Sahabah (RA) were sitting around him when he said, \"O people! Be shy (to do wrong) in front of Allaah as you ought to be shy.\" \"O Rasulullaah ﷺ!\" someone asked, \"Are we to be shy in front of Allaah?\" Rasulullaah ﷺ replied, \"Whoever amongst you is shy, should not pass a single night without his death before his eyes. He should protect his abdomen and whatever it contains (heart, stomach, liver, etc) and his head and whatever organs it is host to (eyes, ears, tongue, etc). He should also remember death and decomposition and forsake the pleasures of this world.\"[^2]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "Rasulullaah ﷺ's Lecture Concerning Resurrection"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Abbaas (RA)",
+"text": "Hadhrat Abdullaah bin Abbaas (RA) reports that he heard Rasulullaah ﷺ deliver the following lecture from the pulpit: \"You will meet your Rabb barefooted, naked, uncircumcised and on foot.\" Another narration states that Rasulullaah ﷺ stood up amongst the Sahabah (RA) and said, \"O people! You will be barefooted, naked and uncircumcised when you are resurrected before Allaah.\" Rasulullaah ﷺ then recited the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "كَمَا بَدَأْنَآ أَوَّلَ خَلْقٍ نُّعِيْدُهٗ ۚ وَعْدًا عَلَيْنَا ۚ إِنَّا كُنَّا فٰعِلِيْنَ",
+"reference": "Surah Ambiyaa, verse 104",
+"text": "As We originated the first creation, We shall repeat it (making all appear as they had appeared when they were first created). This is a binding promise upon Us. We are undoubtedly the Ones Who can do (Who have the power to fulfil this promise). {Surah Ambiyaa, verse 104}"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Abbaas (RA)",
+"text": "Rasulullaah ﷺ then continued. He said, \"Verily the first of creation to be clothed will be Ibraheem (AS). Thereafter, some men from my Ummah will be caught and taken to the left. 'O my Rabb!' I will plead, 'they are my companions.' Allaah will then say, 'You have no idea what innovations they had introduced after you.' I will then say what one of Allaah's pious servants (Isa (AS)) will say:"
+},
+{
+"type": "quran",
+"arabic_text": "وَكُنْتُ عَلَيْهِمْ شَهِيْدًا مَّا دُمْتُ فِيْهِمْ ۚ فَلَمَّا تَوَفَّيْتَنِيْ كُنْتَ أَنْتَ الرَّقِيْبَ عَلَيْهِمْ ۚ وَأَنْتَ عَلٰى كُلِّ شَيْءٍ شَهِيْدٌ ۝ إِنْ تُعَذِّبْهُمْ فَإِنَّهُمْ عِبَادُكَ ۚ وَإِنْ تَغْفِرْ لَهُمْ فَإِنَّكَ أَنْتَ الْعَزِيْزُ الْحَكِيْمُ",
+"reference": "Surah Maa'idah, verses 117,118",
+"text": "'I was a witness to them as long as I was with them. (However) When You took me away, then You were watching over them for You are"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Bazzaar. Haythami (Vol.10 Pg.229) has commented on the chain of narrators."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Tabraani in his Awsat. Tirmidhi has reported a similar narration from Hadhrat Abdullaah bin Mas'ood (RA), as quoted in Targheeb wat Tarheeb (Vol.5 Pg.200)."
+}
+]
+}

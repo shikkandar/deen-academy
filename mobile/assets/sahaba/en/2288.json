@@ -1,0 +1,51 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 2,
+"page_number": 288,
+"running_head": "The Fear of Hadhrat Umar (RA) and his Weeping Over Worldly Prosperity"
+},
+"blocks": [
+{
+"type": "narration",
+"text": "\"All praise is for Allaah! The bracelets of Kisra bin Hurmuz on the arms of Suraaqa bin Maalik bin Ju'shum a Bedouin from the Banu Mudlaj tribe! O Allaah! I know that Your Rasool ﷺ liked getting wealth only to spend it in Your path and on Your servants. However, You chose a better way and kept it away from him. O Allaah! I know that Abu Bakr (RA) also liked getting wealth only to spend it in Your path and on Your servants. However, You chose a better way and kept it away from him as well. (Now this wealth has come during my term as Khalifah) O Allaah! I seek Your protection that this should be a trap from You for Umar.\" He then recited the following verse:",
+"continued": true
+},
+{
+"type": "quran",
+"arabic_text": "اَيَحْسَبُوْنَ اَنَّمَا نُمِدُّهُمْ بِهٖ مِنْ مَّالٍ وَّبَنِيْنَ ۝ نُسَارِعُ لَهُمْ فِي الْخَيْرٰتِ بَلْ لَّا يَشْعُرُوْنَ",
+"reference": "Surah Mu'minoon, verses 55, 56",
+"text": "(When they see their prosperity in this world,) Do they think that by Us granting them an increase in wealth and sons we wish to hasten in granting them good? No (it is rather worse for them)! They fail to perceive.[^1]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The Narration of Hadhrat Abu Sinaan Duwali"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abu Sinaan Duwali",
+"text": "Hadhrat Abu Sinaan Duwali reports that he once went to see Hadhrat Umar (RA) at a time when a group of the earliest Muhaajireen were with him. Hadhrat Umar (RA) sent for a basket resembling a sack or a bag which was brought to him from a fortress in Iraq. The basket contained a ring which one of Hadhrat Umar (RA)'s sons snatched up and put in his mouth. Hadhrat Umar (RA) took it out of the child's mouth and began to weep. One of the persons with him asked, \"Why do you weep when Allaah has granted you so many conquests, given you victory over your enemies and satisfied you?\" Hadhrat Umar (RA) replied, \"I heard Rasulullaah ﷺ say, 'Whenever worldly wealth is opened up to a nation, Allaah casts enmity and hatred amongst them until the Day of Qiyaamah. This is what frightens me.\"[^2]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The Narration of Hadhrat Abdullaah bin Umar (RA) About the Crying of Hadhrat Umar (RA)"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Umar (RA)",
+"text": "Hadhrat Abdullaah bin Umar (RA) reports, \"After leading the salaah, Umar (RA) would remain seated for awhile so that a person with any need may speak to him. He would stand up when there was none with any need. However, it once occurred that he led several salaahs without sitting afterwards. I said (to his slave), 'O Yarfa! Is the Ameerul Mu'mineen not well?' When he informed me that the Ameerul Mu'mineen was in good health, I sat down and Uthmaan bin Affaan (RA) also joined me. (After a while) Yarfa came out and said, 'Come, O son of Affaan! Come, O son of Abbaas!' When we entered the room, we found before Umar (RA) several heaps of money with a shoulder blade on each heap"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Bayhaqi (Vol.6 Pg.358). Abd bin Humayd, Ibn Mundhir and Ibn Asaakir have reported a similar narration, as quoted in Kanzul Ummaal (Vol.4 Pg.412)."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Ahmad, Bazaar and Abu Ya'la, as quoted in Targheeb wat Tarheeb (Vol.5 Pg.144)."
+}
+]
+}

@@ -6,6 +6,7 @@ import {
   TabTriggerSlotProps,
   TabListProps,
 } from 'expo-router/ui';
+import { router } from 'expo-router';
 import { useState, type ComponentProps } from 'react';
 import { Image, Linking, Pressable, View, StyleSheet, useWindowDimensions, type ImageSourcePropType, type StyleProp, type ViewStyle } from 'react-native';
 
@@ -21,11 +22,12 @@ import { ThemedView } from './themed-view';
 const LOGO = require('@/assets/images/logo-mark.png');
 
 const ICONS = {
-  home: require('@/assets/images/tabIcons/home.png'),
-  quran: require('@/assets/images/tabIcons/quran.png'),
-  qibla: require('@/assets/images/tabIcons/qibla.png'),
-  hadith: require('@/assets/images/tabIcons/hadith.png'),
-  settings: require('@/assets/images/tabIcons/settings.png'),
+  home: require('@/assets/images/tabIcons/web/home.png'),
+  quran: require('@/assets/images/tabIcons/web/quran.png'),
+  qibla: require('@/assets/images/tabIcons/web/qibla.png'),
+  hadith: require('@/assets/images/tabIcons/web/hadith.png'),
+  settings: require('@/assets/images/tabIcons/web/settings.png'),
+  namaz: require('@/assets/images/tabIcons/web/namaz.png'),
 };
 
 export default function AppTabs() {
@@ -48,8 +50,10 @@ export default function AppTabs() {
               <SidebarItem icon={ICONS.qibla} label={t('Qibla')} />
             </TabTrigger>
             <TabTrigger name="hadith" href="/hadith" asChild>
-              <SidebarItem icon={ICONS.hadith} label={t('Hadith')} />
+              <SidebarItem icon={ICONS.hadith} label={t('Library')} />
             </TabTrigger>
+            {/* Not a tab: opens the Namaz Assistant over the Prayers screen. */}
+            <SidebarItem icon={ICONS.namaz} label={t('Namaz Assistant')} onPress={() => router.push({ pathname: '/', params: { assistant: '1' } })} />
             <TabTrigger name="settings" href="/settings" asChild>
               <SidebarItem icon={ICONS.settings} label={t('Settings')} />
             </TabTrigger>
@@ -75,7 +79,7 @@ export default function AppTabs() {
             <TabButton>{t('Qibla')}</TabButton>
           </TabTrigger>
           <TabTrigger name="hadith" href="/hadith" asChild>
-            <TabButton>{t('Hadith')}</TabButton>
+            <TabButton>{t('Library')}</TabButton>
           </TabTrigger>
           <TabTrigger name="settings" href="/settings" asChild>
             <TabButton icon={ICONS.settings} label={t('Settings')} />
@@ -256,7 +260,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     cursor: 'pointer',
   },
-  sidebarIcon: { width: 20, height: 20 },
+  sidebarIcon: { width: 22, height: 22 },
   activeDot: { width: 6, height: 6, borderRadius: 3, marginLeft: 'auto' },
   bold: { fontWeight: 700 },
   download: { borderRadius: 18, padding: Spacing.three, gap: Spacing.two },

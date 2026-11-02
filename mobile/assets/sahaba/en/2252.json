@@ -1,0 +1,51 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 2,
+"page_number": 252,
+"running_head": "The Opinion of Hadhrat Umar (RA) About the Rights of the Muslims in Wealth"
+},
+"blocks": [
+{
+"type": "narration",
+"text": "someone else.\"[^1]",
+"continued": true
+},
+{
+"type": "heading",
+"level": "topic",
+"text": "The Opinion of Hadhrat Umar (RA) About the Rights of the Muslims in Wealth"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The Narration of Hadhrat Aslam in this Regard"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Aslam",
+"text": "Hadhrat Aslam reports that he heard Hadhrat Umar (RA) say, \"Gather around to consult and ponder about who should be the recipients of this wealth. (When the people forming the consultative assembly had gathered) Hadhrat Umar (RA) said to them, \"I have instructed you to gather here to ponder about who should receive this wealth. I have studied a few verses of the Qur'aan in which Allaah says:"
+},
+{
+"type": "quran",
+"arabic_text": "مَآ اَفَآءَ اللّٰهُ عَلٰى رَسُوْلِهٖ مِنْ اَهْلِ الْقُرٰى فَلِلّٰهِ وَلِلرَّسُوْلِ وَلِذِى الْقُرْبٰى وَالْيَتٰمٰى وَالْمَسٰكِيْنِ وَابْنِ السَّبِيْلِ ۙ كَيْ لَا يَكُوْنَ دُوْلَةًۢ بَيْنَ الْاَغْنِيَآءِ مِنْكُمْ ؕ وَمَآ اٰتٰىكُمُ الرَّسُوْلُ فَخُذُوْهُ ۚ وَمَا نَهٰىكُمْ عَنْهُ فَانْتَهُوْا ۚ وَاتَّقُوا اللّٰهَ ؕ اِنَّ اللّٰهَ شَدِيْدُ الْعِقَابِ ۘ لِلْفُقَرَآءِ الْمُهٰجِرِيْنَ الَّذِيْنَ اُخْرِجُوْا مِنْ دِيَارِهِمْ وَاَمْوَالِهِمْ يَبْتَغُوْنَ فَضْلًا مِّنَ اللّٰهِ وَرِضْوَانًا وَّيَنْصُرُوْنَ اللّٰهَ وَرَسُوْلَهٗ ؕ اُولٰٓئِكَ هُمُ الصّٰدِقُوْنَ",
+"reference": "Surah Hashar, verses 7,8",
+"text": "The booty that Allaah granted His Rasool ﷺ (without a battle being fought) from the people of the villages is for Allaah (to be distributed as Allaah pleases), for the (needs of the) Rasool ﷺ, for the relatives (of Rasulullaah ﷺ), for the orphans, for the poor and for the travellers so that this wealth may not remain as amassed riches with the wealthy among you (by distributing it in this manner, the wealth is circulated among people so that all may benefit). Hold fast to what (commands) the Rasool ﷺ gives you and refrain from what (actions) He prevents you (because whatever he instructs you is from Allaah). Fear (disobeying) Allaah, for Allaah punishes very severely. (A share of the booty received without a fight is also reserved) For the poor Muhaajireen who were removed from their homes and their possessions. They seek Allaah's grace and pleasure and assist Allaah and His Rasool ﷺ These are the ones who are true (in their claim to Imaan).[^2]"
+},
+{
+"type": "quran",
+"arabic_text": "وَالَّذِيْنَ تَبَوَّؤُ الدَّارَ وَالْاِيْمَانَ مِنْ قَبْلِهِمْ يُحِبُّوْنَ مَنْ هَاجَرَ اِلَيْهِمْ وَلَا يَجِدُوْنَ فِيْ صُدُوْرِهِمْ حَاجَةً مِّمَّآ اُوْتُوْا وَيُؤْثِرُوْنَ عَلٰٓى اَنْفُسِهِمْ وَلَوْ كَانَ بِهِمْ خَصَاصَةٌ ؕ وَمَنْ يُّوْقَ شُحَّ نَفْسِهٖ فَاُولٰٓئِكَ هُمُ الْمُفْلِحُوْنَ",
+"reference": "Surah Hashar, verse 9"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Abu Nu'aym in his Hilya (Vol.1 Pg.81), as quoted in Muntakhab Kanzul Ummaal (Vol.5 Pg.57). Ahmad in his Zuhd and Musaddad has also reported the narration, as also quoted in Muntakhab Kanzul Ummaal (Vol.5 Pg.57)."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Surah Hashar, verses 7,8."
+}
+]
+}

@@ -1,0 +1,62 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 113,
+"running_head": "Conviction in the Recompense for Actions"
+},
+"blocks": [
+{
+"type": "narration",
+"continued": true,
+"text": "Umar (RA) saying, \"I know which is the harshest verse in Allaah's Book.\" (Because referring to a verse of the Qur'aan as being harsh is disrespectful) Hadhrat Umar (RA) got down and struck the man with his lash saying, \"Have you studied the verse so deeply that you know all about it?\" The man then went away. The following morning Hadhrat Umar (RA) said to the man, \"Which verse were you referring to yesterday?\" The man said that it was the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "مَنۡ يَّعۡمَلۡ سُوۡٓءًا يُّجۡزَ بِهٖۙ",
+"reference": "Surah Nisaa, verse 123",
+"text": "Whoever commits an evil act will meet (receive) its punishment..."
+},
+{
+"type": "narration",
+"continued": true,
+"text": "He then said, \"(This means that) Since every one of us commits sins, we will be punished for it.\" Hadhrat Umar (RA) said, \"When this verse was revealed, neither did we enjoy food nor drink until Allaah relieved us by revealing the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "وَمَنْ يَّعْمَلْ سُوْٓءًا اَوْ يَظْلِمْ نَفْسَهٗ ثُمَّ يَسْتَغْفِرِ اللّٰهَ يَجِدِ اللّٰهَ غَفُوْرًا رَّحِيْمًا",
+"reference": "Surah Nisaa, verse 110",
+"text": "Whoever commits a (minor) sin or wrongs himself (by committing a major sin) and then seeks Allaah's forgiveness, he will surely find that Allaah is Most Forgiving, Most Merciful.[^1]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The Conviction of Hadhrat Amr bin Samurah (RA) and Hadhrat Imraan bin Husayn (RA)"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Tha'laba (RA)",
+"text": "Hadhrat Tha'laba (RA) narrates that Hadhrat Amr bin Samurah bin Habeeb bin Abdush Shams (RA) once came to Rasulullaah ﷺ and said, \"O Rasulullaah ﷺ! I have stolen a camel from a certain tribe, so please do cleanse me.\" When Rasulullaah ﷺ sent a message to the people of the tribe, they confirmed that one of their camels were missing. Rasulullaah ﷺ then gave instructions for his hand to be amputated, upon which he said (to his hand), \"All praise belongs to Allaah Who has cleansed me of you who wanted to admit my entire body into Jahannam.\"[^2]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Hasan",
+"text": "Hadhrat Hasan narrates that some friends went to visit Hadhrat Imraan bin Husayn (RA) when he was suffering from a disease. One of them said, \"We are extremely distressed by what we see of your ailing body.\" \"Do not be distressed by what you see,\" he said, \"What you see is because of my sins and those that Allaah has forgiven (without punishing me) are even more.\" He then recited the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "وَمَآ اَصَابَكُمْ مِّنْ مُّصِيْبَةٍ فَبِمَا كَسَبَتْ اَيْدِيْكُمْ وَيَعْفُوْا عَنْ كَثِيْرٍ",
+"text": "The misfortunes that afflict you (in this world) are a result of the (evil) actions you earn, and (because of your many sins, you deserve to suffer"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Ibn Raahway, as quoted in Kanzul Ummaal (Vol.1 Pg.239)."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Ibn Maajah, as quoted in the Tafseer of Ibn Katheer (Vol.2 Pg.56)."
+}
+]
+}

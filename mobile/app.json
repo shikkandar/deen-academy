@@ -61,13 +61,13 @@
         "expo-notifications",
         {
           "sounds": [
-            "./assets/sounds/azan.wav",
-            "./assets/sounds/azan_short.wav",
-            "./assets/sounds/azan_fajr.wav",
-            "./assets/sounds/azan_fajr_short.wav",
-            "./assets/sounds/reminder_iqra.wav",
-            "./assets/sounds/reminder_chime.wav",
-            "./assets/sounds/fajr_wake.wav"
+            "./assets/sounds/azan.m4a",
+            "./assets/sounds/azan_short.m4a",
+            "./assets/sounds/azan_fajr.m4a",
+            "./assets/sounds/azan_fajr_short.m4a",
+            "./assets/sounds/reminder_iqra.m4a",
+            "./assets/sounds/reminder_chime.m4a",
+            "./assets/sounds/fajr_wake.m4a"
           ]
         }
       ],
@@ -87,7 +87,19 @@
           "recordAudioAndroid": false
         }
       ],
-      "expo-asset"
+      "expo-asset",
+      "expo-video",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "buildArchs": [
+              "armeabi-v7a",
+              "arm64-v8a"
+            ]
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,

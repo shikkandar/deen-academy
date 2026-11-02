@@ -1,0 +1,39 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 1,
+"page_number": 430,
+"running_head": "The Letter of Hadhrat Abu Bakr (RA) to Hadhrat Khaalid bin Waleed (RA) and Other Sahabah (RA) with him Concerning Jihaad in the Path of Allaah"
+},
+"blocks": [
+{
+"type": "quran",
+"arabic_text": "اِنْفِرُوْا خِفَافًا وَّثِقَالًا وَّجَاهِدُوْا بِاَمْوَالِكُمْ وَاَنْفُسِكُمْ فِيْ سَبِيْلِ اللّٰهِ ۗ",
+"text": "Proceed (in the path of Allaah) when light or heavy (happily or reluctantly, rich or poor, in good conditions and adverse conditions), and exert yourselves (for the welfare of the Deen) with your wealth and lives in Allaah's way (for Allaah's pleasure). [^1]"
+},
+{
+"type": "narration",
+"text": "I have commanded Khaalid bin Waleed to march to Iraq and to remain there until I issue further instructions. You should all proceed with him without hesitation because this is a path in which Allaah has multiplied the rewards for those whose intentions are good and who are enthusiastic about good things. When you reach Iraq, stay here until my instructions reach you. May Allaah take care of mine and your every concern of this world and the Aakhirah.\nPeace be on you together with the mercy and blessings of Allaah. [^2]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "Hadhrat Abu Bakr (RA) Consults with the Senior Sahabah (RA) Concerning a Military Offensive Against the Romans and Delivers a Speech in this Regard"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Abi Awfa (RA)",
+"text": "Hadhrat Abdullaah bin Abi Awfa (RA) narrates that when Hadhrat Abu Bakr (RA) intended launching a military offensive against the Romans, he first called for Hadhrat Ali (RA), Hadhrat Umar (RA), Hadhrat Uthmaan (RA), Hadhrat Abdur Rahmaan bin Auf (RA), Hadhrat Sa'd bin Abi Waqqaas (RA), Hadhrat Sa'eed bin Zaid (RA), Hadhrat Abu Ubaydah bin Jarraah (RA) and other senior Sahabah (RA) from amongst the Muhaajireen and Ansaar. He called both those who participated in the Battle of Badr and those who did not. Amongst them was Hadhrat Abdullaah bin Abi Awfa (RA), who narrates further that when they all arrived, Hadhrat Abu Bakr (RA) addressed them saying, \"Verily the bounties of Allaah on His servants cannot be counted and all our deeds can never compensate for these. All praises belong to Allaah who has united you, reconciled you, guided you to Islaam and distanced Shaytaan from you. Shaytaan now has no hope of you committing Shirk or of you taking a deity other than Allaah. The Arabs are the children of a single father and mother.\"\nHadhrat Abu Bakr (RA) continued, \"I have decided that the Muslims should march in Jihaad against the Romans in Shaam so that Allaah may strengthen the Muslims and elevate the Kalimah. Together with this, the Muslims shall have a tremendous share because whoever is killed shall die as a martyr and the rewards with Allaah are best for the righteous. On the other hand, whoever survives shall survive to defend the Deen and will be deserving of the great rewards due to those who wage Jihaad. This is merely my opinion. Any one of you is at liberty to advise me.\""
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Surah Taubah, verse 41."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Bayhaqi in his Sunan (Vol.9 Pg.179)."
+}
+]
+}

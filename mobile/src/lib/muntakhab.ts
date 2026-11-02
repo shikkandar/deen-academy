@@ -44,7 +44,7 @@ export const TOC: Record<MLang, Toc> = { ta: tocTa as Toc, en: tocEn as Toc };
 export const FIRST_PAGE = PAGE_NUMBERS[0];
 export const LAST_PAGE = PAGE_NUMBERS[PAGE_NUMBERS.length - 1];
 
-/** One page (bundled in the native apps; fetched from /data on web, so it's async). */
+/** One page, fetched from /data (in the apps: downloaded once, then kept on the phone). Null offline if never opened. */
 export async function getPage(n: number, lang: MLang): Promise<Page | null> {
   const load = PAGES[lang][n] ?? PAGES.ta[n];
   if (!load) return null;

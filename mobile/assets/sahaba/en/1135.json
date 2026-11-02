@@ -1,0 +1,56 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 1,
+"page_number": 135,
+"running_head": "Inviting Towards Islaam on the Battlefield"
+},
+"blocks": [
+{
+"type": "narration",
+"continued": true,
+"text": "him to Yemen, Rasulullaah ﷺ said to him, \"If you hear the Adhaan being called out among any nation you meet, leave them alone. However, if you pass a nation and hear no Adhaan from them, you should invite them to Islaam.\" [^1]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "Rasulullaah ﷺ Frees Captives who had not been Invited to Islaam"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Ubay bin Ka'b (RA)",
+"text": "Hadhrat Ubay bin Ka'b (RA) narrates that when some captives from Laat and Uzza were brought before Rasulullaah ﷺ, he asked (the Muslims who captured them), \"Did you invite them to accept Islaam?\" When they submitted that they had not, Rasulullaah ﷺ asked the captives, \"Did they invite you to accept Islaam?\" When they confirmed that no Da'wah was given to them, Rasulullaah ﷺ instructed, \"Free them so that they may reach their place of safety.\" Thereafter, Rasulullaah ﷺ recited the following two extracts of the Qur'aan:"
+},
+{
+"type": "quran",
+"arabic_text": "يٰٓاَيُّهَا النَّبِيُّ اِنَّآ اَرْسَلْنٰكَ شَاهِدًا وَّمُبَشِّرًا وَّنَذِيْرًا ۝ وَّدَاعِيًا اِلَى اللّٰهِ بِاِذْنِهٖ وَسِرَاجًا مُّنِيْرًا ۝",
+"reference": "Surah Ahzaab, verses 45,46",
+"text": "O Nabi ﷺ! We have certainly sent you as a witness (who will bear testimony against the Kuffaar of all nations on the Day of Qiyaamah), a carrier of good news, a warner and as a caller to Allaah by His command and an illuminating lantern."
+},
+{
+"type": "quran",
+"arabic_text": "وَاُوْحِيَ اِلَيَّ هٰذَا الْقُرْاٰنُ لِاُنْذِرَكُمْ بِهٖ وَمَنْ بَلَغَ ؕ اَئِنَّكُمْ لَتَشْهَدُوْنَ اَنَّ مَعَ اللّٰهِ اٰلِهَةً اُخْرٰى ؕ قُلْ لَّآ اَشْهَدُ ۚ قُلْ اِنَّمَا هُوَ اِلٰهٌ وَّاحِدٌ وَّاِنَّنِيْ بَرِيْٓءٌ مِّمَّا تُشْرِكُوْنَ ۝",
+"reference": "Surah An'aam, verse 19",
+"text": "\"This Qur'aan has been revealed to me so that I may warn you with it as well as (to warn) those whom it reaches (after you). Do you (Mushrikeen) really bear witness that there are other gods with Allaah?\" Say (to them O Rasulullaah ﷺ), \"I bear no such witness.\" Say, \"He (Allaah) is but One Ilaah and I am certainly innocent of that (the idols) which you associate with Him (I openly express my aversion to all types of Shirk).\" [^2]"
+},
+{
+"type": "narration",
+"text": "Another narration states that when Rasulullaah ﷺ dispatched a battalion to the vicinity where the idols Laat and Uzza stood, they attacked an Arab tribe living there and captured the soldiers and their families. The captives (when brought before Rasulullaah ﷺ) said, \"O Rasulullaah ﷺ! They attacked us without inviting us to Islaam.\" When Rasulullaah ﷺ questioned the battalion about this, they confirmed that it was true. Rasulullaah ﷺ then said to them, \"Allow them to return to their place of safety and then invite them to Islaam.\" [^3]"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Tabraani. Haythami (Vol.5 Pg.307) has commented on the Hadith."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Bayhaqi (Vol.9 Pg.107)."
+},
+{
+"type": "footnote",
+"number": 3,
+"text": "Kanzul Ummaal (Vol. 2 Pg.297)."
+}
+]
+}

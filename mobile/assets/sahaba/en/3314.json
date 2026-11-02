@@ -1,0 +1,35 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 314,
+"running_head": "Propagating one's Knowledge even if One does not practise and Seeking Protection from Knowledge that is not Beneficial"
+},
+"blocks": [
+{
+"type": "narration",
+"continued": true,
+"text": "said to them, \"We have been given this knowledge to bear and we therefore pass it on to you even though we do not practise on it.\" [^1]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "Rasulullaah ﷺ Seeks Protection from Knowledge that does not Benefit"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abu Hurayrah (RA)",
+"text": "Hadhrat Abu Hurayrah (RA) narrates that when Rasulullaah ﷺ made du'aa, he said, \"O Allaah! I seek Your protection from four things; from knowledge that is not beneficial, from a heart that does not submit, from a soul that is never satiated and from a du'aa that is not answered.\" [^2]"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Bayhaqi and Ibn Asaakir, as quoted in Kanzul Ummaal (Vol.7 Pg.24)."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Haakim (Vol.1 Pg.104), reporting from reliable sources as confirmed by Dhahabi."
+}
+]
+}

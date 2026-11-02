@@ -1,0 +1,78 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 554,
+"running_head": "Enemies are Defeated with some Pebbles and Sand Thrown at them"
+},
+"blocks": [
+{
+"type": "narration",
+"continued": true,
+"narrator": "Hadhrat Haarith bin Badal (RA)",
+"text": "in the Battle of Hunayn. (During the beginning) When all the Sahabah (RA) apart from Abbaas bin Abdul Muttalib (RA) and Abu Sufyaan bin Haarith (RA) were trounced, Rasulullaah ﷺ took a handful of earth and threw it on our faces, because of which we were defeated. It then appeared to me as if every tree and every stone was running after us.\"[^1]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Amr bin Sufyaan Thaqafi (RA)",
+"text": "Hadhrat Amr bin Sufyaan Thaqafi (RA) and others report, \"When all the Sahabah (RA) were trounced during the Battle of Hunayn, it was only Abbaas (RA) and Abu Sufyaan bin Haarith (RA) who remained with Rasulullaah ﷺ. Rasulullaah ﷺ then took a handful of pebbles and threw it on our faces, because of which we were defeated. It then appeared to me as if every stone and every tree was a horseman running after us. I then spurred my horse on (and fled) until I entered Taa'if.\"[^2]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The Enemy are Defeated by the Throwing of pebbles by Rasulullaah ﷺ during the Battle of Badr"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Hakeem bin Hizaam (RA)",
+"text": "Hadhrat Hakeem bin Hizaam (RA) says, \"(While fighting on the side of the Mushrikeen during the Battle of Badr) We heard a sound booming from the heavens to the earth that sounded like stones falling on a platter. It was then that Rasulullaah ﷺ threw some pebbles at us, because of which we were defeated.\"[^3]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Hakeem bin Hizaam (RA)",
+"text": "Hadhrat Hakeem bin Hizaam (RA) also says, \"During the Battle of Badr, Rasulullaah ﷺ was instructed to take a handful of pebbles, face us and throw it saying, 'May your faces be disfigured!' We were then defeated and Allaah revealed the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "وَمَا رَمَيْتَ إِذْ رَمَيْتَ وَلٰكِنَّ اللّٰهَ رَمٰى",
+"reference": "Surah Anfaal, verse 17[^4]",
+"text": "You (O Rasulullaah ﷺ) did not throw when you threw, but it was (actually) Allaah Who threw."
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Abbaas (RA)",
+"text": "Hadhrat Abdullaah bin Abbaas (RA) reports that Rasulullaah ﷺ asked Hadhrat Ali (RA) to hand him a handful of pebbles. When Hadhrat Ali (RA) handed them over, Rasulullaah ﷺ threw them into the faces of the enemy, causing the eyes of each one of them to be filled with pebbles. It was then that Allaah revealed the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "وَمَا رَمَيْتَ إِذْ رَمَيْتَ وَلٰكِنَّ اللّٰهَ رَمٰى",
+"reference": "Surah Anfaal, verse 17[^5]",
+"text": "You (O Rasulullaah ﷺ) did not throw when you threw, but it was (actually) Allaah Who threw."
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Tabraani, Abu Nu'aym and Ibn Asaakir, as quoted in Kanzul Ummaal (Vol.5 Pg.304). Ibn Mandah and Ibn Asaakir have also reported the narration in brief, as quoted in Kanzul Ummaal as well."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Ya'qoob bin Sufyaan, as quoted in Al Bidaayah wan Nihaayah (Vol.4 Pg.332)."
+},
+{
+"type": "footnote",
+"number": 3,
+"text": "Tabraani in his Kabeer and Awsat, reporting from reliable sources as confirmed by Haythami (Vol.6 Pg.84)."
+},
+{
+"type": "footnote",
+"number": 4,
+"text": "Tabraani in his Kabeer and Awsat, reporting from reliable sources as confirmed by Haythami (Vol.6 Pg.84)."
+},
+{
+"type": "footnote",
+"number": 5,
+"text": "Tabraani in his Kabeer and Awsat, reporting from reliable sources as confirmed by Haythami (Vol.6 Pg.84)."
+}
+]
+}

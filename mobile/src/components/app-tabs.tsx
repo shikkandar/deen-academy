@@ -39,20 +39,23 @@ export default function AppTabs() {
       </NativeTabs.Trigger>
 
       <NativeTabs.Trigger name="hadith">
-        <NativeTabs.Trigger.Label>{t('Hadith')}</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Label>{t('Library')}</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
           src={require('@/assets/images/tabIcons/hadith.png')}
           renderingMode="template"
         />
       </NativeTabs.Trigger>
 
-      <NativeTabs.Trigger name="settings">
-        <NativeTabs.Trigger.Label>{t('Settings')}</NativeTabs.Trigger.Label>
+      {/* Android allows five tabs: the Namaz Assistant has one, and Settings opens from the ⚙ on Prayers. */}
+      <NativeTabs.Trigger name="namaz">
+        <NativeTabs.Trigger.Label>{t('Namaz')}</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
-          src={require('@/assets/images/tabIcons/settings.png')}
+          src={require('@/assets/images/tabIcons/namaz.png')}
           renderingMode="template"
         />
       </NativeTabs.Trigger>
+
+      <NativeTabs.Trigger name="settings" hidden />
     </NativeTabs>
   );
 }

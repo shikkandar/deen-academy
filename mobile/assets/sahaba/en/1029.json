@@ -1,0 +1,46 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 1,
+"page_number": 29,
+"running_head": "Foreword to the Urdu Edition"
+},
+"blocks": [
+{
+"type": "heading",
+"level": "topic",
+"text": "Foreword to the Urdu Edition"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "By Hadhrat Maulana Sayyid Abul Hasan Ali Nadwi (RAH)"
+},
+{
+"type": "paragraph",
+"text": "This book (Hayaatus Sahabah (RA)) was originally written in Arabic, which is the official and most loved language of Islaam and the Muslims. It will always remain such because Allaah says in the Qur'aan:"
+},
+{
+"type": "quran",
+"arabic_text": "إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ",
+"reference": "Surah Hijr, verse 9",
+"text": "\"Without doubt only We have revealed the Reminder (the Qur'aan) and We shall certainly be its protectors.\""
+},
+{
+"type": "paragraph",
+"text": "This promise to eternally safeguard the Qur'aan automatically implies that it will always be recited and taught. This naturally means that the language of the Qur'aan will always remain protected, spoken and taught. During the time of the author Hadhrat Moulana Muhammad Yusuf (RAH), the effort of Da'wah and Tableegh which began in Nizaamud Deen in Delhi had already spread to Hijaaz and other Arab countries and it had tremendously influenced the scholars of these parts. It was therefore appropriate that this book should be published in Arabic and it was originally printed by the Arabic press of Daa'ira Ma'aarif Uthmaaniyyah of Hyderabad. It was favourably accepted in scholarly circles and in the Arab countries. It was later painstakingly printed and attractively bound by Daarul Qalam in Damascus. It was again received favourably in religious and academic circles and is still enjoying wide acceptance."
+},
+{
+"type": "paragraph",
+"text": "However, the need was long felt for a clear and reliable Urdu translation of the book for the people of the subcontinent (India/Pakistan) and those areas where people from tne Indian subcontinent have settled and where Urdu is widely spoken. In this manner, the interested people of these areas and others engaged in the effort of Da'wah and Tableegh may directly benefit from the book. This would enable them to rekindle the embers of Imaan in their hearts and to cast their lives, character and inclinations into the mould of the first Mu'mineen who had been great preachers of Islaam nurtured by none other than Rasulullaah ﷺ."
+},
+{
+"type": "paragraph",
+"text": "Although the need was long felt for an Urdu translation, the time for everything has been ordained. It was the current Ameer of the effort of Da'wah and Tableegh Hadhrat Moulana In'aamul Hasan (RAH) the successor and old friend of Hadhrat Moulana Yusuf (RAH) who initiated the translation. The honour of translating this great work fell to the lot of Hadhrat Moulana Muhammad Ihsaanul Haqq (lecturer at Madrassah Arabiyyah Raiwind). He is a graduate of Mazaahirul Uloom Sahaaranpur, a successor of Hadhrat Sheikhul Hadith Moulana Zakariyyah (RAH) and he received nurturing in the school of Tableegh which teaches concern for the Ummah and the importance of good deeds."
+},
+{
+"type": "paragraph",
+"text": "Translating a book of this type, which serves as a interpreter for the effort of"
+}
+]
+}

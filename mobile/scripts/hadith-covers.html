@@ -1,0 +1,206 @@
+<!doctype html>
+<!--
+  Hadith book covers for the Hadith tab (assets/images/books/<id>.webp), 600x840, Arabic in Diwan Thuluth (macOS).
+  Render each with headless Chrome, then shrink to WebP:
+    for id in muntakhab sahaba1 sahaba2 sahaba3 sahaba4 bukhari muslim abudawud tirmidhi nasai ibnmajah malik nawawi qudsi dehlawi muntakhab-ta sahaba1-ta sahaba2-ta sahaba3-ta sahaba4-ta bukhari-ta muslim-ta abudawud-ta tirmidhi-ta nasai-ta ibnmajah-ta malik-ta nawawi-ta qudsi-ta dehlawi-ta; do
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars --allow-file-access-from-files \
+        --default-background-color=00000000 --window-size=600,840 --screenshot=/tmp/$id.png "file://$PWD/scripts/hadith-covers.html#$id"
+      cwebp -q 80 -resize 480 672 /tmp/$id.png -o assets/images/books/$id.webp
+    done
+-->
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  @font-face { font-family: Thuluth; src: url('file:///System/Library/Fonts/Supplemental/Diwan%20Thuluth.ttf'); }
+  html, body { margin: 0; padding: 0; background: transparent; }
+  body { width: 600px; height: 840px; overflow: hidden; }
+  .book {
+    position: relative; width: 600px; height: 840px; overflow: hidden;
+    border-radius: 10px 22px 22px 10px;
+    background:
+      radial-gradient(120% 80% at 70% 20%, rgba(255,255,255,.10), transparent 60%),
+      radial-gradient(90% 70% at 30% 100%, rgba(0,0,0,.35), transparent 70%),
+      var(--c);
+  }
+  /* Spine: the bound edge on the left. */
+  .book::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 46px;
+    background: linear-gradient(90deg, rgba(0,0,0,.45), rgba(0,0,0,.12) 55%, rgba(255,255,255,.10) 80%, rgba(0,0,0,.25));
+  }
+  .book::after {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(35deg, rgba(255,255,255,.018) 0 2px, transparent 2px 5px);
+    pointer-events: none;
+  }
+  .pattern { position: absolute; left: 46px; right: 0; top: 0; bottom: 0; opacity: .16; }
+  .frame { position: absolute; left: 76px; right: 30px; top: 30px; bottom: 30px; border: 3px solid var(--g); border-radius: 6px; }
+  .frame2 { position: absolute; left: 88px; right: 42px; top: 42px; bottom: 42px; border: 1.5px solid var(--g); border-radius: 4px; opacity: .8; }
+  .corner { position: absolute; width: 64px; height: 64px; }
+  .medallion {
+    position: absolute; left: 46px; right: 0; top: 110px; height: 470px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .ar {
+    position: absolute; left: 46px; right: 0; top: 195px; height: 300px;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    font-family: Thuluth, 'Diwan Thuluth'; color: var(--g); direction: rtl;
+    font-size: var(--fs, 116px); line-height: 1.25;
+    text-shadow: 0 2px 0 rgba(0,0,0,.35), 0 0 18px rgba(0,0,0,.25);
+  }
+  .en {
+    position: absolute; left: 96px; right: 50px; bottom: 120px; text-align: center;
+    font-family: 'Baskerville', 'Times New Roman', serif; color: var(--g);
+    font-size: 30px; letter-spacing: 3px; text-transform: uppercase; line-height: 1.25;
+  }
+  .rule { position: absolute; left: 50%; bottom: 96px; width: 120px; margin-left: -37px; height: 2px; background: var(--g); opacity: .7; }
+  .by {
+    position: absolute; left: 96px; right: 50px; bottom: 62px; text-align: center;
+    font-family: 'Baskerville', serif; font-style: italic; color: var(--g); opacity: .85; font-size: 20px; letter-spacing: 1px;
+  }
+
+  /* Hayatus Sahaba: its own design — a mihrab arch, a title band, the volume as a large Arabic numeral. */
+  .sahaba .pattern, .sahaba .frame, .sahaba .frame2, .sahaba .corner, .sahaba .medallion, .sahaba .ar,
+  .sahaba .en, .sahaba .rule, .sahaba .by { display: none; }
+  .sh { display: none; }
+  .sahaba .sh { display: block; }
+  .sh-lattice { position: absolute; left: 46px; right: 0; top: 0; bottom: 0; opacity: .10; }
+  .sh-band { position: absolute; left: 46px; right: 0; top: 46px; text-align: center; font-family: 'Baskerville', serif;
+    color: var(--g); font-size: 26px; letter-spacing: 7px; }
+  .sh-band::before, .sh-band::after { content: ''; display: block; height: 2px; margin: 14px 120px; background: var(--g); opacity: .6; }
+  .sh-arch { position: absolute; left: 46px; right: 0; top: 130px; height: 470px; display: flex; justify-content: center; }
+  .sh-title { position: absolute; left: 46px; right: 0; top: 245px; text-align: center; font-family: Thuluth, 'Diwan Thuluth';
+    color: var(--g); font-size: 100px; line-height: 1.2; direction: rtl; text-shadow: 0 2px 0 rgba(0,0,0,.35); }
+  .sh-num { position: absolute; left: 46px; right: 0; top: 618px; text-align: center; font-family: 'Geeza Pro', 'Damascus', serif;
+    color: var(--g); font-size: 64px; line-height: 1; }
+  .sh-vol { position: absolute; left: 46px; right: 0; top: 700px; text-align: center; font-family: 'Baskerville', serif;
+    color: var(--g); font-size: 22px; letter-spacing: 5px; }
+  .sh-pages { position: absolute; left: 46px; right: 0; top: 740px; text-align: center; font-family: 'Baskerville', serif;
+    font-style: italic; color: var(--g); opacity: .8; font-size: 19px; }
+
+  /* Tamil covers (#<id>-ta): the same design with Tamil title and author. */
+  .ta .en { font-family: 'Tamil Sangam MN', 'InaiMathi', serif; text-transform: none; letter-spacing: 0; font-size: 28px; font-weight: 700; }
+  .ta .by { font-family: 'Tamil Sangam MN', 'InaiMathi', serif; font-style: normal; font-size: 18px; letter-spacing: 0; }
+  .ta .sh-band { font-family: 'Tamil Sangam MN', 'InaiMathi', serif; letter-spacing: 1px; font-size: 26px; font-weight: 700; }
+  .ta .sh-vol { font-family: 'Tamil Sangam MN', 'InaiMathi', serif; letter-spacing: 1px; font-size: 22px; }
+  .ta .sh-pages { font-family: 'Tamil Sangam MN', 'InaiMathi', serif; font-style: normal; }
+</style>
+</head>
+<body>
+<div class="book" id="book">
+  <svg class="pattern" viewBox="0 0 554 840" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <pattern id="star" width="92" height="92" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="#fff" stroke-width="1.6">
+          <!-- eight-pointed star (two squares) with linking lines: a simple girih tile -->
+          <rect x="26" y="26" width="40" height="40" />
+          <rect x="26" y="26" width="40" height="40" transform="rotate(45 46 46)" />
+          <circle cx="46" cy="46" r="9" />
+          <path d="M0 46H18M74 46H92M46 0V18M46 74V92" />
+          <path d="M0 0L17 17M92 0L75 17M0 92L17 75M92 92L75 75" />
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#star)" />
+  </svg>
+  <div class="frame"></div>
+  <div class="frame2"></div>
+  <svg class="corner" style="left:70px;top:24px" viewBox="0 0 64 64"><g fill="none" stroke="var(--g)" stroke-width="2.5"><path d="M6 40C6 20 20 6 40 6"/><path d="M6 26C6 15 15 6 26 6"/><circle cx="18" cy="18" r="4" fill="var(--g)"/></g></svg>
+  <svg class="corner" style="right:24px;top:24px;transform:scaleX(-1)" viewBox="0 0 64 64"><g fill="none" stroke="var(--g)" stroke-width="2.5"><path d="M6 40C6 20 20 6 40 6"/><path d="M6 26C6 15 15 6 26 6"/><circle cx="18" cy="18" r="4" fill="var(--g)"/></g></svg>
+  <svg class="corner" style="left:70px;bottom:24px;transform:scaleY(-1)" viewBox="0 0 64 64"><g fill="none" stroke="var(--g)" stroke-width="2.5"><path d="M6 40C6 20 20 6 40 6"/><path d="M6 26C6 15 15 6 26 6"/><circle cx="18" cy="18" r="4" fill="var(--g)"/></g></svg>
+  <svg class="corner" style="right:24px;bottom:24px;transform:scale(-1,-1)" viewBox="0 0 64 64"><g fill="none" stroke="var(--g)" stroke-width="2.5"><path d="M6 40C6 20 20 6 40 6"/><path d="M6 26C6 15 15 6 26 6"/><circle cx="18" cy="18" r="4" fill="var(--g)"/></g></svg>
+  <div class="medallion">
+    <svg width="470" height="470" viewBox="0 0 400 400">
+      <g fill="none" stroke="var(--g)">
+        <!-- a 16-point rosette framing the title -->
+        <g stroke-width="2.5" opacity=".9">
+          <rect x="70" y="70" width="260" height="260" rx="8" transform="rotate(0 200 200)" />
+          <rect x="70" y="70" width="260" height="260" rx="8" transform="rotate(45 200 200)" />
+        </g>
+        <g stroke-width="1.2" opacity=".55">
+          <rect x="84" y="84" width="232" height="232" rx="6" transform="rotate(22.5 200 200)" />
+          <rect x="84" y="84" width="232" height="232" rx="6" transform="rotate(67.5 200 200)" />
+        </g>
+        <circle cx="200" cy="200" r="132" stroke-width="1.2" opacity=".6" />
+      </g>
+      <circle cx="200" cy="200" r="128" fill="rgba(0,0,0,.18)" />
+    </svg>
+  </div>
+  <svg class="sh sh-lattice" viewBox="0 0 554 840" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <pattern id="lat" width="56" height="56" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <path d="M0 28H56M28 0V56" stroke="#fff" stroke-width="1.4" fill="none" />
+        <circle cx="28" cy="28" r="5" stroke="#fff" stroke-width="1.2" fill="none" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#lat)" />
+  </svg>
+  <div class="sh sh-band">HAYATUS SAHABA</div>
+  <div class="sh sh-arch">
+    <svg width="380" height="470" viewBox="0 0 380 470">
+      <g fill="none" stroke="var(--g)">
+        <path d="M20 470V200C20 95 110 40 190 10C270 40 360 95 360 200V470" stroke-width="3" />
+        <path d="M44 470V206C44 112 122 64 190 36C258 64 336 112 336 206V470" stroke-width="1.4" opacity=".7" />
+        <circle cx="190" cy="10" r="6" fill="var(--g)" />
+      </g>
+      <path d="M44 470V206C44 112 122 64 190 36C258 64 336 112 336 206V470Z" fill="rgba(0,0,0,.20)" />
+    </svg>
+  </div>
+  <div class="sh sh-title" id="shTitle"></div>
+  <div class="sh sh-num" id="shNum"></div>
+  <div class="sh sh-vol" id="shVol"></div>
+  <div class="sh sh-pages" id="shPages"></div>
+  <div class="ar" id="ar"></div>
+  <div class="en" id="en"></div>
+  <div class="rule"></div>
+  <div class="by" id="by"></div>
+</div>
+<script>
+  const BOOKS = {
+    muntakhab: { ar: 'منتخب<br>الأحاديث', en: 'Muntakhab Ahadith', by: 'Maulana Muhammad Yusuf Kandhlawi', c: '#1E1E24', g: '#E9C77B', fs: '100px' },
+    sahaba1: { sahaba: true, num: '١', vol: 'VOLUME ONE', pages: '452 pages', c: '#1D4E4A', g: '#E9C77B' },
+    sahaba2: { sahaba: true, num: '٢', vol: 'VOLUME TWO', pages: '588 pages', c: '#5E2230', g: '#E9C77B' },
+    sahaba3: { sahaba: true, num: '٣', vol: 'VOLUME THREE', pages: '539 pages', c: '#283A66', g: '#E9C77B' },
+    sahaba4: { sahaba: true, num: '٤', vol: 'VOLUME FOUR', pages: '199 pages', c: '#5B4022', g: '#E9C77B' },
+    sahaba:   { ar: 'حياة<br>الصحابة', en: 'Hayatus Sahaba', by: 'Maulana Muhammad Yusuf Kandhlawi', c: '#3D5A2A', g: '#EED98A', fs: '108px' },
+    bukhari:  { ar: 'صحيح<br>البخاري', en: 'Sahih al-Bukhari', by: 'Imam al-Bukhari', c: '#1F4D3A', g: '#E2C27A' },
+    muslim:   { ar: 'صحيح<br>مسلم', en: 'Sahih Muslim', by: 'Imam Muslim', c: '#6B1F2A', g: '#E9C984' },
+    abudawud: { ar: 'سنن<br>أبي داود', en: 'Sunan Abu Dawud', by: 'Imam Abu Dawud', c: '#1E3557', g: '#DDBF7E' },
+    tirmidhi: { ar: 'جامع<br>الترمذي', en: 'Jami at-Tirmidhi', by: 'Imam at-Tirmidhi', c: '#5A3A1E', g: '#EACB8A' },
+    nasai:    { ar: 'سنن<br>النسائي', en: 'Sunan an-Nasai', by: 'Imam an-Nasai', c: '#0F4C5C', g: '#E3C580' },
+    ibnmajah: { ar: 'سنن<br>ابن ماجه', en: 'Sunan Ibn Majah', by: 'Imam Ibn Majah', c: '#4A2545', g: '#E6C78A' },
+    malik:    { ar: 'موطأ<br>مالك', en: 'Muwatta Malik', by: 'Imam Malik', c: '#2E4A2A', g: '#E8CF8F', fs: '108px' },
+    nawawi:   { ar: 'الأربعون<br>النووية', en: '40 Hadith an-Nawawi', by: 'Imam an-Nawawi', c: '#7A4A12', g: '#F3DDA6', fs: '100px' },
+    qudsi:    { ar: 'الأحاديث<br>القدسية', en: '40 Hadith Qudsi', by: 'Sacred hadith', c: '#23395B', g: '#F0D79A', fs: '100px' },
+    dehlawi:  { ar: 'الأربعون<br>الدهلوية', en: '40 Hadith Shah Waliullah', by: 'Shah Waliullah Dehlawi', c: '#3B4A1F', g: '#E8D095', fs: '100px' },
+  };
+  // Tamil title and author for the Tamil covers (#<id>-ta).
+  const TA = {"muntakhab": {"en": "முன்தகப் அஹாதீஸ்", "by": "மௌலானா முஹம்மத் யூஸுஃப் காந்தலவி"}, "bukhari": {"en": "ஸஹீஹ் அல்புகாரி", "by": "இமாம் புகாரி"}, "muslim": {"en": "ஸஹீஹ் முஸ்லிம்", "by": "இமாம் முஸ்லிம்"}, "abudawud": {"en": "ஸுனன் அபூதாவூத்", "by": "இமாம் அபூதாவூத்"}, "tirmidhi": {"en": "ஜாமிஉத் திர்மிதீ", "by": "இமாம் திர்மிதீ"}, "nasai": {"en": "ஸுனன் அந்நஸாயீ", "by": "இமாம் நஸாயீ"}, "ibnmajah": {"en": "ஸுனன் இப்னுமாஜா", "by": "இமாம் இப்னுமாஜா"}, "malik": {"en": "முவத்தா மாலிக்", "by": "இமாம் மாலிக்"}, "nawawi": {"en": "நவவீயின் 40 ஹதீஸ்கள்", "by": "இமாம் நவவீ"}, "qudsi": {"en": "40 ஹதீஸ் குத்ஸீ", "by": "புனித ஹதீஸ்கள்"}, "dehlawi": {"en": "40 ஹதீஸ்கள்", "by": "ஷாஹ் வலியுல்லாஹ் திஹ்லவீ"}};
+  const TA_VOL = { '1': 'பாகம் ஒன்று', '2': 'பாகம் இரண்டு', '3': 'பாகம் மூன்று', '4': 'பாகம் நான்கு' };
+  const [id, lang] = location.hash.slice(1).split('-');
+  const tamil = lang === 'ta';
+  const b = { ...(BOOKS[id] || BOOKS.bukhari), ...(tamil && TA[id] ? TA[id] : {}) };
+  if (tamil && b.sahaba) {
+    const v = id.slice(-1);
+    b.vol = TA_VOL[v];
+    b.pages = b.pages.replace('pages', 'பக்கங்கள்');
+  }
+  const book = document.getElementById('book');
+  if (tamil) book.classList.add('ta');
+  book.style.setProperty('--c', b.c);
+  book.style.setProperty('--g', b.g);
+  if (b.fs) book.style.setProperty('--fs', b.fs);
+  if (b.sahaba) {
+    book.classList.add('sahaba');
+    if (tamil) document.querySelector('.sh-band').textContent = 'ஹயாத்துஸ் ஸஹாபா';
+    document.getElementById('shTitle').innerHTML = 'حياة<br>الصحابة';
+    document.getElementById('shNum').textContent = b.num;
+    document.getElementById('shVol').textContent = b.vol;
+    document.getElementById('shPages').textContent = b.pages;
+  }
+  document.getElementById('ar').innerHTML = b.ar || '';
+  document.getElementById('en').textContent = b.en || '';
+  document.getElementById('by').textContent = b.by || '';
+</script>
+</body>
+</html>

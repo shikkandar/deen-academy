@@ -13,12 +13,16 @@ export const WELCOME = {
       ta: 'Deen Academy-க்கு வரவேற்கிறோம். உங்கள் தொழுகைக்கு ஒரு அமைதியான துணை.',
     },
     {
+      en: 'It was made by Shikkandar, from the Gandhigramam Masjid mahalla in Karur, as a small bridge between this dunya and the Jannah we all hope for.',
+      ta: 'கரூர் காந்திகிராமம் மஸ்ஜித் மஹல்லாவைச் சேர்ந்த ஷிக்கந்தர் இதை உருவாக்கினார். இந்த துன்யாவுக்கும், நாம் அனைவரும் ஆசைப்படும் சுவனத்துக்கும் இடையே ஒரு சிறிய பாலமாக.',
+    },
+    {
       en: 'It will remind you before every Azan, wake you for Fajr, and keep the Quran, the duas and the words of the Prophet ﷺ close to you, wherever you are.',
       ta: 'ஒவ்வொரு பாங்குக்கும் முன் நினைவூட்டும், ஃபஜ்ருக்கு எழுப்பும், குர்ஆன், துஆக்கள், நபி ﷺ அவர்களின் வார்த்தைகளை நீங்கள் எங்கிருந்தாலும் அருகில் வைத்திருக்கும்.',
     },
     {
-      en: 'Every day it will show you one reminder from the Quran and the Sunnah. Read it, reflect on it, and carry it into your day.',
-      ta: 'ஒவ்வொரு நாளும் குர்ஆன், சுன்னாவிலிருந்து ஒரு நினைவூட்டல் காட்டும். படியுங்கள், சிந்தியுங்கள், அதை உங்கள் நாளில் எடுத்துச் செல்லுங்கள்.',
+      en: 'It is free for everyone. If it helps you even a little, please remember me in your duas.',
+      ta: 'இது அனைவருக்கும் இலவசம். இது உங்களுக்குச் சிறிதளவாவது பயன்பட்டால், உங்கள் துஆக்களில் என்னையும் நினைவுகூருங்கள்.',
     },
     {
       en: 'May Allah accept your prayers and make every step a step towards Jannah.',
@@ -32,7 +36,7 @@ export const WELCOME = {
       ta: 'எங்கள் இறைவா, எங்களுக்கு இம்மையிலும் நன்மையைத் தா, மறுமையிலும் நன்மையைத் தா, நரக வேதனையிலிருந்து எங்களைக் காப்பாற்று. (அல்-பகரா 2:201)',
     } as Text,
   },
-  signoff: { en: 'Deen Academy', ta: 'Deen Academy' } as Text,
+  signoff: { en: 'Shikkandar · Gandhigramam Masjid, Karur', ta: 'ஷிக்கந்தர் · காந்திகிராமம் மஸ்ஜித், கரூர்' } as Text,
 };
 
 export const pick = (text: Text, language: Language) => text[language] ?? text.en;

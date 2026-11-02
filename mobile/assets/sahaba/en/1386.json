@@ -1,0 +1,40 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 1,
+"page_number": 386,
+"running_head": "The Ansaar in the Battles against the Banu Qaynuqah, Banu Nadheer and Banu Qurayzah Tribes"
+},
+"blocks": [
+{
+"type": "narration",
+"continued": true,
+"text": "defeated the Quraysh in the Battle of Badr, he gathered the Jews (of Madinah) in the marketplace of the Banu Qaynuqah tribe. He then said to them, \"O Jews! Accept Islaam before you suffer the same fate as the Quraysh suffered in the Battle of Badr.\" The Jews said, \"The Quraysh do not know how to fight. If you were to fight against us, you would learn that we are real men.\" It was then that Allaah revealed the following verse of the Qur'aan:"
+},
+{
+"type": "quran",
+"arabic_text": "قُلْ لِّلَّذِيْنَ كَفَرُوْا سَتُغْلَبُوْنَ وَتُحْشَرُوْنَ اِلٰى جَهَنَّمَ ۗ وَبِئْسَ الْمِهَادُ ۞ قَدْ كَانَ لَكُمْ اٰيَةٌ فِيْ فِئَتَيْنِ الْتَقَتَا ۗ فِئَةٌ تُقَاتِلُ فِيْ سَبِيْلِ اللّٰهِ وَاُخْرٰى كَافِرَةٌ يَّرَوْنَهُمْ مِّثْلَيْهِمْ رَاْيَ الْعَيْنِ ۗ وَاللّٰهُ يُؤَيِّدُ بِنَصْرِهٖ مَنْ يَّشَآءُ ۗ اِنَّ فِيْ ذٰلِكَ لَعِبْرَةً لِّاُولِى الْاَبْصَارِ ۞",
+"reference": "Surah Aal Imraan, verses 12,13",
+"text": "Say to the Kaafiroon, \"You shall be overpowered (by the Muslims in this world) and gathered in Jahannam (in the Aakhirah), which is the worst of beddings (places).\" Indeed there was a sign for you in the two groups which met (during the Battle of Badr). One group fought in the way of Allaah (in the obedience of Allaah, this was the Muslim army led by Rasulullaah ﷺ) while the other was (the group of) Kuffaar, who saw them (the Muslims) as twice their number with their very eyes (Allaah made the Muslims seem twice their number to the Kuffaar). Allaah strengthens with His aid whoever He wills. Truly in this is a lesson for those with foresight. [^1]"
+},
+{
+"type": "narration",
+"text": "Another narration states that the Jews said to Rasulullaah ﷺ, \"O Muhammad! Do not pride yourself on the fact that you have killed some people of the Quraysh who were unseasoned in the art of warfare and did not know how to fight. Should you fight against us, you would soon learn that we are real men and that you have not met the likes of us in battle.\" [^2]"
+},
+{
+"type": "narration",
+"narrator": "Imaam Zuhri (RAH)",
+"text": "Imaam Zuhri (RAH) narrates that after the Mushrikeen were defeated at Badr, the Muslims said to their Jewish acquaintances, \"Accept Islaam before Alaah makes you suffer a day like the day of Badr.\" Maalik bin Sayf commented, \"Are you deceived by that fact that you have defeated a group of people from the Quraysh who have no knowledge of warfare? If we resolve to amass all our forces against you, you would have no power to fight us.\"\nHadhrat Ubaadah bin Saamit (RA) then said, \"O Rasulullaah ﷺ! I have many Jewish friends who are powerful men with plenty weapons and great influence. However, I release myself from their friendship to adopt the friendship of Allaah and His Rasool ﷺ. I shall have no protecting friend besides Allaah and His Rasool ﷺ.\" To this, (the hypocrite) Abdullaah bin Ubay commented, \"On the contrary, I shall not release myself from the friendship of the Jews for I am a person who needs them.\" Addressing Abdullaah bin Ubay, Rasulullaah ﷺ said,"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Ibn Is'haaq, as quoted in Fat'hul Baari (Vol.7 Pg.334)."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Abu Dawood (Vol.4 Pg.141)."
+}
+]
+}

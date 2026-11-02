@@ -1,6 +1,6 @@
-import { router } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { Image, Modal, Platform, ScrollView, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn, FadeOut, LinearTransition } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -19,9 +19,10 @@ import { useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 import { localeFor } from '@/lib/i18n';
+import SettingsScreen from '@/app/settings';
 import { useAppState } from '@/lib/app-state';
 import { rakatFor } from '@/lib/rakat';
-import { dueTime, formatTime, getCurrentPrayer, getDayTimes, getLastPrayer, getNextPrayer, getPrayerWindow, isAfterNamaz, type PrayerTime } from '@/lib/prayer';
+import { formatTime, getCurrentPrayer, getDayTimes, getLastPrayer, getNextPrayer, getPrayerWindow, isAfterNamaz } from '@/lib/prayer';
 
 
 function useNow(intervalMs = 1000) {
@@ -33,18 +34,27 @@ function useNow(intervalMs = 1000) {
   return now;
 }
 
-function formatCountdown(ms: number) {
+function formatCountdown(ms: number, t: (en: string, vars?: Record<string, string | number>) => string) {
   const total = Math.max(0, Math.floor(ms / 1000));
   const h = Math.floor(total / 3600);
   const m = Math.floor((total % 3600) / 60);
   const s = total % 60;
-  return h > 0 ? `${h}h ${m}m` : `${m}m ${s.toString().padStart(2, '0')}s`;
+  return h > 0 ? t('{h}h {m}m', { h, m }) : t('{m}m {s}s', { m, s: s.toString().padStart(2, '0') });
 }
 
 export default function HomeScreen() {
   const [assistant, setAssistant] = useState(false);
+  // In the apps Settings isn't a tab (Android allows five; the Namaz Assistant has one): the ⚙ here opens it.
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  // The sidebar's "Namaz Assistant" opens it here (/?assistant=1).
+  const { assistant: openAssistant } = useLocalSearchParams<{ assistant?: string }>();
+  const assistantOpen = assistant || openAssistant === '1';
+  const closeAssistant = () => {
+    setAssistant(false);
+    if (openAssistant) router.setParams({ assistant: undefined });
+  };
   const theme = useTheme();
-  const { place, settings, locationPermission, loading, requestLocation, refreshLocation } = useAppState();
+  const { place, settings, updateSettings, locationPermission, loading, requestLocation, refreshLocation } = useAppState();
   const t = useT();
   const now = useNow();
   const layout = useLayout();
@@ -83,7 +93,7 @@ export default function HomeScreen() {
     );
   }
 
-  const { prayers, sunrise } = getDayTimes(place, now, settings);
+  const { prayers, sunrise, extras } = getDayTimes(place, now, settings);
   const next = getNextPrayer(place, settings, now);
   const current = getCurrentPrayer(place, settings, now);
   // The prayer the screen is about: the one happening now, otherwise the next one.
@@ -93,7 +103,18 @@ export default function HomeScreen() {
   const prayerWindow = getPrayerWindow(place, settings, now);
   const assistantPrayer = prayerWindow?.prayer.name ?? next.name;
   const afterNamaz = !!last && isAfterNamaz(last, settings, now);
-  const rows = [prayers[0], { name: 'Sunrise', time: sunrise, jamaat: null }, ...prayers.slice(1)];
+  // Sahar, Zawal and Iftar sit beside the prayers they belong to; she can hide them.
+  const showExtra = settings.showExtraTimes;
+  const extra = (name: string, time: Date) => (showExtra ? [{ name, time, extra: true }] : []);
+  const rows: { name: string; time: Date; extra?: boolean }[] = [
+    ...extra('Sahar ends', extras.sahar),
+    prayers[0],
+    { name: 'Sunrise', time: sunrise },
+    ...extra('Zawal', extras.zawal),
+    ...prayers.slice(1, 3),
+    ...extra('Iftar', extras.iftar),
+    ...prayers.slice(3),
+  ];
   const dateLabel = now.toLocaleDateString(localeFor(settings.language) ?? [], { weekday: 'long', day: 'numeric', month: 'long' });
 
   const greeting = (
@@ -102,13 +123,28 @@ export default function HomeScreen() {
       <Animated.View entering={enter(0)} style={styles.header}>
         <View style={styles.headerText}>
           <ThemedText style={styles.serifTitle}>{t('Assalamu alaikum')}</ThemedText>
+          {settings.profile?.name ? (
+            <ThemedText style={[styles.greetName, { color: theme.primary }]} numberOfLines={1}>
+              {settings.profile.name}
+            </ThemedText>
+          ) : null}
           <ThemedText type="small" themeColor="textSecondary">
             {dateLabel}
           </ThemedText>
         </View>
-        <View style={[styles.headerFlower, { backgroundColor: theme.primarySoft }]}>
-          <FloatingFlower size={40} rotate={12} period={30} />
-        </View>
+        {Platform.OS === 'web' ? (
+          <View style={[styles.headerFlower, { backgroundColor: theme.primarySoft }]}>
+            <FloatingFlower size={40} rotate={12} period={30} />
+          </View>
+        ) : (
+          <SpringPressable
+            accessibilityRole="button"
+            accessibilityLabel={t('Settings')}
+            onPress={() => setSettingsOpen(true)}
+            style={[styles.headerFlower, { backgroundColor: theme.primarySoft }]}>
+            <Image source={require('@/assets/images/tabIcons/settings.png')} style={[styles.gear, { tintColor: theme.primary }]} />
+          </SpringPressable>
+        )}
       </Animated.View>
 
       {/* A different reminder every day. */}
@@ -159,7 +195,7 @@ export default function HomeScreen() {
         <ThemedText type="small" style={{ color: theme.onHero, fontVariant: ['tabular-nums'] }}>
           {current
             ? t('Next: {name} at {time}', { name: t(next.name), time: formatTime(next.time) })
-            : t('in {time}', { time: formatCountdown(next.time.getTime() - now.getTime()) })}
+            : t('in {time}', { time: formatCountdown(next.time.getTime() - now.getTime(), t) })}
         </ThemedText>
       </View>
 
@@ -222,7 +258,12 @@ export default function HomeScreen() {
         </View>
         <ThemedText style={[styles.bold, { color: theme.primary }]}>▶</ThemedText>
       </SpringPressable>
-      <NamazAssistant prayer={assistantPrayer} visible={assistant} onClose={() => setAssistant(false)} />
+      <NamazAssistant prayer={assistantPrayer} visible={assistantOpen} onClose={closeAssistant} />
+      {Platform.OS !== 'web' && (
+        <Modal visible={settingsOpen} animationType="slide" onRequestClose={() => setSettingsOpen(false)}>
+          <SettingsScreen onClose={() => setSettingsOpen(false)} />
+        </Modal>
+      )}
       <SpringPressable
         pressedScale={0.98}
         onPress={() => router.push('/qibla')}
@@ -266,13 +307,10 @@ export default function HomeScreen() {
           <ThemedText type="smallBold" themeColor="textSecondary" style={styles.timeCol}>
             {t('Azan')}
           </ThemedText>
-          <ThemedText type="smallBold" themeColor="textSecondary" style={styles.timeCol}>
-            {t('Iqamah')}
-          </ThemedText>
         </View>
       </View>
       {rows.map((p, i) => {
-        const isNext = p.time.getTime() === next.time.getTime();
+        const isNext = !p.extra && p.time.getTime() === next.time.getTime();
         const past = p.time < now && !isNext;
         const color = isNext ? theme.primary : past ? theme.textSecondary : theme.text;
         return (
@@ -291,18 +329,23 @@ export default function HomeScreen() {
                 petalColor={isNext ? theme.primary : past ? theme.border : theme.backgroundSelected}
                 centerColor={isNext ? theme.gold : past ? theme.backgroundSelected : theme.gold}
               />
-              <ThemedText style={[{ color }, isNext && styles.bold]}>{t(p.name)}</ThemedText>
+              <ThemedText type={p.extra ? 'small' : 'default'} style={[{ color }, isNext && styles.bold]}>
+                {t(p.name)}
+              </ThemedText>
             </View>
             <View style={styles.rowRight}>
-              <ThemedText style={[styles.timeCol, { color }, isNext && styles.bold]}>{formatTime(p.time)}</ThemedText>
-              {/* Iqamah: the masjid's Jamaat, else an estimate (~) from "Namaz starts after Azan"; none for Sunrise */}
-              <ThemedText style={[styles.timeCol, { color: p.jamaat ? color : theme.textSecondary }, isNext && !!p.jamaat && styles.bold]}>
-                {p.name === 'Sunrise' ? '—' : p.jamaat ? formatTime(p.jamaat) : `~${formatTime(dueTime(p as PrayerTime, settings))}`}
+              <ThemedText type={p.extra ? 'small' : 'default'} style={[styles.timeCol, { color }, isNext && styles.bold]}>
+                {formatTime(p.time)}
               </ThemedText>
             </View>
           </Animated.View>
         );
       })}
+      <SpringPressable pressedScale={0.96} onPress={() => updateSettings({ showExtraTimes: !showExtra })} style={styles.extraToggle}>
+        <ThemedText type="small" style={[styles.bold, { color: theme.primary }]}>
+          {showExtra ? t('✕ Hide Sahar, Zawal and Iftar') : t('+ Show Sahar, Zawal and Iftar')}
+        </ThemedText>
+      </SpringPressable>
     </Animated.View>
   );
 
@@ -367,6 +410,8 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
+  gear: { width: 26, height: 26 },
+  greetName: { fontSize: 20, fontWeight: 700 },
   dailyLine: { fontFamily: Fonts?.serif, fontStyle: 'italic', fontSize: 16, lineHeight: 24 },
   container: { flex: 1, flexDirection: 'row', justifyContent: 'center' },
   safeArea: { flex: 1, maxWidth: MaxContentWidth },
@@ -439,6 +484,7 @@ const styles = StyleSheet.create({
   rowRight: { flexDirection: 'row', gap: Spacing.three },
   timeCol: { width: 76, textAlign: 'right', fontVariant: ['tabular-nums'] },
   colHead: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  extraToggle: { alignSelf: 'center', paddingTop: Spacing.two, paddingHorizontal: Spacing.three, cursor: 'pointer' },
   tabular: { fontVariant: ['tabular-nums'] },
   assistant: {
     flexDirection: 'row',

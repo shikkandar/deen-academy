@@ -46,3 +46,7 @@ example
 .netlify/
 build-apk.log
 modules/*/android/build/
+
+scripts/sahaba/_work/
+scripts/sahaba/_haiku_test/
+assets/sahaba/search-*.json

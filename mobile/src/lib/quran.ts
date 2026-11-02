@@ -1,9 +1,11 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-// AlQuran Cloud — free, no API key. Arabic: Uthmani script. English: Saheeh International.
+import { WORD_TIMES } from './word-times';
+
+// AlQuran Cloud — free, no API key. Arabic: Uthmani script. English: Saheeh International. Urdu: Jalandhry.
 // Audio: one MP3 per ayah, from the reciter / translation edition she picks (see audio options below).
 const API = 'https://api.alquran.cloud/v1';
-const TEXT_EDITIONS = 'quran-uthmani,en.sahih';
+const TEXT_EDITIONS = 'quran-uthmani,en.sahih,ur.jalandhry';
 
 // Tamil translation text and audio: Omar Sharif (abridged), from QuranEnc.com — free to republish unchanged,
 // with credit and the version number. Both are streamed from QuranEnc, not packaged in the app.
@@ -41,8 +43,20 @@ const VOICE_EDITION: Record<Exclude<Voice, 'none'>, string> = {
   urdu: 'ur.khan', // Shamshad Ali Khan
 };
 
-/** Translation shown under each ayah. */
-export type TextLanguage = 'en' | 'ta';
+/** Translation shown under each ayah, or none (the Arabic only). */
+export type TextLanguage = 'en' | 'ta' | 'ur' | 'off';
+
+/** The language a spoken-translation edition speaks, or null for the Arabic recitation. */
+export function voiceLanguage(edition: string): Exclude<TextLanguage, 'off'> | null {
+  const voice = (Object.keys(VOICE_EDITION) as (keyof typeof VOICE_EDITION)[]).find((v) => VOICE_EDITION[v] === edition);
+  return voice === 'english' ? 'en' : voice === 'tamil' ? 'ta' : voice === 'urdu' ? 'ur' : null;
+}
+
+/** An ayah's translation in `lang` (English if that one is missing), or null when translations are off. */
+export function translationOf(a: Ayah, lang: TextLanguage): string | null {
+  if (lang === 'off') return null;
+  return (lang === 'ta' ? a.tamil : lang === 'ur' ? a.urdu : '') || a.english;
+}
 
 /** What plays for each ayah: the Arabic recitation, a spoken translation, or both (Arabic first). */
 export type AudioPrefs = { arabic: boolean; voice: Voice; reciter: ReciterId; translation?: TextLanguage };
@@ -92,6 +106,7 @@ export type Ayah = {
   arabic: string;
   english: string;
   tamil: string;
+  urdu: string;
 };
 
 export type Surah = SurahInfo & { ayahs: Ayah[] };
@@ -159,8 +174,8 @@ async function getTamil(number: number): Promise<string[]> {
 }
 
 export function getSurah(number: number): Promise<Surah> {
-  return cached(`quran.surah.v5.${number}`, async () => {
-    const [[arabic, english], tamil] = await Promise.all([
+  return cached(`quran.surah.v6.${number}`, async () => {
+    const [[arabic, english, urdu], tamil] = await Promise.all([
       get<EditionSurah[]>(`/surah/${number}/editions/${TEXT_EDITIONS}`),
       getTamil(number),
     ]);
@@ -173,13 +188,92 @@ export function getSurah(number: number): Promise<Surah> {
         arabic: i === 0 && hasBismillahHeader(number) ? stripBismillah(a.text) : a.text,
         english: english.ayahs[i].text,
         tamil: tamil[i] ?? '',
+        urdu: urdu?.ayahs[i]?.text ?? '',
       })),
     };
   });
 }
 
+// Quran.com: the same reciters' recordings with the time of every word (to highlight the word being recited),
+// and the Uthmani text split into those same words.
+const QURAN_COM = 'https://api.quran.com/api/v4';
+const QURAN_COM_AUDIO = 'https://verses.quran.com/';
+const WORD_TIMED: Partial<Record<string, number>> = {
+  'ar.alafasy': 7,
+  'ar.abdulbasitmurattal': 2,
+  'ar.abdurrahmaansudais': 3,
+  'ar.saoodshuraym': 10,
+  'ar.husary': 6,
+  'ar.minshawi': 9,
+};
+
+/** When each word of an ayah is said (ms from the start of the ayah's MP3): [start, end] per word, or null for a
+ * shown "word" that is not said (a dash). */
+export type WordTimes = ([number, number] | null)[];
+type TimedAudio = { urls: string[]; times: WordTimes[] };
+
+// Recitations whose word times we made (forced alignment against the shown text), per surah: the spoken
+// translations, and Arabic reciters Quran.com has no timings for (against its words).
+const OWN_TIMED = WORD_TIMES;
+
+/** Whether this audio edition knows when each word is said. */
+export function hasWordTimes(edition: string) {
+  return WORD_TIMED[edition] != null || edition in OWN_TIMED;
+}
+
+async function quranCom<T>(path: string): Promise<T> {
+  let res: Response;
+  try {
+    res = await fetch(`${QURAN_COM}${path}`);
+  } catch {
+    throw new Error('No internet connection. Opened surahs are saved for offline reading.');
+  }
+  if (!res.ok) throw new Error('Could not load the recitation right now. Please try again.');
+  return (await res.json()) as T;
+}
+
+type Segment = [number | string, number | string, number | string, number | string]; // index, word, start, end
+type QuranComAudio = { audio_files: { verse_key: string; url: string; segments?: Segment[] }[] };
+
+function getTimedAudio(number: number, recitation: number): Promise<TimedAudio> {
+  return cached(`quran.timed.v1.${recitation}.${number}`, async () => {
+    const { audio_files } = await quranCom<QuranComAudio>(`/recitations/${recitation}/by_chapter/${number}?fields=segments&per_page=300`);
+    const files = [...audio_files].sort((a, b) => Number(a.verse_key.split(':')[1]) - Number(b.verse_key.split(':')[1]));
+    return {
+      urls: files.map((f) => (f.url.startsWith('//') ? `https:${f.url}` : f.url.startsWith('http') ? f.url : QURAN_COM_AUDIO + f.url)),
+      times: files.map((f) => {
+        const times: WordTimes = [];
+        for (const [, word, start, end] of f.segments ?? []) times[Number(word) - 1] = [Number(start), Number(end)];
+        return Array.from(times, (t) => t ?? null);
+      }),
+    };
+  });
+}
+
+/** The time of every word of every ayah, for an edition that has them (see hasWordTimes). */
+export async function getWordTimes(number: number, edition: string): Promise<WordTimes[]> {
+  const own = OWN_TIMED[edition]?.[number];
+  if (own) return ((await own()) as WordTimes[] | null) ?? [];
+  const id = WORD_TIMED[edition];
+  return id == null ? [] : (await getTimedAudio(number, id)).times;
+}
+
+type QuranComVerses = { verses: { verse_key: string; words: { char_type_name: string; text_uthmani: string }[] }[] };
+
+/** Each ayah's Arabic as its words (the ones the word times count), without the ayah-number sign. */
+export function getSurahWords(number: number): Promise<string[][]> {
+  return cached(`quran.words.v1.${number}`, async () => {
+    const { verses } = await quranCom<QuranComVerses>(
+      `/verses/by_chapter/${number}?words=true&word_fields=text_uthmani&per_page=300`,
+    );
+    return verses.map((v) => v.words.filter((w) => w.char_type_name === 'word').map((w) => w.text_uthmani));
+  });
+}
+
 /** One MP3 URL per ayah of the surah, for one audio edition. */
 export function getSurahAudio(number: number, edition: string): Promise<string[]> {
+  const timed = WORD_TIMED[edition];
+  if (timed != null) return getTimedAudio(number, timed).then((t) => t.urls);
   return cached(`quran.audio.v1.${edition}.${number}`, async () => {
     if (edition === TAMIL_EDITION) {
       const info = (await getSurahList()).find((x) => x.number === number);

@@ -1,0 +1,56 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 115,
+"running_head": "The Strength of the Imaan of the Sahabah (RA)"
+},
+"blocks": [
+{
+"type": "heading",
+"level": "topic",
+"text": "The Strength of the Imaan of the Sahabah (RA)"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The Sahabah (RA) Abide by the verse \"Whether you make known what is in your hearts or hide it...\""
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abu Hurayrah (RA)",
+"text": "Hadhrat Abu Hurayrah (RA) narrates that the Sahabah (RA) felt a hard blow when Allah revealed the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "لِلّٰهِ مَا فِى السَّمٰوٰتِ وَمَا فِى الْاَرْضِ ؕ وَاِنْ تُبْدُوْا مَا فِىْٓ اَنْفُسِكُمْ اَوْ تُخْفُوْهُ يُحَاسِبْكُمْ بِهِ اللّٰهُ ؕ فَيَغْفِرُ لِمَنْ يَّشَآءُ وَيُعَذِّبُ مَنْ يَّشَآءُ ؕ وَاللّٰهُ عَلٰى كُلِّ شَىْءٍ قَدِيْرٌ",
+"reference": "Surah Baqarah, verse 284",
+"text": "(To Allaah belongs whatever is in the heavens and whatever is in the earth. Whether you make known what is in your hearts or hide it, Allaah will bring you to account for it (will remind you of it on the Day of Qiyaamah). He forgives whoever He wills and punishes whoever He wills. Allaah has control over all things (ownership, knowledge and control of everything are in Allaah's hands)."
+},
+{
+"type": "narration",
+"continued": true,
+"text": "They approached Rasulullaah ﷺ, knelt down and said, \"O Rasulullaah ﷺ! We have been instructed to do something that is beyond our capabilities.\" Rasulullaah ﷺ said, \"Do you wish to say what the people given the two previous books[^1] before you said when they stated, 'We hear and we disobey!' Rather say, \"We hear and we obey. (We ask) Your forgiveness, (O) our Rabb. To You is our return.\" When the Sahabah (RA) started to say the same words and their tongues grew accustomed to it, Allaah followed the verses up with the following:"
+},
+{
+"type": "quran",
+"arabic_text": "اٰمَنَ الرَّسُوْلُ بِمَآ اُنْزِلَ اِلَيْهِ مِنْ رَّبِّهٖ وَالْمُؤْمِنُوْنَ ؕ كُلٌّ اٰمَنَ بِاللّٰهِ وَمَلٰٓئِكَتِهٖ وَكُتُبِهٖ وَرُسُلِهٖ ۟ لَا نُفَرِّقُ بَيْنَ اَحَدٍ مِّنْ رُّسُلِهٖ ۟ وَقَالُوْا سَمِعْنَا وَاَطَعْنَا ۫ غُفْرَانَكَ رَبَّنَا وَاِلَيْكَ الْمَصِيْرُ",
+"reference": "Surah Baqarah, verse 285",
+"text": "The Rasool (Muhammad ﷺ) believed in that which has been revealed to him from his Rabb and (so do) the Mu'mineen. Each one believes in Allaah, His angels, His Books and His Rusul. (They say) \"We make no distinction between one and another messenger (we believe in every one of them, unlike others like the Jews and the Christians who reject some prophets),\" and they say, \"We hear (Allaah's commands) and we obey. (We ask) Your forgiveness, (O) our Rabb. To You is our return.\""
+},
+{
+"type": "narration",
+"continued": true,
+"text": "When this happened, Allaah abrogated the initial decree by revealing:"
+},
+{
+"type": "quran",
+"arabic_text": "لَا يُكَلِّفُ اللّٰهُ نَفْسًا اِلَّا وُسْعَهَا ؕ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ ؕ رَبَّنَا لَا تُؤَاخِذْنَآ"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "The Jews and the Christians who were given the Torah and Injeel respectively."
+}
+]
+}

@@ -1,0 +1,50 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 87,
+"running_head": "Imaan (Belief) in Intercession"
+},
+"blocks": [
+{
+"type": "narration",
+"continued": true,
+"text": "intercession until I met Hadhrat Jaabir (RA). After I recited to him all the verses of the Qur'aan I could recite that spoke of the people of Jahannam remaining there forever, he said, 'O Talq! Do you think that you have more knowledge of the Qur'aan and the Sunnah than I? The verses you have recited refer to those who belong in Jahannam. They are the Mushrikeen. However, those (for whom intercession will take place) are people (Mu'mineen) who have sinned, who will be punished for their sins and then be removed from Jahannam.' He then held both his ears and said, 'May these become deaf if I have not heard Rasulullaah ﷺ say that they will leave Jahannam after having entered it (because of Rasulullaah ﷺ's intercession). We also recite the Qur'aan as you recite.\"[^1]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Yazeed Faqeer",
+"text": "Hadhrat Yazeed Faqeer reports, \"I was once sitting with Hadhrat Jaabir bin Abdullaah (RA) as he was busy narrating Ahadeeth. When he narrated that some people would leave Jahannam, I became very angry because during those days I was one who rejected such a belief. I therefore said, 'I am not as astonished with common people (making such statements) as I am astonished with you companions of Rasulullaah ﷺ! You believe that people will leave the fire of Jahannam when Allah says:"
+},
+{
+"type": "quran",
+"arabic_text": "يُرِيْدُوْنَ أَنْ يَّخْرُجُوْا مِنَ النَّارِ وَمَا هُمْ بِخٰرِجِيْنَ مِنْهَا ۖ وَلَهُمْ عَذَابٌ مُّقِيْمٌ",
+"reference": "Surah Maa'idah, verse 37",
+"text": "They will try to escape from the Fire (of Jahannam) but they will not be able to escape. They will have a permanent punishment. {Surah Maa'idah, verse 37}"
+},
+{
+"type": "narration",
+"text": "His companions started rebuking me, but he was the most tolerant of them all. 'Leave the man alone!' he said. He then explained, 'That verse refers to the Kuffaar.' He then recited the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "إِنَّ الَّذِيْنَ كَفَرُوْا لَوْ أَنَّ لَهُمْ مَّا فِي الْأَرْضِ جَمِيْعًا وَّمِثْلَهٗ مَعَهٗ لِيَفْتَدُوْا بِهٖ مِنْ عَذَابِ يَوْمِ الْقِيٰمَةِ مَا تُقُبِّلَ مِنْهُمْ ۚ وَلَهُمْ عَذَابٌ أَلِيْمٌ يُرِيْدُوْنَ أَنْ يَّخْرُجُوْا مِنَ النَّارِ وَمَا هُمْ بِخٰرِجِيْنَ مِنْهَا ۖ وَلَهُمْ عَذَابٌ مُّقِيْمٌ",
+"reference": "Surah Maa'idah, verses 36,37",
+"text": "Without doubt (even) if the Kuffaar possessed all (the wealth) within the earth and as much more in addition to ransom themselves from the punishment of the Day of Qiyaamah, it will not be accepted from them. They shall have (to suffer) a painful punishment. They will try to escape from the Fire (of Jahannam) but they will not be able to escape. They will have a permanent punishment. {Surah Maa'idah, verses 36,37}"
+},
+{
+"type": "narration",
+"text": "He then asked, 'Do you recite the Qur'aan?' 'I certainly do,' I replied, 'in fact, I have memorised it.' He then said, 'Does Allaah not say:"
+},
+{
+"type": "quran",
+"arabic_text": "وَمِنَ اللَّيْلِ فَتَهَجَّدْ بِهٖ نَافِلَةً لَّكَ ۖ عَسٰٓى أَنْ يَّبْعَثَكَ رَبُّكَ مَقَامًا مَّحْمُوْدًا",
+"reference": "Surah Bani Israa'eel, verse 79"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Ibn Mardway."
+}
+]
+}

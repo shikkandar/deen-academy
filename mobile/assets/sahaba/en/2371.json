@@ -1,0 +1,42 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 2,
+"page_number": 371,
+"running_head": "Obeying the Instructions of Rasulullaah ﷺ"
+},
+"blocks": [
+{
+"type": "narration",
+"narrator": "Hadhrat Jundub bin Abdullaah (RA)",
+"text": "Hadhrat Jundub bin Abdullaah (RA) narrates that Rasulullaah ﷺ once dispatched an expedition with Hadhrat Ubaydah bin Haarith (RA) as the commander. However, when they were leaving, he was overcome by his love for Rasulullaah ﷺ and started weeping. Rasulullaah ﷺ then dispatched a Sahabi called Hadhrat Abdullaah bin Jahash (RA) in his place. Rasulullaah ﷺ had a letter written for him and instructed him to read the letter only when he reached a certain place. He also received instructions not to force anyone to march with him. When he reached the specified destination, he read the letter and recited, \"Innaa Lillaahi wa Innaa Ilayhi Raaji'oon\"[^1]. He then said, \"I hear and obey the orders of Allaah and His Rasool ﷺ.\" While two of the Sahabah (RA) left the expedition, the others proceeded with him.\nWhen they met with Ibn Hadhrami, they killed him, not knowing whether it was still the month of Rajab or whether it was Jumaadal Aakhirah (that had already started). When the Mushrikeen claimed that the Sahabah (RA) had killed him during a sacred month, Allaah revealed the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "يَسْئَلُوْنَكَ عَنِ الشَّهْرِ الْحَرَامِ قِتَالٍ فِيْهِ قُلْ قِتَالٌ فِيْهِ كَبِيْرٌ وَصَدٌّ عَنْ سَبِيْلِ اللّٰهِ وَكُفْرٌ بِهٖ وَالْمَسْجِدِ الْحَرَامِ وَاِخْرَاجُ اَهْلِهٖ مِنْهُ اَكْبَرُ عِنْدَ اللّٰهِ وَالْفِتْنَةُ اَكْبَرُ مِنَ الْقَتْلِ",
+"reference": "Surah Baqara, verse 217",
+"text": "They question you (O Muhammad ﷺ) about warfare in the sacred months (Dhul Qa'dah, Dhul Hijjah, Muharram and Rajab). Say, \"Warfare in these months is a grave matter, but to prevent (others) from Allaah's way (from Islaam), to disbelieve in Him, (to prevent people from) the Masjidul Haraam and to expel (drive out) its people from it (as the Mushrikeen did to Rasulullaah ﷺ and the Sahabah (RA)) is a far greater sin in the sight of Allaah. Corruption (especially kufr, Shirk and causing mischief in religion) is worse than killing.\""
+},
+{
+"type": "narration",
+"text": "Some Muslims then enquired, \"Although what they did may have been alright, they will receive no reward for it.\" It was then that Allaah revealed the verse:",
+"continued": true
+},
+{
+"type": "quran",
+"arabic_text": "اِنَّ الَّذِيْنَ اٰمَنُوْا وَالَّذِيْنَ هَاجَرُوْا وَجَاهَدُوْا فِيْ سَبِيْلِ اللّٰهِ اُولٰٓئِكَ يَرْجُوْنَ رَحْمَتَ اللّٰهِ وَاللّٰهُ غَفُوْرٌ رَّحِيْمٌ",
+"reference": "Surah Baqara, verse 218",
+"text": "Verily those who have Imaan, who migrate and who strive (exert themselves) in the way of Allaah (for Islaam), these have hope of Allaah's mercy (His rewards). Allaah is Most Forgiving, Most Merciful (Allaah will not deprive such people of the rewards they deserve).[^2]"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "He said this because he misinterpreted the instruction to mean that he was to attack the enemy during a sacred month."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Bayhaqi (Vol.9 Pg.11). Ibn Abi Haatim has reported a similar narration, as quoted in Al Bidaayah wan Nihaayah (Vol.3 Pg.251)."
+}
+]
+}

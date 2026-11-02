@@ -10,6 +10,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 
 const API = 'https://raw.githubusercontent.com/fawazahmed0/hadith-api/1/editions'; // jsDelivr 403s uncached files
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -87,4 +88,6 @@ for (const b of books) {
   lines.push('  },');
 }
 lines.push('};', '');
-fs.writeFileSync(path.join(ROOT, 'src/lib/hadith-bundled.ts'), lines.join('\n'));
+// The loaders (src/lib/hadith-bundled.web.ts and its native re-export) are written from assets/hadith by:
+void lines;
+execFileSync('node', [path.join(ROOT, 'scripts/gen-web-loaders.mjs')], { stdio: 'inherit' });

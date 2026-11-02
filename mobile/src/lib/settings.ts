@@ -34,6 +34,10 @@ export type QuranReminder = {
 export type Language = 'en' | 'ta';
 export type CustomAzan = { uri: string; name: string };
 
+export type Gender = 'male' | 'female';
+/** Asked once, the first time the app opens. */
+export type Profile = { name: string; gender: Gender; dob: string /* YYYY-MM-DD */ };
+
 export type Settings = {
   language: Language; // app text, and the Quran / hadith translation shown
   afterMinutes: number; // Namaz starts this long after the Azan (when no Jamaat time), for DND
@@ -46,7 +50,9 @@ export type Settings = {
   dndMinutes: number; // how long DND stays on, from the "Namaz due" reminder
   masjid: Masjid; // her masjid's own Azan/Jamaat times (from the board)
   quranReminder: QuranReminder;
+  showExtraTimes: boolean; // Sahar, Zawal and Iftar rows on the Today card
   customAzan: { full: CustomAzan | null; short: CustomAzan | null }; // recordings picked from the phone
+  profile: Profile | null; // null until it has been asked
 };
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -61,7 +67,9 @@ export const DEFAULT_SETTINGS: Settings = {
   dndMinutes: 20,
   masjid: EMPTY_MASJID,
   quranReminder: { enabled: false, time: '20:00', sound: 'iqra' },
+  showExtraTimes: true,
   customAzan: { full: null, short: null },
+  profile: null,
 };
 
 const KEY = 'settings.v1';

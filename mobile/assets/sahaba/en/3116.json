@@ -1,0 +1,43 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 116,
+"running_head": "The Strength of the Imaan of the Sahabah (RA)"
+},
+"blocks": [
+{
+"type": "quran",
+"continued": true,
+"arabic_text": "اِنۡ نَّسِيۡنَاۤ اَوۡ اَخۡطَاۡنَا رَبَّنَا وَلَا تُحَمِّلۡنَا مَا لَا طَاقَةَ لَنَا بِهٖ وَاعۡفُ عَنَّا وَاغۡفِرۡ لَنَا وَارۡحَمۡنَا اَنۡتَ مَوۡلٰٮنَا فَانۡصُرۡنَا عَلَى الۡقَوۡمِ الۡكٰفِرِيۡنَ",
+"reference": "Surah Baqarah, verse 286",
+"text": "Allaah does not place on a soul a responsibility (duty) except what is within its capability (Allaah shall therefore not take one to task for involuntary thoughts that enter one's mind). It (every soul) shall receive to its favour that (good acts) which it had earned and to its harm shall be what (sins) it had carried out. (Say,) \"O our Rabb, do not take us to task if we forget or make mistakes (do not punish us if we do wrong through forgetfulness or by mistake). Our Rabb, do not place such responsibilities (duties) on us as You had placed on those before us. Our Rabb, do not enforce on us that which we do not have the strength to bear. Overlook (our sins), forgive us and have mercy on us. You are our Protector so assist us against the nation of Kaafiroon.\"[^1]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Abbaas (RA)",
+"text": "Hadhrat Mujaahid says that he once approached Hadhrat Abdullaah bin Abbaas (RA) and said, \"I was with Hadhrat Abdullaah bin Umar (RA) when he recited a verse and started weeping.\" \"What is the verse?\" Hadhrat Abdullaah bin Abbaas (RA) enquired. Hadhrat Mujaahid replied that it was the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "وَاِنْ تُبْدُوْا مَا فِىْٓ اَنْفُسِكُمْ اَوْ تُخْفُوْهُ يُحَاسِبْكُمْ بِهِ اللّٰهُ ؕ فَيَغْفِرُ لِمَنْ يَّشَآءُ وَيُعَذِّبُ مَنْ يَّشَآءُ ؕ وَاللّٰهُ عَلٰى كُلِّ شَىْءٍ قَدِيْرٌ",
+"reference": "Surah Baqarah, verse 284",
+"text": "Whether you make known what is in your hearts or hide it, Allaah will bring you to account for it (will remind you of it on the Day of Qiyaamah). He forgives whoever He wills and punishes whoever He wills. Allaah has control over all things (ownership, knowledge and control of everything are in Allaah's hands)."
+},
+{
+"type": "narration",
+"continued": true,
+"text": "Hadhrat Abdullaah bin Abbaas (RA) explained, \"When this verse was revealed, it filled the Sahabah (RA) with worry and extreme anxiety. 'O Rasulullaah ﷺ!' they said, 'We are destroyed! While we may be taken to task for what we say and do, our hearts are beyond our control (we cannot control our thoughts).' Rasulullaah ﷺ said, 'Say, 'We hear and we obey'.' When they said 'We hear and we obey', the decree was abrogated by the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "اٰمَنَ الرَّسُوْلُ بِمَآ اُنْزِلَ اِلَيْهِ مِنْ رَّبِّهٖ وَالْمُؤْمِنُوْنَ ؕ كُلٌّ اٰمَنَ بِاللّٰهِ وَمَلٰٓئِكَتِهٖ وَكُتُبِهٖ وَرُسُلِهٖ ۟ لَا نُفَرِّقُ بَيْنَ اَحَدٍ مِّنْ رُّسُلِهٖ ۟ وَقَالُوْا سَمِعْنَا وَاَطَعْنَا ۫ غُفْرَانَكَ رَبَّنَا وَاِلَيْكَ الْمَصِيْرُ ۝ لَا يُكَلِّفُ اللّٰهُ نَفْسًا اِلَّا وُسْعَهَا ؕ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ ؕ",
+"text": "The Rasool (Muhammad ﷺ) believed in that which has been revealed to him from his Rabb and (so do) the Mu'mineen. Each one believes in"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Ahmad. Muslim has reported a similar narration."
+}
+]
+}

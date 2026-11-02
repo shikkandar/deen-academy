@@ -4,6 +4,7 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { BookSearchButton } from '@/components/book-search';
 import { JasmineBadge, JasmineFlower } from '@/components/jasmine-flower';
 import { enter, FloatingFlower, SpringPressable } from '@/components/motion';
 import { MuntakhabLangSwitch } from '@/components/muntakhab-lang';
@@ -56,6 +57,8 @@ export default function MuntakhabContents() {
             </SpringPressable>
             <MuntakhabLangSwitch value={lang} onChange={changeLang} />
           </View>
+
+          <BookSearchButton scope="muntakhab" title="Muntakhab Ahadith" />
 
           <Animated.View entering={enter(0)} style={[styles.hero, { backgroundColor: theme.hero }]}>
             <FloatingFlower size={90} rotate={18} period={50} style={[styles.heroFlower, { opacity: 0.14 }]} />

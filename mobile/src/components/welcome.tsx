@@ -85,7 +85,8 @@ const styles = StyleSheet.create({
   noteButton: { borderRadius: 999, paddingVertical: Spacing.two + 2, paddingHorizontal: Spacing.five },
 });
 
-const SEEN_KEY = 'welcome.seen.v1';
+// v2: the note now says who made it; everyone sees it once more.
+const SEEN_KEY = 'welcome.seen.v2';
 
 const NOTE_KEY = 'reminder.day.v1';
 const todayKey = () => new Date().toDateString();

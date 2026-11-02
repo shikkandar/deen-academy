@@ -14,6 +14,7 @@ import {
 } from '../../modules/prayer-dnd';
 import { playSource } from './audio-focus';
 import { scheduleDnd } from './dnd';
+import { applyAppLanguage, setCurrentLanguage, tr } from './i18n';
 import { getLocationPermission, loadCachedPlace, refreshPlace, type LocationPermission, type Place } from './location';
 import { cancelFajrWake, requestNotificationPermission, schedulePrayerNotifications } from './notifications';
 import { DEFAULT_SETTINGS, loadSettings, saveSettings, type Settings } from './settings';
@@ -21,10 +22,10 @@ import { DEFAULT_SETTINGS, loadSettings, saveSettings, type Settings } from './s
 const BATTERY_ASKED = 'asked.batteryOptimization.v1';
 
 const AZAN_SOURCES = {
-  full: require('@/assets/sounds/azan.wav'),
-  short: require('@/assets/sounds/azan_short.wav'),
-  fajrFull: require('@/assets/sounds/azan_fajr.wav'),
-  fajrShort: require('@/assets/sounds/azan_fajr_short.wav'),
+  full: require('@/assets/sounds/azan.m4a'),
+  short: require('@/assets/sounds/azan_short.m4a'),
+  fajrFull: require('@/assets/sounds/azan_fajr.m4a'),
+  fajrShort: require('@/assets/sounds/azan_fajr_short.m4a'),
 };
 
 type AppStateValue = {
@@ -65,6 +66,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [dndAccess, setDndAccess] = useState(hasDndAccess());
+  setCurrentLanguage(settings.language); // for tr() outside components
 
   // Quran and duas keep playing with the screen off or the app in the background (like a music app).
   useEffect(() => {
@@ -97,7 +99,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       setError(null);
     } catch (e) {
       setLocationPermission(await getLocationPermission());
-      setError(e instanceof Error ? e.message : 'Could not get location');
+      setError(e instanceof Error ? e.message : tr('Could not get location'));
     }
   }, []);
 
@@ -176,6 +178,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   const updateSettings = useCallback(
     async (patch: Partial<Settings>) => {
       const next = { ...settings, ...patch };
+      if (patch.language && patch.language !== settings.language) applyAppLanguage(patch.language);
       setSettings(next);
       await saveSettings(next);
     },

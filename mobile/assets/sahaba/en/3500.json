@@ -1,0 +1,47 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 500,
+"running_head": "A Lecture of Hadhrat Abdullaah bin Salaam (RA)"
+},
+"blocks": [
+{
+"type": "quran",
+"continued": true,
+"arabic_text": "مِثْلِهٖ فَاٰمَنَ وَاسْتَكْبَرْتُمْ",
+"reference": "Surah Ahqaaf, verse 10",
+"text": "(O Rasulullaah ﷺ) Say (to the Mushrikeen), 'Tell me. What if this Qur'aan is really from Allaah and you people deny it (without good reason) and are too proud (to accept it) although a witness from the Bani Israa'eel (those learned in the original teachings of the Torah and Injeel, such as Abdullaah bin Salaam (RA)) testifies to a similar (divine) book and believes in it (believes that the Qur'aan is from Allaah)?'\""
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Muhammad bin Yusuf",
+"text": "The narration then proceeds to recount the martyrdom of Hadhrat Uthmaan (RA). [^1]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The lectures of Hadhrat Husayn bin Ali (RA)"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Muhammad bin Hasan",
+"text": "Hadhrat Muhammad bin Hasan narrates that when Umar bin Sa'd arrived (with his army) to confront Hadhrat Husayn (RA) (and his party), Hadhrat Husayn stood up to address his companions. After duly praising Allaah, he said, \"Matters have reached a head as you can see. Life in this world has changed and become detestable. The good of this life has turned away and passed on. All that is left of the good is the equivalent of what remains at the bottom of a utensil (after the contents have been poured out). What is left of life is the worst of it like a diseased pasture (that makes every grazing animal ill). Do you not see that the truth is no longer practised on and that people do not refrain from falsehood? Every Mu'min should look forward to meeting Allaah. I regard death as something most fortunate and life amongst oppressors as a source of great anguish.\" [^2]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Uqba bin Abul Ayraaz",
+"text": "Hadhrat Uqba bin Abul Ayraaz narrates that it was at a place called Bayda that Hadhrat Husayn (RA) addressed his companions together with the army of Hurr bin Yazeed (whose army had arrived to fight Hadhrat Husayn (RA)). After praising Allaah, he said, \"O people! Verily Rasulullaah ﷺ said, 'When a person sees a tyrannical ruler who permits what Allaah has made Haraam, who reneges his pledge with Allaah, who contradicts the Sunnah of Allaah's Rasool ﷺ and who sins and transgresses against Allaah's servants and he neither acts or speaks out against such a ruler (despite having the ability to do so), Allaah takes it upon Himself to enter such a person into the same place He will be entering the tyrant (i.e. into Jahannam).' Take note of the fact that these people (the present ruling party) have taken it upon themselves to obey Shaytaan, to forsake obedience to Allaah, to spread corruption, to renounce the restrictions Allaah has set, to show favouritism when distributing booty, to make legal what Allaah has forbidden and to forbid what Allaah has made lawful. I am most obliged to change all of this. (O people of Kufa!) Your letters had come to me and many of your messengers had also come to me with the assurance that you will never desert me or leave me in the lurch. If you fulfil this pledge of allegiance to me, you will"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Tabraani, reporting from reliable sources as confirmed by Haythami (Vol.9 Pg.93)."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Tabraani. Haythami (Vol.9 Pg.193) has commented on the chain of narrators. A narration of Ibn Jareer (Vol.4 Pg.305) states that this lecture was delivered at a place called Dhu Husum."
+}
+]
+}

@@ -1,0 +1,61 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 126,
+"running_head": "The Encouragement Nabi ﷺ gave for Salaah"
+},
+"blocks": [
+{
+"type": "narration",
+"continued": true,
+"text": "the good that wipe out sins[^1].'\"\nThe people then asked, \"O Uthmaan! If these are the good deeds, what then are the 'lasting good deeds'[^2]?\" Hadhrat Uthmaan (RA) replied, \"That is to recite 'Laa Ilaaha Illallaah' (لَا اِلٰهَ اِلَّا اللّٰهُ), 'Subhaanallaah' (سُبْحَانَ اللّٰهِ), 'Al Hamdu Lillaah' (اَلْحَمْدُ لِلّٰهِ) 'Allaahu Akbar' (اَللّٰهُ اَكْبَرُ), and 'Laa Howla wa Laa Quwwata Illaa Billaah' (لَا حَوْلَ وَلَا قُوَّةَ اِلَّا بِاللّٰهِ).\"[^3]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Salmaan (RA)",
+"text": "Hadhrat Abu Uthmaan reports that he was once with Hadhrat Salmaan (RA) beneath a tree when Hadhrat Salmaan (RA) caught hold of a dry branch and shook it until its leaves all fell off. \"O Abu Uthmaan!\" he said, \"Will you not ask me why I did that?\" \"Why did you do that?\" Hadhrat Abu Uthmaan asked. Hadhrat Salmaan (RA) replied, \"This is exactly what Rasulullaah ﷺ did when I was once standing with him beneath a tree. He took hold of a dry branch and shook it until its leaves all fell off. 'O Salmaan!' he said, 'Will you not ask me why I did that?' 'Why did you do that?' I asked. Rasulullaah ﷺ explained, 'When a Muslim performs wudhu properly and performs his five salaahs, his sins fall off him just as these leaves have fallen.' Rasulullaah ﷺ then recited the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "وَاَقِمِ الصَّلٰوةَ طَرَفَىِ النَّهَارِ وَزُلَـفًا مِّنَ الَّيۡلِ​ ؕ اِنَّ الۡحَسَنٰتِ يُذۡهِبۡنَ السَّيِّاٰتِ ​ؕ ذٰ لِكَ ذِكۡرٰى لِلذّٰكِرِيۡنَ",
+"reference": "Surah Hood, verse 114",
+"text": "Establish salaah at the two ends of the day (with Fajr salaah and Zuhr salaah at the one end and Asr salaah and Maghrib salaah at the other) and during portions of the night (the Isha salaah). Verily good deeds (such as the five Fardh salaah) wipe out evil acts. This is advice to those who will take heed.[^4]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The Incident of Two Brothers who Passed away, One as a Martyr and the Other some time Later"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Sa'd bin Abi Waqqaas (RA)",
+"text": "Hadhrat Aamir the son of Hadhrat Sa'd bin Abi Waqqaas narrates that he heard his father and other Sahabah (RA) narrate that two brothers lived during the time of Rasulullaah ﷺ. The one who was the better of the two died a martyr while the other lived some after him before also passing away (forty days later[^5]). When someone mentioned to Rasulullaah ﷺ that the one was a better person (who carried out more good deeds), Rasulullaah ﷺ asked, \"Was he not performing salaah?\" When the Sahabah (RA) confirmed that the person was performing salaah, Rasulullaah ﷺ remarked, \"You have no idea where his salaahs (after the demise of his brother) may have taken him.\" It was on this occasion that Rasulullaah ﷺ said, \"The example of salaah is like a deep and pure river running by the door of a person. When he bathes in it five times a"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "As referred to in verse 114 of Surah Hood where Allaah says, \"Verily good deeds wipe out evil acts.\""
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "As referred to in verse 46 of Surah Kahaf."
+},
+{
+"type": "footnote",
+"number": 3,
+"text": "Ahmad, Abu Ya'la and Bazzaar, as quoted in Targheeb wat Tarheeb (Vol.1 Pg.203). Haythami (Vol.1 Pg.297) has commented on the chain of narrators."
+},
+{
+"type": "footnote",
+"number": 4,
+"text": "Ahmad, Nasa'ee and Tabraani, as quoted in Targheeb wat Tarheeb (Vol.1 Pg.201)."
+},
+{
+"type": "footnote",
+"number": 5,
+"text": "Tabraani in his Awsat."
+}
+]
+}

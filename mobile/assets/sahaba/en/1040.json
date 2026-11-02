@@ -1,0 +1,41 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 1,
+"page_number": 40,
+"running_head": "Qur'aanic Verses Concerning Obedience to Allaah and His Rasool ﷺ"
+},
+"blocks": [
+{
+"type": "heading",
+"level": "topic",
+"text": "Qur'aanic Verses Concerning Obedience to Allaah and His Rasool ﷺ"
+},
+{
+"type": "paragraph",
+"text": "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ"
+},
+{
+"type": "quran",
+"arabic_text": "الْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَ ۝ الرَّحْمٰنِ الرَّحِيْمِ ۝ مٰلِكِ يَوْمِ الدِّيْنِ ۝ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِيْنُ ۝ اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ ۝ صِرَاطَ الَّذِيْنَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلَا الضَّآلِّيْنَ",
+"reference": "Surah Faatiha, verses 1-7",
+"text": "All praise belongs to Allaah, the Rabb (the Cherisher, the Creator, the Sustainer) of the universe (and whatever it contains), Who is the Most Compassionate, the Most Merciful and Master of (all affairs on) the Day of Recompense. (O Allaah!) You Alone do we worship, and You Alone do we ask for help. Guide us to the straight path (the path of Islaam); the path of those whom You have favoured (by guiding them aright) and not the path of those with whom You are angry, nor the path of those who have gone astray."
+},
+{
+"type": "quran",
+"arabic_text": "إِنَّ اللّٰهَ رَبِّيْ وَرَبُّكُمْ فَاعْبُدُوْهُ ؕ هٰذَا صِرَاطٌ مُّسْتَقِيْمٌ",
+"reference": "Surah Aal Imraan, verse 51",
+"text": "Verily Allaah is my Rabb and your Rabb, so worship Him (Only, without ascribing partners to Him)."
+},
+{
+"type": "quran",
+"arabic_text": "قُلْ إِنَّنِيْ هَدٰىنِيْ رَبِّيْۤ إِلٰى صِرَاطٍ مُّسْتَقِيْمٍ ۚ دِيْنًا قِيَمًا مِّلَّةَ إِبْرٰهِيْمَ حَنِيْفًا ۚ وَمَا كَانَ مِنَ الْمُشْرِكِيْنَ ۝ قُلْ إِنَّ صَلَاتِيْ وَنُسُكِيْ وَمَحْيَايَ وَمَمَاتِيْ لِلّٰهِ رَبِّ الْعٰلَمِيْنَ ۝ لَا شَرِيْكَ لَهٗ ۚ وَبِذٰلِكَ أُمِرْتُ وَأَنَا أَوَّلُ الْمُسْلِمِيْنَ",
+"reference": "Surah An'aam, verses 161-163",
+"text": "Say (O Rasulullaah ﷺ), \"Certainly my Rabb has guided me to the straight path. This (Deen of Islaam) is the secure Deen that is the Deen of Ibraheem (AS), which is Haneef (not inclined towards any deviation but is inclined to the straight way, which is the path Allaah sanctions). He (Ibraheem (AS)) was never from the Mushrikeen.\" Say, \"Truly my salaah, all my acts of worship, my life and my death are for Allaah, the Rabb of the universe.\" (Also say, O Rasulullaah ﷺ) \"He (Allaah) has no partner. With this (Towheed) have I been commanded (to adhere to) and I am the first of the Muslims.\""
+},
+{
+"type": "quran",
+"arabic_text": "قُلْ يٰۤأَيُّهَا النَّاسُ إِنِّيْ رَسُوْلُ اللّٰهِ إِلَيْكُمْ جَمِيْعًا الَّذِيْ لَهٗ مُلْكُ السَّمٰوٰتِ وَالْأَرْضِ ۚ لَاۤ إِلٰهَ إِلَّا هُوَ يُحْيٖ وَيُمِيْتُ ۖ فَاٰمِنُوْا بِاللّٰهِ وَرَسُوْلِهِ النَّبِيِّ الْأُمِّيِّ الَّذِيْ يُؤْمِنُ بِاللّٰهِ وَكَلِمٰتِهٖ وَاتَّبِعُوْهُ لَعَلَّكُمْ"
+}
+]
+}

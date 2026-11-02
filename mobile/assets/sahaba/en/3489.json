@@ -1,0 +1,73 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 489,
+"running_head": "The Lecture he Delivered when he Made Peace with Hadhrat Mu'aawiya (RA)"
+},
+"blocks": [
+{
+"type": "narration",
+"narrator": "Hadhrat Hasan bin Ali (RA)",
+"continued": true,
+"text": "and the successes of this world pass from hand to hand. Allaah has said to His Nabi ﷺ:"
+},
+{
+"type": "quran",
+"arabic_text": "وَاِنْ اَدْرِىْ لَعَلَّهٗ فِتْنَةٌ لَّكُمْ وَمَتَاعٌ اِلٰى حِيْنٍ",
+"reference": "Surah Ambiyaa, verse 111",
+"text": "I have no idea whether it (the delay in punishment) is a test for you (to see whether you repent) or an enjoyment until a stipulated time.\" [^1]"
+},
+{
+"type": "heading",
+"level": "topic",
+"text": "The Lecture of Ameerul Mu'mineen Hadhrat Mu'aawiya bin Abu Sufyaan (RA)"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Muhammad bin Ka'b Qurazi",
+"text": "Hadhrat Muhammad bin Ka'b Qurazi narrates that Hadhrat Mu'aawiya bin Abu Sufyaan (RA) delivered a lecture in Madinah saying, \"O people! There is none to prevent that which Allaah grants, none can grant what Allaah prevents, the wealth of the wealthy cannot assist them and when Allaah wishes well for a person, He grants him understanding of the Deen. I have heard Rasulullaah ﷺ speak these words from this very pulpit.\" [^2]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Muhammad bin Abdur Rahmaan",
+"text": "Hadhrat Muhammad bin Abdur Rahmaan reports that he heard Hadhrat Mu'aawiya (RA) deliver a lecture saying, \"I have heard Rasulullaah ﷺ say, 'When Allaah wishes well for a person, He grants him understanding of the Deen. While I am just the distributor (of knowledge), it is Allaah Who grants it. This Ummah will always remain firm on the truth and on Allaah's Deen until the Day of Qiyaamah without being harmed by those who oppose them.\" [^3]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Umayr bin Haani",
+"text": "Hadhrat Umayr bin Haani narrates that Hadhrat Mu'aawiya bin Abu Sufyaan (RA) once addressed them saying, \"I heard Rasulullaah ﷺ say, 'Until the Day of Qiyaamah, this Ummah will always remain steadfast on Allaah's Deen and will not be harmed by those who oppose them or by those who do not want to assist them.\" Another narration states that he also said, \"And they (the Ummah) shall dominate over others.\"\nHadhrat Umayr bin Haani says, \"Hadhrat Maalik bin Yakhaamir then stood up and said, 'I heard Hadhrat Mu'aadh bin Jabal (RA) say that these people (the Ummah steadfast on the Deen and dominant over others) are the people of Shaam (during those times).\" [^4]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Yunus bin Halbas Janadi",
+"text": "Hadhrat Yunus bin Halbas Janadi reports a similar narration with the addition that Hadhrat Mu'aawiya (RA) recited the following verse (in substantiation):"
+},
+{
+"type": "quran",
+"arabic_text": "يَا عِيْسٰٓى اِنِّىْ مُتَوَفِّيْكَ وَرَافِعُكَ اِلَىَّ وَمُطَهِّرُكَ مِنَ الَّذِيْنَ كَفَرُوْا وَجَاعِلُ الَّذِيْنَ اتَّبَعُوْكَ فَوْقَ الَّذِيْنَ كَفَرُوْٓا اِلٰى يَوْمِ الْقِيٰمَةِ",
+"reference": "Surah Aal Imraan, verse 55",
+"text": "(Allaah said,) 'O Isa, I shall take you away (from this world), raise you to Me (to the heavens), purify you from (the company of) those who disbelieve and make those who follow you above (superior to) those"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Ibn Jareer in his Taareekh (Vol.4 Pg.124)."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Ibn Abdul Birr in his Jaami'ul Ilm (Vol.1 Pg.20)."
+},
+{
+"type": "footnote",
+"number": 3,
+"text": "Ibn Abdul Birr in his Jaami (Vol.1 Pg.20)"
+},
+{
+"type": "footnote",
+"number": 4,
+"text": "Ahmad, Abu Ya'la, Ya'qoob bin Sufyaan and others."
+}
+]
+}

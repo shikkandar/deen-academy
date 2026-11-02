@@ -1,0 +1,70 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 2,
+"page_number": 278,
+"running_head": "Hadhrat Abu Dharr (RA) Refuses to accept Wealth Given to him"
+},
+"blocks": [
+{
+"type": "narration",
+"text": "passed away, Hadhrat Hakeem (RA) did not accept anything from anyone until the day he passed away.[^1]",
+"continued": true
+},
+{
+"type": "narration",
+"text": "Another narration from Hadhrat Urwa (RA) states that Hadhrat Hakeem (RA) did not accept anything from Hadhrat Abu Bakr (RA) until the Khalifah's death. Thereafter, he also refused to accept anything from Hadhrat Umar (RA) until the demise of the Ameerul Mu'mineen and also from Hadhrat Uthmaan (RA) and from Hadhrat Mu'aawiya (RA) until the day he passed away.[^2]"
+},
+{
+"type": "heading",
+"level": "topic",
+"text": "Hadhrat Aamir bin Rabee'ah (RA) Refuses Land"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The Incident with another Arab"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Aslam",
+"text": "Hadhrat Aslam reports that when an Arab man came to stay with Hadhrat Aamir bin Rabee'ah (RA), he entertained his guest well and spoke to Rasulullaah ﷺ about (addressing the need of) the man. The man later came to Hadhrat Aamir (RA) (after meeting Rasulullaah ﷺ) and said, \"I have asked (and received) from Rasulullaah ﷺ a valley in Arabia that is the best of all valleys. I now wish to allocate a portion of it for you and for your progeny after you.\" Hadhrat Aamir (RA) replied, \"I have no need for your land because today a Surah has been revealed that makes us oblivious of this world:"
+},
+{
+"type": "quran",
+"arabic_text": "اِقْتَرَبَ لِلنَّاسِ حِسَابُهُمْ وَهُمْ فِيْ غَفْلَةٍ مُّعْرِضُوْنَ",
+"reference": "Surah Ambiyaa, verse 1",
+"text": "Peoples' reckoning (the Day of Qiyaamah) has drawn near, yet (failing to take heed) they are turning away in negligence.[^3]"
+},
+{
+"type": "heading",
+"level": "topic",
+"text": "Hadhrat Abu Dharr (RA) Refuses to accept Wealth Given to him"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The Incident with Hadhrat Uthmaan (RA) and Hadhrat Ka'b (RA)"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Saamit",
+"text": "Hadhrat Abdullaah bin Saamit the nephew of Hadhrat Abu Dharr (RA) says that he once accompanied his uncle (Hadhrat Abu Dharr (RA)) to see (Ameerul Mu'mineen) Hadhrat Uthmaan (RA). Hadhrat Abu Dharr (RA) requested, \"Allow me to go to (and live in) Rabdha.\" Hadhrat Uthmaan (RA) replied, \"Go ahead. We shall give instructions for some of the zakaah animals to go to you early in the mornings and in the evenings (so that you may use their milk).\" \"I have no need for it,\" said Hadhrat Abu Dharr (RA), \"because the little flock of Abu Dharr suffices for him.\" He then stood up and said, \"While you people remain"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Bukhaari and Muslim, as quoted in Targheeb wat Tarheeb (Vol.2 Pg.101). Tirmidhi and Nasa'ee have also reported the narration in brief."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Haakim (Vol.3 Pg.483)."
+},
+{
+"type": "footnote",
+"number": 3,
+"text": "Abu Nu'aym in his Hilya (Vol.1 Pg.179)."
+}
+]
+}

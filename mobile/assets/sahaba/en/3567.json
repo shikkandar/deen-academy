@@ -1,0 +1,62 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 567,
+"running_head": "Hearing Voices from the Unseen"
+},
+"blocks": [
+{
+"type": "narration",
+"continued": true,
+"narrator": "Hadhrat Abdullaah bin Abbaas (RA)",
+"text": "voice, the source of which they did not know. It said, \"Bathe the body of your Nabi ﷺ with his Qamees on.\" Rasulullaah ﷺ was therefore bathed wearing his Qamees. A narration from Hadhrat Aa'isha (RA) states that the unknown voice said, \"Bathe him with his clothes on.\"[^1]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "Hadhrat Abu Moosa Ash'ari (RA) Hears a voice while on a Naval Expedition"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Abbaas (RA)",
+"text": "Hadhrat Abdullaah bin Abbaas (RA) reports that Nabi ﷺ once appointed Hadhrat Abu Moosa Ash'ari (RA) to command a naval expedition. As his vessel was travelling one night, a voice called to them from above saying, \"Shall I not inform you of a decision that Allaah has taken upon Himself? When a person keeps himself thirsty on a hot summer's day (by fasting), then Allaah takes it upon Himself to give him a drink on the Day of the Great Thirst (the Day of Qiyaamah).\"[^2]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abu Burda",
+"text": "Hadhrat Abu Burda reports that Hadhrat Abu Moosa Ash'ari (RA) said, \"We were once out on a naval expedition when the wind was pleasant and the sails were filled. We then suddenly heard a voice calling, 'O people aboard this vessel! Stop so that I may inform you of something.' When the voice called this out seven times, I stood at the bow of the vessel and asked, 'Who are you and where do you come from? Can you not see where we are? Can we even stop?' The voice then responded by saying, 'Shall I not inform you of a decision that Allaah has taken upon Himself?' 'Why not?' I replied, 'Please do inform us.' It then said, 'When a person keeps himself thirsty on a hot day (by fasting) solely for Allaah's pleasure, then Allaah takes it upon Himself to give him a drink on the Day of Qiyaamah.'\"\nIt was therefore the habit of Hadhrat Abu Moosa Ash'ari (RA) to search for days that were so scorching hot that a person's skin could almost roast. He would then fast during such days.[^3]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "People hear a Voice Reciting the Qur'aan the Day Hadhrat Abdullaah bin Abbaas (RA) Passed Away"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Sa'eed bin Jubayr",
+"text": "Hadhrat Sa'eed bin Jubayr reports, \"I was present for the funeral of Hadhrat Abdullaah bin Abbaas (RA) when he passed away in Taa'if. A (white) bird, the likes of which had never been seen before, then came and entered his shroud. We looked on and waited for it to emerge, but it was clear that it was not going to. When he was then buried, the following verses of the Qur'aan were recited beside his grave, but no one knew who was reciting them:"
+},
+{
+"type": "quran",
+"arabic_text": "يٰٓأَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ ارْجِعِيْٓ إِلٰى رَبِّكِ رَاضِيَةً مَّرْضِيَّةً فَادْخُلِيْ فِيْ عِبٰدِيْ وَادْخُلِيْ جَنَّتِيْ",
+"reference": "Surah Fajr, verses 27-30",
+"text": "O contented soul! Return happily to your Rabb Who is pleased with you. Enter amongst My (chosen) bondsmen and enter My Jannah."
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Ibn Sa'd (Vol.2 Pg.276)."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Haakim (Vol.3 Pg.467)."
+},
+{
+"type": "footnote",
+"number": 3,
+"text": "Abu Nu'aym in his Hilya (Vol.1 Pg.260)."
+}
+]
+}

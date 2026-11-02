@@ -1,0 +1,61 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 184,
+"running_head": "The Importance Rasulullaah ﷺ and the Sahabah (RA) Attached to the Tahajjud Salaah"
+},
+"blocks": [
+{
+"type": "narration",
+"continued": true,
+"text": "\"Never omit the Qiyaamul Layl because Rasulullaah ﷺ never left it out. Even when he was ill or very tired, he would perform it sitting down rather that leaving it out.\" [^1]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The Narration of Hadhrat Jaabir (RA) About the Tahajjud Salaah Being Compulsory Before Concession was Granted"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Jaabir (RA)",
+"text": "Hadhrat Jaabir (RA) says, \"Qiyaamul Layl became compulsory for us with the revelation of the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "يٰٓأَيُّهَا الْمُزَّمِّلُ ۝ قُمِ الَّيْلَ إِلَّا قَلِيْلًا ۝",
+"reference": "Surah Muzammil, verses 1,2",
+"text": "O you wrapped in a cloth! Stand up all night (in Tahajjud salaah) except for a little while (in which to take a rest)...\""
+},
+{
+"type": "narration",
+"continued": true,
+"text": "We therefore stood so long in salaah that our feet would swell. Allaah then revealed the verses granting concession when He said:"
+},
+{
+"type": "quran",
+"arabic_text": "عَلِمَ أَنْ سَيَكُوْنُ مِنْكُمْ مَّرْضٰى ۙ وَاٰخَرُوْنَ يَضْرِبُوْنَ فِي الْأَرْضِ يَبْتَغُوْنَ مِنْ فَضْلِ اللّٰهِ ۙ وَاٰخَرُوْنَ يُقَاتِلُوْنَ فِيْ سَبِيْلِ اللّٰهِ ۖ فَاقْرَءُوْا مَا تَيَسَّرَ مِنْهُ ۙ وَأَقِيْمُوا الصَّلٰوةَ وَاٰتُوا الزَّكٰوةَ وَأَقْرِضُوا اللّٰهَ قَرْضًا حَسَنًا ۚ وَمَا تُقَدِّمُوْا لِأَنْفُسِكُمْ مِّنْ خَيْرٍ تَجِدُوْهُ عِنْدَ اللّٰهِ هُوَ خَيْرًا وَّأَعْظَمَ أَجْرًا ۚ وَاسْتَغْفِرُوا اللّٰهَ ۖ إِنَّ اللّٰهَ غَفُوْرٌ رَّحِيْمٌ ۝",
+"reference": "Surah Muzammil, verse 20",
+"text": "Allaah knows that some of you may fall ill, others will travel in the world in search of Allaah's bounty (to earn a living) and others will fight in Allaah's path (in each of these cases, they will be unable to perform Tahajjud as they do at home). Therefore, recite (only) that of the Qur'aan (in Tahajjud) which is easy. (Although Tahajjud is not obligatory, do not neglect to) Establish (the Fardh) salaah, pay zakaah and give to Allaah a good loan (spend in charity for Allaah's pleasure). Whatever good you send ahead for yourselves (as reward to the Aakhirah), you will find it with Allaah in a better and more rewarding state. Seek forgiveness from Allaah. Verily Allaah is Most Forgiving, Most Merciful. [^2]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "Hadhrat Sa'eed bin Hishaam asks Hadhrat Aa'isha (RA) About Rasulullaah ﷺ's Witr Salaah"
+},
+{
+"type": "narration",
+"text": "Hadhrat Sa'eed bin Hishaam divorced his wife and then journeyed to Madinah to sell the property he had there. He intended to invest the money from the sale in horses and weapons to use in the Jihaad against the Romans until he died. En route, he met a group of people from his tribe who narrated to him that when six persons of his tribe also wanted to do the same thing during the time of Rasulullaah ﷺ, Rasulullaah ﷺ forbade them saying, \"Do you not have an"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Abu Dawood and Ibn Khuzaymah, as quoted in Targheeb wat Tarheeb (Vol.1 Pg.401)."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Bazzaar. Haythami (Vol.2 Pg.251) has commented on the chain of narrators."
+}
+]
+}

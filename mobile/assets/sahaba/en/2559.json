@@ -1,0 +1,54 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 2,
+"page_number": 559,
+"running_head": "The Tolerance of Rasulullaah ﷺ"
+},
+"blocks": [
+{
+"type": "quran",
+"arabic_text": "اسْتَغْفِرْ لَهُمْ أَوْ لَا تَسْتَغْفِرْ لَهُمْ",
+"reference": "Surah Taubah, verse 80",
+"text": "'Seek forgiveness for them (the Munaafiqeen) or do not seek forgiveness for them.'\""
+},
+{
+"type": "narration",
+"continued": true,
+"text": "Rasulullaah ﷺ then proceeded to lead the salaah, after which Allaah revealed the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "وَلَا تُصَلِّ عَلَىٰ أَحَدٍ مِّنْهُم مَّاتَ أَبَدًا",
+"reference": "Surah Taubah, verse 84[^1]",
+"text": "Do not ever perform (the funeral) salaah for any of them who die."
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Umar (RA)",
+"text": "Hadhrat Umar (RA) says, \"When Abdullaah bin Ubay died, Rasulullaah ﷺ was called for the Janaazah salaah and he proceeded. When Rasulullaah ﷺ stood before the corpse with the intention of leading the salaah, I turned around and stood in front of him saying, 'O Rasulullaah ﷺ! Will you perform the salaah for the enemy of Allaah, Abdullaah bin Ubay, the one who made all those (blasphemous) statements?' I then went on to recount the things he had said. Rasulullaah ﷺ continued smiling and it was only when I had gone too far that he said, 'Do move away from me, O Umar because I have been given a choice and have made mine. I have been told:"
+},
+{
+"type": "quran",
+"arabic_text": "اسْتَغْفِرْ لَهُمْ أَوْ لَا تَسْتَغْفِرْ لَهُمْ إِن تَسْتَغْفِرْ لَهُمْ سَبْعِينَ مَرَّةً فَلَن يَغْفِرَ اللَّهُ لَهُمْ ۚ ذَٰلِكَ بِأَنَّهُمْ كَفَرُوا بِاللَّهِ وَرَسُولِهِ ۗ وَاللَّهُ لَا يَهْدِي الْقَوْمَ الْفَاسِقِينَ",
+"reference": "Surah Taubah, verse 80",
+"text": "'(O Muhammad ﷺ!) Seek forgiveness for them (the Munaafiqeen) or do not seek forgiveness for them. Even if you seek forgiveness for them seventy times, Allaah will never forgive them. This is because they disbelieved in Allaah and His Rasool ﷺ. Allaah does not guide the disobedient ones (because they have no desire to be guided).'"
+},
+{
+"type": "narration",
+"continued": true,
+"text": "If I knew that he would be forgiven if I sought forgiveness for him more than seventy times, I would certainly exceed seventy.' Rasulullaah ﷺ then proceeded to lead the salaah and stood by the grave until the funeral was over. I was greatly perplexed by my audaciousness before Rasulullaah ﷺ for Allaah and His Rasool ﷺ know best (what is right and what not). By Allaah! it was hardly much longer afterwards that Allaah revealed the following two verses:"
+},
+{
+"type": "quran",
+"arabic_text": "وَلَا تُصَلِّ عَلَىٰ أَحَدٍ مِّنْهُم مَّاتَ أَبَدًا وَلَا تَقُمْ عَلَىٰ قَبْرِهِ ۖ إِنَّهُمْ كَفَرُوا بِاللَّهِ وَرَسُولِهِ وَمَاتُوا وَهُمْ فَاسِقُونَ ۝ وَلَا تُعْجِبْكَ أَمْوَالُهُمْ وَأَوْلَادُهُمْ ۚ إِنَّمَا يُرِيدُ اللَّهُ أَن يُعَذِّبَهُم بِهَا فِي الدُّنْيَا وَتَزْهَقَ أَنفُسُهُمْ وَهُمْ كَافِرُونَ",
+"reference": "سورة توبه آيت ٨٤، ٨٥",
+"text": "Do not ever perform (the funeral) salaah for any of them who die and do not stand over their graves (to bury them or to visit their graves)."
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Bukhaari and Muslim."
+}
+]
+}

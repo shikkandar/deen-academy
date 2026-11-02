@@ -1,0 +1,51 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 1,
+"page_number": 49,
+"running_head": "Qur'aanic Verses Concerning Rasulullaah ﷺ and the Sahabah (RA)"
+},
+"blocks": [
+{
+"type": "quran",
+"arabic_text": "إِنَّاۤ أَرْسَلْنٰكَ شَاهِدًا وَّمُبَشِّرًا وَّنَذِيْرًا ۝ لِّتُؤْمِنُوْا بِاللّٰهِ وَرَسُوْلِهٖ وَتُعَزِّرُوْهُ وَتُوَقِّرُوْهُ ؕ وَتُسَبِّحُوْهُ بُكْرَةً وَّأَصِيْلًا",
+"reference": "Surah Fatah, verses 8, 9",
+"text": "Verily We have sent you (O Rasulullaah ﷺ) as a witness (to testify to the actions of people on the Day of Qiyaamah), a carrier of good news (to the Mu'mineen) and a warner (to the Kuffaar) so that you (O people) believe in Allaah, believe in His Rasool, assist Him (His Deen), revere Him and glorify Him morning and evening."
+},
+{
+"type": "quran",
+"arabic_text": "إِنَّاۤ أَرْسَلْنٰكَ بِالْحَقِّ بَشِيْرًا وَّنَذِيْرًا ۙ وَّلَا تُسْئَلُ عَنْ أَصْحٰبِ الْجَحِيْمِ",
+"reference": "Surah Baqara, verse 119",
+"text": "Undoubtedly We have sent you (O Muhammad ﷺ) with the truth, as a carrier of good news (to those who believe you) and as a warner (to those who refuse to believe you). You will not be questioned about the people of the Blaze (about those in the fire of Jahannam. Allaah shall not ask you why they did not believe because your duty is to give them the message and not to force them to believe)."
+},
+{
+"type": "quran",
+"arabic_text": "إِنَّاۤ أَرْسَلْنٰكَ بِالْحَقِّ بَشِيْرًا وَّنَذِيْرًا ؕ وَإِنْ مِّنْ أُمَّةٍ إِلَّا خَلَا فِيْهَا نَذِيْرٌ",
+"reference": "Surah Faatir, verse 24",
+"text": "Verily We have sent you (O Rasulullaah ﷺ) with the truth, as a carrier of good news (to the Mu'mineen) and (as) a warner (to the Kuffaar). (Your duty is nothing strange to people because) A warner (who cautioned people about the consequences of kufr) passed in every nation."
+},
+{
+"type": "quran",
+"arabic_text": "وَمَاۤ أَرْسَلْنٰكَ إِلَّا كَآفَّةً لِّلنَّاسِ بَشِيْرًا وَّنَذِيْرًا وَّلٰكِنَّ أَكْثَرَ النَّاسِ لَا يَعْلَمُوْنَ",
+"reference": "Surah Saba, verse 28",
+"text": "We have sent you (O Muhammad ﷺ) to the whole of mankind only as a carrier of good news and a warner (and not as one who has to force people to accept Imaan). However, most people (the Kuffaar) do not know (that you are Allaah's true Nabi)."
+},
+{
+"type": "quran",
+"arabic_text": "وَمَاۤ أَرْسَلْنٰكَ إِلَّا مُبَشِّرًا وَّنَذِيْرًا",
+"reference": "Surah Furqaan, verse 56",
+"text": "We have sent you (O Rasulullaah ﷺ) only as a carrier of good news (to the Mu'mineen) and a warner (to the Kuffaar)."
+},
+{
+"type": "quran",
+"arabic_text": "وَمَاۤ أَرْسَلْنٰكَ إِلَّا رَحْمَةً لِّلْعٰلَمِيْنَ",
+"reference": "Surah Ambiyaa, verse 107",
+"text": "We have sent you (O Muhammad ﷺ) as a mercy to the universe (to show mercy towards mankind, Jinn and creation at large by guiding them to the path of salvation)."
+},
+{
+"type": "quran",
+"arabic_text": "هُوَ الَّذِيْۤ أَرْسَلَ رَسُوْلَهٗ بِالْهُدٰى وَدِيْنِ الْحَقِّ لِيُظْهِرَهٗ عَلَى الدِّيْنِ كُلِّهٖ وَلَوْ كَرِهَ الْمُشْرِكُوْنَ",
+"text": "It is He (Allaah) Who sent His Rasool ﷺ with guidance and the true religion (of Islaam) so that He may make it overcome all other religions even"
+}
+]
+}

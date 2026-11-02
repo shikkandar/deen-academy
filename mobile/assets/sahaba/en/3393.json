@@ -1,0 +1,60 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 393,
+"running_head": "Some General Du'aas that Rasulullaah ﷺ Made"
+},
+"blocks": [
+{
+"type": "narration",
+"continued": true,
+"narrator": "Hadhrat Abu Hurayrah (RA)",
+"text": "my affairs, set right my worldly affairs in which lies my livelihood and set right the affairs of my Aakhirah to which I shall be returning. Make life a means for me to progress in every good and make death a means for me to be relieved of every evil\"[^1]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Abbaas (RA)",
+"arabic_text": "اَللّٰهُمَّ لَكَ أَسْلَمْتُ وَبِكَ آمَنْتُ وَعَلَيْكَ تَوَكَّلْتُ وَإِلَيْكَ أَنَبْتُ وَبِكَ خَاصَمْتُ اَللّٰهُمَّ إِنِّيْ أَعُوْذُ بِعِزَّتِكَ لَا إِلٰهَ إِلَّا أَنْتَ أَنْ تُضِلَّنِيْ أَنْتَ الْحَيُّ الَّذِيْ لَا يَمُوْتُ وَالْجِنُّ وَالْإِنْسُ يَمُوْتُوْنَ",
+"text": "Hadhrat Abdullaah bin Abbaas (RA) reports that Rasulullaah ﷺ used to make the following du'aa:\n\"O Allaah! To You do I submit, in You do I believe, in You do I trust, to You do I turn and with You do I challenge (my opposition). O Allaah! Because there is none worthy of worship but You, I seek protection with Your honour against me being misguided. You are the Ever Living Who will never die while man and Jinn will surely die\"[^2]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Ummu Salamah (RA)",
+"arabic_text": "يَا مُقَلِّبَ الْقُلُوْبِ ثَبِّتْ قَلْبِيْ عَلٰى دِيْنِكَ",
+"text": "Hadhrat Ummu Salamah (RA) narrates that the du'aa Rasulullaah ﷺ most often made was:\n\"O the One Who turns hearts! Keep my heart steadfast on Your Deen\"[^3]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Aa'isha (RA)",
+"arabic_text": "اَللّٰهُمَّ عَافِنِيْ فِيْ جَسَدِيْ وَعَافِنِيْ فِيْ بَصَرِيْ وَاجْعَلْهُ الْوَارِثَ مِنِّيْ لَا إِلٰهَ إِلَّا أَنْتَ الْحَلِيْمُ الْكَرِيْمُ سُبْحَانَ اللّٰهِ رَبِّ الْعَرْشِ الْعَظِيْمِ وَالْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِيْنَ",
+"text": "Hadhrat Aa'isha (RA) narrates that another of the du'aas that Rasulullaah ﷺ used to make was:\n\"O Allaah! Grant me well-being in my body and well-being in my sight and make them my beneficiaries. There is none worthy of worship but You the Most Forbearing and Most Magnanimous. Glorified is Allaah the Rabb of the Grand Throne. All praise belongs to Allaah the Rabb of the universe\"[^4]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Abbaas (RA)",
+"arabic_text": "رَبِّ أَعِنِّيْ وَلَا تُعِنْ عَلَيَّ وَانْصُرْنِيْ وَلَا تَنْصُرْ عَلَيَّ وَامْكُرْ لِيْ وَلَا تَمْكُرْ عَلَيَّ وَاهْدِنِيْ وَيَسِّرْ هُدَايَ وَانْصُرْنِيْ عَلٰى مَنْ بَغٰى عَلَيَّ رَبِّ اجْعَلْنِيْ لَكَ شَاكِرًا لَكَ ذَاكِرًا لَكَ رَاهِبًا لَكَ مِطْوَاعًا إِلَيْكَ مُخْبِتًا أَوْ مُنِيْبًا تَقَبَّلْ تَوْبَتِيْ وَاغْسِلْ حَوْبَتِيْ وَأَجِبْ دَعْوَتِيْ وَثَبِّتْ حُجَّتِيْ وَاهْدِ قَلْبِيْ وَسَدِّدْ لِسَانِيْ وَاسْلُلْ سَخِيْمَةَ قَلْبِيْ",
+"text": "Hadhrat Abdullaah bin Abbaas (RA) narrates that one of the du'aas Rasulullaah ﷺ used to make was:\n\"O my Rabb! Assist me and do not assist others against me. Help me"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Muslim."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Muslim and Bukhaari."
+},
+{
+"type": "footnote",
+"number": 3,
+"text": "Tirmidhi."
+},
+{
+"type": "footnote",
+"number": 4,
+"text": "Tirmidhi."
+}
+]
+}

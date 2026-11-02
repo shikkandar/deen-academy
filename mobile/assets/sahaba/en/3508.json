@@ -1,0 +1,46 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 508,
+"running_head": "The Advice he gave to Someone"
+},
+"blocks": [
+{
+"type": "narration",
+"narrator": "Hadhrat Umar (RA)",
+"continued": true,
+"text": "you from yourself because you are ultimately responsible for yourself and not for them. Never spend your days wandering about because everything you do is recorded. Always carry out a good deed whenever you sin because I have never seen anything catch up with another as fast as a newly done good deed catches up with an old sin.\" [^1]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Umar (RA)",
+"text": "Hadhrat Umar (RA) also said, \"Stay away from that which causes you harm, ensure that you have righteous friends even though such people are scarce and consult those who fear Allaah about all your matters.\" [^2]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "Eighteen Wise Advices from the Lips of Hadhrat Umar (RA)"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Sa'eed bin Musayyib",
+"text": "Hadhrat Sa'eed bin Musayyib reports that there were eighteen guidelines that Hadhrat Umar (RA) formulated for the people, every one of which is replete with wisdom. He said,\n\"(1) When someone disobeys Allaah in matter that impacts on you, you can give him no punishment worse than obeying Allaah in matters that impact on him.\n(2) Always assume the best about your brother unless you learn something about him that you absolutely cannot reconcile.\n(3) Never assume the worst about any statement that a Muslim makes as long as you are able to make a favourable interpretation.\n(4) The person who exposes himself to slander must never rebuke anyone who holds a bad opinion of him.\n(5) Whoever guards his secrets will retain the choice in his hands.\n(6) Ensure that you keep true friends to stay under their wings because they are a source of beauty during times of prosperity and a means of protection during times of hardship.\n(7) Always speak the truth even though it leads to your death.\n(8) Never delve into matters that do not concern you.\n(9) Do not ask about matters that have not occurred because that which has already taken place is enough to preoccupy you from that which has not.\n(10) Never seek your needs from one who does not want to see your success.\n(11) Never treat false oaths lightly because Allaah will then destroy you.\n(12) Never keep the company of the sinners to learn from their sinful ways.\n(13) Keep away from your enemy.\n(14) Beware even of your friends, except for the trustworthy one and none can be trustworthy unless he fears Allaah.\n(15) Be humble when in the graveyard,\n(16) submit to Allaah's obedience and\n(17) seek Allaah's protection at the time of disobeying His commands. (18) Consult with those who fear Allaah because Allaah says:"
+},
+{
+"type": "quran",
+"arabic_text": "اِنَّمَا يَخۡشَى اللّٰهَ مِنۡ عِبَادِهِ الۡعُلَمٰٓؤُا",
+"reference": "Surah Faatir, verse 28"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Deenowri, as quoted in Kanzul Ummaal (Vol.8 Pg.208)."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Bayhaqi, as quoted in Kanzul Ummaal (Vol.8 Pg.208)."
+}
+]
+}

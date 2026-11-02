@@ -4,6 +4,7 @@ import { ActivityIndicator, FlatList, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { BookSearchButton } from '@/components/book-search';
 import { JasmineBadge } from '@/components/jasmine-flower';
 import { enter, SpringPressable } from '@/components/motion';
 import { ThemedText } from '@/components/themed-text';
@@ -13,19 +14,39 @@ import { useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 import { useAppState } from '@/lib/app-state';
-import { getBook, getChapter, isOurTamil, type Hadith } from '@/lib/hadith-books';
-import { saveHadithProgress } from '@/lib/reading-progress';
+import {
+  getBook,
+  getChapter,
+  hasTamil as bookHasTamil,
+  isOurTamil,
+  loadHadithTranslation,
+  saveHadithTranslation,
+  type Hadith,
+} from '@/lib/hadith-books';
+import { saveHadithProgress, useReadingSession } from '@/lib/reading-progress';
 
 export default function HadithChapterScreen() {
   const theme = useTheme();
   const t = useT();
   const layout = useLayout();
-  const tamil = useAppState().settings.language === 'ta';
+  const appLanguage = useAppState().settings.language;
   // `at` is set when opened from "Continue reading".
   const { book: bookId, section, at } = useLocalSearchParams<{ book: string; section: string; at?: string }>();
   const book = getBook(bookId);
   const sectionId = Number(section);
   const chapter = book?.sections.find((s) => s.id === sectionId);
+
+  // English or Tamil under the Arabic: the app language until she picks one here.
+  const [translation, setTranslation] = useState<'en' | 'ta'>(appLanguage === 'ta' ? 'ta' : 'en');
+  useEffect(() => {
+    loadHadithTranslation().then((v) => v && setTranslation(v));
+  }, []);
+  const chooseTranslation = (value: 'en' | 'ta') => {
+    setTranslation(value);
+    saveHadithTranslation(value);
+  };
+  const hasTamil = bookHasTamil(bookId);
+  const tamil = hasTamil && translation === 'ta';
 
   const [hadiths, setHadiths] = useState<Hadith[] | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -38,7 +59,8 @@ export default function HadithChapterScreen() {
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps -- load once per chapter
   }, [bookId, sectionId]);
-  // Remember the hadith at the top of the screen, so "Continue reading" brings her back here.
+  // Remember the hadith at the top of the screen, so "Continue reading" brings her back here (once she has stayed a moment).
+  useReadingSession('hadith', `${bookId}/${sectionId}`);
   const listRef = useRef<FlatList<Hadith>>(null);
   const meta = useRef({ bookId, bookName: book?.name ?? '', sectionId, chapterName: chapter?.name ?? '' });
   useEffect(() => {
@@ -106,11 +128,13 @@ export default function HadithChapterScreen() {
                 </ThemedText>
               </SpringPressable>
 
+              {book && book.sections.length === 1 && <BookSearchButton scope={`book-${book.id}`} title={book.name} />}
+
               <Animated.View entering={enter(0)} style={[styles.hero, { backgroundColor: theme.hero }]}>
                 <ThemedText type="small" style={{ color: theme.onHeroMuted }}>
-                  {book?.name}
+                  {book ? t(book.name) : ''}
                 </ThemedText>
-                <ThemedText style={[styles.heroTitle, { color: theme.onHero }]}>{chapter?.name ?? 'Chapter'}</ThemedText>
+                <ThemedText style={[styles.heroTitle, { color: theme.onHero }]}>{chapter?.name ?? t('Chapter')}</ThemedText>
                 {chapter && (
                   <ThemedText type="small" style={{ color: theme.onHeroMuted }}>
                     {t('Hadith {first}–{last}', { first: chapter.first, last: chapter.last })}
@@ -118,6 +142,26 @@ export default function HadithChapterScreen() {
                 )}
               </Animated.View>
 
+              {hasTamil && (
+                <View style={styles.langRow}>
+                  {(
+                    [
+                      ['en', 'English'],
+                      ['ta', 'Tamil'],
+                    ] as const
+                  ).map(([id, label]) => (
+                    <SpringPressable
+                      key={id}
+                      pressedScale={0.95}
+                      onPress={() => chooseTranslation(id)}
+                      style={[styles.langChip, { backgroundColor: translation === id ? theme.primary : theme.primarySoft }]}>
+                      <ThemedText type="small" style={[styles.bold, { color: translation === id ? theme.onPrimary : theme.primary }]}>
+                        {t(label)}
+                      </ThemedText>
+                    </SpringPressable>
+                  ))}
+                </View>
+              )}
               {tamil && isOurTamil(bookId) && (
                 <ThemedText type="small" themeColor="textSecondary" style={styles.credit}>
                   {t('Tamil: Deen Academy translation, made with AI help from the Arabic. Not yet checked by a scholar.')}
@@ -193,7 +237,9 @@ const styles = StyleSheet.create({
   container: { flex: 1, flexDirection: 'row', justifyContent: 'center' },
   safeArea: { flex: 1, maxWidth: MaxContentWidth },
   bold: { fontWeight: 700 },
-  credit: { textAlign: 'center' },
+  credit: { textAlign: 'center', marginTop: -Spacing.one },
+  langRow: { flexDirection: 'row', gap: Spacing.two, alignSelf: 'center' },
+  langChip: { borderRadius: 999, paddingVertical: Spacing.two, paddingHorizontal: Spacing.three },
   list: {
     paddingHorizontal: Spacing.three + Spacing.one,
     paddingBottom: BottomTabInset + Spacing.four,

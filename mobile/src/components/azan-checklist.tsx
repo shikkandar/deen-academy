@@ -24,6 +24,9 @@ type Check = { id: string; label: string; why: string; ok: boolean; fix: () => v
  * Everything Android needs for the Azan to ring on time, with a Fix button for each one that's missing.
  * Re-checked whenever the app comes back from system settings.
  */
+/** The checks only apply on Android (the installed app); elsewhere there is nothing to show. */
+export const hasAzanChecklist = Platform.OS === 'android' && isDndSupported;
+
 export function AzanChecklist() {
   const theme = useTheme();
   const t = useT();

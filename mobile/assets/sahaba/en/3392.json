@@ -1,0 +1,66 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 392,
+"running_head": "The Du'aas Rasulullaah ﷺ Recited when Sighting the New Moon and when Noticing Thunder, Clouds or Wind"
+},
+"blocks": [
+{
+"type": "narration",
+"continued": true,
+"narrator": "Hadhrat Aa'isha (RA)",
+"arabic_text": "اَللّٰهُمَّ صَيِّبًا نَافِعًا",
+"text": "which it has been sent\"\nHowever, if it happened to rain, he would recite the following du'aa twice or thrice:\n\"O Allaah! Make this a beneficial downpour\"[^1]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Salamah bin Akwa (RA)",
+"arabic_text": "اَللّٰهُمَّ لَقْحًا لَا عَقِيْمًا",
+"text": "Hadhrat Salamah bin Akwa (RA) reports that when the wind blew fiercely, Rasulullaah ﷺ would say:\n\"O Allaah! Make it a wind that is fruitful and not one that is destructive\"[^2]"
+},
+{
+"type": "heading",
+"level": "topic",
+"text": "Some General Du'aas that Rasulullaah ﷺ Made"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Mas'ood (RA)",
+"arabic_text": "اَللّٰهُمَّ إِنِّيْ أَسْأَلُكَ الْهُدٰى وَالتُّقٰى وَالْعَفَافَ وَالْغِنٰى",
+"text": "Hadhrat Abdullaah bin Mas'ood (RA) narrates that Rasulullaah ﷺ used to make du'aa saying:\n\"O Allaah! I ask you for guidance, Taqwa, chastity and independence\"[^3]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abu Moosa Ash'ari (RA)",
+"arabic_text": "اَللّٰهُمَّ اغْفِرْ لِيْ خَطِيْئَتِيْ وَجَهْلِيْ وَإِسْرَافِيْ فِيْ أَمْرِيْ وَمَا أَنْتَ أَعْلَمُ بِهٖ مِنِّيْ اَللّٰهُمَّ اغْفِرْ لِيْ جِدِّيْ وَهَزْلِيْ وَخَطَئِيْ وَعَمْدِيْ وَكُلُّ ذٰلِكَ عِنْدِيْ اَللّٰهُمَّ اغْفِرْ لِيْ مَا قَدَّمْتُ وَمَا أَخَّرْتُ وَمَا أَسْرَرْتُ وَمَا أَعْلَنْتُ وَمَا أَنْتَ أَعْلَمُ بِهٖ مِنِّيْ أَنْتَ الْمُقَدِّمُ وَأَنْتَ الْمُؤَخِّرُ وَأَنْتَ عَلٰى كُلِّ شَيْءٍ قَدِيْرٌ",
+"text": "Hadhrat Abu Moosa Ash'ari (RA) reports that one of the du'aas Rasulullaah ﷺ often recited was:\n\"O Allaah! Forgive my sins, my acts of ignorance, the excesses I commit in my affairs and everything else that You know better than I. O Allaah! Forgive the wrong I do in earnestness, in jest, in error and on purpose, all of which I am guilty of. O Allaah! Forgive my past sins, my future sins, those that I have done secretly, those I have committed openly and all others that You know better than I. You are the one Who promotes and relegates (people in status) and You have power over all things\"[^4]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abu Hurayrah (RA)",
+"arabic_text": "اَللّٰهُمَّ أَصْلِحْ لِيْ دِيْنِيَ الَّذِيْ هُوَ عِصْمَةُ أَمْرِيْ وَأَصْلِحْ لِيْ دُنْيَايَ الَّتِيْ فِيْهَا مَعَاشِيْ وَأَصْلِحْ لِيْ آخِرَتِيَ الَّتِيْ فِيْهَا مَعَادِيْ وَاجْعَلِ الْحَيَاةَ زِيَادَةً لِّيْ فِيْ كُلِّ خَيْرٍ وَّاجْعَلِ الْمَوْتَ رَاحَةً لِّيْ مِنْ كُلِّ شَرٍّ",
+"text": "Hadhrat Abu Hurayrah (RA) narrates that Rasulullaah ﷺ used to make the following du'aa:\n\"O Allaah! Set right the affairs of my Deen in which lies the safety of all"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Ibn Abi Shaybah, as quoted in Kanzul Ummaal (Vol.4 Pg.290)."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Tabraani. Haythami (Vol.10 Pg.135) has commented on the chain of narrators."
+},
+{
+"type": "footnote",
+"number": 3,
+"text": "Muslim."
+},
+{
+"type": "footnote",
+"number": 4,
+"text": "Muslim and Bukhaari."
+}
+]
+}

@@ -1,0 +1,81 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 189,
+"running_head": "The Importance Rasulullaah ﷺ and the Sahabah (RA) Attached to the Nawaafil Salaahs between Sunrise and Midday"
+},
+"blocks": [
+{
+"type": "heading",
+"level": "section",
+"text": "Narrations of Hadhrat Anas (RA) and Hadhrat Abdullaah bin Abu Awfa (RA) Concerning the Salaatud Duhaa that Rasulullaah ﷺ Performed"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Anas (RA)",
+"text": "Hadhrat Anas (RA) narrates, \"I saw Rasulullaah ﷺ perform six Rakaahs of Salaatud Duhaa and I have never forsaken them thereafter.\" [^1]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Ummu Haani (RA)",
+"text": "Another narration from Hadhrat Ummu Haani (RA) states that when Rasulullaah ﷺ went to her house the day Makkah was conquered, he performed six Rakaahs Salaatud Duhaa. [^2]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Abu Awfa (RA)",
+"text": "When Hadhrat Abdullaah bin Abu Awfa (RA) performed only two Rakaahs Salaatud Duhaa, his wife asked, \"You have performed only two Rakaahs?\" He replied, \"Rasulullaah ﷺ also performed two Rakaahs of this salaah when he was given the good news of a victory and also when the head of Abu Jahal was brought to him.\" [^3]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The narration of Hadhrat Abdullaah bin Abbaas (RA) from Hadhrat Ummu Haani (RA) Concerning the Salaatud Duhaa that Rasulullaah ﷺ Performed"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Abbaas (RA)",
+"text": "Hadhrat Abdullaah bin Abbaas (RA) once said, \"There is a verse of the Qur'aan that I used to recite without understanding what it referred to. The verse is:"
+},
+{
+"type": "quran",
+"arabic_text": "بِالْعَشِيِّ وَالْإِشْرَاقِ",
+"reference": "Surah Saad, verse 18",
+"text": "...by evening and at Ishraaq (daybreak)..."
+},
+{
+"type": "narration",
+"continued": true,
+"text": "This was until Ummu Haani (RA) narrated to me that Rasulullaah ﷺ once came to her and asked for a dish of water to make wudhu. She said, 'I could still see traces of dough in the dish (because I had just used it for making dough). Rasulullaah ﷺ however made wudhu and performed the Salaatud Duhaa saying, 'O Ummu Haani! This is the 'Ishraaq' salaah ('the daybreak salaah').'\" [^4]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "Rasulullaah ﷺ Encourages the Performing of Salaatud Duhaa and explains its Virtues"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abu Hurayrah (RA)",
+"text": "Hadhrat Abu Hurayrah (RA) reports that when Rasulullaah ﷺ once dispatched an army, they returned very quickly with a large booty. Someone remarked, \"O Rasulullaah ﷺ! I have never before seen an army returning so quickly with such a large booty.\" Rasulullaah ﷺ said, \"Shall I not inform you of an army that returns even quicker with an even larger booty? It is the person who"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Tabraani. Haythami (Vol.2 Pg.337) has commented on the chain of narrators."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Tabraani in his Awsat and Kabeer, reporting from reliable sources as confirmed by Haythami (Vol.2 Pg.238)."
+},
+{
+"type": "footnote",
+"number": 3,
+"text": "Bazzaar and Tabraani. Haythami (Vol.2 Pg.238) has commented on the chain of narrators. Ibn Maajah has reported a similar narration, stating that Rasulullaah ﷺ performed the Salaatud Duhaa in this manner when the head of Abu Jahal was brought to him. This narration does not state that Rasulullaah ﷺ did so when receiving news of a victory."
+},
+{
+"type": "footnote",
+"number": 4,
+"text": "Tabraani. Haythami (Vol.2 Pg.238) has commented on the chain of narrators."
+}
+]
+}

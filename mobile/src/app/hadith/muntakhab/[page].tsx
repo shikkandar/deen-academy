@@ -1,6 +1,6 @@
 import { router, useLocalSearchParams, type Href } from 'expo-router';
 import { useEffect, useRef, useState, type ComponentRef } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, ScrollView, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -152,7 +152,8 @@ export default function MuntakhabPage() {
       live = false;
     };
   }, [n, lang, pageKey]);
-  const page = loaded?.key === pageKey ? loaded.page : null;
+  const loading = loaded?.key !== pageKey;
+  const page = loading ? null : loaded.page;
   const goTo = (p: number) => router.replace(`/hadith/muntakhab/${p}` as Href);
   const contents = () => {
     if (router.canDismiss()) router.dismissTo('/hadith/muntakhab');
@@ -189,6 +190,8 @@ export default function MuntakhabPage() {
                   <BlockView block={block} terms={terms} />
                 </View>
               ))
+            ) : loading ? (
+              <ActivityIndicator color={theme.primary} style={styles.loading} />
             ) : (
               <ThemedText themeColor="textSecondary" style={styles.center}>
                 {t('This page is not available.')}
@@ -226,6 +229,7 @@ export default function MuntakhabPage() {
 }
 
 const styles = StyleSheet.create({
+  loading: { paddingVertical: 48 },
   container: { flex: 1, flexDirection: 'row', justifyContent: 'center' },
   safeArea: { flex: 1, maxWidth: MaxContentWidth },
   flex: { flex: 1 },

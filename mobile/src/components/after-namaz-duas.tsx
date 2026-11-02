@@ -7,6 +7,7 @@ import Animated, { FadeIn, FadeOut, LinearTransition } from 'react-native-reanim
 
 import { Spacing } from '@/constants/theme';
 import { useT } from '@/hooks/use-t';
+import { tr } from '@/lib/i18n';
 import { useTheme } from '@/hooks/use-theme';
 import { playExclusive, type LockScreen } from '@/lib/audio-focus';
 import type { PrayerTime } from '@/lib/prayer';
@@ -154,7 +155,7 @@ export function AfterNamazDuas({ prayer, highlight }: { prayer: PrayerTime; high
 
   // Lock screen / notification controls, so the duas keep playing with the screen off.
   const lock: LockScreen = {
-    metadata: { title: tab === 'jamaat' ? 'Jamaat dua' : `After ${prayer.name} adhkar`, artist: 'After-namaz duas', albumTitle: 'Deen Academy' },
+    metadata: { title: tab === 'jamaat' ? tr('Jamaat dua') : tr('After {name} adhkar', { name: tr(prayer.name) }), artist: tr('After-namaz duas'), albumTitle: 'Deen Academy' },
     options: { showNextTrack: true, showPreviousTrack: true },
   };
 

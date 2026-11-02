@@ -1,0 +1,31 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 3,
+"page_number": 366,
+"running_head": "The Etiquette of Dhikr and Compounding Good Deeds"
+},
+"blocks": [
+{
+"type": "quran",
+"continued": true,
+"reference": "Surah Nisaa, verse 40",
+"text": "He shall multiply it (the reward of a good deed) and grant a tremendous (manifold) reward from His side. {Surah Nisaa, verse 40}"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abu Hurayrah (RA)",
+"text": "Thereafter, he added, \"If Allaah speaks of a 'tremendous reward', who can measure its magnitude?\""
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abu Hurayrah (RA)",
+"text": "According to another narration, Hadhrat Abu Uthmaan says that he approached Hadhrat Abu Hurayrah (RA) and asked, \"I have heard that according to you, the reward of a good deed is multiplied as much as a million times.\" To this, Hadhrat Abu Hurayrah (RA) said, \"Why do you find that surprising when I swear by Allaah that I heard Rasulullaah ﷺ say...\" The rest of the narration is like the one above.[^1]"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Ahmad and Bazzaar, as quoted in Majma'uz Zawaa'id (Vol.10 Pg.145)."
+}
+]
+}

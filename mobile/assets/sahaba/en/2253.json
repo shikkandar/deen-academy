@@ -1,0 +1,61 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 2,
+"page_number": 253,
+"running_head": "The Opinion of Hadhrat Umar (RA) About the Rights of the Muslims in Wealth"
+},
+"blocks": [
+{
+"type": "quran",
+"reference": "Surah Hashar, verse 9",
+"text": "(Part of this booty is also for) Those (the Ansaar) who adopted the place (Madinah) as their home before them (before the Muhaajireen) and (had adopted) Imaan. They (the Ansaar) love those who migrate to them (the Muhaajireen) and find no want (jealousy or envy) in their hearts for what they (the Muhaajireen) are given. They (the Ansaar) prefer (others) above themselves (they prefer to give others) even though they are themselves in need (of the things they give). (Like the Ansaar,) Those who are saved from the miserliness (and greed) of the soul are really the successful ones (whom will attain salvation).[^1]",
+"continued": true
+},
+{
+"type": "narration",
+"text": "Hadhrat Umar (RA) said, \"By Allaah! This wealth is not only for these people (there are others also as mentioned in the forthcoming verse)."
+},
+{
+"type": "quran",
+"arabic_text": "وَالَّذِيْنَ جَآءُوْ مِنْۢ بَعْدِهِمْ يَقُوْلُوْنَ رَبَّنَا اغْفِرْ لَنَا وَلِاِخْوَانِنَا الَّذِيْنَ سَبَقُوْنَا بِالْاِيْمَانِ وَلَا تَجْعَلْ فِيْ قُلُوْبِنَا غِلًّا لِّلَّذِيْنَ اٰمَنُوْا رَبَّنَآ اِنَّكَ رَءُوْفٌ رَّحِيْمٌ",
+"reference": "Surah Hashar, verse 10",
+"text": "(It should also be given to) Those who come after them (after the Muhaajireen and Ansaar who) say, \"O our Rabb! Forgive us and our brothers (the Sahabah (RA)) who passed before us with Imaan. And do not place any impurity (ill-feelings) in our hearts against those who have Imaan. O our Rabb! Indeed You are the Most Forgiving, Most Merciful.\"[^2]"
+},
+{
+"type": "narration",
+"text": "Hadhrat Umar (RA) then said, \"By Allaah! There is not a single Muslim who does not have a right to this wealth, whether it is given to him or not, even though he may be a shepherd in Adan.\"[^3]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The Narration of Hadhrat Maalik bin Hadathaan"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Maalik bin Aws bin Hadathaan",
+"text": "Narrating the same incident, Hadhrat Maalik bin Aws bin Hadathaan reports that Hadhrat Umar (RA) also recited the following verses:"
+},
+{
+"type": "quran",
+"arabic_text": "اِنَّمَا الصَّدَقٰتُ لِلْفُقَرَآءِ وَالْمَسٰكِيْنِ وَالْعٰمِلِيْنَ عَلَيْهَا وَالْمُؤَلَّفَةِ قُلُوْبُهُمْ وَفِى الرِّقَابِ وَالْغٰرِمِيْنَ وَفِيْ سَبِيْلِ اللّٰهِ وَابْنِ السَّبِيْلِ ؕ فَرِيْضَةً مِّنَ اللّٰهِ ؕ وَاللّٰهُ عَلِيْمٌ حَكِيْمٌ",
+"reference": "Surah Taubah, verse 60",
+"text": "Alms (zakaah) are only for the poor, the destitute (people whose total wealth is less than the value of Nisaab), the orphans, those appointed to collect them (zakaah), those whose hearts have to be reconciled (a group that existed only during the time of Rasulullaah ﷺ), for (the freedom of) slaves, for those in debt (who are not merely stalling payment), for (those striving in) the path of Allaah (and have no means) and for the traveller (who has no means). This is ordered (as obligatory) by Allaah. Allaah is All Knowing, The Wise (Allaah knows best who should receive zakaah and it is therefore not permissible for man to"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Surah Hashar, verse 9."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Surah Hashar, verse 10."
+},
+{
+"type": "footnote",
+"number": 3,
+"text": "Bayhaqi (Vol.6 Pg.351)."
+}
+]
+}

@@ -1,0 +1,93 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 2,
+"page_number": 51,
+"running_head": "The Sahabah (RA) Unanimously Accept Hadhrat Abu Bakr (RA) as Khalifah"
+},
+"blocks": [
+{
+"type": "narration",
+"continued": true,
+"narrator": "Hadhrat Urwa bin Zubayr (RA)",
+"text": "you the news of your own deaths. Death is a reality and there will come a time when none but Allaah will be alive. Allaah has declared:"
+},
+{
+"type": "quran",
+"arabic_text": "وَمَا مُحَمَّدٌ اِلَّا رَسُوْلٌ ۚ قَدْ خَلَتْ مِنْ قَبْلِهِ الرُّسُلُ ؕ اَفَاۡئِنْ مَّاتَ اَوْ قُتِلَ انْقَلَبْتُمْ عَلٰٓى اَعْقَابِكُمْ ؕ وَمَنْ يَّنْقَلِبْ عَلٰى عَقِبَيْهِ فَلَنْ يَّضُرَّ اللّٰهَ شَيْـًٔا ؕ وَسَيَجْزِى اللّٰهُ الشّٰكِرِيْنَ",
+"reference": "آل عمران: آيت ١٤٤",
+"text": "'Muhammad ﷺ is but a Rasool (of Allaah). Indeed many Rusul have passed before him. If he passes away or is martyred, would you (Muslims) then turn back on your heels (and forsake Islaam)? He who turns back on his heels can never harm Allaah in the least (because he will be harming only himself). Allaah shall soon reward the grateful ones (so be firm and strive for His Deen).'\" [^1]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Urwa bin Zubayr (RA)",
+"text": "Hadhrat Umar (RA) exclaimed, \"Is this verse in the Qur'aan? By Allaah, to this day, I had never known that it was ever revealed (I had completely forgotten about it)!\" Hadhrat Abu Bakr (RA) continued, \"Allaah has also mentioned the following about Muhammad ﷺ:"
+},
+{
+"type": "quran",
+"arabic_text": "اِنَّكَ مَيِّتٌ وَّاِنَّهُمْ مَّيِّتُوْنَ",
+"reference": "زمر آيت ٣٠",
+"text": "'Indeed, you (O Rasulullaah ﷺ) shall certainly die, and they shall all die as well.' [^2]"
+},
+{
+"type": "paragraph",
+"text": "Allaah has also mentioned:"
+},
+{
+"type": "quran",
+"arabic_text": "كُلُّ شَیْءٍ هَالِكٌ اِلَّا وَجْهَهٗ ؕ لَهُ الْحُكْمُ وَاِلَيْهِ تُرْجَعُوْنَ",
+"reference": "قصص آيت ٨٨",
+"text": "'Everything shall perish but His Countenance. All decisions rest with Him and to Him shall you all be returned (after death).' [^3]"
+},
+{
+"type": "paragraph",
+"text": "Allaah also says:"
+},
+{
+"type": "quran",
+"arabic_text": "كُلُّ مَنْ عَلَيْهَا فَانٍ ۚ وَّيَبْقٰى وَجْهُ رَبِّكَ ذُو الْجَلٰلِ وَالْاِكْرَامِ",
+"reference": "رحمن آيت ٢٦",
+"text": "'Everything on earth shall perish (on the Day of Qiyaamah if not sooner). (When this happens,) Only the countenance of your Rabb the Possessor of majesty and benevolence shall remain (forever, without ever perishing).' [^4]"
+},
+{
+"type": "paragraph",
+"text": "Allaah says in another verse:"
+},
+{
+"type": "quran",
+"arabic_text": "كُلُّ نَفْسٍ ذَآئِقَةُ الْمَوْتِ ؕ وَاِنَّمَا تُوَفَّوْنَ اُجُوْرَكُمْ يَوْمَ الْقِيٰمَةِ ؕ",
+"reference": "آل عمران آيت ١٨٥",
+"text": "'Every soul shall taste death and it is only on the Day of Qiyaamah that you will be given your rewards in full (although partial rewards are received in this world and in the grave).'\" [^5]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Urwa bin Zubayr (RA)",
+"text": "Hadhrat Abu Bakr (RA) continued, \"Allaah had given a lifetime to Rasulullaah ﷺ and kept him alive until he established the Deen of Allaah, made the"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Surah Aal Imraan, verse 144."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Surah Zumar, verse 30."
+},
+{
+"type": "footnote",
+"number": 3,
+"text": "Surah Qasas, verse 88."
+},
+{
+"type": "footnote",
+"number": 4,
+"text": "Surah Rahmaan, verses 26, 27."
+},
+{
+"type": "footnote",
+"number": 5,
+"text": "Surah Aal Imran, verse 185."
+}
+]
+}

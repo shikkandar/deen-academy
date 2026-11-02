@@ -1,0 +1,70 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 1,
+"page_number": 378,
+"running_head": "The Bond of Brotherhood Between the Muhaajireen and the Ansaar (RA)"
+},
+"blocks": [
+{
+"type": "narration",
+"continued": true,
+"text": "goat.\" (Referring to the tremendous blessings that Allaah had granted him in business,) Hadhrat Abdur Rahmaan (RA) used to say, \"Even if I were to pick up a stone, I could hope to receive gold or silver in exchange.\" [^1]"
+},
+{
+"type": "heading",
+"level": "section",
+"text": "The Muhaajireen and Ansaar Inherit from Each other"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abdullaah bin Abbaas (RA)",
+"text": "Hadhrat Abdullaah bin Abbaas (RA) narrates that when the Muhaajireen first arrived in Madinah, a Muhaajir would inherit from his Ansaar brother because of the bonds of brotherhood that Rasulullaah ﷺ created between them. In fact, even the relatives of the Ansaar would not inherit from their families as the Muhaajireen would. However, this practice was abrogated when Allaah revealed the following verse of the Qur'aan:"
+},
+{
+"type": "quran",
+"arabic_text": "وَلِكُلٍّ جَعَلْنَا مَوَالِيَ",
+"reference": "Surah Nisaa, verse 33",
+"text": "For each (man and woman) We have appointed heirs. [^2]"
+},
+{
+"type": "paragraph",
+"text": "While this narration states that the above verse abrogated the inheritance of a confederate (the Muhaajir whom Rasulullaah ﷺ appointed as a brother to an Ansaari), the next narration makes it clear that the verse which abrogated the practice was:"
+},
+{
+"type": "quran",
+"arabic_text": "وَأُولُو الْأَرْحَامِ بَعْضُهُمْ أَوْلَىٰ بِبَعْضٍ فِي كِتَابِ اللَّهِ ۗ إِنَّ اللَّهَ بِكُلِّ شَيْءٍ عَلِيمٌ",
+"reference": "Surah Anfaal, verse 75",
+"text": "Those who are relatives are closer to each other in Allaah's Book (and will therefore inherit from each other before anyone else). Undoubtedly (Only) Allaah knows everything (He knows who deserves what)."
+},
+{
+"type": "paragraph",
+"text": "Haafidh Ibn Hazar (RA) states that this narration is more reliable. However, he also points out that this practice could have been abrogated twice. It is possible that in the early stages, the only form of inheritance was between those whom Rasulullaah ﷺ appointed as brothers, without any inheritance being stipulated for relatives. However, relatives were also given a share of inheritance together with the confederates when Allaah revealed the verse:"
+},
+{
+"type": "quran",
+"arabic_text": "وَلِكُلٍّ جَعَلْنَا مَوَالِيَ",
+"reference": "Surah Nisaa, verse 33",
+"text": "For each (man and woman) We have appointed heirs."
+},
+{
+"type": "paragraph",
+"text": "This is the interpretation of the narration reported by Hadhrat Abdullaah bin Abbaas (RA). However, inheritance was left exclusively for relatives and the inheritance of confederates was completely abrogated by the following verse of Surah Ahzaab:"
+},
+{
+"type": "quran",
+"arabic_text": "وَأُولُو الْأَرْحَامِ بَعْضُهُمْ أَوْلَىٰ بِبَعْضٍ فِي كِتَابِ اللَّهِ مِنَ الْمُؤْمِنِينَ وَالْمُهَاجِرِينَ إِلَّا أَنْ",
+"reference": "Surah Ahzaab, verse 6"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Ahmad, as quoted in Al Bidaaya wan Nihaaya (Vol.3 Pg.228). Bukhari and Muslim have also reported the Hadith as quoted Isaaba (Vol.2 Pg.26). Ibn Sa'd has also narrated it in his Tabaqaat (Vol.3 Pg.89)."
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Bukhari."
+}
+]
+}

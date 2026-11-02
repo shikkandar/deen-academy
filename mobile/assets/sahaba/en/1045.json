@@ -1,0 +1,58 @@
+{
+"header": {
+"book_title": "Hayatus Sahaba",
+"volume": 1,
+"page_number": 45,
+"running_head": "Qur'aanic Verses Concerning Obedience to Allaah and His Rasool ﷺ"
+},
+"blocks": [
+{
+"type": "quran",
+"continued": true,
+"reference": "Surah Aal Imraan, verse 31",
+"text": "Say (O Muhammad ﷺ), \"If you love Allaah then follow me (Muhammad ﷺ), Allaah will then love you (He will reward you and grant you numerous material and spiritual blessings) and forgive your sins. Allaah is Most Forgiving, Most Merciful.\""
+},
+{
+"type": "quran",
+"arabic_text": "لَقَدْ كَانَ لَكُمْ فِيْ رَسُوْلِ اللّٰهِ أُسْوَةٌ حَسَنَةٌ لِّمَنْ كَانَ يَرْجُوا اللّٰهَ وَالْيَوْمَ الْاٰخِرَ وَذَكَرَ اللّٰهَ كَثِيْرًا",
+"reference": "Surah Ahzaab, Verse 21",
+"text": "There is definitely an excellent example in Allaah's Rasool ﷺ for the one who fears Allaah and the Last Day, and who remembers Allaah abundantly."
+},
+{
+"type": "quran",
+"arabic_text": "مَاۤ أَفَآءَ اللّٰهُ عَلٰى رَسُوْلِهٖ مِنْ أَهْلِ الْقُرٰى فَلِلّٰهِ وَلِلرَّسُوْلِ وَلِذِي الْقُرْبٰى وَالْيَتٰمٰى وَالْمَسٰكِيْنِ وَابْنِ السَّبِيْلِ ۙ كَيْ لَا يَكُوْنَ دُوْلَةًۢ بَيْنَ الْأَغْنِيَآءِ مِنْكُمْ ؕ وَمَاۤ اٰتٰىكُمُ الرَّسُوْلُ فَخُذُوْهُ ۚ وَمَا نَهٰىكُمْ عَنْهُ فَانْتَهُوْا ۚ وَاتَّقُوا اللّٰهَ ؕ إِنَّ اللّٰهَ شَدِيْدُ الْعِقَابِ",
+"reference": "Surah Hashar, verse 7",
+"text": "The booty (wealth) that Allaah granted His Rasool ﷺ (without a battle being fought) from the people of the villages is for Allaah (to be distributed as Allaah pleases), for the (needs of the) Rasool ﷺ, for the relatives (of Rasulullaah ﷺ), for the orphans, for the poor and for the travellers so that this wealth may not remain as amassed riches with the wealthy among you (by distributing it in this manner, the wealth is circulated among people so that all may benefit). Hold fast to what (commands) the Rasool ﷺ gives you and refrain from what (actions) He prevents you (because whatever he instructs you is from Allaah). Fear (disobeying) Allaah, for Allaah punishes very severely."
+},
+{
+"type": "heading",
+"level": "topic",
+"text": "Ahaadeeth Concerning Obedience to Rasulullaah ﷺ, Following him and Following the Khulafa (RA)"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abu Hurayrah (RA)",
+"text": "Hadhrat Abu Hurayrah (RA) narrates that Rasulullaah ﷺ said, \"Whoever obeys me, obeys Allaah and whoever disobeys me, disobeys Allaah. Whoever obeys my Ameer (whom I have appointed), obeys me and whoever disobeys my Ameer, disobeys me.\" [^1]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Abu Hurayrah (RA)",
+"text": "Hadhrat Abu Hurayrah (RA) has also narrated that Rasulullaah ﷺ said, \"Everyone belonging to my Ummah shall enter Jannah except those who refuse (they will not enter Jannah).\" \"Who are those who refuse?\" someone asked. Rasulullaah ﷺ replied, \"Those who obey me shall enter Jannah while those who disobey me are the ones who refuse.\" [^2]"
+},
+{
+"type": "narration",
+"narrator": "Hadhrat Jaabir (RA)",
+"text": "Hadhrat Jaabir (RA) narrated that a few angels came to Rasulullaah ﷺ while he was asleep. Addressing the others, one of the angels said, \"There is a similitude for this friend of yours. Mention this similitude.\" One of them said, \"But he is asleep.\" Another responded, \"Although his eyes sleep, his heart remains"
+},
+{
+"type": "footnote",
+"number": 1,
+"text": "Bukhari"
+},
+{
+"type": "footnote",
+"number": 2,
+"text": "Bukhari, as narrated in Jaami Vol. 2 Pg. 233"
+}
+]
+}

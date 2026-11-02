@@ -1,11 +1,12 @@
 import { useAudioPlaylist, useAudioPlaylistStatus } from 'expo-audio';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Modal, ScrollView, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { MaxContentWidth, Spacing } from '@/constants/theme';
 import { useLayout } from '@/hooks/use-layout';
+import { useKeepAwakeWhile } from '@/hooks/use-keep-awake-while';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 import { useAppState } from '@/lib/app-state';
@@ -18,6 +19,7 @@ import { endPrayerSession, isDndSupported, startPrayerSession } from '../../modu
 import { buildSalah, flatten, LENGTHS, type Length, type Salah, type Speed } from '@/lib/salah-sequence';
 
 import { JasmineFlower } from './jasmine-flower';
+import { SalahFigure, figureFor } from './salah-figure';
 import { SpringPressable } from './motion';
 import { ThemedText } from './themed-text';
 import { ThemedView } from './themed-view';
@@ -88,6 +90,8 @@ export function NamazAssistant({
   const [salah, setSalah] = useState<Salah | null>(null);
   const [finished, setFinished] = useState(false);
   const [donePart, setDonePart] = useState<number | null>(null);
+  // Tracks in the prayer now playing; 0 while nothing is (clearing the old one also reports "finished").
+  const expected = useRef(0);
 
   const playlist = useAudioPlaylist();
   const status = useAudioPlaylistStatus(playlist);
@@ -113,9 +117,11 @@ export function NamazAssistant({
       withDua: part.kind === 'Fard',
     });
     const { tracks } = flatten(next);
+    expected.current = 0;
     playlist.pause();
     playlist.clear();
     for (const t of tracks) playlist.add(t);
+    expected.current = tracks.length;
     setPlaybackRate(playlist, speed);
     setSalah(next);
     setPartIndex(index);
@@ -127,10 +133,15 @@ export function NamazAssistant({
     playExclusive(playlist, lock(salahTitle(next, t)));
   };
 
+  // The screen stays on from the first takbir until the prayer is over (or it is closed).
+  useKeepAwakeWhile(visible && !!salah && !finished, 'namaz-assistant');
+
   // The whole prayer finished: show what's next.
   useEffect(() => {
     const sub = playlist.addListener('playlistStatusUpdate', (s) => {
-      if (s.didJustFinish && s.currentIndex >= s.trackCount - 1) {
+      const n = expected.current;
+      if (s.didJustFinish && n > 0 && s.trackCount === n && s.currentIndex === n - 1) {
+        expected.current = 0;
         endPrayerSession();
         setFinished(true);
         setDonePart((d) => d ?? partIndex);
@@ -161,6 +172,7 @@ export function NamazAssistant({
   };
 
   const close = () => {
+    expected.current = 0;
     playlist.pause();
     endPrayerSession();
     setSalah(null);
@@ -192,13 +204,16 @@ export function NamazAssistant({
         {/* Desktop: a centred column rather than a full-width page. */}
         <SafeAreaView style={[styles.safeArea, wide && styles.safeAreaWide]}>
           <View style={styles.topBar}>
-            <ThemedText type="smallBold" themeColor="textSecondary" style={styles.label}>
+            <ThemedText type="smallBold" themeColor="textSecondary" numberOfLines={1} style={[styles.topLabel, styles.flex]}>
               {t('NAMAZ ASSISTANT · {prayer}', { prayer: t(prayer).toUpperCase() })}
             </ThemedText>
-            <SpringPressable onPress={close} style={[styles.chip, { backgroundColor: theme.primarySoft }]}>
-              <ThemedText type="small" style={[styles.bold, { color: theme.primary }]}>
-                {t('Close')}
-              </ThemedText>
+            <SpringPressable
+              onPress={close}
+              accessibilityRole="button"
+              accessibilityLabel={t('Close')}
+              hitSlop={8}
+              style={[styles.closeBtn, { backgroundColor: theme.primarySoft }]}>
+              <ThemedText style={[styles.closeIcon, { color: theme.primary }]}>✕</ThemedText>
             </SpringPressable>
           </View>
 
@@ -283,18 +298,39 @@ export function NamazAssistant({
 
             {salah && step && !finished && (
               <Animated.View entering={FadeIn} style={styles.block}>
-                <ThemedText type="small" themeColor="textSecondary" style={styles.center}>
-                  {salahTitle(salah, t)}
-                </ThemedText>
-                <View style={[styles.hero, { backgroundColor: theme.hero }]}>
-                  <ThemedText type="small" style={{ color: theme.onPrimary, opacity: 0.8 }}>
-                    {step.rakat
-                      ? t('Rakat {n} of {total} · {posture}', { n: step.rakat, total: salah.rakats, posture: t(POSTURE[step.posture]) })
-                      : t(POSTURE[step.posture])}
+                <View style={styles.progressHead}>
+                  <View style={[styles.pill, { backgroundColor: theme.primarySoft }]}>
+                    {step.rakat != null && (
+                      <View style={styles.dots}>
+                        {Array.from({ length: salah.rakats }, (_, i) => (
+                          <View
+                            key={i}
+                            style={[styles.dot, { backgroundColor: theme.primary, opacity: i < (step.rakat ?? 0) ? 1 : 0.25 }]}
+                          />
+                        ))}
+                      </View>
+                    )}
+                    <ThemedText type="smallBold" style={{ color: theme.primary }}>
+                      {step.rakat
+                        ? t('Rakat {n} of {total} · {posture}', { n: step.rakat, total: salah.rakats, posture: t(POSTURE[step.posture]) })
+                        : t(POSTURE[step.posture])}
+                    </ThemedText>
+                  </View>
+                  <View style={styles.flex} />
+                  <ThemedText type="small" themeColor="textSecondary" style={styles.tabular}>
+                    {stepIndex + 1} / {salah.steps.length}
                   </ThemedText>
-                  <ThemedText style={[styles.stepTitle, { color: theme.onPrimary }]}>{t(step.title, step.vars)}</ThemedText>
+                </View>
+                <View style={[styles.track, { backgroundColor: theme.backgroundSelected }]}>
+                  <View
+                    style={[styles.fill, { backgroundColor: theme.primary, width: `${((stepIndex + 1) / salah.steps.length) * 100}%` }]}
+                  />
+                </View>
+                <SalahFigure figure={figureFor(step)} speed={speed} gender={settings.profile?.gender} />
+                <View style={styles.stepHead}>
+                  <ThemedText style={styles.stepTitle}>{t(step.title, step.vars)}</ThemedText>
                   {gapLeft != null && (
-                    <ThemedText style={[styles.countdown, { color: theme.onPrimary }]}>{minutes(gapLeft)}</ThemedText>
+                    <ThemedText style={[styles.countdown, { color: theme.primary }]}>{minutes(gapLeft)}</ThemedText>
                   )}
                 </View>
 
@@ -305,26 +341,6 @@ export function NamazAssistant({
                 <ThemedText type="small" style={styles.center}>
                   {t(step.english, step.vars)}
                 </ThemedText>
-
-                <View style={styles.controls}>
-                  <SpringPressable onPress={() => goStep(-1)} style={[styles.ctrl, { backgroundColor: theme.primarySoft }]}>
-                    <ThemedText style={[styles.bold, { color: theme.primary }]}>◀◀</ThemedText>
-                  </SpringPressable>
-                  <SpringPressable
-                    onPress={() => (status.playing ? playlist.pause() : playExclusive(playlist, lock(salahTitle(salah, t))))}
-                    style={[styles.ctrlMain, { backgroundColor: theme.primary }]}>
-                    <ThemedText style={[styles.bold, { color: theme.onPrimary }]}>{status.playing ? '❚❚' : '▶'}</ThemedText>
-                  </SpringPressable>
-                  <SpringPressable onPress={() => goStep(1)} style={[styles.ctrl, { backgroundColor: theme.primarySoft }]}>
-                    <ThemedText style={[styles.bold, { color: theme.primary }]}>▶▶</ThemedText>
-                  </SpringPressable>
-                </View>
-
-                <View style={[styles.row, styles.centerRow]}>
-                  {SPEEDS.map((s) => (
-                    <Chip key={s} on={speed === s} label={`${s}x`} onPress={() => setSpeed(s)} />
-                  ))}
-                </View>
               </Animated.View>
             )}
 
@@ -351,6 +367,30 @@ export function NamazAssistant({
               </Animated.View>
             )}
           </ScrollView>
+          {salah && step && !finished && (
+            <View style={[styles.dock, { borderTopColor: theme.border }]}>
+              {/* One compact row: back, play / pause, next, and the speed (tap to change). */}
+              <View style={styles.ctrlSide} />
+              <SpringPressable onPress={() => goStep(-1)} style={[styles.ctrl, { backgroundColor: theme.primarySoft }]}>
+                <ThemedText style={[styles.ctrlIcon, { color: theme.primary }]}>◀◀</ThemedText>
+              </SpringPressable>
+              <SpringPressable
+                onPress={() => (status.playing ? playlist.pause() : playExclusive(playlist, lock(salahTitle(salah, t))))}
+                style={[styles.ctrlMain, { backgroundColor: theme.primary }]}>
+                <ThemedText style={[styles.ctrlIcon, { color: theme.onPrimary }]}>{status.playing ? '❚❚' : '▶'}</ThemedText>
+              </SpringPressable>
+              <SpringPressable onPress={() => goStep(1)} style={[styles.ctrl, { backgroundColor: theme.primarySoft }]}>
+                <ThemedText style={[styles.ctrlIcon, { color: theme.primary }]}>▶▶</ThemedText>
+              </SpringPressable>
+              <SpringPressable
+              onPress={() => setSpeed(SPEEDS[(SPEEDS.indexOf(speed) + 1) % SPEEDS.length])}
+              style={[styles.ctrlSide, styles.speed, { backgroundColor: theme.primarySoft }]}>
+              <ThemedText type="smallBold" style={{ color: theme.primary }}>
+                {speed}x
+              </ThemedText>
+              </SpringPressable>
+            </View>
+          )}
         </SafeAreaView>
       </ThemedView>
     </Modal>
@@ -361,8 +401,18 @@ const styles = StyleSheet.create({
   container: { flex: 1, flexDirection: 'row', justifyContent: 'center' },
   safeArea: { flex: 1, maxWidth: MaxContentWidth },
   safeAreaWide: { maxWidth: 720, paddingTop: Spacing.four },
-  topBar: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: Spacing.three },
-  scroll: { padding: Spacing.three, paddingBottom: Spacing.six },
+  topBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: Spacing.three,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.two,
+  },
+  topLabel: { letterSpacing: 1.5 },
+  closeBtn: { width: 36, height: 36, borderRadius: 18, alignItems: 'center', justifyContent: 'center' },
+  closeIcon: { fontSize: 15, fontWeight: 700 },
+  scroll: { paddingHorizontal: Spacing.three, paddingTop: Spacing.one, paddingBottom: Spacing.four },
   block: { gap: Spacing.three },
   centerBlock: { alignItems: 'center' },
   heading: { fontSize: 22, fontWeight: 700, textAlign: 'center' },
@@ -373,12 +423,31 @@ const styles = StyleSheet.create({
   bold: { fontWeight: 700 },
   notice: { borderRadius: 16, padding: Spacing.three },
   start: { borderRadius: 999, paddingVertical: Spacing.three, alignItems: 'center', alignSelf: 'stretch', marginTop: Spacing.two },
-  hero: { borderRadius: 28, padding: Spacing.four, alignItems: 'center', gap: Spacing.one },
-  stepTitle: { fontSize: 24, fontWeight: 700, textAlign: 'center' },
+  stepHead: { alignItems: 'center', gap: Spacing.two },
+  pill: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two, borderRadius: 999, paddingVertical: 6, paddingHorizontal: Spacing.three },
+  stepTitle: { fontSize: 28, lineHeight: 34, fontWeight: 700, textAlign: 'center' },
   countdown: { fontSize: 40, fontWeight: 700, fontVariant: ['tabular-nums'] },
-  arabic: { fontSize: 28, lineHeight: 52, textAlign: 'center', writingDirection: 'rtl' },
+  arabic: { fontSize: 26, lineHeight: 48, textAlign: 'center', writingDirection: 'rtl' },
   center: { textAlign: 'center' },
-  controls: { flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: Spacing.four, marginTop: Spacing.two },
-  ctrl: { width: 56, height: 56, borderRadius: 28, alignItems: 'center', justifyContent: 'center' },
-  ctrlMain: { width: 72, height: 72, borderRadius: 36, alignItems: 'center', justifyContent: 'center' },
+  dock: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.three,
+    borderTopWidth: StyleSheet.hairlineWidth,
+    paddingTop: Spacing.three,
+    paddingBottom: Spacing.four,
+  },
+  ctrlSide: { width: 44 },
+  speed: { height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center' },
+  ctrlIcon: { fontSize: 13, fontWeight: 700 },
+  progressHead: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
+  flex: { flex: 1 },
+  tabular: { fontVariant: ['tabular-nums'] },
+  track: { height: 4, borderRadius: 2, overflow: 'hidden', marginTop: -Spacing.two },
+  fill: { height: 4, borderRadius: 2 },
+  dots: { flexDirection: 'row', gap: 4 },
+  dot: { width: 6, height: 6, borderRadius: 3 },
+  ctrl: { width: 40, height: 40, borderRadius: 20, alignItems: 'center', justifyContent: 'center' },
+  ctrlMain: { width: 52, height: 52, borderRadius: 26, alignItems: 'center', justifyContent: 'center' },
 });
