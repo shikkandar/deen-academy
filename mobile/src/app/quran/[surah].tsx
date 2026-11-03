@@ -1,7 +1,7 @@
 import { useAudioPlaylist, useAudioPlaylistStatus } from 'expo-audio';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router, useLocalSearchParams } from 'expo-router';
-import { useEffect, useRef, useState } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, FlatList, Modal, Pressable, ScrollView, StyleSheet, Text, View, type StyleProp, type TextStyle } from 'react-native';
 import Animated, { FadeIn, FadeInDown, FadeOutDown } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -143,6 +143,59 @@ function WordText({ text, words, word, color, style }: {
     </ThemedText>
   );
 }
+
+/**
+ * One ayah card. Memoised: the playlist reports ten times a second while reciting, and only the ayah being recited
+ * gets new props (its word); the others skip rendering, which kept the phone busy enough to freeze ("isn't responding").
+ */
+const AyahRow = memo(function AyahRow({ a, index, active, playing, word, wordIn, words, translation, onToggle }: {
+  a: Ayah;
+  index: number;
+  active: boolean;
+  playing: boolean; // only meaningful for the active ayah
+  word: number | null; // the word being said, for the active ayah only
+  wordIn: TextLanguage | 'arabic' | null;
+  words?: string[];
+  translation: TextLanguage;
+  onToggle: (i: number) => void;
+}) {
+  const theme = useTheme();
+  return (
+    <Animated.View
+      // Only the first cards slide in when the surah opens; cards mounted while scrolling appear as they are.
+      entering={index < 8 ? FadeInDown.springify().damping(18).delay(120 + index * 60) : undefined}
+      style={[
+        styles.ayah,
+        { backgroundColor: theme.backgroundElement, borderColor: active ? theme.primary : theme.border },
+        active && { backgroundColor: theme.primarySoft },
+      ]}>
+      <View style={styles.ayahTop}>
+        <JasmineBadge value={a.numberInSurah} size={42} active={active} />
+        <SpringPressable
+          pressedScale={0.9}
+          onPress={() => onToggle(index)}
+          style={[styles.playBtn, { backgroundColor: active ? theme.primary : theme.primarySoft }]}>
+          <ThemedText style={[styles.playIcon, { color: active ? theme.onPrimary : theme.primary }]}>
+            {active && playing ? '❚❚' : '▶'}
+          </ThemedText>
+        </SpringPressable>
+      </View>
+      <WordText style={styles.arabic} text={a.arabic} words={words} word={active && wordIn === 'arabic' ? word : null} color={theme.primary} />
+      {translation !== 'off' && (
+        <>
+          <View style={[styles.divider, { backgroundColor: theme.gold }]} />
+          <WordText
+            style={[styles.english, { color: theme.textSecondary }, translation === 'ur' && styles.urdu]}
+            text={translationOf(a, translation) ?? ''}
+            words={active && wordIn === translation ? wordsOf(a, translation) : undefined}
+            word={active && wordIn === translation ? word : null}
+            color={theme.primary}
+          />
+        </>
+      )}
+    </Animated.View>
+  );
+});
 
 // The translation shown on the player's language button.
 const LANG_SHORT: Record<TextLanguage, string> = { en: 'EN', ta: 'தமிழ்', ur: 'اردو', off: 'عربي' };
@@ -450,6 +503,12 @@ export default function SurahScreen() {
       playAt(i);
     }
   };
+  // The same function for every render (so the memoised ayah cards don't re-render), calling the latest toggle.
+  const toggleRef = useRef<(i: number) => void>(() => {});
+  const [onToggle] = useState(() => (i: number) => toggleRef.current(i));
+  useEffect(() => {
+    toggleRef.current = toggle;
+  });
 
   return (
     <ThemedView style={styles.container}>
@@ -560,44 +619,17 @@ export default function SurahScreen() {
           renderItem={({ item: a, index }) => {
             const active = current === index;
             return (
-              <Animated.View
-                entering={index < 8 ? FadeInDown.springify().damping(18).delay(120 + index * 60) : FadeIn}
-                style={[
-                  styles.ayah,
-                  { backgroundColor: theme.backgroundElement, borderColor: active ? theme.primary : theme.border },
-                  active && { backgroundColor: theme.primarySoft },
-                ]}>
-                <View style={styles.ayahTop}>
-                  <JasmineBadge value={a.numberInSurah} size={42} active={active} />
-                  <SpringPressable
-                    pressedScale={0.9}
-                    onPress={() => toggle(index)}
-                    style={[styles.playBtn, { backgroundColor: active ? theme.primary : theme.primarySoft }]}>
-                    <ThemedText style={[styles.playIcon, { color: active ? theme.onPrimary : theme.primary }]}>
-                      {active && playing ? '❚❚' : '▶'}
-                    </ThemedText>
-                  </SpringPressable>
-                </View>
-                <WordText
-                  style={styles.arabic}
-                  text={a.arabic}
-                  words={words?.[index]}
-                  word={active && wordIn === 'arabic' ? word : null}
-                  color={theme.primary}
-                />
-                {translation !== 'off' && (
-                  <>
-                    <View style={[styles.divider, { backgroundColor: theme.gold }]} />
-                    <WordText
-                      style={[styles.english, { color: theme.textSecondary }, translation === 'ur' && styles.urdu]}
-                      text={translationOf(a, translation) ?? ''}
-                      words={active && wordIn === translation ? wordsOf(a, translation) : undefined}
-                      word={word}
-                      color={theme.primary}
-                    />
-                  </>
-                )}
-              </Animated.View>
+              <AyahRow
+                a={a}
+                index={index}
+                active={active}
+                playing={active && playing}
+                word={active ? word : null}
+                wordIn={active ? wordIn : null}
+                words={words?.[index]}
+                translation={translation}
+                onToggle={onToggle}
+              />
             );
           }}
         />
