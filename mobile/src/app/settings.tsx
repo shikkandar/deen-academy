@@ -153,8 +153,7 @@ function SettingsColumns({ wide, children }: { wide: boolean; children: [React.R
   );
 }
 
-/** Settings: a tab on the web; in the apps a full-screen sheet opened from the ⚙ on Prayers (`onClose` shows ✕). */
-export default function SettingsScreen({ onClose }: { onClose?: () => void } = {}) {
+export default function SettingsScreen() {
   const theme = useTheme();
   const t = useT();
   const layout = useLayout();
@@ -214,17 +213,7 @@ export default function SettingsScreen({ onClose }: { onClose?: () => void } = {
           showsVerticalScrollIndicator={false}>
           <Animated.View entering={enter(0)} style={styles.header}>
             <ThemedText style={styles.serifTitle}>{t('Settings')}</ThemedText>
-            {onClose ? (
-              <SpringPressable
-                accessibilityRole="button"
-                accessibilityLabel={t('Close')}
-                onPress={onClose}
-                style={[styles.closeBtn, { backgroundColor: theme.backgroundElement }]}>
-                <ThemedText style={{ fontSize: 18, fontWeight: 700 }}>✕</ThemedText>
-              </SpringPressable>
-            ) : (
-              <FloatingFlower size={30} rotate={20} period={30} />
-            )}
+            <FloatingFlower size={30} rotate={20} period={30} />
           </Animated.View>
 
 
@@ -315,7 +304,7 @@ export default function SettingsScreen({ onClose }: { onClose?: () => void } = {
               />
             </View>
             {settings.playAzan && (
-              <View style={[styles.row, styles.divider, { borderTopColor: theme.border }]}>
+              <View style={[styles.row, styles.wrapRow, styles.divider, { borderTopColor: theme.border }]}>
                 <ThemedText style={styles.rowLabel}>{t('Azan length')}</ThemedText>
                 <View style={[styles.segment, { backgroundColor: theme.background }]}>
                   {(
@@ -331,7 +320,7 @@ export default function SettingsScreen({ onClose }: { onClose?: () => void } = {
                         pressedScale={0.95}
                         onPress={() => updateSettings({ azanLength: v })}
                         style={[styles.segmentBtn, on && { backgroundColor: theme.primary }]}>
-                        <ThemedText type="small" style={[styles.bold, { color: on ? theme.onPrimary : theme.textSecondary }]}>
+                        <ThemedText type="small" style={[styles.bold, styles.centerText, { color: on ? theme.onPrimary : theme.textSecondary }]}>
                           {t(label)}
                         </ThemedText>
                       </SpringPressable>
@@ -528,7 +517,6 @@ export default function SettingsScreen({ onClose }: { onClose?: () => void } = {
 }
 
 const styles = StyleSheet.create({
-  closeBtn: { width: 40, height: 40, borderRadius: 20, alignItems: 'center', justifyContent: 'center' },
   detailsRow: { borderWidth: 1, marginTop: Spacing.two },
   detailsIcon: { fontSize: 20 },
   letterRow: { flexDirection: 'row', alignItems: 'center', gap: Spacing.three, borderRadius: 20, padding: Spacing.three },
@@ -556,8 +544,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.two,
     gap: Spacing.two,
   },
+  centerText: { textAlign: 'center' },
+  // Too narrow for both side by side (Tamil), the control moves under the label instead of squeezing it.
+  wrapRow: { flexWrap: 'wrap', rowGap: Spacing.two },
   divider: { borderTopWidth: StyleSheet.hairlineWidth },
-  rowLabel: { flex: 1 },
+  // The label keeps a readable width; the control beside it gives way (Tamil labels are long).
+  rowLabel: { flex: 1, minWidth: 96 },
   stepper: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
   stepBtn: { width: 36, height: 36, borderRadius: 18, alignItems: 'center', justifyContent: 'center' },
   stepBtnText: { fontSize: 20, lineHeight: 24, fontWeight: 700 },
@@ -570,9 +562,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.three,
     borderRadius: 16,
   },
-  segment: { flexDirection: 'row', borderRadius: 999, padding: 3, gap: 2 },
+  segment: { flexDirection: 'row', marginLeft: 'auto', borderRadius: 999, padding: 3, gap: 2 },
   segmentBtn: { borderRadius: 999, paddingVertical: Spacing.one + 2, paddingHorizontal: Spacing.three },
-  timeChip: { borderRadius: 999, paddingVertical: Spacing.two, paddingHorizontal: Spacing.three, minWidth: 96, alignItems: 'center' },
+  timeChip: { flexShrink: 1, borderRadius: 999, paddingVertical: Spacing.two, paddingHorizontal: Spacing.three, minWidth: 96, alignItems: 'center' },
   timeInput: { textAlign: 'center', fontSize: 15, fontWeight: 700 },
   soundTitle: { letterSpacing: 1.5, paddingHorizontal: Spacing.two, paddingTop: Spacing.three, paddingBottom: Spacing.one },
   previewBtn: { width: 34, height: 34, borderRadius: 17, alignItems: 'center', justifyContent: 'center' },

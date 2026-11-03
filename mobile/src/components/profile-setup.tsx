@@ -8,6 +8,7 @@ import { useTheme } from '@/hooks/use-theme';
 import { useAppState } from '@/lib/app-state';
 import type { Gender, Profile } from '@/lib/settings';
 
+import { LanguageChoice } from './language-choice';
 import { FloatingFlower, SpringPressable } from './motion';
 import { ThemedText } from './themed-text';
 
@@ -32,7 +33,7 @@ export function ageOf(dob: string) {
 }
 
 /**
- * Asked once, the first time the app opens: name, gender and date of birth (the age follows from it). The Namaz
+ * Asked once, the first time the app opens: the app's language, name, gender and date of birth (the age follows from it). The Namaz
  * Assistant then shows a man or a woman praying. From Settings the same card edits them (`initial` filled in, with
  * Cancel).
  */
@@ -66,6 +67,15 @@ export function ProfileSetup({ initial, onClose }: { initial?: Profile | null; o
             <ThemedText type="small" themeColor="textSecondary" style={styles.centerText}>
               {t('A little about you, so we can greet you by name and show a brother or a sister praying in the Namaz Assistant.')}
             </ThemedText>
+
+            {!initial && (
+              <>
+                <ThemedText type="smallBold" themeColor="textSecondary" style={styles.label}>
+                  {t('LANGUAGE')}
+                </ThemedText>
+                <LanguageChoice />
+              </>
+            )}
 
             <ThemedText type="smallBold" themeColor="textSecondary" style={styles.label}>
               {t('YOUR NAME')}
@@ -135,7 +145,7 @@ export function ProfileSetup({ initial, onClose }: { initial?: Profile | null; o
               disabled={!ready}
               onPress={() => {
                 if (!ready) return;
-                updateSettings({ profile: { name: name.trim(), gender: gender!, dob: dob! } });
+                updateSettings({ profile: { name: name.trim(), gender: gender!, dob: dob! }, ...(initial ? null : { languageAsked: true }) });
                 onClose?.();
               }}
               style={[styles.button, { backgroundColor: theme.primary, opacity: ready ? 1 : 0.4 }]}>

@@ -1,6 +1,5 @@
 // Tamil for the app's text, keyed by the English (see lib/i18n). Wins over the other ta-*.ts files when a key is in both.
 export const TA_APP: Record<string, string> = {
-  Namaz: 'நமாஸ்',
   'Dismiss': 'மறை',
   'Download': 'பதிவிறக்கு',
   'Deen Academy for Android — Azan alarms, Qibla camera and offline Quran & Hadith work best in the app.': 'Android-க்கான Deen Academy — பாங்கு அலாரம், கிப்லா கேமரா, இணையமில்லாமல் குர்ஆன் & ஹதீஸ் ஆகியவை ஆப்பில் சிறப்பாக வேலை செய்யும்.',
@@ -200,6 +199,9 @@ export const TA_APP: Record<string, string> = {
 
   // Settings
   LANGUAGE: 'மொழி',
+  'Choose your language': 'உங்கள் மொழியைத் தேர்ந்தெடுங்கள்',
+  'The whole app will be shown in this language. You can change it any time in Settings.':
+    'செயலி முழுவதும் இந்த மொழியில் காட்டப்படும். அமைப்புகளில் எப்போது வேண்டுமானாலும் மாற்றலாம்.',
   'MY MASJID': 'எனது பள்ளிவாசல்',
   "Use my masjid's timings": 'எனது பள்ளிவாசல் நேரங்களைப் பயன்படுத்து',
   'Not set up yet': 'இன்னும் அமைக்கவில்லை',

@@ -201,7 +201,7 @@ export function AfterNamazDuas({ prayer, highlight }: { prayer: PrayerTime; high
         <SpringPressable
           onPress={() => (started ? (playing ? playlist.pause() : playExclusive(playlist, lock)) : playFrom(0))}
           style={[styles.playAll, { backgroundColor: theme.primary }]}>
-          <ThemedText type="small" style={[styles.bold, { color: theme.onPrimary }]}>
+          <ThemedText type="small" style={[styles.bold, styles.centerText, { color: theme.onPrimary }]}>
             {started && playing ? t('❚❚  Pause') : started ? t('▶  Resume') : t('▶  Play all')}
           </ThemedText>
         </SpringPressable>
@@ -246,11 +246,13 @@ const styles = StyleSheet.create({
   bold: { fontWeight: 700 },
   tabular: { fontVariant: ['tabular-nums'] },
   card: { borderRadius: 24, borderWidth: 1, padding: Spacing.three, gap: Spacing.three },
-  header: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
-  headerToggle: { flex: 1, flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
+  // Two rows: the title, then Play all across the card (side by side, a long Tamil label squeezed both).
+  header: { gap: Spacing.three },
+  headerToggle: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
   headerText: { flex: 1, gap: 2 },
   label: { letterSpacing: 1.5 },
-  playAll: { borderRadius: 999, paddingVertical: Spacing.two, paddingHorizontal: Spacing.three },
+  centerText: { textAlign: 'center' },
+  playAll: { borderRadius: 999, paddingVertical: Spacing.two + Spacing.one, paddingHorizontal: Spacing.three, alignItems: 'center' },
   list: { gap: Spacing.two },
   tabs: { flexDirection: 'row', borderRadius: 999, padding: Spacing.one, gap: Spacing.one },
   tab: { flex: 1, borderRadius: 999, paddingVertical: Spacing.two, alignItems: 'center' },

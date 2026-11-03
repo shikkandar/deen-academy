@@ -2,6 +2,7 @@ import { Platform, StyleSheet, Text, type TextProps } from 'react-native';
 
 import { Fonts, ThemeColor } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
+import { useAppLanguage } from '@/lib/app-state';
 
 export type ThemedTextProps = TextProps & {
   type?: 'default' | 'title' | 'small' | 'smallBold' | 'subtitle' | 'link' | 'linkPrimary' | 'code';
@@ -10,8 +11,24 @@ export type ThemedTextProps = TextProps & {
 
 export function ThemedText({ style, type = 'default', themeColor, ...rest }: ThemedTextProps) {
   const theme = useTheme();
+  const lang = useAppLanguage();
+  const base = [{ color: theme[themeColor ?? 'text'] }, styles[type], style];
+  return <Text style={lang === 'ta' ? tamil(base) : base} {...rest} />;
+}
 
-  return <Text style={[{ color: theme[themeColor ?? 'text'] }, styles[type], style]} {...rest} />;
+/**
+ * Tamil needs room the English styles don't give it: letter spacing pulls the vowel signs off their letters (the
+ * spaced-out UPPERCASE labels), and English line heights clip the signs above and below the line.
+ */
+function tamil(style: TextProps['style']) {
+  const flat = StyleSheet.flatten(style) ?? {};
+  const fontSize = flat.fontSize ?? 16;
+  const minLine = Math.ceil(fontSize * 1.4);
+  return {
+    ...flat,
+    letterSpacing: 0,
+    ...(flat.lineHeight != null && flat.lineHeight < minLine ? { lineHeight: minLine } : null),
+  };
 }
 
 const styles = StyleSheet.create({

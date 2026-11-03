@@ -3,17 +3,21 @@ import { useColorScheme } from 'react-native';
 
 import { Colors } from '@/constants/theme';
 import { useT } from '@/hooks/use-t';
+import { useAppLanguage } from '@/lib/app-state';
 
 export default function AppTabs() {
   const scheme = useColorScheme();
   const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
   const t = useT();
+  const lang = useAppLanguage();
+  // Five Tamil labels (அமைப்புகள், தொழுகை…) are wider than the English ones; a size smaller keeps them from being cut.
+  const fontSize = lang === 'ta' ? 10 : 12;
 
   return (
     <NativeTabs
       backgroundColor={colors.background}
       indicatorColor={colors.primarySoft}
-      labelStyle={{ selected: { color: colors.primary } }}>
+      labelStyle={{ default: { fontSize }, selected: { fontSize, color: colors.primary } }}>
       <NativeTabs.Trigger name="index">
         <NativeTabs.Trigger.Label>{t('Prayers')}</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
@@ -46,16 +50,13 @@ export default function AppTabs() {
         />
       </NativeTabs.Trigger>
 
-      {/* Android allows five tabs: the Namaz Assistant has one, and Settings opens from the ⚙ on Prayers. */}
-      <NativeTabs.Trigger name="namaz">
-        <NativeTabs.Trigger.Label>{t('Namaz')}</NativeTabs.Trigger.Label>
+      <NativeTabs.Trigger name="settings">
+        <NativeTabs.Trigger.Label>{t('Settings')}</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
-          src={require('@/assets/images/tabIcons/namaz.png')}
+          src={require('@/assets/images/tabIcons/settings.png')}
           renderingMode="template"
         />
       </NativeTabs.Trigger>
-
-      <NativeTabs.Trigger name="settings" hidden />
     </NativeTabs>
   );
 }

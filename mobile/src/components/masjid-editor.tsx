@@ -161,13 +161,13 @@ export function MasjidEditor({ masjid, onClose, onSave }: Props) {
                   disabled={scanning}
                   onPress={() => scan('camera')}
                   style={[styles.scanBtn, { backgroundColor: theme.primary, opacity: scanning ? 0.6 : 1 }]}>
-                  <ThemedText style={[styles.bold, { color: theme.onPrimary }]}>{t('Take photo')}</ThemedText>
+                  <ThemedText numberOfLines={1} adjustsFontSizeToFit style={[styles.bold, { color: theme.onPrimary }]}>{t('Take photo')}</ThemedText>
                 </SpringPressable>
                 <SpringPressable
                   disabled={scanning}
                   onPress={() => scan('gallery')}
                   style={[styles.scanBtn, { backgroundColor: theme.primarySoft, opacity: scanning ? 0.6 : 1 }]}>
-                  <ThemedText style={[styles.bold, { color: theme.primary }]}>{t('From gallery')}</ThemedText>
+                  <ThemedText numberOfLines={1} adjustsFontSizeToFit style={[styles.bold, { color: theme.primary }]}>{t('From gallery')}</ThemedText>
                 </SpringPressable>
               </View>
               {scanning && (
@@ -250,7 +250,7 @@ const styles = StyleSheet.create({
   card: { borderRadius: 24, borderWidth: 1, padding: Spacing.three, gap: Spacing.two },
   cardTitle: { letterSpacing: 1.5 },
   scanRow: { flexDirection: 'row', gap: Spacing.two },
-  scanBtn: { flex: 1, borderRadius: 999, paddingVertical: Spacing.three, alignItems: 'center' },
+  scanBtn: { flex: 1, minWidth: 0, borderRadius: 999, paddingVertical: Spacing.three, paddingHorizontal: Spacing.two, alignItems: 'center' },
   scanning: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two, paddingTop: Spacing.one },
   message: { paddingTop: Spacing.one },
   tableHead: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },

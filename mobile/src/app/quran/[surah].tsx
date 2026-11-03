@@ -709,9 +709,8 @@ export default function SurahScreen() {
                           {surah.englishName} · {surah.name}
                         </ThemedText>
                       </View>
-                      <SpringPressable onPress={() => setSheet('options')} style={[styles.fullClose, styles.fullRound]}>
-                        <ThemedText style={{ color: theme.onHero, fontSize: 17 }}>🎧</ThemedText>
-                      </SpringPressable>
+                      {/* keeps the title centred; language and voice are by the controls below */}
+                      <View style={styles.fullClose} />
                     </View>
 
                     <View style={styles.fullMiddle}>
@@ -762,7 +761,16 @@ export default function SurahScreen() {
                       </View>
 
                       <View style={styles.fullControls}>
-                        <View style={styles.fullSide} />
+                        {/* Language and voice, left of ◀◀ where the thumb is (it was hard to see at the top). */}
+                        <SpringPressable
+                          pressedScale={0.92}
+                          accessibilityLabel={t('Audio and language')}
+                          onPress={() => setSheet('options')}
+                          style={[styles.fullSide, styles.fullSpeed]}>
+                          <ThemedText style={{ color: theme.onHero, fontSize: 12 }} numberOfLines={1}>
+                            🎧 {LANG_SHORT[translation]}
+                          </ThemedText>
+                        </SpringPressable>
                         <SpringPressable accessibilityLabel={t('Previous ayah')} onPress={() => go(i - 1)} style={[styles.fullSkip, styles.fullRound]}>
                           <ThemedText style={[styles.fullSkipIcon, { color: theme.onHero }]}>◀◀</ThemedText>
                         </SpringPressable>
@@ -982,7 +990,7 @@ const styles = StyleSheet.create({
   trackFill: { height: 4, borderRadius: 2 },
   trackLabels: { flexDirection: 'row', justifyContent: 'space-between', gap: Spacing.three },
   fullControls: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: Spacing.three },
-  fullSide: { width: 44 },
+  fullSide: { minWidth: 44, paddingHorizontal: 8 },
   fullSpeed: { height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(255, 253, 247, 0.12)' },
   fullSkip: { width: 44, height: 44, alignItems: 'center', justifyContent: 'center' },
   fullSkipIcon: { fontSize: 14, fontWeight: 700 },

@@ -1,6 +1,6 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { Image, Modal, Platform, ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn, FadeOut, LinearTransition } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -19,7 +19,6 @@ import { useLayout } from '@/hooks/use-layout';
 import { useT } from '@/hooks/use-t';
 import { useTheme } from '@/hooks/use-theme';
 import { localeFor } from '@/lib/i18n';
-import SettingsScreen from '@/app/settings';
 import { useAppState } from '@/lib/app-state';
 import { rakatFor } from '@/lib/rakat';
 import { formatTime, getCurrentPrayer, getDayTimes, getLastPrayer, getNextPrayer, getPrayerWindow, isAfterNamaz } from '@/lib/prayer';
@@ -44,8 +43,6 @@ function formatCountdown(ms: number, t: (en: string, vars?: Record<string, strin
 
 export default function HomeScreen() {
   const [assistant, setAssistant] = useState(false);
-  // In the apps Settings isn't a tab (Android allows five; the Namaz Assistant has one): the ⚙ here opens it.
-  const [settingsOpen, setSettingsOpen] = useState(false);
   // The sidebar's "Namaz Assistant" opens it here (/?assistant=1).
   const { assistant: openAssistant } = useLocalSearchParams<{ assistant?: string }>();
   const assistantOpen = assistant || openAssistant === '1';
@@ -132,19 +129,9 @@ export default function HomeScreen() {
             {dateLabel}
           </ThemedText>
         </View>
-        {Platform.OS === 'web' ? (
-          <View style={[styles.headerFlower, { backgroundColor: theme.primarySoft }]}>
-            <FloatingFlower size={40} rotate={12} period={30} />
-          </View>
-        ) : (
-          <SpringPressable
-            accessibilityRole="button"
-            accessibilityLabel={t('Settings')}
-            onPress={() => setSettingsOpen(true)}
-            style={[styles.headerFlower, { backgroundColor: theme.primarySoft }]}>
-            <Image source={require('@/assets/images/tabIcons/settings.png')} style={[styles.gear, { tintColor: theme.primary }]} />
-          </SpringPressable>
-        )}
+        <View style={[styles.headerFlower, { backgroundColor: theme.primarySoft }]}>
+          <FloatingFlower size={40} rotate={12} period={30} />
+        </View>
       </Animated.View>
 
       {/* A different reminder every day. */}
@@ -259,11 +246,6 @@ export default function HomeScreen() {
         <ThemedText style={[styles.bold, { color: theme.primary }]}>▶</ThemedText>
       </SpringPressable>
       <NamazAssistant prayer={assistantPrayer} visible={assistantOpen} onClose={closeAssistant} />
-      {Platform.OS !== 'web' && (
-        <Modal visible={settingsOpen} animationType="slide" onRequestClose={() => setSettingsOpen(false)}>
-          <SettingsScreen onClose={() => setSettingsOpen(false)} />
-        </Modal>
-      )}
       <SpringPressable
         pressedScale={0.98}
         onPress={() => router.push('/qibla')}
@@ -410,7 +392,6 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  gear: { width: 26, height: 26 },
   greetName: { fontSize: 20, fontWeight: 700 },
   dailyLine: { fontFamily: Fonts?.serif, fontStyle: 'italic', fontSize: 16, lineHeight: 24 },
   container: { flex: 1, flexDirection: 'row', justifyContent: 'center' },

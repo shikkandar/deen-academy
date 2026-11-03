@@ -53,6 +53,7 @@ export type Settings = {
   showExtraTimes: boolean; // Sahar, Zawal and Iftar rows on the Today card
   customAzan: { full: CustomAzan | null; short: CustomAzan | null }; // recordings picked from the phone
   profile: Profile | null; // null until it has been asked
+  languageAsked: boolean; // false until the language was picked on the welcome card or the one-time language popup
 };
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -70,6 +71,7 @@ export const DEFAULT_SETTINGS: Settings = {
   showExtraTimes: true,
   customAzan: { full: null, short: null },
   profile: null,
+  languageAsked: false,
 };
 
 const KEY = 'settings.v1';

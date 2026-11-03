@@ -205,6 +205,11 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   );
 }
 
+/** The app's language, also outside the provider (English there). */
+export function useAppLanguage() {
+  return useContext(Ctx)?.settings.language ?? 'en';
+}
+
 export function useAppState() {
   const v = useContext(Ctx);
   if (!v) throw new Error('useAppState must be used inside AppStateProvider');

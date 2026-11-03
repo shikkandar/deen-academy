@@ -15,6 +15,8 @@ const CHANNEL_REMINDER = 'prayer-reminder';
 // "Alarms only" DND of the namaz. Fajr also has its own recording.
 // Recordings: azan.m4a and azan_short.m4a (its first 20 seconds) are Mohamed Tarek; azan_fajr.m4a is Abdul Basit
 // Abdus Samad (archive.org/details/athan_sound, f_abd_el_basset.mp3) and azan_fajr_short.m4a is its first 20 seconds.
+// Each is trimmed to the Azan itself: Mohamed Tarek 1.9–152.5 s of the original (the noise before it and the talk and
+// noise after it are cut), Abdul Basit from 1.45 s (the hiss before it; the end is the last note's own fade).
 // Full and short Azans need separate channels, since a channel's sound can't change once created.
 const AZAN = {
   full: { channel: 'azan-v5', sound: 'azan.m4a' },
