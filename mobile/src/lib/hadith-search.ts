@@ -3,15 +3,15 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { BOOKS, type Hadith } from "./hadith-books";
 import { BUNDLED } from "./hadith-bundled";
 import type { T } from "./i18n";
-import { getPage, type MLang } from "./muntakhab";
-import { PAGE_NUMBERS } from "./muntakhab-pages";
+import { type MLang } from "./muntakhab";
+import { getData, getSavedData } from "./remote-data";
 import { LANG_LABEL, pageLabel, volumeOf, type SLang } from "./sahaba";
 import { sahabaRows } from "./sahaba-search-data";
 
-// One search over the Library: all of Muntakhab Ahadith (Tamil and English, offline), all of Hayatus Sahaba (our Tamil,
-// the Arabic original, the English and the printed Tamil),
-// every hadith book's chapter titles, every hadith bundled in the app (with our Tamil), and the hadith of every
-// chapter already opened (saved for offline).
+// One search over the Library: all of Muntakhab Ahadith (Tamil and English), all of Hayatus Sahaba (our Tamil,
+// the Arabic original, the English and the printed Tamil), every hadith book's chapter titles, and the hadith of
+// every chapter already on the phone (opened once). The books are no longer in the app, so each part is one compact
+// download (kept on the phone) rather than thousands of page files, and results show as each part is ready.
 // Same rules as the Muntakhab web edition: Arabic vowel marks are ignored, look-alike letters are folded,
 // every word must appear, and whole-phrase matches come first.
 
@@ -76,50 +76,24 @@ let muntakhab: Promise<Doc[]> | null = null;
 
 const yieldToUi = () => new Promise((r) => setTimeout(r, 0));
 
-/** Every text on every Muntakhab page, both languages. Built once, in slices so the screen stays smooth. */
+/** One Muntakhab search row (scripts/gen-search-index.mjs): page, block, hadith number (0 if none), text. */
+type MuntakhabRow = [page: number, block: number, hadith: number, text: string];
+
+/** Every text on every Muntakhab page, both languages, from one compact file per language. Built once. */
 function muntakhabDocs(): Promise<Doc[]> {
   if (muntakhab) return muntakhab;
   muntakhab = (async () => {
     const docs: Doc[] = [];
     for (const lang of ["ta", "en"] as const) {
-      // fetched in batches on web (each page is its own file there); instant on phones
-      const BATCH = 24;
-      const loaded: Awaited<ReturnType<typeof getPage>>[] = [];
-      for (let k = 0; k < PAGE_NUMBERS.length; k += BATCH) {
-        loaded.push(
-          ...(await Promise.all(
-            PAGE_NUMBERS.slice(k, k + BATCH).map((n) => getPage(n, lang)),
-          )),
-        );
+      const rows = await getData(`/data/muntakhab/search-${lang}.json`);
+      if (!Array.isArray(rows)) continue;
+      for (const [page, block, hadith, text] of rows as MuntakhabRow[]) {
+        docs.push({ where: { kind: "muntakhab", lang, page, block, hadith: hadith || undefined }, text, norm: normOnly(text) });
       }
-      for (let i = 0; i < PAGE_NUMBERS.length; i++) {
-        const n = PAGE_NUMBERS[i];
-        const page = loaded[i];
-        page?.blocks.forEach((b, block) => {
-          const texts =
-            b.type === "quran"
-              ? [b.arabic_text, b.tamil_translation, b.surah_reference_tamil]
-              : b.type === "hadith"
-                ? [
-                    b.narrator,
-                    b.arabic_text,
-                    b.tamil_translation,
-                    b.source_reference_tamil,
-                  ]
-                : [b.text];
-          const hadith = b.type === "hadith" && !b.continued ? b.hadith_number : undefined;
-          for (const text of texts) {
-            if (text?.trim())
-              docs.push({
-                where: { kind: "muntakhab", lang, page: n, block, hadith },
-                text,
-                norm: normOnly(text),
-              });
-          }
-        });
-        if (i % 60 === 59) await yieldToUi();
-      }
+      await yieldToUi();
     }
+    // Not downloaded (offline the first time): try again on the next search.
+    if (!docs.length) muntakhab = null;
     return docs;
   })();
   return muntakhab;
@@ -149,6 +123,8 @@ function sahabaDocs(): Promise<Doc[]> {
       });
       await yieldToUi();
     }
+    // Not downloaded (offline the first time): try again on the next search.
+    if (!docs.length) sahaba = null;
     return docs;
   })();
   return sahaba;
@@ -197,27 +173,29 @@ function addChapter(
   });
 }
 
-let bundled: Promise<Doc[]> | null = null;
+// Each chapter file read from the phone once (they don't change), so later searches don't read it again.
+const chapterCache = new Map<string, Doc[]>();
 
-/** Every hadith bundled in the app. Built once, in slices so the screen stays smooth. */
-function bundledDocs(): Promise<Doc[]> {
-  if (bundled) return bundled;
-  bundled = (async () => {
-    const docs: Doc[] = [];
-    for (const [book, sections] of Object.entries(BUNDLED)) {
-      for (const [section, load] of Object.entries(sections)) {
-        addChapter(
-          docs,
-          book,
-          Number(section),
-          ((await load()) as Hadith[] | null) ?? [],
-        );
+/** The hadith of every book chapter already on the phone (opened once). Never downloads (the books are ~60 MB);
+ * re-checked on every search, so a chapter opened since is found. */
+async function bundledDocs(): Promise<Doc[]> {
+  const docs: Doc[] = [];
+  for (const [book, sections] of Object.entries(BUNDLED)) {
+    for (const section of Object.keys(sections)) {
+      const path = `/data/hadith/${book}/${section}.json`;
+      let chapter = chapterCache.get(path);
+      if (!chapter) {
+        const hadiths = (await getSavedData(path)) as Hadith[] | null;
+        if (!Array.isArray(hadiths)) continue;
+        chapter = [];
+        addChapter(chapter, book, Number(section), hadiths);
+        chapterCache.set(path, chapter);
         await yieldToUi();
       }
+      docs.push(...chapter);
     }
-    return docs;
-  })();
-  return bundled;
+  }
+  return docs;
 }
 
 /** The hadith of every chapter saved on the phone (opened at least once). Re-read on every search. */
@@ -240,10 +218,9 @@ async function savedHadithDocs(): Promise<Doc[]> {
   }
 }
 
-/** Start building the Muntakhab index early (e.g. when the search screen opens). */
+/** Start loading the Muntakhab index early (e.g. when the search screen opens). */
 export function warmUp() {
   muntakhabDocs();
-  bundledDocs();
 }
 
 // ---------------- searching ----------------
@@ -379,23 +356,18 @@ export function parseScope(s: string | undefined): Scope {
 
 const none = { hits: [] as Hit[], total: 0 };
 
+/** Searches the Library. `onUpdate` gets the results so far each time a part is ready (chapter titles at once, then
+ * Muntakhab, Hayatus Sahaba and the saved hadith as they load); the promise gives the full results. */
 export async function searchAll(
   q: string,
   limit = 60,
   scope: Scope = { kind: "all" },
+  onUpdate?: (results: Results) => void,
 ): Promise<Results | null> {
   const terms = queryTerms(q);
   if (!terms.length || terms.join("").length < 2) return null;
   const phrase = terms.join(" ");
   const all = scope.kind === "all";
-  // Only what the scope needs is loaded (Hayatus Sahaba's text is large).
-  const empty: Doc[] = [];
-  const [m, sh, inApp, saved] = await Promise.all([
-    all || scope.kind === "muntakhab" ? muntakhabDocs() : empty,
-    all || scope.kind === "sahaba" ? sahabaDocs() : empty,
-    all || scope.kind === "book" ? bundledDocs() : empty,
-    all || scope.kind === "book" ? savedHadithDocs() : empty,
-  ]);
   // A volume of Hayatus Sahaba is its Arabic original and our Tamil of that volume.
   const inScope = (d: Doc) =>
     scope.kind === "sahaba"
@@ -406,16 +378,27 @@ export async function searchAll(
         ? (d.where.kind === "hadith" || d.where.kind === "chapter") &&
           d.where.book === scope.book
         : true;
-  return {
-    muntakhab: m.length ? run(m, terms, phrase, limit) : none,
-    sahaba: sh.length ? run(sh.filter(inScope), terms, phrase, limit) : none,
-    chapters:
-      all || scope.kind === "book"
-        ? run(chapterDocs().filter(inScope), terms, phrase, limit)
-        : none,
-    hadith:
-      inApp.length || saved.length
-        ? run(inApp.concat(saved).filter(inScope), terms, phrase, limit)
-        : none,
+  const out: Results = {
+    muntakhab: none,
+    sahaba: none,
+    chapters: all || scope.kind === "book" ? run(chapterDocs().filter(inScope), terms, phrase, limit) : none,
+    hadith: none,
   };
+  onUpdate?.({ ...out });
+  // Only what the scope needs is loaded (Hayatus Sahaba's text is large); a part that fails just finds nothing.
+  const part = (key: keyof Results, docs: Promise<Doc[]>) =>
+    docs
+      .then((d) => {
+        out[key] = d.length ? run(d.filter(inScope), terms, phrase, limit) : none;
+        onUpdate?.({ ...out });
+      })
+      .catch(() => {});
+  await Promise.all([
+    all || scope.kind === "muntakhab" ? part("muntakhab", muntakhabDocs()) : null,
+    all || scope.kind === "sahaba" ? part("sahaba", sahabaDocs()) : null,
+    all || scope.kind === "book"
+      ? part("hadith", Promise.all([bundledDocs(), savedHadithDocs()]).then(([a, b]) => a.concat(b)))
+      : null,
+  ]);
+  return out;
 }

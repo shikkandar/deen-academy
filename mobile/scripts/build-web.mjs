@@ -12,6 +12,7 @@ const run = (cmd) => execSync(cmd, { cwd: ROOT, stdio: 'inherit' });
 
 run('node scripts/gen-web-loaders.mjs');
 run('node scripts/sahaba/gen-pages.mjs');
+run('node scripts/gen-search-index.mjs');
 fs.rmSync(DIST, { recursive: true, force: true });
 run('npx expo export --platform web --output-dir dist');
 

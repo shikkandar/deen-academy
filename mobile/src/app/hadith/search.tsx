@@ -80,11 +80,11 @@ export default function HadithSearchScreen() {
     // wait for a pause in typing, then search
     setTimeout(() => {
       if (id !== runId.current) return;
-      searchAll(text, 60, scope).then((r) => {
-        if (id !== runId.current) return;
-        setResults(r);
-        setBusy(false);
-      });
+      // Results show as each part of the Library is ready; the spinner stays until all are in (or one fails).
+      searchAll(text, 60, scope, (partial) => id === runId.current && setResults(partial))
+        .then((r) => id === runId.current && setResults(r))
+        .catch(() => {})
+        .finally(() => id === runId.current && setBusy(false));
     }, 250);
   };
 

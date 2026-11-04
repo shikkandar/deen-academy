@@ -42,6 +42,16 @@ async function load(path: string): Promise<unknown> {
   return json;
 }
 
+/** One `/data/...json` file only if it is already saved on the phone (opened before), else null; never downloads. */
+export async function getSavedData(path: string): Promise<unknown> {
+  const file = local(path);
+  try {
+    return file.exists ? JSON.parse(await file.text()) : null;
+  } catch {
+    return null;
+  }
+}
+
 /** One `/data/...json` file, from the phone if saved there, otherwise downloaded once and saved. */
 export function getData(path: string): Promise<unknown> {
   let p = inFlight.get(path);
