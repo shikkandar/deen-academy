@@ -1,7 +1,6 @@
 import { router, useLocalSearchParams, type Href } from 'expo-router';
 import { useEffect, useRef, useState, type ComponentRef } from 'react';
 import { ActivityIndicator, ScrollView, StyleSheet, View } from 'react-native';
-import Animated, { FadeIn } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { SpringPressable } from '@/components/motion';
@@ -14,7 +13,7 @@ import { useTheme } from '@/hooks/use-theme';
 import { useAppState } from '@/lib/app-state';
 import { markParts, queryTerms } from '@/lib/hadith-search';
 import { useT } from '@/hooks/use-t';
-import { getPage, hasPage, loadLang, neighbours, pageLabel, samePages, saveLang, saveProgress, volumeFor, volumeOf, type Block, type SLang } from '@/lib/sahaba';
+import { getPage, hasPage, loadLang, neighbours, pageLabel, samePlaceIn, saveLang, saveProgress, shownLang, volumeFor, volumeOf, type Block, type SLang } from '@/lib/sahaba';
 
 const SUP = '⁰¹²³⁴⁵⁶⁷⁸⁹';
 /** `[^12]` footnote markers as superscript numbers. */
@@ -125,7 +124,8 @@ export default function SahabaPage() {
   // The edition comes from the link; without one, the last edition read.
   const appLang = useAppState().settings.language;
   const [savedLang, setSavedLang] = useState<SLang | null>(null);
-  const lang: SLang | null = langParam === 'en' || langParam === 'ta' || langParam === 'tp' || langParam === 'ar' ? langParam : savedLang;
+  // Arabic and the printed Tamil are no longer offered: a link to one of them opens in Tamil.
+  const lang: SLang | null = shownLang(langParam) ?? savedLang;
   const scrollRef = useRef<ComponentRef<typeof ScrollView>>(null);
 
   useEffect(() => {
@@ -147,11 +147,14 @@ export default function SahabaPage() {
     if (router.canDismiss()) router.dismissTo(href);
     else router.replace(href);
   };
-  // Arabic and our Tamil share pages; English and the printed Tamil have their own, so switching to or from them goes to the contents.
+  // Switching edition stays on the reading page: the same chapter, about as far into it (English has its own pages).
   const changeLang = (l: SLang) => {
     saveLang(l);
-    if (lang && samePages(lang, l) && hasPage(n, l)) router.replace(`/hadith/sahaba/${n}?lang=${l}&vol=${book}` as Href);
-    else contents();
+    const to = lang ? samePlaceIn(n, lang, l) : null;
+    if (to == null) return contents(); // that edition has no page here yet
+    const toBook = l === 'ta' ? volumeOf(to) : book; // Tamil pages carry their volume; English keeps the book it came from
+    // In place, with no screen transition: only the page shown changes.
+    router.setParams({ page: String(to), lang: l, vol: String(toBook) });
   };
 
   const [loaded, setLoaded] = useState<{ key: string; page: Awaited<ReturnType<typeof getPage>> } | null>(null);
@@ -187,7 +190,7 @@ export default function SahabaPage() {
         </View>
 
         <ScrollView ref={scrollRef} contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
-          <Animated.View key={pageKey} entering={FadeIn.duration(300)} style={styles.blocks}>
+          <View key={pageKey} style={styles.blocks}>
             {page ? (
               page.blocks.map((block, i) => (
                 <View
@@ -206,7 +209,7 @@ export default function SahabaPage() {
                 {t('This page is not in the app yet — it is coming in an update.')}
               </ThemedText>
             )}
-          </Animated.View>
+          </View>
 
           <View style={styles.nav}>
             <SpringPressable

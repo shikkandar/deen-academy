@@ -200,13 +200,19 @@ const AyahRow = memo(function AyahRow({ a, index, active, playing, word, wordIn,
 // The translation shown on the player's language button.
 const LANG_SHORT: Record<TextLanguage, string> = { en: 'EN', ta: 'தமிழ்', ur: 'اردو', off: 'عربي' };
 
+/** Seconds as m:ss, for the Now Playing progress bar. */
+function clock(seconds: number) {
+  const s = Math.max(0, Math.floor(seconds));
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+}
+
 export default function SurahScreen() {
   const theme = useTheme();
   const t = useT();
   const layout = useLayout();
   const language = useAppState().settings.language;
   // `ayah` is set when opened from "Continue reading".
-  const { surah: param, ayah: resumeAyah } = useLocalSearchParams<{ surah: string; ayah?: string }>();
+  const { surah: param, ayah: resumeAyah, translation: bookTranslation } = useLocalSearchParams<{ surah: string; ayah?: string; translation?: string }>();
   const number = Number(param);
 
   const [surah, setSurah] = useState<Surah | null>(null);
@@ -223,6 +229,8 @@ export default function SurahScreen() {
   // starts cleanly instead of losing its first moment while it downloads.
   // Updates ten times a second, so the highlighted word keeps up with the reciter.
   const playlist = useAudioPlaylist({ updateInterval: 100 });
+  const [trackWidth, setTrackWidth] = useState(0); // the Now Playing progress bar, for tap and drag to seek
+  const [dragAt, setDragAt] = useState<number | null>(null); // 0..1 while a finger is on the bar
   const status = useAudioPlaylistStatus(playlist);
   const playing = status.playing;
   const listRef = useRef<FlatList<Surah['ayahs'][number]>>(null);
@@ -233,7 +241,15 @@ export default function SurahScreen() {
       .catch((e: Error) => setError(e.message));
   useEffect(() => {
     fetchData();
-    loadAudioPrefs().then(setPrefs);
+    loadAudioPrefs().then((p) => {
+      // Opened from a Quran book on the Library shelf: that book's translation, kept for next time.
+      const t = bookTranslation as TextLanguage | undefined;
+      if (t && ['off', 'ta', 'en', 'ur'].includes(t) && p.translation !== t) {
+        p = { ...p, translation: t };
+        saveAudioPrefs(p);
+      }
+      setPrefs(p);
+    });
     getSurahList().then(setAllSurahs).catch(() => {});
     // eslint-disable-next-line react-hooks/exhaustive-deps -- load once per surah
   }, [number]);
@@ -439,13 +455,13 @@ export default function SurahScreen() {
   // Replace (not push) so the surah list stays directly underneath for "All surahs" / Android back.
   const goToSurah = (n: number) => {
     stop();
-    router.replace(`/quran/${n}`);
+    router.replace(`/hadith/quran/${n}`);
   };
 
   const backToList = () => {
     stop();
-    if (router.canDismiss()) router.dismissTo('/quran');
-    else router.replace('/quran');
+    if (router.canDismiss()) router.dismissTo('/hadith/quran');
+    else router.replace('/hadith/quran');
   };
 
   const lockFor = (i: number) => lockScreenFor(surah?.englishName ?? 'Quran', prefs, i);
@@ -693,8 +709,8 @@ export default function SurahScreen() {
       {surah && (
         <Modal visible={full} animationType="slide" onRequestClose={() => setFull(false)}>
           <ThemedView style={[styles.full, { backgroundColor: theme.hero }]}>
-            {/* A jasmine garden at night: the leaf green deepening downwards, big faint flowers in the corners,
-                a few petals around the ayah and a soft golden glow behind it. */}
+            {/* Night: the green deepening downwards, big faint stars in the corners,
+                a few small stars around the ayah and a soft golden glow behind it. */}
             <View pointerEvents="none" style={StyleSheet.absoluteFill}>
               <LinearGradient colors={['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0.32)']} style={StyleSheet.absoluteFill} />
               {[340, 250, 170].map((d) => (
@@ -721,6 +737,9 @@ export default function SurahScreen() {
                 const meaning = spoken ? translationOf(a, spoken) : current === null ? translationOf(a, translation) : null;
                 const meaningLang = spoken ?? translation;
                 const progress = current !== null && status.duration > 0 ? Math.min(1, status.currentTime / status.duration) : 0;
+                const canSeek = current !== null && status.duration > 0 && trackWidth > 0;
+                const fractionAt = (x: number) => Math.min(Math.max(x / trackWidth, 0), 0.999);
+                const shown = dragAt ?? progress; // follows the finger while dragging
                 const go = (to: number) => playAt(Math.min(Math.max(to, 0), surah.ayahs.length - 1));
                 return (
                   <>
@@ -780,16 +799,56 @@ export default function SurahScreen() {
                     </View>
 
                     <View style={styles.fullBottom}>
-                      <View style={[styles.track, { backgroundColor: 'rgba(255, 253, 247, 0.2)' }]}>
-                        <View style={[styles.trackFill, { width: `${progress * 100}%`, backgroundColor: theme.gold }]} />
-                      </View>
-                      <View style={styles.trackLabels}>
-                        <ThemedText type="small" style={{ color: theme.onHeroMuted }}>
-                          {t('Ayah {n} of {total}', { n: a.numberInSurah, total: surah.numberOfAyahs })}
-                        </ThemedText>
-                        <ThemedText type="small" style={{ color: theme.onHeroMuted }} numberOfLines={1}>
-                          {current === null ? t('Stopped') : reciterName(editions[part] ?? '', t)}
-                        </ThemedText>
+                      {/* The time above the bar, then the ayah and reciter, kept close together. */}
+                      <View style={styles.trackGroup}>
+                        <View style={styles.trackLabels}>
+                          <ThemedText type="small" style={[styles.tabular, { color: theme.onHeroMuted }]}>
+                            {clock(shown * (status.duration || 0))}
+                          </ThemedText>
+                          <ThemedText type="small" style={[styles.tabular, { color: theme.onHeroMuted }]}>
+                            {status.duration > 0 ? clock(status.duration) : '–:––'}
+                          </ThemedText>
+                        </View>
+                        {/* Tap or drag anywhere on the bar to play this ayah's recitation from there. */}
+                        <View
+                          accessibilityRole="adjustable"
+                          accessibilityLabel={t('Playback position')}
+                          hitSlop={{ top: 16, bottom: 16 }}
+                          onLayout={(e) => setTrackWidth(e.nativeEvent.layout.width)}
+                          onStartShouldSetResponder={() => canSeek}
+                          onMoveShouldSetResponder={() => canSeek}
+                          onResponderTerminationRequest={() => false}
+                          onResponderGrant={(e) => setDragAt(fractionAt(e.nativeEvent.locationX))}
+                          onResponderMove={(e) => setDragAt(fractionAt(e.nativeEvent.locationX))}
+                          onResponderRelease={(e) => {
+                            playlist.seekTo(fractionAt(e.nativeEvent.locationX) * status.duration).catch(() => {});
+                            setDragAt(null);
+                          }}
+                          onResponderTerminate={() => setDragAt(null)}
+                          style={styles.trackTouch}>
+                          {/* none: the touch stays on the bar itself, so locationX is measured across the whole bar */}
+                          <View pointerEvents="none" style={[styles.track, { backgroundColor: 'rgba(255, 253, 247, 0.2)' }]}>
+                            <View style={[styles.trackFill, { width: `${shown * 100}%`, backgroundColor: theme.gold }]} />
+                          </View>
+                          {canSeek && (
+                            <View
+                              pointerEvents="none"
+                              style={[
+                                styles.trackThumb,
+                                dragAt !== null && styles.trackThumbDragging,
+                                { left: `${shown * 100}%`, backgroundColor: theme.gold },
+                              ]}
+                            />
+                          )}
+                        </View>
+                        <View style={styles.trackLabels}>
+                          <ThemedText type="small" style={{ color: theme.onHeroMuted }}>
+                            {t('Ayah {n} of {total}', { n: a.numberInSurah, total: surah.numberOfAyahs })}
+                          </ThemedText>
+                          <ThemedText type="small" style={{ color: theme.onHeroMuted }} numberOfLines={1}>
+                            {current === null ? t('Stopped') : reciterName(editions[part] ?? '', t)}
+                          </ThemedText>
+                        </View>
                       </View>
 
                       <View style={styles.fullControls}>
@@ -1018,8 +1077,14 @@ const styles = StyleSheet.create({
   fullMeaning: { fontSize: 17, lineHeight: 27, textAlign: 'center' },
   fullSpoken: { fontSize: 22, lineHeight: 34, textAlign: 'center' },
   fullBottom: { gap: Spacing.three, paddingBottom: Spacing.four },
-  track: { height: 4, borderRadius: 2, overflow: 'hidden' },
-  trackFill: { height: 4, borderRadius: 2 },
+  tabular: { fontVariant: ['tabular-nums'] },
+  trackGroup: { gap: Spacing.one },
+  // a bigger area to touch, without moving the bar or adding space around it
+  trackTouch: { paddingVertical: Spacing.two, marginVertical: -Spacing.two, justifyContent: 'center' },
+  track: { height: 6, borderRadius: 3, overflow: 'hidden' },
+  trackThumb: { position: 'absolute', width: 14, height: 14, borderRadius: 7, marginLeft: -7 },
+  trackThumbDragging: { width: 20, height: 20, borderRadius: 10, marginLeft: -10 },
+  trackFill: { height: 6, borderRadius: 3 },
   trackLabels: { flexDirection: 'row', justifyContent: 'space-between', gap: Spacing.three },
   fullControls: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: Spacing.three },
   fullSide: { minWidth: 44, paddingHorizontal: 8 },

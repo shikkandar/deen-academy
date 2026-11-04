@@ -10,28 +10,28 @@ type Props = {
   style?: StyleProp<ViewStyle>;
 };
 
-/** A five-petal jasmine flower drawn with plain views. */
+/** An eight-pointed star (two squares, one turned 45°), the girih of the book covers, drawn with plain views.
+ *  Deen Academy's ornament; it keeps the jasmine's name and props so every screen that used the flower shows the star. */
 export function JasmineFlower({ size = 32, petalColor, centerColor, rotate = 0, style }: Props) {
   const theme = useTheme();
-  const petalW = size * 0.36;
-  const petalH = size * 0.5;
-  const center = size * 0.2;
+  const side = size * 0.66; // a square this size, turned 45°, just fits in `size`
+  const center = size * 0.22;
 
   return (
     <View style={[{ width: size, height: size, transform: [{ rotate: `${rotate}deg` }] }, style]}>
-      {[0, 72, 144, 216, 288].map((deg) => (
+      {[0, 45].map((deg) => (
         <View
           key={deg}
           style={[
             styles.abs,
             {
-              width: petalW,
-              height: petalH,
-              left: (size - petalW) / 2,
-              top: (size - petalH) / 2,
-              borderRadius: petalW,
+              width: side,
+              height: side,
+              left: (size - side) / 2,
+              top: (size - side) / 2,
+              borderRadius: size * 0.04,
               backgroundColor: petalColor ?? theme.petal,
-              transform: [{ rotate: `${deg}deg` }, { translateY: -size * 0.24 }],
+              transform: [{ rotate: `${deg}deg` }],
             },
           ]}
         />
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   badgeText: { fontWeight: 700, fontVariant: ['tabular-nums'] },
 });
 
-/** A number sitting in a jasmine flower — like the ornament that marks the end of an ayah. */
+/** A number sitting in an eight-pointed star — like the ornament that marks the end of an ayah. */
 export function JasmineBadge({ value, size = 40, active = false }: { value: number | string; size?: number; active?: boolean }) {
   const theme = useTheme();
   return (

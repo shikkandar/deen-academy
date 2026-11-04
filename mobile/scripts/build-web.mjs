@@ -17,7 +17,7 @@ fs.rmSync(DIST, { recursive: true, force: true });
 run('npx expo export --platform web --output-dir dist');
 
 // public/data links into assets/: make sure real files ended up in dist/data
-for (const dir of ['hadith', 'muntakhab', 'sahaba', 'wordtimes']) {
+for (const dir of ['hadith', 'muntakhab', 'sahaba', 'wordtimes', 'quran']) {
   // expo export copies the links themselves (absolute paths), which Netlify can't upload: replace them with files
   const dest = path.join(DIST, 'data', dir);
   try {

@@ -160,7 +160,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const sub = Notifications.addNotificationResponseReceivedListener((r) => {
       const data = r.notification.request.content.data;
-      if (data?.url === '/quran') router.push('/quran');
+      if (data?.url === '/hadith/quran') router.push('/hadith/quran');
       if (data?.kind === 'wake' && typeof data.fajrAt === 'number') cancelFajrWake(data.fajrAt).catch(() => {});
     });
     return () => sub.remove();

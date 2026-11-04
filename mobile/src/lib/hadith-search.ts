@@ -1,3 +1,4 @@
+import { getSurahList } from "./quran";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import { BOOKS, type Hadith } from "./hadith-books";
@@ -44,6 +45,7 @@ function normalize(s: string) {
 const normOnly = (s: string) => normalize(s).norm;
 
 export type Where =
+  | { kind: "quran"; surah: number; ayah: number; lang: QLang; label: string }
   | { kind: "muntakhab"; lang: MLang; page: number; block: number; hadith?: number }
   | { kind: "chapter"; book: string; name: string; section: number }
   | { kind: "hadith"; book: string; name: string; section: number; index: number; number: number }
@@ -56,6 +58,7 @@ export function whereLabel(w: Where, t: T) {
     return w.hadith != null ? `${at} · ${t("hadith {n}", { n: w.hadith })}` : at;
   }
   if (w.kind === "sahaba") return `${LANG_LABEL[w.lang]} · ${pageLabel(w.page, w.lang)}`;
+  if (w.kind === "quran") return `${w.label.replace(/ · \w+$/, "")} · ${t(QURAN_LANG[w.lang])}`;
   if (w.kind === "chapter") return `${w.name} · ${t("chapter {n}", { n: w.section })}`;
   return `${w.name} · ${w.number}`;
 }
@@ -106,7 +109,7 @@ function sahabaDocs(): Promise<Doc[]> {
   if (sahaba) return sahaba;
   sahaba = (async () => {
     const docs: Doc[] = [];
-    for (const lang of ["ta", "ar", "en", "tp"] as const) {
+    for (const lang of ["ta", "en"] as const) { // the editions the app offers
       const rows = await sahabaRows(lang, yieldToUi);
       rows.forEach(([page, block, text], i) => {
         docs.push({
@@ -128,6 +131,32 @@ function sahabaDocs(): Promise<Doc[]> {
     return docs;
   })();
   return sahaba;
+}
+
+export type QLang = "ar" | "ta" | "en" | "ur";
+const QURAN_LANG: Record<QLang, string> = { ar: "Arabic", ta: "Tamil", en: "English", ur: "Urdu" };
+let quran: Promise<Doc[]> | null = null;
+
+/** Every ayah of the Quran: the Arabic, and the Tamil, English and Urdu the reader shows. */
+function quranDocs(): Promise<Doc[]> {
+  if (quran) return quran;
+  quran = (async () => {
+    const names = await getSurahList().then((l) => l.map((x) => x.englishName)).catch(() => [] as string[]);
+    const docs: Doc[] = [];
+    for (const lang of ["ar", "ta", "en", "ur"] as const) {
+      const rows = await getData(`/data/quran/search-${lang}.json`);
+      if (!Array.isArray(rows)) continue;
+      for (const [surah, ayah, text] of rows as [number, number, string][]) {
+        const label = `${names[surah - 1] ?? `Surah ${surah}`} ${surah}:${ayah} · ${QURAN_LANG[lang]}`;
+        docs.push({ where: { kind: "quran", surah, ayah, lang, label }, text, norm: normOnly(text) });
+      }
+      await yieldToUi();
+    }
+    // Not downloaded (offline the first time): try again on the next search.
+    if (!docs.length) quran = null;
+    return docs;
+  })();
+  return quran;
 }
 
 let titles: Doc[] | null = null;
@@ -334,7 +363,7 @@ function run(docs: Doc[], terms: string[], phrase: string, limit: number) {
 }
 
 export type Results = Record<
-  "muntakhab" | "sahaba" | "chapters" | "hadith",
+  "quran" | "muntakhab" | "sahaba" | "chapters" | "hadith",
   { hits: Hit[]; total: number }
 >;
 
@@ -379,6 +408,7 @@ export async function searchAll(
           d.where.book === scope.book
         : true;
   const out: Results = {
+    quran: none,
     muntakhab: none,
     sahaba: none,
     chapters: all || scope.kind === "book" ? run(chapterDocs().filter(inScope), terms, phrase, limit) : none,
@@ -394,6 +424,7 @@ export async function searchAll(
       })
       .catch(() => {});
   await Promise.all([
+    all ? part("quran", quranDocs()) : null,
     all || scope.kind === "muntakhab" ? part("muntakhab", muntakhabDocs()) : null,
     all || scope.kind === "sahaba" ? part("sahaba", sahabaDocs()) : null,
     all || scope.kind === "book"

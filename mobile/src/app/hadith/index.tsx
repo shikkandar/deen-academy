@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Image } from "expo-image";
 import { router } from "expo-router";
 import {
@@ -25,10 +26,15 @@ import { useT } from "@/hooks/use-t";
 import { useTheme } from "@/hooks/use-theme";
 import { useAppState } from "@/lib/app-state";
 import { BOOKS, type Book } from "@/lib/hadith-books";
+import { loadAudioPrefs, saveAudioPrefs } from "@/lib/quran";
 
 // Book covers (scripts/hadith-covers.html, rendered with Chrome): Arabic title in Thuluth on each book's colour.
 // Tamil covers (the same design with Tamil title and author), shown when the app is in Tamil.
 const COVERS_TA: Record<string, number> = {
+  quranar: require('@/assets/images/books/quranar-ta.webp'),
+  quranta: require('@/assets/images/books/quranta-ta.webp'),
+  quranen: require('@/assets/images/books/quranen-ta.webp'),
+  quranur: require('@/assets/images/books/quranur-ta.webp'),
   muntakhab: require('@/assets/images/books/muntakhab-ta.webp'),
   sahaba1: require('@/assets/images/books/sahaba1-ta.webp'),
   sahaba2: require('@/assets/images/books/sahaba2-ta.webp'),
@@ -47,6 +53,10 @@ const COVERS_TA: Record<string, number> = {
 };
 
 const COVERS: Record<string, number> = {
+  quranar: require("@/assets/images/books/quranar.webp"),
+  quranta: require("@/assets/images/books/quranta.webp"),
+  quranen: require("@/assets/images/books/quranen.webp"),
+  quranur: require("@/assets/images/books/quranur.webp"),
   muntakhab: require("@/assets/images/books/muntakhab.webp"),
   sahaba1: require("@/assets/images/books/sahaba1.webp"),
   sahaba2: require("@/assets/images/books/sahaba2.webp"),
@@ -64,7 +74,8 @@ const COVERS: Record<string, number> = {
   dehlawi: require("@/assets/images/books/dehlawi.webp"),
 };
 
-// The Library: two shelves — the hadith books (Muntakhab Ahadith first), then the four volumes of Hayatus Sahaba.
+// The Library: three shelves — the Quran (one book per language), the hadith books (Muntakhab Ahadith first), then
+// the four volumes of Hayatus Sahaba.
 type Vars = Record<string, string | number>;
 type ShelfBook = { id: string; name: string; nv?: Vars; open: () => void; detail: string; dv?: Vars };
 // What each volume of Hayatus Sahaba covers (its chapters in the Arabic original).
@@ -84,6 +95,25 @@ const SAHABA: ShelfBook[] = [
     detail: SAHABA_VOLUMES[v - 1],
   })),
 ];
+// The Quran: one book per language. Opening one shows the surah list with that translation under the Arabic
+// (Arabic: none), the same choice the language button in the reader makes.
+const QURAN: ShelfBook[] = (
+  [
+    ["ar", "Arabic", "off"],
+    ["ta", "Tamil", "ta"],
+    ["en", "English", "en"],
+    ["ur", "Urdu", "ur"],
+  ] as const
+).map(([id, name, translation]) => ({
+  id: `quran${id}`,
+  name: `Quran · ${name}`,
+  open: async () => {
+    const prefs = await loadAudioPrefs();
+    saveAudioPrefs({ ...prefs, translation });
+    router.push(`/hadith/quran?translation=${translation}`);
+  },
+  detail: "114 surahs",
+}));
 const HADITH: ShelfBook[] = [
   {
     id: "muntakhab",
@@ -100,6 +130,11 @@ const HADITH: ShelfBook[] = [
   })),
 ];
 const SHELVES = [
+  {
+    title: "Quran",
+    subtitle: "In Arabic, Tamil, English and Urdu",
+    books: QURAN,
+  },
   {
     title: "Hadith",
     subtitle: "Muntakhab Ahadith and the hadith collections",
@@ -120,6 +155,7 @@ function openBook(book: Book) {
 }
 
 export default function HadithBooksScreen() {
+  const [section, setSection] = useState(0);
   const theme = useTheme();
   const t = useT();
   const lang = useAppState().settings.language;
@@ -177,8 +213,27 @@ export default function HadithBooksScreen() {
               </SpringPressable>
             </Animated.View>
             <ContinueHadith />
+            {/* Three sections: the Quran, the hadith books and the Sahabah; each shows its own books. */}
+            <View style={[styles.sections, { backgroundColor: theme.backgroundElement, borderColor: theme.border }]}>
+              {SHELVES.map((shelf, i) => {
+                const on = section === i;
+                return (
+                  <SpringPressable
+                    key={shelf.title}
+                    pressedScale={0.96}
+                    accessibilityRole="tab"
+                    accessibilityState={{ selected: on }}
+                    onPress={() => setSection(i)}
+                    style={[styles.sectionBtn, on && { backgroundColor: theme.primary }]}>
+                    <ThemedText type="small" numberOfLines={1} style={[styles.sectionLabel, { color: on ? theme.onPrimary : theme.textSecondary }]}>
+                      {t(shelf.title)}
+                    </ThemedText>
+                  </SpringPressable>
+                );
+              })}
+            </View>
           </View>
-          {SHELVES.map((shelf, si) => (
+          {SHELVES.filter((_, i) => i === section).map((shelf, si) => (
             <View key={shelf.title} style={styles.shelf}>
               <View style={styles.shelfHead}>
                 <ThemedText style={styles.shelfTitle}>{t(shelf.title)}</ThemedText>
@@ -217,6 +272,9 @@ export default function HadithBooksScreen() {
                             <View style={styles.coverShadow}>
                               <Image
                                 source={(lang === 'ta' ? COVERS_TA : COVERS)[b.id]}
+                                // The covers ship in the app: no disk cache. On Android it is keyed by resource number,
+                                // which an update reshuffles, so it showed other books' covers after updating.
+                                cachePolicy="memory"
                                 style={styles.cover}
                                 contentFit="cover"
                                 transition={150}
@@ -297,6 +355,9 @@ const styles = StyleSheet.create({
     paddingBottom: Spacing.three,
     paddingHorizontal: Spacing.one,
   },
+  sections: { flexDirection: 'row', borderRadius: 999, borderWidth: 1, padding: 3, gap: 2 },
+  sectionBtn: { flex: 1, alignItems: 'center', borderRadius: 999, paddingVertical: 8, paddingHorizontal: 6 },
+  sectionLabel: { fontWeight: 700 },
   shelfTitle: {
     fontFamily: Fonts?.serif,
     fontSize: 22,

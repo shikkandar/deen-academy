@@ -201,7 +201,7 @@ export async function schedulePrayerNotifications(coords: Coords, settings: Sett
         content: {
           title: NOTIFY.quranTitle,
           body: NOTIFY.quranBody,
-          data: { kind: 'quran', url: '/quran' },
+          data: { kind: 'quran', url: '/hadith/quran' },
           sound,
         },
         trigger: { type: Notifications.SchedulableTriggerInputTypes.DAILY, hour, minute, channelId: channel },

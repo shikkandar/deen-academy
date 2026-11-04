@@ -173,8 +173,23 @@ async function getTamil(number: number): Promise<string[]> {
   }
 }
 
-export function getSurah(number: number): Promise<Surah> {
-  return cached(`quran.surah.v6.${number}`, async () => {
+export async function getSurah(number: number): Promise<Surah> {
+  const key = `quran.surah.v6.${number}`;
+  const surah = await loadSurah(number, key);
+  // Saved while QuranEnc couldn't be reached: the Tamil is missing (English showed instead), so fetch it again.
+  if (surah.ayahs.length && surah.ayahs.every((a) => !a.tamil)) {
+    const tamil = await getTamil(number);
+    if (tamil.length) {
+      const fixed = { ...surah, ayahs: surah.ayahs.map((a, i) => ({ ...a, tamil: tamil[i] ?? '' })) };
+      AsyncStorage.setItem(key, JSON.stringify(fixed)).catch(() => {});
+      return fixed;
+    }
+  }
+  return surah;
+}
+
+function loadSurah(number: number, key: string): Promise<Surah> {
+  return cached(key, async () => {
     const [[arabic, english, urdu], tamil] = await Promise.all([
       get<EditionSurah[]>(`/surah/${number}/editions/${TEXT_EDITIONS}`),
       getTamil(number),

@@ -97,6 +97,55 @@ export function neighbours(id: number, lang: SLang, vol: number | null = null) {
   return { prev, next };
 }
 
+/** The language shown for a page link's `lang`: Arabic and the printed Tamil, no longer offered, open in Tamil. */
+export const shownLang = (lang: string | undefined | null): SLang | null =>
+  lang === 'en' ? 'en' : lang === 'ta' || lang === 'ar' || lang === 'tp' ? 'ta' : null;
+
+// Where each chapter (bab) starts: in the Arabic original, whose pages our Tamil shares ("الباب الأول" …), and in the
+// English, which has its own pages ("Vol 1 · Chapter 1: …"). Both follow the original's order of chapters.
+const AR_ORDINALS = ['الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس', 'السادس', 'السابع', 'الثامن', 'التاسع', 'العاشر'];
+function arChapterNo(title: string) {
+  const m = title.match(/^الباب (ال[^\s]+)(?: (عشر))?/);
+  if (!m) return null;
+  if (m[1] === 'الحادي' && m[2]) return 11;
+  const i = AR_ORDINALS.indexOf(m[1]);
+  return i < 0 ? null : m[2] ? i + 11 : i + 1;
+}
+const chapterStarts: Partial<Record<'ta' | 'en', Map<number, number>>> = {};
+function startsOf(lang: 'ta' | 'en') {
+  if (!chapterStarts[lang]) {
+    const starts = new Map<number, number>();
+    for (const c of TOC[lang === 'ta' ? 'ar' : 'en'].chapters) {
+      const no = lang === 'ta' ? arChapterNo(c.title) : Number(c.title.match(/Chapter (\d+)/)?.[1]) || null;
+      if (no && c.items[0] && !starts.has(no)) starts.set(no, c.items[0].page);
+    }
+    chapterStarts[lang] = starts;
+  }
+  return chapterStarts[lang]!;
+}
+
+/** The page in `to` nearest to page `id` of `from`: the same chapter, about as far into it. Tamil and Arabic share
+ *  pages; English has its own, so the place is found by chapter. Null when `to` has no page there yet. */
+export function samePlaceIn(id: number, from: SLang, to: SLang): number | null {
+  if (samePages(from, to)) return hasPage(id, to) ? id : null;
+  const a = startsOf(from === 'en' ? 'en' : 'ta');
+  const b = startsOf(to === 'en' ? 'en' : 'ta');
+  const common = [...a.keys()].filter((k) => b.has(k)).sort((x, y) => x - y);
+  const ids = pageIds(to);
+  if (!ids.length) return null;
+  const i = common.findLastIndex((k) => a.get(k)! <= id);
+  if (i < 0) return ids[0]; // before the first chapter (the introductions): the start of the book
+  const k = common[i];
+  const next = common[i + 1];
+  const fromStart = a.get(k)!;
+  const toStart = b.get(k)!;
+  const fraction = next != null ? Math.min(1, (id - fromStart) / Math.max(1, a.get(next)! - fromStart)) : 0;
+  const ideal = next != null ? toStart + fraction * (b.get(next)! - toStart) : toStart + (id - fromStart);
+  const inChapter = ids.filter((p) => p >= toStart && (next == null || p < b.get(next)!));
+  const pool = inChapter.length ? inChapter : ids;
+  return pool.reduce((best, p) => (Math.abs(p - ideal) < Math.abs(best - ideal) ? p : best), pool[0]);
+}
+
 /** The TOC entry a page belongs to (the last one starting at or before it). */
 export function chapterOf(id: number, lang: SLang) {
   let found: { chapter: string; item: string } | null = null;
@@ -119,7 +168,8 @@ const PROGRESS_KEY = 'sahaba.progress.v1';
 export async function loadLang(fallback: SLang): Promise<SLang> {
   try {
     const v = await AsyncStorage.getItem(LANG_KEY);
-    return v === 'en' || v === 'ta' || v === 'tp' || v === 'ar' ? v : fallback;
+    // Arabic and the printed Tamil are no longer offered: those readers continue in Tamil.
+    return v === 'en' || v === 'ta' ? v : v === 'ar' || v === 'tp' ? 'ta' : fallback;
   } catch {
     return fallback;
   }

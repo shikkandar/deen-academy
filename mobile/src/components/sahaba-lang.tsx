@@ -6,12 +6,12 @@ import { LANG_LABEL, type SLang } from '@/lib/sahaba';
 import { SpringPressable } from './motion';
 import { ThemedText } from './themed-text';
 
-/** Tamil (ours) / Arabic original / English / printed Tamil switch for Hayatus Sahaba. */
+/** Tamil / English switch for Hayatus Sahaba (the Arabic original and the printed Tamil are not offered). */
 export function SahabaLangSwitch({ value, onChange }: { value: SLang; onChange: (lang: SLang) => void }) {
   const theme = useTheme();
   return (
     <View style={[styles.segment, { backgroundColor: theme.backgroundElement, borderColor: theme.border }]}>
-      {(['ta', 'ar', 'en', 'tp'] as const).map((id) => {
+      {(['ta', 'en'] as const).map((id) => {
         const on = value === id;
         return (
           <SpringPressable

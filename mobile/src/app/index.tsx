@@ -6,10 +6,9 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AfterNamazDuas } from '@/components/after-namaz-duas';
 import { AndroidAppCard } from '@/components/android-app-card';
-import { ContinueHadith, ContinueQuran } from '@/components/continue-reading';
 import { JasmineFlower } from '@/components/jasmine-flower';
+import { MasjidFinial } from '@/components/masjid-finial';
 import { NamazAssistant } from '@/components/namaz-assistant';
-import { PrayerHadithCard } from '@/components/prayer-hadith-card';
 import { enter, FloatingFlower, SpringPressable } from '@/components/motion';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
@@ -134,12 +133,13 @@ export default function HomeScreen() {
         </View>
       </Animated.View>
 
-      {/* A different reminder every day. */}
+      {/* A different reminder every day, under the greeting. */}
       <Animated.View entering={enter(1)}>
         <ThemedText style={[styles.dailyLine, { color: theme.primary }]}>“{reminderForToday(settings.language, now)}”</ThemedText>
       </Animated.View>
 
-      <Animated.View entering={enter(1)}>
+      {/* The location */}
+      <Animated.View entering={enter(1)} style={styles.pillRow}>
         <SpringPressable
           onPress={refreshLocation}
           style={[styles.locationPill, { backgroundColor: theme.backgroundElement, borderColor: theme.border }]}>
@@ -156,65 +156,69 @@ export default function HomeScreen() {
   );
 
   // The prayer that's on now, or the next one with a countdown.
+  // The next prayer under a masjid dome: an arched card with a gold finial on top.
   const hero = (
-    <Animated.View entering={enter(2)} style={[styles.hero, { backgroundColor: theme.hero }]}>
-      <FloatingFlower size={110} rotate={18} period={60} style={[styles.heroFlowerBig, { opacity: 0.16 }]} />
-      <FloatingFlower size={54} rotate={-10} period={45} style={[styles.heroFlowerSmall, { opacity: 0.12 }]} />
-      <FloatingFlower size={26} rotate={30} period={35} style={[styles.heroFlowerTiny, { opacity: 0.2 }]} />
+    <Animated.View entering={enter(2)} style={styles.heroWrap}>
+      <MasjidFinial color={theme.gold} cutout={theme.background} />
+      <View style={[styles.hero, { backgroundColor: theme.hero, borderColor: theme.border }]}>
+        <FloatingFlower size={110} rotate={18} period={60} style={[styles.heroFlowerBig, { opacity: 0.16 }]} />
+        <FloatingFlower size={54} rotate={-10} period={45} style={[styles.heroFlowerSmall, { opacity: 0.12 }]} />
+        <FloatingFlower size={26} rotate={30} period={35} style={[styles.heroFlowerTiny, { opacity: 0.2 }]} />
 
-      <ThemedText type="small" style={[styles.heroLabel, { color: theme.onHeroMuted }]}>
-        {current ? t('IT’S TIME FOR') : t('NEXT PRAYER')}
-      </ThemedText>
-      {/* Keyed so the name and time cross-fade when the prayer changes. */}
-      <Animated.View key={focus.time.getTime()} entering={FadeIn.duration(500)} exiting={FadeOut.duration(250)} style={styles.heroCenter}>
-        <ThemedText style={[styles.heroName, { color: theme.onHero }]}>{t(focus.name)}</ThemedText>
-        <ThemedText style={[styles.heroTime, { color: theme.onHero }]}>
-          {current && current.jamaat ? t('Jamaat {time}', { time: formatTime(current.jamaat) }) : formatTime(focus.time)}
+        <ThemedText type="small" style={[styles.heroLabel, { color: theme.onHeroMuted }]}>
+          {current ? t('IT’S TIME FOR') : t('NEXT PRAYER')}
         </ThemedText>
-        {!current && next.jamaat && (
-          <ThemedText type="small" style={{ color: theme.onHeroMuted }}>
-            {t('Jamaat {time}', { time: formatTime(next.jamaat) })}
-            {settings.masjid.name ? ` · ${settings.masjid.name}` : ''}
+        {/* Keyed so the name and time cross-fade when the prayer changes. */}
+        <Animated.View key={focus.time.getTime()} entering={FadeIn.duration(500)} exiting={FadeOut.duration(250)} style={styles.heroCenter}>
+          <ThemedText style={[styles.heroName, { color: theme.onHero }]}>{t(focus.name)}</ThemedText>
+          <ThemedText style={[styles.heroTime, { color: theme.onHero }]}>
+            {current && current.jamaat ? t('Jamaat {time}', { time: formatTime(current.jamaat) }) : formatTime(focus.time)}
           </ThemedText>
-        )}
-      </Animated.View>
-      <View style={styles.heroCountdown}>
-        <ThemedText type="small" style={{ color: theme.onHero, fontVariant: ['tabular-nums'] }}>
-          {current
-            ? t('Next: {name} at {time}', { name: t(next.name), time: formatTime(next.time) })
-            : t('in {time}', { time: formatCountdown(next.time.getTime() - now.getTime(), t) })}
+          {!current && next.jamaat && (
+            <ThemedText type="small" style={{ color: theme.onHeroMuted }}>
+              {t('Jamaat {time}', { time: formatTime(next.jamaat) })}
+              {settings.masjid.name ? ` · ${settings.masjid.name}` : ''}
+            </ThemedText>
+          )}
+        </Animated.View>
+        <View style={styles.heroCountdown}>
+          <ThemedText type="small" style={{ color: theme.onHero, fontVariant: ['tabular-nums'] }}>
+            {current
+              ? t('Next: {name} at {time}', { name: t(next.name), time: formatTime(next.time) })
+              : t('in {time}', { time: formatCountdown(next.time.getTime() - now.getTime(), t) })}
+          </ThemedText>
+        </View>
+
+        {/* Rakat of this prayer, in the order they're prayed. */}
+        <View style={styles.rakatRow}>
+          {rakatFor(focus.name, settings.madhab).parts.map((r, i) => {
+            const fard = r.kind === 'Fard';
+            return (
+              <View
+                key={i}
+                style={[
+                  styles.rakatChip,
+                  fard
+                    ? { backgroundColor: theme.gold }
+                    : r.optional
+                      ? { borderWidth: 1, borderColor: theme.onHeroMuted, borderStyle: 'dashed' }
+                      : { backgroundColor: 'rgba(255, 253, 247, 0.14)' },
+                ]}>
+                <ThemedText type="small" style={[styles.rakatNum, { color: fard ? theme.hero : theme.onHero }]}>
+                  {r.count}
+                </ThemedText>
+                <ThemedText type="small" style={{ color: fard ? theme.hero : theme.onHeroMuted }}>
+                  {t(r.kind)}
+                  {r.optional ? ` · ${t('optional')}` : ''}
+                </ThemedText>
+              </View>
+            );
+          })}
+        </View>
+        <ThemedText type="small" style={{ color: theme.onHeroMuted }}>
+          {t('{n} rakat · {madhab}', { n: rakatFor(focus.name, settings.madhab).total, madhab: t(settings.madhab === 'Shafi' ? "Shafi'i" : 'Hanafi') })}
         </ThemedText>
       </View>
-
-      {/* Rakat of this prayer, in the order they're prayed. */}
-      <View style={styles.rakatRow}>
-        {rakatFor(focus.name, settings.madhab).parts.map((r, i) => {
-          const fard = r.kind === 'Fard';
-          return (
-            <View
-              key={i}
-              style={[
-                styles.rakatChip,
-                fard
-                  ? { backgroundColor: theme.gold }
-                  : r.optional
-                    ? { borderWidth: 1, borderColor: theme.onHeroMuted, borderStyle: 'dashed' }
-                    : { backgroundColor: 'rgba(255, 253, 247, 0.14)' },
-              ]}>
-              <ThemedText type="small" style={[styles.rakatNum, { color: fard ? theme.hero : theme.onHero }]}>
-                {r.count}
-              </ThemedText>
-              <ThemedText type="small" style={{ color: fard ? theme.hero : theme.onHeroMuted }}>
-                {t(r.kind)}
-                {r.optional ? ` · ${t('optional')}` : ''}
-              </ThemedText>
-            </View>
-          );
-        })}
-      </View>
-      <ThemedText type="small" style={{ color: theme.onHeroMuted }}>
-        {t('{n} rakat · {madhab}', { n: rakatFor(focus.name, settings.madhab).total, madhab: t(settings.madhab === 'Shafi' ? "Shafi'i" : 'Hanafi') })}
-      </ThemedText>
     </Animated.View>
   );
 
@@ -246,35 +250,10 @@ export default function HomeScreen() {
         <ThemedText style={[styles.bold, { color: theme.primary }]}>▶</ThemedText>
       </SpringPressable>
       <NamazAssistant prayer={assistantPrayer} visible={assistantOpen} onClose={closeAssistant} />
-      <SpringPressable
-        pressedScale={0.98}
-        onPress={() => router.push('/qibla')}
-        style={[styles.assistant, styles.qiblaRow, { backgroundColor: theme.backgroundElement, borderColor: theme.border }]}>
-        <ThemedText style={styles.qiblaIcon}>🕋</ThemedText>
-        <View style={styles.assistantText}>
-          <ThemedText style={[styles.bold, { color: theme.primary }]}>{t('Qibla direction')}</ThemedText>
-          <ThemedText type="small" themeColor="textSecondary">
-            {t('Compass to the Kaaba · buzzes when you face it')}
-          </ThemedText>
-        </View>
-        <ThemedText style={[styles.bold, { color: theme.primary }]}>›</ThemedText>
-      </SpringPressable>
     </Animated.View>
   );
 
-  const hadithCard = (
-    <Animated.View entering={enter(3)}>
-      <PrayerHadithCard key={focus.time.getTime()} prayer={focus} />
-    </Animated.View>
-  );
 
-  // Pick up the Quran / Hadith where she left off.
-  const continueBlock = (
-    <Animated.View entering={enter(4)} style={styles.continueBlock}>
-      <ContinueQuran />
-      <ContinueHadith />
-    </Animated.View>
-  );
 
   // Today's times
   const todayCard = (
@@ -344,47 +323,31 @@ export default function HomeScreen() {
           contentContainerStyle={[styles.scroll, { paddingTop: layout.topInset + Spacing.three }, layout.wide && styles.scrollWide]}
           showsVerticalScrollIndicator={false}>
           <AndroidAppCard />
-          {greeting}
-
           {layout.wide ? (
-            // Desktop: the prayer and what to do now on the left; today's times and reading on the right.
-            <View style={styles.columns}>
-              <View style={styles.column}>
-                {hero}
-                {duasNow}
-                {assistantRows}
-                {duasLater}
+            // Desktop: the name and message across the top; the prayer, Namaz Assistant and duas on the left;
+            // today's times on the right.
+            <>
+              {greeting}
+              <View style={styles.columns}>
+                <View style={styles.column}>
+                  {hero}
+                  {assistantRows}
+                  {duasNow}
+                  {duasLater}
+                </View>
+                <View style={styles.column}>{todayCard}</View>
               </View>
-              <View style={styles.column}>
-                {todayCard}
-                {hadithCard}
-                {continueBlock}
-              </View>
-            </View>
+            </>
           ) : (
             <>
+              {greeting}
               {hero}
-              {duasNow}
-              {assistantRows}
-              {hadithCard}
-              {continueBlock}
               {todayCard}
+              {assistantRows}
+              {duasNow}
               {duasLater}
             </>
           )}
-
-          <Animated.View entering={FadeIn.delay(900).duration(600)} style={styles.footerBlock}>
-            <ThemedText type="small" themeColor="textSecondary" style={styles.centerText}>
-              {t('One notification at each Azan · Jamaat reminder when the masjid time is set')}
-            </ThemedText>
-            <View style={styles.footer}>
-              <JasmineFlower size={14} />
-              <ThemedText type="small" themeColor="textSecondary" style={styles.footerText}>
-                Deen Academy
-              </ThemedText>
-              <JasmineFlower size={14} />
-            </View>
-          </Animated.View>
         </ScrollView>
       </SafeAreaView>
     </ThemedView>
@@ -412,8 +375,8 @@ const styles = StyleSheet.create({
   header: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   headerText: { gap: 2 },
   permissionFlower: { width: 120, height: 120, borderRadius: 60, alignItems: 'center', justifyContent: 'center' },
-  continueBlock: { gap: Spacing.two },
   headerFlower: { width: 64, height: 64, borderRadius: 32, alignItems: 'center', justifyContent: 'center' },
+  pillRow: { flexDirection: 'row', flexWrap: 'wrap', gap: Spacing.two },
   locationPill: {
     alignSelf: 'flex-start',
     flexDirection: 'row',
@@ -425,9 +388,16 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   dot: { width: 8, height: 8, borderRadius: 4 },
+  heroWrap: { alignItems: 'center' },
   hero: {
+    alignSelf: 'stretch',
+    marginTop: -1, // the finial's base sits on the dome
     borderRadius: 28,
-    paddingVertical: Spacing.five,
+    borderTopLeftRadius: 180, // the dome (React Native keeps it to half the card's width)
+    borderTopRightRadius: 180,
+    borderWidth: 1,
+    paddingTop: Spacing.five + Spacing.four,
+    paddingBottom: Spacing.five,
     paddingHorizontal: Spacing.four,
     alignItems: 'center',
     gap: Spacing.one,
@@ -441,7 +411,7 @@ const styles = StyleSheet.create({
   heroName: { fontFamily: Fonts?.serif, fontSize: 44, lineHeight: 52, fontWeight: 600 },
   heroTime: { fontSize: 22, lineHeight: 28, fontWeight: 600 },
   rakatRow: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', gap: Spacing.one + 2, marginTop: Spacing.three },
-  rakatChip: { flexDirection: 'row', alignItems: 'baseline', gap: 4, borderRadius: 999, paddingVertical: 4, paddingHorizontal: Spacing.two + 2 },
+  rakatChip: { flexDirection: 'row', alignItems: 'baseline', gap: 4, borderRadius: 8, paddingVertical: 4, paddingHorizontal: Spacing.two + 2 },
   rakatNum: { fontWeight: 800, fontVariant: ['tabular-nums'] },
   heroCountdown: {
     marginTop: Spacing.two,
@@ -476,8 +446,6 @@ const styles = StyleSheet.create({
     padding: Spacing.three,
   },
   assistantText: { flex: 1, gap: Spacing.half },
-  qiblaRow: { marginTop: Spacing.two },
-  qiblaIcon: { fontSize: 18 },
   pill: {
     borderRadius: 999,
     paddingVertical: Spacing.three,
@@ -486,7 +454,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   pillText: { fontWeight: 700 },
-  footerBlock: { gap: Spacing.two },
-  footer: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: Spacing.two, paddingTop: Spacing.two },
-  footerText: { fontStyle: 'italic' },
 });

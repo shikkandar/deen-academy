@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Modal, ScrollView, StyleSheet, TextInput, View } from 'react-native';
+import { useRef, useState, type ComponentRef } from 'react';
+import { KeyboardAvoidingView, Modal, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
 
 import { Spacing } from '@/constants/theme';
@@ -51,12 +51,16 @@ export function ProfileSetup({ initial, onClose }: { initial?: Profile | null; o
   const ready = name.trim().length > 0 && gender != null && dob != null;
   const typed = (s: string) => s.replace(/[^0-9]/g, '');
 
+  // The card shrinks above the keyboard (KeyboardAvoidingView); the date fields, at the bottom, are scrolled into view.
+  const scroll = useRef<ComponentRef<typeof ScrollView>>(null);
+  const showFields = () => setTimeout(() => scroll.current?.scrollToEnd({ animated: true }), 250);
+
   const field = [styles.input, { borderColor: theme.border, backgroundColor: theme.background, color: theme.text }];
 
   return (
     <Modal visible transparent animationType="fade" onRequestClose={onClose}>
-      <View style={styles.backdrop}>
-        <ScrollView contentContainerStyle={styles.center} keyboardShouldPersistTaps="handled">
+      <KeyboardAvoidingView behavior="padding" style={styles.backdrop}>
+        <ScrollView ref={scroll} contentContainerStyle={styles.center} keyboardShouldPersistTaps="handled">
           <Animated.View
             entering={FadeInDown.springify().damping(18)}
             style={[styles.card, { backgroundColor: theme.backgroundElement, borderColor: theme.border }]}>
@@ -118,6 +122,7 @@ export function ProfileSetup({ initial, onClose }: { initial?: Profile | null; o
                 placeholder={t('DD')}
                 placeholderTextColor={theme.textSecondary}
                 keyboardType="number-pad"
+                onFocus={showFields}
                 style={[field, styles.short]}
               />
               <TextInput
@@ -126,6 +131,7 @@ export function ProfileSetup({ initial, onClose }: { initial?: Profile | null; o
                 placeholder={t('MM')}
                 placeholderTextColor={theme.textSecondary}
                 keyboardType="number-pad"
+                onFocus={showFields}
                 style={[field, styles.short]}
               />
               <TextInput
@@ -134,6 +140,7 @@ export function ProfileSetup({ initial, onClose }: { initial?: Profile | null; o
                 placeholder={t('YYYY')}
                 placeholderTextColor={theme.textSecondary}
                 keyboardType="number-pad"
+                onFocus={showFields}
                 style={[field, styles.long]}
               />
             </View>
@@ -160,7 +167,7 @@ export function ProfileSetup({ initial, onClose }: { initial?: Profile | null; o
             )}
           </Animated.View>
         </ScrollView>
-      </View>
+      </KeyboardAvoidingView>
     </Modal>
   );
 }

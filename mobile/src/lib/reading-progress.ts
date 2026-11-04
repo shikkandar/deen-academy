@@ -120,7 +120,7 @@ export function useRecent<K extends Kind>(kind: K) {
 }
 
 export function quranHref(p: QuranProgress): Href {
-  return `/quran/${p.surah}?ayah=${p.ayah}` as Href;
+  return `/hadith/quran/${p.surah}?ayah=${p.ayah}` as Href;
 }
 
 export function hadithHref(p: HadithProgress): Href {

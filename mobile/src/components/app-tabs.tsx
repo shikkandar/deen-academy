@@ -26,13 +26,16 @@ export default function AppTabs() {
         />
       </NativeTabs.Trigger>
 
-      <NativeTabs.Trigger name="quran">
-        <NativeTabs.Trigger.Label>{t('Quran')}</NativeTabs.Trigger.Label>
+      {/* Five tabs on Android: the Namaz Assistant has one; the Quran is on the Library shelf. */}
+      <NativeTabs.Trigger name="namaz">
+        <NativeTabs.Trigger.Label>{t('Namaz')}</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
-          src={require('@/assets/images/tabIcons/quran.png')}
+          src={require('@/assets/images/tabIcons/namaz.png')}
           renderingMode="template"
         />
       </NativeTabs.Trigger>
+
+
 
       <NativeTabs.Trigger name="qibla">
         <NativeTabs.Trigger.Label>{t('Qibla')}</NativeTabs.Trigger.Label>

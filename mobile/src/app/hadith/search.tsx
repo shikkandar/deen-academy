@@ -27,18 +27,23 @@ import {
   type Results,
 } from "@/lib/hadith-search";
 
-type Filter = "all" | "muntakhab" | "sahaba" | "books";
+// Muntakhab Ahadith is a hadith book: one Hadith filter for it and the hadith books, as on the Library shelf.
+type Filter = "all" | "quran" | "hadith" | "sahaba";
 
 const GROUPS = [
-  { key: "muntakhab", title: "MUNTAKHAB AHADITH", filter: "muntakhab" },
+  { key: "quran", title: "QURAN", filter: "quran" },
+  { key: "muntakhab", title: "MUNTAKHAB AHADITH", filter: "hadith" },
+  { key: "hadith", title: "SAVED HADITH BOOK CHAPTERS", filter: "hadith" },
+  { key: "chapters", title: "CHAPTER TITLES", filter: "hadith" },
   { key: "sahaba", title: "HAYATUS SAHABA", filter: "sahaba" },
-  { key: "hadith", title: "SAVED HADITH BOOK CHAPTERS", filter: "books" },
-  { key: "chapters", title: "CHAPTER TITLES", filter: "books" },
 ] as const;
 
 function hrefFor(hit: Hit, q: string): Href {
   const w = hit.where;
   const query = encodeURIComponent(q);
+  if (w.kind === "quran")
+    // the ayah, with the language it was found in under the Arabic (an Arabic hit keeps the reader's choice)
+    return `/hadith/quran/${w.surah}?ayah=${w.ayah}${w.lang === "ar" ? "" : `&translation=${w.lang}`}` as Href;
   if (w.kind === "muntakhab")
     return `/hadith/muntakhab/${w.page}?lang=${w.lang}&b=${w.block}&q=${query}` as Href;
   if (w.kind === "sahaba")
@@ -167,9 +172,9 @@ export default function HadithSearchScreen() {
               (
                 [
                   ["all", "All"],
-                  ["muntakhab", "Muntakhab"],
+                  ["quran", "Quran"],
+                  ["hadith", "Hadith"],
                   ["sahaba", "Hayatus Sahaba"],
-                  ["books", "Hadith books"],
                 ] as const
               ).map(([id, label]) => (
                 <SpringPressable
@@ -313,7 +318,8 @@ const styles = StyleSheet.create({
   },
   search: { flex: 1, fontSize: 16, height: "100%" },
   clear: { paddingHorizontal: Spacing.three, paddingVertical: Spacing.two },
-  filters: { flexDirection: "row", alignItems: "center", gap: Spacing.two },
+  // wraps, so the longer Tamil labels and the count never run off the screen
+  filters: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: Spacing.two },
   chip: { borderRadius: 999, paddingVertical: 6, paddingHorizontal: 12 },
   list: {
     paddingHorizontal: Spacing.three,

@@ -25,12 +25,26 @@ export async function getLocationPermission(): Promise<LocationPermission> {
   return canAskAgain ? 'denied' : 'blocked';
 }
 
+const FIX_TIMEOUT_MS = 15_000;
+
+/** A fresh GPS fix, but never stuck on "Finding your location…": indoors a fix can take minutes or never come, so after
+ *  15 s it settles for the phone's last known position (a few minutes or km off changes the times by a minute at most). */
+async function currentPosition() {
+  const fresh = Location.getCurrentPositionAsync({ accuracy: Location.Accuracy.Balanced });
+  const timeout = new Promise<null>((resolve) => setTimeout(() => resolve(null), FIX_TIMEOUT_MS));
+  const fix = await Promise.race([fresh.catch(() => null), timeout]);
+  if (fix) return fix;
+  const last = await Location.getLastKnownPositionAsync().catch(() => null);
+  if (last) return last;
+  return fresh; // nothing known yet: keep waiting for the real fix (or its error)
+}
+
 /** Asks for permission, reads the current position and caches it. Throws if permission is denied. */
 export async function refreshPlace(): Promise<Place> {
   const { status } = await Location.requestForegroundPermissionsAsync();
   if (status !== 'granted') throw new Error('Location permission denied');
 
-  const { coords } = await Location.getCurrentPositionAsync({});
+  const { coords } = await currentPosition();
   let city: string | null = null;
   try {
     const [address] = await Location.reverseGeocodeAsync(coords);

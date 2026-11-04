@@ -7,42 +7,42 @@ import '@/global.css';
 
 import { Platform } from 'react-native';
 
-// Jasmine theme: cream petals, leaf green, and the flower's golden centre.
-// Dark mode is "night jasmine" — deep leaf green with cream text.
+// Geometric theme: deep emerald and warm gold, with the eight-pointed star of the book covers (the Special Edition keeps
+// the jasmine). `petal` / `petalSoft` colour the stars (the components keep their jasmine names).
 export const Colors = {
   light: {
-    text: '#2E2A24',
-    background: '#FBF7EE',
-    backgroundElement: '#FFFFFF',
-    backgroundSelected: '#F2EBDC',
-    textSecondary: '#8C8576',
-    border: '#EDE4D1',
-    primary: '#2F6B4F',
-    primarySoft: '#E7F1EA',
-    petalSoft: '#DCEBE1', // solid soft green for small flower badges
-    onPrimary: '#FFFDF7', // text on a primary-coloured button
-    hero: '#2F6B4F',
-    onHero: '#FFFDF7',
-    onHeroMuted: 'rgba(255, 253, 247, 0.75)',
-    gold: '#E2B84F',
-    petal: '#FFFFFF',
+    text: '#18231F',
+    background: '#F6F1E6',
+    backgroundElement: '#FFFCF5',
+    backgroundSelected: '#EEE6D6',
+    textSecondary: '#5A665F',
+    border: '#E2D9C6',
+    primary: '#0F4A40',
+    primarySoft: '#E6EFEA',
+    petalSoft: '#DCE8E2', // solid soft green for small star badges
+    onPrimary: '#FFFCF5', // text on a primary-coloured button
+    hero: '#0F4A40',
+    onHero: '#F6F1E6',
+    onHeroMuted: 'rgba(246, 241, 230, 0.78)',
+    gold: '#BF9748', // warm gold: brighter than dusty, not yellow
+    petal: '#BF9748',
   },
   dark: {
-    text: '#F3EEE2',
-    background: '#0E1612',
-    backgroundElement: '#16221C',
-    backgroundSelected: '#1F2E26',
-    textSecondary: '#A3A89C',
-    border: '#24332B',
-    primary: '#8FCBA5',
-    primarySoft: 'rgba(143, 203, 165, 0.14)',
-    petalSoft: '#243B30',
-    onPrimary: '#0E1612',
-    hero: '#1E3B2D',
-    onHero: '#FFFDF7',
-    onHeroMuted: 'rgba(255, 253, 247, 0.7)',
-    gold: '#E9C46A',
-    petal: '#FFFDF7',
+    text: '#F1ECE0',
+    background: '#0B1B19',
+    backgroundElement: '#0F2421',
+    backgroundSelected: '#173430',
+    textSecondary: '#AFB9B2',
+    border: '#22403A',
+    primary: '#D8B370',
+    primarySoft: 'rgba(216, 179, 112, 0.14)',
+    petalSoft: '#1A3A33',
+    onPrimary: '#13241F',
+    hero: '#13302B',
+    onHero: '#F1ECE0',
+    onHeroMuted: 'rgba(241, 236, 224, 0.72)',
+    gold: '#D8B370', // warm gold: brighter than dusty, not yellow
+    petal: '#D8B370',
   },
 } as const;
 

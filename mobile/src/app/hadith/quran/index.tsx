@@ -1,4 +1,4 @@
-import { router } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
 import { ActivityIndicator, FlatList, StyleSheet, TextInput, View } from 'react-native';
 import Animated from 'react-native-reanimated';
@@ -16,6 +16,8 @@ import { useTheme } from '@/hooks/use-theme';
 import { getSurahList, type SurahInfo } from '@/lib/quran';
 
 export default function QuranScreen() {
+  // From a Quran book on the Library shelf: the translation it opens with, carried into each surah.
+  const { translation } = useLocalSearchParams<{ translation?: string }>();
   const theme = useTheme();
   const t = useT();
   const [surahs, setSurahs] = useState<SurahInfo[] | null>(null);
@@ -92,7 +94,7 @@ export default function QuranScreen() {
             <Animated.View entering={index < 12 ? enter(2 + index) : undefined} style={cell}>
               <SpringPressable
                 pressedScale={0.98}
-                onPress={() => router.push(`/quran/${s.number}`)}
+                onPress={() => router.push(`/hadith/quran/${s.number}${translation ? `?translation=${translation}` : ''}`)}
                 style={[styles.row, layout.wide && styles.rowWide, { backgroundColor: theme.backgroundElement, borderColor: theme.border }]}>
                 <JasmineBadge value={s.number} size={44} />
                 <View style={styles.rowMain}>

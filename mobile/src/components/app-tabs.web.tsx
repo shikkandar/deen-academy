@@ -6,7 +6,6 @@ import {
   TabTriggerSlotProps,
   TabListProps,
 } from 'expo-router/ui';
-import { router } from 'expo-router';
 import { useState, type ComponentProps } from 'react';
 import { Image, Linking, Pressable, View, StyleSheet, useWindowDimensions, type ImageSourcePropType, type StyleProp, type ViewStyle } from 'react-native';
 
@@ -43,8 +42,8 @@ export default function AppTabs() {
             <TabTrigger name="home" href="/" asChild>
               <SidebarItem icon={ICONS.home} label={t('Prayers')} />
             </TabTrigger>
-            <TabTrigger name="quran" href="/quran" asChild>
-              <SidebarItem icon={ICONS.quran} label={t('Quran')} />
+            <TabTrigger name="namaz" href="/namaz" asChild>
+              <SidebarItem icon={ICONS.namaz} label={t('Namaz Assistant')} />
             </TabTrigger>
             <TabTrigger name="qibla" href="/qibla" asChild>
               <SidebarItem icon={ICONS.qibla} label={t('Qibla')} />
@@ -52,8 +51,6 @@ export default function AppTabs() {
             <TabTrigger name="hadith" href="/hadith" asChild>
               <SidebarItem icon={ICONS.hadith} label={t('Library')} />
             </TabTrigger>
-            {/* Not a tab: opens the Namaz Assistant over the Prayers screen. */}
-            <SidebarItem icon={ICONS.namaz} label={t('Namaz Assistant')} onPress={() => router.push({ pathname: '/', params: { assistant: '1' } })} />
             <TabTrigger name="settings" href="/settings" asChild>
               <SidebarItem icon={ICONS.settings} label={t('Settings')} />
             </TabTrigger>
@@ -72,8 +69,8 @@ export default function AppTabs() {
           <TabTrigger name="home" href="/" asChild>
             <TabButton>{t('Prayers')}</TabButton>
           </TabTrigger>
-          <TabTrigger name="quran" href="/quran" asChild>
-            <TabButton>{t('Quran')}</TabButton>
+          <TabTrigger name="namaz" href="/namaz" asChild>
+            <TabButton>{t('Namaz')}</TabButton>
           </TabTrigger>
           <TabTrigger name="qibla" href="/qibla" asChild>
             <TabButton>{t('Qibla')}</TabButton>

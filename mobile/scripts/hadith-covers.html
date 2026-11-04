@@ -63,6 +63,22 @@
   .sahaba .pattern, .sahaba .frame, .sahaba .frame2, .sahaba .corner, .sahaba .medallion, .sahaba .ar,
   .sahaba .en, .sahaba .rule, .sahaba .by { display: none; }
   .sh { display: none; }
+  .q { display: none; }
+  .mq { display: none; }
+  .quran .pattern, .quran .frame, .quran .frame2, .quran .corner, .quran .medallion, .quran .ar,
+  .quran .en, .quran .rule, .quran .by { display: none; }
+  .quran .mq { display: block; }
+  .quran .sh-arch { display: none; } /* its own display: flex would show it */
+  .mq-art { position: absolute; left: 46px; top: 0; width: 554px; height: 840px; }
+  .mq-title { position: absolute; left: 46px; right: 0; top: 300px; text-align: center; font-family: Thuluth, 'Diwan Thuluth';
+    color: var(--g); direction: rtl; font-size: 92px; line-height: 1.3; text-shadow: 0 2px 0 rgba(0,0,0,.35), 0 0 18px rgba(0,0,0,.25); }
+  .mq-lang { position: absolute; left: 46px; right: 0; top: 742px; text-align: center; font-family: 'Baskerville', serif;
+    color: var(--g); font-size: 20px; letter-spacing: 4px; }
+  .ta .mq-lang { font-family: 'Tamil Sangam MN', 'InaiMathi', serif; letter-spacing: 1px; font-size: 20px; font-weight: 700; }
+  .qstar .medallion, .qcart .medallion { display: none; }
+  .qstar .q-star { display: block; position: absolute; left: 73px; top: 150px; width: 500px; height: 500px; }
+  .qcart .q-cart { display: block; position: absolute; left: 150px; right: 104px; top: 150px; height: 400px; border: 3px solid var(--g); border-radius: 170px; box-shadow: inset 0 0 0 10px transparent, inset 0 0 0 12px var(--g); opacity: .9; }
+  .qcart .corner { display: none; }
   .sahaba .sh { display: block; }
   .sh-lattice { position: absolute; left: 46px; right: 0; top: 0; bottom: 0; opacity: .10; }
   .sh-band { position: absolute; left: 46px; right: 0; top: 46px; text-align: center; font-family: 'Baskerville', serif;
@@ -150,6 +166,27 @@
   <div class="sh sh-num" id="shNum"></div>
   <div class="sh sh-vol" id="shVol"></div>
   <div class="sh sh-pages" id="shPages"></div>
+  <svg class="q q-star" viewBox="0 0 400 400"><g fill="none" stroke="var(--g)"><g stroke-width="3"><rect x="70" y="70" width="260" height="260"/><rect x="70" y="70" width="260" height="260" transform="rotate(45 200 200)"/></g><g stroke-width="1.2" opacity=".6"><rect x="96" y="96" width="208" height="208"/><rect x="96" y="96" width="208" height="208" transform="rotate(45 200 200)"/></g></g></svg>
+  <div class="q q-cart"></div>
+  <svg class="mq mq-art" viewBox="0 0 554 840">
+    <g fill="none" stroke="var(--g)">
+      <rect x="22" y="22" width="510" height="796" rx="4" stroke-width="3"/>
+      <rect x="36" y="36" width="482" height="768" rx="3" stroke-width="1.2" opacity=".8"/>
+      <g stroke-width="1.6" opacity=".9">
+        <path d="M36 120 A84 84 0 0 0 120 36"/><path d="M36 96 A60 60 0 0 0 96 36"/>
+        <path d="M518 120 A84 84 0 0 1 434 36"/><path d="M518 96 A60 60 0 0 1 458 36"/>
+        <path d="M36 720 A84 84 0 0 1 120 804"/><path d="M36 744 A60 60 0 0 1 96 804"/>
+        <path d="M518 720 A84 84 0 0 0 434 804"/><path d="M518 744 A60 60 0 0 0 458 804"/>
+      </g>
+      <path stroke-width="3" d="M277 150 C400 230 430 330 430 420 C430 510 400 610 277 690 C154 610 124 510 124 420 C124 330 154 230 277 150 Z"/>
+      <path stroke-width="1.2" opacity=".75" d="M277 178 C380 248 406 336 406 420 C406 504 380 592 277 662 C174 592 148 504 148 420 C148 336 174 248 277 178 Z"/>
+      <path stroke-width="2" d="M277 120 L285 138 L277 150 L269 138 Z M277 690 L285 702 L277 720 L269 702 Z"/>
+    </g>
+    <g fill="var(--g)"><circle cx="277" cy="112" r="5"/><circle cx="277" cy="728" r="5"/>
+      <circle cx="58" cy="58" r="5"/><circle cx="496" cy="58" r="5"/><circle cx="58" cy="782" r="5"/><circle cx="496" cy="782" r="5"/></g>
+  </svg>
+  <div class="mq mq-title" id="mqTitle">القرآن<br>الكريم</div>
+  <div class="mq mq-lang" id="mqLang"></div>
   <div class="ar" id="ar"></div>
   <div class="en" id="en"></div>
   <div class="rule"></div>
@@ -157,6 +194,10 @@
 </div>
 <script>
   const BOOKS = {
+    quranar:  { quran: true, vol: 'ARABIC', volTa: 'அரபி', pages: '114 surahs', pagesTa: '114 சூராக்கள்', c: '#14432F', g: '#E9C77B' },
+    quranta:  { quran: true, vol: 'TAMIL TRANSLATION', volTa: 'தமிழ் மொழிபெயர்ப்பு', pages: '114 surahs', pagesTa: '114 சூராக்கள்', c: '#1F3D5A', g: '#E9C77B' },
+    quranen:  { quran: true, vol: 'ENGLISH TRANSLATION', volTa: 'ஆங்கில மொழிபெயர்ப்பு', pages: '114 surahs', pagesTa: '114 சூராக்கள்', c: '#3B2A55', g: '#E9C77B' },
+    quranur:  { quran: true, vol: 'URDU TRANSLATION', volTa: 'உருது மொழிபெயர்ப்பு', pages: '114 surahs', pagesTa: '114 சூராக்கள்', c: '#5A2E1E', g: '#E9C77B' },
     muntakhab: { ar: 'منتخب<br>الأحاديث', en: 'Muntakhab Ahadith', by: 'Maulana Muhammad Yusuf Kandhlawi', c: '#1E1E24', g: '#E9C77B', fs: '100px' },
     sahaba1: { sahaba: true, num: '١', vol: 'VOLUME ONE', pages: '452 pages', c: '#1D4E4A', g: '#E9C77B' },
     sahaba2: { sahaba: true, num: '٢', vol: 'VOLUME TWO', pages: '588 pages', c: '#5E2230', g: '#E9C77B' },
@@ -175,11 +216,12 @@
     dehlawi:  { ar: 'الأربعون<br>الدهلوية', en: '40 Hadith Shah Waliullah', by: 'Shah Waliullah Dehlawi', c: '#3B4A1F', g: '#E8D095', fs: '100px' },
   };
   // Tamil title and author for the Tamil covers (#<id>-ta).
+  const TA_QURAN = {"quranar": {"en": "திருக்குர்ஆன்", "by": "அரபி"}, "quranta": {"en": "திருக்குர்ஆன்", "by": "தமிழ் மொழிபெயர்ப்பு"}, "quranen": {"en": "திருக்குர்ஆன்", "by": "ஆங்கில மொழிபெயர்ப்பு"}, "quranur": {"en": "திருக்குர்ஆன்", "by": "உருது மொழிபெயர்ப்பு"}};
   const TA = {"muntakhab": {"en": "முன்தகப் அஹாதீஸ்", "by": "மௌலானா முஹம்மத் யூஸுஃப் காந்தலவி"}, "bukhari": {"en": "ஸஹீஹ் அல்புகாரி", "by": "இமாம் புகாரி"}, "muslim": {"en": "ஸஹீஹ் முஸ்லிம்", "by": "இமாம் முஸ்லிம்"}, "abudawud": {"en": "ஸுனன் அபூதாவூத்", "by": "இமாம் அபூதாவூத்"}, "tirmidhi": {"en": "ஜாமிஉத் திர்மிதீ", "by": "இமாம் திர்மிதீ"}, "nasai": {"en": "ஸுனன் அந்நஸாயீ", "by": "இமாம் நஸாயீ"}, "ibnmajah": {"en": "ஸுனன் இப்னுமாஜா", "by": "இமாம் இப்னுமாஜா"}, "malik": {"en": "முவத்தா மாலிக்", "by": "இமாம் மாலிக்"}, "nawawi": {"en": "நவவீயின் 40 ஹதீஸ்கள்", "by": "இமாம் நவவீ"}, "qudsi": {"en": "40 ஹதீஸ் குத்ஸீ", "by": "புனித ஹதீஸ்கள்"}, "dehlawi": {"en": "40 ஹதீஸ்கள்", "by": "ஷாஹ் வலியுல்லாஹ் திஹ்லவீ"}};
   const TA_VOL = { '1': 'பாகம் ஒன்று', '2': 'பாகம் இரண்டு', '3': 'பாகம் மூன்று', '4': 'பாகம் நான்கு' };
   const [id, lang] = location.hash.slice(1).split('-');
   const tamil = lang === 'ta';
-  const b = { ...(BOOKS[id] || BOOKS.bukhari), ...(tamil && TA[id] ? TA[id] : {}) };
+  const b = { ...(BOOKS[id] || BOOKS.bukhari), ...(tamil && (TA[id] || TA_QURAN[id]) ? (TA[id] || TA_QURAN[id]) : {}) };
   if (tamil && b.sahaba) {
     const v = id.slice(-1);
     b.vol = TA_VOL[v];
@@ -190,10 +232,17 @@
   book.style.setProperty('--c', b.c);
   book.style.setProperty('--g', b.g);
   if (b.fs) book.style.setProperty('--fs', b.fs);
+  if (b.look) book.classList.add(b.look);
+  if (b.quran) {
+    book.classList.add('quran');
+    document.getElementById('mqLang').textContent = tamil ? b.volTa : b.vol;
+  }
   if (b.sahaba) {
     book.classList.add('sahaba');
     if (tamil) document.querySelector('.sh-band').textContent = 'ஹயாத்துஸ் ஸஹாபா';
-    document.getElementById('shTitle').innerHTML = 'حياة<br>الصحابة';
+    if (b.band) document.querySelector('.sh-band').textContent = tamil ? b.bandTa : b.band;
+    document.getElementById('shTitle').innerHTML = b.title || 'حياة<br>الصحابة';
+    if (tamil && b.volTa) { b.vol = b.volTa; b.pages = b.pagesTa; }
     document.getElementById('shNum').textContent = b.num;
     document.getElementById('shVol').textContent = b.vol;
     document.getElementById('shPages').textContent = b.pages;
